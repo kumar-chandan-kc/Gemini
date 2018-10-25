@@ -1,0 +1,18 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<SelectDialog
+		id="pers"
+		noDataText="{i18n>NoSearchObjectFound}"
+		title="{i18n>SelectSearchObject}"
+		search="handleSearch"
+		liveChange="handleSearch"
+		confirm="handleClose"
+		cancel="handleClose"
+		items="{ path: 'worklistView>/SearchObject' , sorter: { path: 'worklistView>value' }
+		}" >
+		<StandardListItem
+			title="{worklistView>value}"
+			 />
+	</SelectDialog>
+</core:FragmentDefinition>

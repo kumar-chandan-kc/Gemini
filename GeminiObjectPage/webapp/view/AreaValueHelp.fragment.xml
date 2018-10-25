@@ -1,0 +1,17 @@
+<core:FragmentDefinition  
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <SelectDialog
+        id="AreaDialog"
+        title="{i18n>AreaHelp}"
+        class="sapUiPopupWithPadding"
+        items="{/I_SBRAREAVH}"
+        search="handleValueHelpSearchArea"
+        liveChange="handleValueHelpSearchArea"
+         confirm="handleValueHelpArea"
+         cancel="handleValueHelpArea">
+        <StandardListItem id="AreaList"
+            title="{Area}"
+            description="{Description}" /> 
+    </SelectDialog>
+</core:FragmentDefinition>

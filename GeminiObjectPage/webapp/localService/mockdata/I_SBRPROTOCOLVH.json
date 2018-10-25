@@ -1,0 +1,61 @@
+[{
+	"Protocol": "SOAP",
+	"__metadata": {
+		"uri": "I_SBRPROTOCOLVH('Protocol%201')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRPROTOCOLVHType"
+	}
+}, {
+	"Protocol": "ODATA",
+	"__metadata": {
+		"uri": "I_SBRPROTOCOLVH('Protocol%202')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRPROTOCOLVHType"
+	}
+}, {
+	"Protocol": "Protocol 3",
+	"__metadata": {
+		"uri": "I_SBRPROTOCOLVH('Protocol%203')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRPROTOCOLVHType"
+	}
+}, {
+	"Protocol": "Protocol 4",
+	"__metadata": {
+		"uri": "I_SBRPROTOCOLVH('Protocol%204')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRPROTOCOLVHType"
+	}
+}, {
+	"Protocol": "Protocol 5",
+	"__metadata": {
+		"uri": "I_SBRPROTOCOLVH('Protocol%205')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRPROTOCOLVHType"
+	}
+}, {
+	"Protocol": "Protocol 6",
+	"__metadata": {
+		"uri": "I_SBRPROTOCOLVH('Protocol%206')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRPROTOCOLVHType"
+	}
+}, {
+	"Protocol": "Protocol 7",
+	"__metadata": {
+		"uri": "I_SBRPROTOCOLVH('Protocol%207')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRPROTOCOLVHType"
+	}
+}, {
+	"Protocol": "Protocol 8",
+	"__metadata": {
+		"uri": "I_SBRPROTOCOLVH('Protocol%208')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRPROTOCOLVHType"
+	}
+}, {
+	"Protocol": "Protocol 9",
+	"__metadata": {
+		"uri": "I_SBRPROTOCOLVH('Protocol%209')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRPROTOCOLVHType"
+	}
+}, {
+	"Protocol": "Protocol 10",
+	"__metadata": {
+		"uri": "I_SBRPROTOCOLVH('Protocol%2010')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRPROTOCOLVHType"
+	}
+}]

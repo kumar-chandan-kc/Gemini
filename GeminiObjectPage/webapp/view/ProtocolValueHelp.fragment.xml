@@ -1,0 +1,17 @@
+<core:FragmentDefinition  
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <SelectDialog
+        id="ProtocolDialog"
+        title="{i18n>ProtocolValueHelp}"
+        class="sapUiPopupWithPadding"
+        items="{/I_SBRPROTOCOLVH}"
+        search="handleValueHelpProtocol"
+        liveChange="handleValueHelpProtocol"
+        confirm="handleValueHelpClose"
+        cancel="handleValueHelpClose">
+        <StandardListItem id="Protocollist"
+            title="{Protocol}"
+           />
+    </SelectDialog>
+</core:FragmentDefinition>

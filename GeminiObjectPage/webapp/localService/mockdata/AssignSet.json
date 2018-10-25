@@ -1,0 +1,91 @@
+[{
+	"sapobjecttypeold": "sapobjecttypeold 1",
+	"sapobjecttypenew": "sapobjecttypenew 1",
+	"comment": "comment 1",
+	"createdate": "/Date(1024202818000+0000)/",
+	"__metadata": {
+		"uri": "AssignSet('sapobjecttypeold%201')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.Assign"
+	}
+}, {
+	"sapobjecttypeold": "sapobjecttypeold 2",
+	"sapobjecttypenew": "sapobjecttypenew 2",
+	"comment": "comment 2",
+	"createdate": "/Date(1470199618000+0000)/",
+	"__metadata": {
+		"uri": "AssignSet('sapobjecttypeold%202')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.Assign"
+	}
+}, {
+	"sapobjecttypeold": "sapobjecttypeold 3",
+	"sapobjecttypenew": "sapobjecttypenew 3",
+	"comment": "comment 3",
+	"createdate": "/Date(1164602818000+0000)/",
+	"__metadata": {
+		"uri": "AssignSet('sapobjecttypeold%203')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.Assign"
+	}
+}, {
+	"sapobjecttypeold": "sapobjecttypeold 4",
+	"sapobjecttypenew": "sapobjecttypenew 4",
+	"comment": "comment 4",
+	"createdate": "/Date(1014094018000+0000)/",
+	"__metadata": {
+		"uri": "AssignSet('sapobjecttypeold%204')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.Assign"
+	}
+}, {
+	"sapobjecttypeold": "sapobjecttypeold 5",
+	"sapobjecttypenew": "sapobjecttypenew 5",
+	"comment": "comment 5",
+	"createdate": "/Date(1135226818000+0000)/",
+	"__metadata": {
+		"uri": "AssignSet('sapobjecttypeold%205')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.Assign"
+	}
+}, {
+	"sapobjecttypeold": "sapobjecttypeold 6",
+	"sapobjecttypenew": "sapobjecttypenew 6",
+	"comment": "comment 6",
+	"createdate": "/Date(952145218000+0000)/",
+	"__metadata": {
+		"uri": "AssignSet('sapobjecttypeold%206')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.Assign"
+	}
+}, {
+	"sapobjecttypeold": "sapobjecttypeold 7",
+	"sapobjecttypenew": "sapobjecttypenew 7",
+	"comment": "comment 7",
+	"createdate": "/Date(1176266818000+0000)/",
+	"__metadata": {
+		"uri": "AssignSet('sapobjecttypeold%207')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.Assign"
+	}
+}, {
+	"sapobjecttypeold": "sapobjecttypeold 8",
+	"sapobjecttypenew": "sapobjecttypenew 8",
+	"comment": "comment 8",
+	"createdate": "/Date(1388897218000+0000)/",
+	"__metadata": {
+		"uri": "AssignSet('sapobjecttypeold%208')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.Assign"
+	}
+}, {
+	"sapobjecttypeold": "sapobjecttypeold 9",
+	"sapobjecttypenew": "sapobjecttypenew 9",
+	"comment": "comment 9",
+	"createdate": "/Date(1219380418000+0000)/",
+	"__metadata": {
+		"uri": "AssignSet('sapobjecttypeold%209')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.Assign"
+	}
+}, {
+	"sapobjecttypeold": "sapobjecttypeold 10",
+	"sapobjecttypenew": "sapobjecttypenew 10",
+	"comment": "comment 10",
+	"createdate": "/Date(1396327618000+0000)/",
+	"__metadata": {
+		"uri": "AssignSet('sapobjecttypeold%2010')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.Assign"
+	}
+}]

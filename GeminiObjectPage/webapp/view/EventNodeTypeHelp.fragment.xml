@@ -1,0 +1,18 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<SelectDialog
+		id="EventNodeTypeHelp"
+		noDataText="{i18n>NoEventNodeTypeFound}"
+		title="{i18n>SelectNodeType}"
+		search="fnHandleValueHelpSearchNodeType"
+		liveChange="fnHandleValueHelpSearchNodeType"
+		confirm="handleAppCloseEvent"
+		cancel="handleAppCloseEvent"
+		items="{ path: '/I_SBRNodeTypeVH'}" >
+		<StandardListItem
+			title="{NodeType}"
+			 />
+	</SelectDialog>
+</core:FragmentDefinition> 
+ 

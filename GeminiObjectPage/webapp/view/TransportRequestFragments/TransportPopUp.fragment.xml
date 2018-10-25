@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog id="transportDialog" items="{ path: 'Gemini>/aTRANSPORT'}" search="s4.cfnd.geminiobjectpage.controller.TransportRequest.onOpenTRSelectSearch" title="{i18n>SelectRequest}" class="sapUiPopupWithPadding"
+		confirm="s4.cfnd.geminiobjectpage.controller.TransportRequest.onOpenTRSelectConfirm" cancel="s4.cfnd.geminiobjectpage.controller.TransportRequest.onOpenTRSelectCancel">
+		<StandardListItem id="transportListItem" title="{Gemini>TRNumber}" description="{Gemini>TRDescription}"/>
+	</SelectDialog>
+</core:FragmentDefinition>

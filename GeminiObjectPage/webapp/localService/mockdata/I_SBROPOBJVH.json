@@ -1,0 +1,71 @@
+[{
+	"OutputType": "OutputType 1",
+	"ApplicationObjectType": "ApplicationObjectType 1",
+	"__metadata": {
+		"uri": "I_SBROPOBJVH(OutputType='OutputType%201',ApplicationObjectType='ApplicationObjectType%201')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBROPOBJVHType"
+	}
+}, {
+	"OutputType": "OutputType 2",
+	"ApplicationObjectType": "ApplicationObjectType 2",
+	"__metadata": {
+		"uri": "I_SBROPOBJVH(OutputType='OutputType%202',ApplicationObjectType='ApplicationObjectType%202')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBROPOBJVHType"
+	}
+}, {
+	"OutputType": "OutputType 3",
+	"ApplicationObjectType": "ApplicationObjectType 3",
+	"__metadata": {
+		"uri": "I_SBROPOBJVH(OutputType='OutputType%203',ApplicationObjectType='ApplicationObjectType%203')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBROPOBJVHType"
+	}
+}, {
+	"OutputType": "OutputType 4",
+	"ApplicationObjectType": "ApplicationObjectType 4",
+	"__metadata": {
+		"uri": "I_SBROPOBJVH(OutputType='OutputType%204',ApplicationObjectType='ApplicationObjectType%204')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBROPOBJVHType"
+	}
+}, {
+	"OutputType": "OutputType 5",
+	"ApplicationObjectType": "ApplicationObjectType 5",
+	"__metadata": {
+		"uri": "I_SBROPOBJVH(OutputType='OutputType%205',ApplicationObjectType='ApplicationObjectType%205')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBROPOBJVHType"
+	}
+}, {
+	"OutputType": "OutputType 6",
+	"ApplicationObjectType": "ApplicationObjectType 6",
+	"__metadata": {
+		"uri": "I_SBROPOBJVH(OutputType='OutputType%206',ApplicationObjectType='ApplicationObjectType%206')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBROPOBJVHType"
+	}
+}, {
+	"OutputType": "OutputType 7",
+	"ApplicationObjectType": "ApplicationObjectType 7",
+	"__metadata": {
+		"uri": "I_SBROPOBJVH(OutputType='OutputType%207',ApplicationObjectType='ApplicationObjectType%207')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBROPOBJVHType"
+	}
+}, {
+	"OutputType": "OutputType 8",
+	"ApplicationObjectType": "ApplicationObjectType 8",
+	"__metadata": {
+		"uri": "I_SBROPOBJVH(OutputType='OutputType%208',ApplicationObjectType='ApplicationObjectType%208')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBROPOBJVHType"
+	}
+}, {
+	"OutputType": "OutputType 9",
+	"ApplicationObjectType": "ApplicationObjectType 9",
+	"__metadata": {
+		"uri": "I_SBROPOBJVH(OutputType='OutputType%209',ApplicationObjectType='ApplicationObjectType%209')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBROPOBJVHType"
+	}
+}, {
+	"OutputType": "OutputType 10",
+	"ApplicationObjectType": "ApplicationObjectType 10",
+	"__metadata": {
+		"uri": "I_SBROPOBJVH(OutputType='OutputType%2010',ApplicationObjectType='ApplicationObjectType%2010')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBROPOBJVHType"
+	}
+}]

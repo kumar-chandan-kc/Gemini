@@ -1,0 +1,10 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout">
+	<ResponsivePopover showHeader="false" class="sapUiPopupWithPadding" placement="Top">
+		<content>
+			<layout:VerticalLayout>
+				<Text text="{i18n>cancelConfirmationMessage}" class="sapUiTinyMarginBottom"></Text>
+				<Button text="{i18n>Discard}" press="fnCancelling" width="100%"/>
+			</layout:VerticalLayout>
+		</content>
+	</ResponsivePopover>
+</core:FragmentDefinition>

@@ -1,0 +1,101 @@
+[{
+	"communication_scenario_id": "communication_scenario_id 1",
+	"ServiceInterface": "ServiceInterface 1",
+	"protocol": "Protocol 1",
+	"ibs_id": "ibs_id 1",
+	"service_interface_wov": "service_interface_wov 1",
+	"__metadata": {
+		"uri": "I_SBRSERVICEINTERFACEVH(communication_scenario_id='communication_scenario_id%201',ServiceInterface='ServiceInterface%201',protocol='protocol%201',ibs_id='ibs_id%201')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSERVICEINTERFACEVHType"
+	}
+}, {
+	"communication_scenario_id": "communication_scenario_id 2",
+	"ServiceInterface": "ServiceInterface 2",
+	"protocol": "Protocol 2",
+	"ibs_id": "ibs_id 2",
+	"service_interface_wov": "service_interface_wov 2",
+	"__metadata": {
+		"uri": "I_SBRSERVICEINTERFACEVH(communication_scenario_id='communication_scenario_id%202',ServiceInterface='ServiceInterface%202',protocol='protocol%202',ibs_id='ibs_id%202')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSERVICEINTERFACEVHType"
+	}
+}, {
+	"communication_scenario_id": "communication_scenario_id 3",
+	"ServiceInterface": "ServiceInterface 3",
+	"protocol": "Protocol 3",
+	"ibs_id": "ibs_id 3",
+	"service_interface_wov": "service_interface_wov 3",
+	"__metadata": {
+		"uri": "I_SBRSERVICEINTERFACEVH(communication_scenario_id='communication_scenario_id%203',ServiceInterface='ServiceInterface%203',protocol='protocol%203',ibs_id='ibs_id%203')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSERVICEINTERFACEVHType"
+	}
+}, {
+	"communication_scenario_id": "communication_scenario_id 4",
+	"ServiceInterface": "ServiceInterface 4",
+	"protocol": "Protocol 4",
+	"ibs_id": "ibs_id 4",
+	"service_interface_wov": "service_interface_wov 4",
+	"__metadata": {
+		"uri": "I_SBRSERVICEINTERFACEVH(communication_scenario_id='communication_scenario_id%204',ServiceInterface='ServiceInterface%204',protocol='protocol%204',ibs_id='ibs_id%204')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSERVICEINTERFACEVHType"
+	}
+}, {
+	"communication_scenario_id": "communication_scenario_id 5",
+	"ServiceInterface": "ServiceInterface 5",
+	"protocol": "Protocol 5",
+	"ibs_id": "ibs_id 5",
+	"service_interface_wov": "service_interface_wov 5",
+	"__metadata": {
+		"uri": "I_SBRSERVICEINTERFACEVH(communication_scenario_id='communication_scenario_id%205',ServiceInterface='ServiceInterface%205',protocol='protocol%205',ibs_id='ibs_id%205')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSERVICEINTERFACEVHType"
+	}
+}, {
+	"communication_scenario_id": "communication_scenario_id 6",
+	"ServiceInterface": "ServiceInterface 6",
+	"protocol": "Protocol 6",
+	"ibs_id": "ibs_id 6",
+	"service_interface_wov": "service_interface_wov 6",
+	"__metadata": {
+		"uri": "I_SBRSERVICEINTERFACEVH(communication_scenario_id='communication_scenario_id%206',ServiceInterface='ServiceInterface%206',protocol='protocol%206',ibs_id='ibs_id%206')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSERVICEINTERFACEVHType"
+	}
+}, {
+	"communication_scenario_id": "communication_scenario_id 7",
+	"ServiceInterface": "ServiceInterface 7",
+	"protocol": "Protocol 7",
+	"ibs_id": "ibs_id 7",
+	"service_interface_wov": "service_interface_wov 7",
+	"__metadata": {
+		"uri": "I_SBRSERVICEINTERFACEVH(communication_scenario_id='communication_scenario_id%207',ServiceInterface='ServiceInterface%207',protocol='protocol%207',ibs_id='ibs_id%207')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSERVICEINTERFACEVHType"
+	}
+}, {
+	"communication_scenario_id": "communication_scenario_id 8",
+	"ServiceInterface": "ServiceInterface 8",
+	"protocol": "Protocol 8",
+	"ibs_id": "ibs_id 8",
+	"service_interface_wov": "service_interface_wov 8",
+	"__metadata": {
+		"uri": "I_SBRSERVICEINTERFACEVH(communication_scenario_id='communication_scenario_id%208',ServiceInterface='ServiceInterface%208',protocol='protocol%208',ibs_id='ibs_id%208')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSERVICEINTERFACEVHType"
+	}
+}, {
+	"communication_scenario_id": "communication_scenario_id 9",
+	"ServiceInterface": "ServiceInterface 9",
+	"protocol": "Protocol 9",
+	"ibs_id": "ibs_id 9",
+	"service_interface_wov": "service_interface_wov 9",
+	"__metadata": {
+		"uri": "I_SBRSERVICEINTERFACEVH(communication_scenario_id='communication_scenario_id%209',ServiceInterface='ServiceInterface%209',protocol='protocol%209',ibs_id='ibs_id%209')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSERVICEINTERFACEVHType"
+	}
+}, {
+	"communication_scenario_id": "communication_scenario_id 10",
+	"ServiceInterface": "ServiceInterface 10",
+	"protocol": "Protocol 10",
+	"ibs_id": "ibs_id 10",
+	"service_interface_wov": "service_interface_wov 10",
+	"__metadata": {
+		"uri": "I_SBRSERVICEINTERFACEVH(communication_scenario_id='communication_scenario_id%2010',ServiceInterface='ServiceInterface%2010',protocol='protocol%2010',ibs_id='ibs_id%2010')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSERVICEINTERFACEVHType"
+	}
+}]

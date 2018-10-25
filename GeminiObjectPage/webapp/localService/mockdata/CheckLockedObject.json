@@ -1,0 +1,91 @@
+[{
+	"TaskNumber": "TaskNumber 1",
+	"RequestType": "RequestType 1",
+	"TRStatus": "TRStatus 1",
+	"ObjectName": "ObjectName 1",
+	"__metadata": {
+		"uri": "CheckLockedObject(TaskNumber='TaskNumber%201',ObjectName='ObjectName%201')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.CheckLockedObject"
+	}
+}, {
+	"TaskNumber": "TaskNumber 2",
+	"RequestType": "RequestType 2",
+	"TRStatus": "TRStatus 2",
+	"ObjectName": "ObjectName 2",
+	"__metadata": {
+		"uri": "CheckLockedObject(TaskNumber='TaskNumber%202',ObjectName='ObjectName%202')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.CheckLockedObject"
+	}
+}, {
+	"TaskNumber": "TaskNumber 3",
+	"RequestType": "RequestType 3",
+	"TRStatus": "TRStatus 3",
+	"ObjectName": "ObjectName 3",
+	"__metadata": {
+		"uri": "CheckLockedObject(TaskNumber='TaskNumber%203',ObjectName='ObjectName%203')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.CheckLockedObject"
+	}
+}, {
+	"TaskNumber": "TaskNumber 4",
+	"RequestType": "RequestType 4",
+	"TRStatus": "TRStatus 4",
+	"ObjectName": "ObjectName 4",
+	"__metadata": {
+		"uri": "CheckLockedObject(TaskNumber='TaskNumber%204',ObjectName='ObjectName%204')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.CheckLockedObject"
+	}
+}, {
+	"TaskNumber": "TaskNumber 5",
+	"RequestType": "RequestType 5",
+	"TRStatus": "TRStatus 5",
+	"ObjectName": "ObjectName 5",
+	"__metadata": {
+		"uri": "CheckLockedObject(TaskNumber='TaskNumber%205',ObjectName='ObjectName%205')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.CheckLockedObject"
+	}
+}, {
+	"TaskNumber": "TaskNumber 6",
+	"RequestType": "RequestType 6",
+	"TRStatus": "TRStatus 6",
+	"ObjectName": "ObjectName 6",
+	"__metadata": {
+		"uri": "CheckLockedObject(TaskNumber='TaskNumber%206',ObjectName='ObjectName%206')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.CheckLockedObject"
+	}
+}, {
+	"TaskNumber": "TaskNumber 7",
+	"RequestType": "RequestType 7",
+	"TRStatus": "TRStatus 7",
+	"ObjectName": "ObjectName 7",
+	"__metadata": {
+		"uri": "CheckLockedObject(TaskNumber='TaskNumber%207',ObjectName='ObjectName%207')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.CheckLockedObject"
+	}
+}, {
+	"TaskNumber": "TaskNumber 8",
+	"RequestType": "RequestType 8",
+	"TRStatus": "TRStatus 8",
+	"ObjectName": "ObjectName 8",
+	"__metadata": {
+		"uri": "CheckLockedObject(TaskNumber='TaskNumber%208',ObjectName='ObjectName%208')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.CheckLockedObject"
+	}
+}, {
+	"TaskNumber": "TaskNumber 9",
+	"RequestType": "RequestType 9",
+	"TRStatus": "TRStatus 9",
+	"ObjectName": "ObjectName 9",
+	"__metadata": {
+		"uri": "CheckLockedObject(TaskNumber='TaskNumber%209',ObjectName='ObjectName%209')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.CheckLockedObject"
+	}
+}, {
+	"TaskNumber": "TaskNumber 10",
+	"RequestType": "RequestType 10",
+	"TRStatus": "TRStatus 10",
+	"ObjectName": "ObjectName 10",
+	"__metadata": {
+		"uri": "CheckLockedObject(TaskNumber='TaskNumber%2010',ObjectName='ObjectName%2010')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.CheckLockedObject"
+	}
+}]

@@ -1,0 +1,29 @@
+[{"d": {
+	"sObjectName": "object_node_type 12",
+	"sObj": "BR02",
+	"TROwner": "TROwner 1",
+	"TRDescription": "TRDescription",
+	"IsObjectLocked": false,
+	"IsLockRequiredInNewTask": false,
+	"IsTaskOpen": false,
+	"TRNumber": "TRNumber",
+	"__metadata": {
+		"uri": "TRCheckLockedObjectResponseCollection(sObjectName='sObjectName%201',sObj='sObj%201')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.TRCheckLockedObjectResponse"
+	}
+}
+},
+{"d": {
+	"sObjectName": "object_node_type 8",
+	"sObj": "BR02",
+	"TROwner": "NAMAR",
+	"IsObjectLocked": true,
+	"IsTaskOpen": false,
+	"TRNumber": "Tr12",
+	"TRDescription": "dummyTR",
+	"__metadata": {
+		"uri": "TRCheckLockedObjectResponseCollection(sObjectName='sObjectName%201',sObj='sObj%201')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.TRCheckLockedObjectResponse"
+	}
+}
+}]

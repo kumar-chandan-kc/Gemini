@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="s4.cfnd.geminiobjectpage">
+        <wb-resource deploy-path="/WEB-INF/web.xml" source-path="/webapp/WEB-INF/web.xml"/>
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/webapp" tag="defaultRootSource"/>
+        <property name="java-output-path" value="/ca/target/classes"/>
+        <property name="component.exclusion.patterns" value="WEB-INF/classes/META-INF/test-resources/**"/>
+        <property name="context-root" value="s4.cfnd.geminiobjectpage"/>
+    </wb-module>
+</project-modules>

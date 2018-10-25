@@ -1,0 +1,151 @@
+[{
+	"sapobjecttype": "sapobjecttype 1",
+	"communicationscenario": "communicationscenario 1",
+	"apitype": "apitype 1",
+	"service_interface": "service_interface 1",
+	"protocol": "protocol 1",
+	"serviceinterface_wov": "serviceinterface_wov 1",
+	"readapi": 6,
+	"createapi": 3,
+	"updateapi": 5,
+	"deleteapi": 2,
+	"__metadata": {
+		"uri": "I_SBRAPIOPERATIONSMASTER(sapobjecttype='sapobjecttype%201',communicationscenario='communicationscenario%201',apitype='apitype%201',service_interface='service_interface%201',protocol='protocol%201')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRAPIOPERATIONSMASTERType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 2",
+	"communicationscenario": "communicationscenario 2",
+	"apitype": "apitype 2",
+	"service_interface": "service_interface 2",
+	"protocol": "protocol 2",
+	"serviceinterface_wov": "serviceinterface_wov 2",
+	"readapi": 1,
+	"createapi": 9,
+	"updateapi": 7,
+	"deleteapi": 7,
+	"__metadata": {
+		"uri": "I_SBRAPIOPERATIONSMASTER(sapobjecttype='sapobjecttype%202',communicationscenario='communicationscenario%202',apitype='apitype%202',service_interface='service_interface%202',protocol='protocol%202')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRAPIOPERATIONSMASTERType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 3",
+	"communicationscenario": "communicationscenario 3",
+	"apitype": "apitype 3",
+	"service_interface": "service_interface 3",
+	"protocol": "protocol 3",
+	"serviceinterface_wov": "serviceinterface_wov 3",
+	"readapi": 7,
+	"createapi": 3,
+	"updateapi": 4,
+	"deleteapi": 3,
+	"__metadata": {
+		"uri": "I_SBRAPIOPERATIONSMASTER(sapobjecttype='sapobjecttype%203',communicationscenario='communicationscenario%203',apitype='apitype%203',service_interface='service_interface%203',protocol='protocol%203')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRAPIOPERATIONSMASTERType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 4",
+	"communicationscenario": "communicationscenario 4",
+	"apitype": "apitype 4",
+	"service_interface": "service_interface 4",
+	"protocol": "protocol 4",
+	"serviceinterface_wov": "serviceinterface_wov 4",
+	"readapi": 2,
+	"createapi": 8,
+	"updateapi": 2,
+	"deleteapi": 3,
+	"__metadata": {
+		"uri": "I_SBRAPIOPERATIONSMASTER(sapobjecttype='sapobjecttype%204',communicationscenario='communicationscenario%204',apitype='apitype%204',service_interface='service_interface%204',protocol='protocol%204')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRAPIOPERATIONSMASTERType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 5",
+	"communicationscenario": "communicationscenario 5",
+	"apitype": "apitype 5",
+	"service_interface": "service_interface 5",
+	"protocol": "protocol 5",
+	"serviceinterface_wov": "serviceinterface_wov 5",
+	"readapi": 8,
+	"createapi": 4,
+	"updateapi": 2,
+	"deleteapi": 3,
+	"__metadata": {
+		"uri": "I_SBRAPIOPERATIONSMASTER(sapobjecttype='sapobjecttype%205',communicationscenario='communicationscenario%205',apitype='apitype%205',service_interface='service_interface%205',protocol='protocol%205')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRAPIOPERATIONSMASTERType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 6",
+	"communicationscenario": "communicationscenario 6",
+	"apitype": "apitype 6",
+	"service_interface": "service_interface 6",
+	"protocol": "protocol 6",
+	"serviceinterface_wov": "serviceinterface_wov 6",
+	"readapi": 6,
+	"createapi": 6,
+	"updateapi": 7,
+	"deleteapi": 5,
+	"__metadata": {
+		"uri": "I_SBRAPIOPERATIONSMASTER(sapobjecttype='sapobjecttype%206',communicationscenario='communicationscenario%206',apitype='apitype%206',service_interface='service_interface%206',protocol='protocol%206')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRAPIOPERATIONSMASTERType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 7",
+	"communicationscenario": "communicationscenario 7",
+	"apitype": "apitype 7",
+	"service_interface": "service_interface 7",
+	"protocol": "protocol 7",
+	"serviceinterface_wov": "serviceinterface_wov 7",
+	"readapi": 9,
+	"createapi": 7,
+	"updateapi": 8,
+	"deleteapi": 6,
+	"__metadata": {
+		"uri": "I_SBRAPIOPERATIONSMASTER(sapobjecttype='sapobjecttype%207',communicationscenario='communicationscenario%207',apitype='apitype%207',service_interface='service_interface%207',protocol='protocol%207')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRAPIOPERATIONSMASTERType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 8",
+	"communicationscenario": "communicationscenario 8",
+	"apitype": "apitype 8",
+	"service_interface": "service_interface 8",
+	"protocol": "protocol 8",
+	"serviceinterface_wov": "serviceinterface_wov 8",
+	"readapi": 7,
+	"createapi": 6,
+	"updateapi": 9,
+	"deleteapi": 0,
+	"__metadata": {
+		"uri": "I_SBRAPIOPERATIONSMASTER(sapobjecttype='sapobjecttype%208',communicationscenario='communicationscenario%208',apitype='apitype%208',service_interface='service_interface%208',protocol='protocol%208')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRAPIOPERATIONSMASTERType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 9",
+	"communicationscenario": "communicationscenario 9",
+	"apitype": "apitype 9",
+	"service_interface": "service_interface 9",
+	"protocol": "protocol 9",
+	"serviceinterface_wov": "serviceinterface_wov 9",
+	"readapi": 9,
+	"createapi": 2,
+	"updateapi": 1,
+	"deleteapi": 8,
+	"__metadata": {
+		"uri": "I_SBRAPIOPERATIONSMASTER(sapobjecttype='sapobjecttype%209',communicationscenario='communicationscenario%209',apitype='apitype%209',service_interface='service_interface%209',protocol='protocol%209')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRAPIOPERATIONSMASTERType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 10",
+	"communicationscenario": "communicationscenario 10",
+	"apitype": "apitype 10",
+	"service_interface": "service_interface 10",
+	"protocol": "protocol 10",
+	"serviceinterface_wov": "serviceinterface_wov 10",
+	"readapi": 1,
+	"createapi": 9,
+	"updateapi": 8,
+	"deleteapi": 7,
+	"__metadata": {
+		"uri": "I_SBRAPIOPERATIONSMASTER(sapobjecttype='sapobjecttype%2010',communicationscenario='communicationscenario%2010',apitype='apitype%2010',service_interface='service_interface%2010',protocol='protocol%2010')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRAPIOPERATIONSMASTERType"
+	}
+}]

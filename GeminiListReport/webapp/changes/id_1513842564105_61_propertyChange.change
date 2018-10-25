@@ -1,0 +1,34 @@
+{
+	"fileName": "id_1513842564105_61_propertyChange",
+	"fileType": "change",
+	"changeType": "propertyChange",
+	"reference": "GeminiSmartTemplate.Component",
+	"packageName": "$TMP",
+	"content": {
+		"property": "visible",
+		"newValue": false
+	},
+	"selector": {
+		"id": "GeminiSmartTemplate::sap.suite.ui.generic.template.ListReport.view.ListReport::C_SBRBACKUP--listReport-variant",
+		"type": "sap.ui.comp.smartvariants.SmartVariantManagement",
+		"idIsLocal": false
+	},
+	"layer": "VENDOR",
+	"texts": {},
+	"namespace": "apps/GeminiSmartTemplate/changes/",
+	"creation": "2017-12-21T07:49:27.084Z",
+	"originalLanguage": "EN",
+	"conditions": {},
+	"context": "",
+	"support": {
+		"generator": "Change.createInitialFileContent",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.50.6"
+	},
+	"dependentSelector": {},
+	"validAppVersions": {
+		"creation": "${project.version}",
+		"from": "${project.version}"
+	}
+}

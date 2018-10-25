@@ -1,0 +1,17 @@
+<core:FragmentDefinition  
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <SelectDialog
+        id="ServiceInterfaceDialogAPIPlanTable"
+        title="{i18n>ServiceInterfaceValueHelp}"
+        class="sapUiPopupWithPadding"
+        items="{ path: 'Gemini>/api'}"
+        search="handleValueHelpServiceInterface"
+        liveChange="handleValueHelpServiceInterface"
+        confirm="handleValueHelpClose"
+        cancel="handleValueHelpClose">
+        <StandardListItem id="SIValueHelpListItems"
+            title="{Gemini>si}" description = "{Gemini>comm}" info = "{Gemini>protocol}"
+             />
+    </SelectDialog>
+</core:FragmentDefinition>

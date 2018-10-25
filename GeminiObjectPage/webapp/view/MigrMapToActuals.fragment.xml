@@ -1,0 +1,27 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout">
+	<ViewSettingsDialog confirm="handleMigrMapConfirm" cancel="handleMigrMapClose">
+		<customTabs>
+			<ViewSettingsCustomTab id="migrMapToActuals" title="{i18n>MaptoMigrationObjects}">
+				<content>
+					<Panel height="100%">
+						<layout:VerticalLayout width="50%">
+							<Label text="{i18n>SelectMigrationObjectField}" design="Bold" labelFor = "MigrObjMap"/>
+							<Input id="MigrObjMap" width="200%" editable="true" showValueHelp="true" valueHelpOnly="true" value="" 
+								valueHelpRequest="onValueHelpRequestMigrObjectMap" fieldWidth="100%" change="MigrObj">
+								</Input>
+							<Label id="ActualReleaseMigrT" text="{i18n>ActualReleaseField}" visible="true"/>
+							<Input id="ActualReleaseMigr" width="100%" showValueHelp="true"  showSuggestion="true"  valueHelpOnly="true" 
+								suggestionItems="{ path: 'Gemini>/target_release' }" valueHelpRequest="onValueHelpRequestTargetReleaseMigrMap">
+								<suggestionItems>
+									<core:ListItem text="{release_id}"/>
+								</suggestionItems>
+							</Input>
+							<Button id="btnDummyMigr1" type="Transparent" enabled="false"/>
+							<Button id="btnDummyMigr2" type="Transparent" enabled="false"/>
+						</layout:VerticalLayout>
+					</Panel>
+				</content>
+			</ViewSettingsCustomTab>
+		</customTabs>
+	</ViewSettingsDialog>
+</core:FragmentDefinition>

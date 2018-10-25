@@ -1,0 +1,323 @@
+<edmx:Edmx
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+    <edmx:Reference
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference
+        xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Uri="./IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="CA_BUSINESS_REPOSITORY_SMART_SRV" xml:lang="en" sap:schema-version="1">
+            <EntityType Name="C_SBRAPPCOMPVHType" sap:label="Value Help for Application Component" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ApplicationComponent"/>
+                </Key>
+                <Property Name="ApplicationComponent" Type="Edm.String" Nullable="false" MaxLength="24" sap:display-format="UpperCase" sap:label="Component ID" sap:quickinfo="Application component ID"/>
+            </EntityType>
+            <EntityType Name="C_SBRBACKUPType" sap:label="Gemini SmartTemplate" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ObjectName"/>
+                </Key>
+                <Property Name="ObjectName" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="SAP Object Type" sap:value-list="standard"/>
+                <Property Name="Area" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Area" sap:quickinfo="Area / LoB" sap:value-list="standard"/>
+                <Property Name="PersonResponsible" Type="Edm.String" MaxLength="80" sap:label="Person Responsible" sap:quickinfo="Description of the Technical User Account" sap:value-list="standard"/>
+                <Property Name="ContactPerson" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Contact Person"/>
+                <Property Name="Status" Type="Edm.String" MaxLength="25" sap:display-format="UpperCase" sap:label="Status" sap:quickinfo="Status of Objects" sap:value-list="standard"/>
+                <Property Name="StatusComments" Type="Edm.String" sap:label="Status Comments" sap:quickinfo="Status Comment"/>
+                <Property Name="CDSViewName" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="CDS View Name" sap:quickinfo="DDL Source"/>
+                <Property Name="ObjectCount" Type="Edm.Byte"/>
+                <Property Name="ApplicationComponent" Type="Edm.String" MaxLength="24" sap:display-format="UpperCase" sap:label="Application Component" sap:quickinfo="Application component ID" sap:value-list="standard"/>
+                <Property Name="ParentObjectType" Type="Edm.String" MaxLength="30" sap:label="Parent Object" sap:quickinfo="Parent BO"/>
+                <Property Name="isExtensionApplicable" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase"/>
+                <Property Name="isMigrationApplicable" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:value-list="standard"/>
+                <Property Name="SearchObjectCount" Type="Edm.Byte" sap:label="Search Object"/>
+                <Property Name="SearchObject" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Object Type"/>
+                <Property Name="isSearchApplicable" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="isSearchApplicable" sap:value-list="standard"/>
+                <Property Name="isOutputApplicable" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="isOutputApplicable" sap:value-list="standard"/>
+                <Property Name="SoftwareComponent" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Software Component"/>
+                <Property Name="CDSCountRequired" Type="Edm.String" MaxLength="5" sap:display-format="UpperCase"/>
+                <Property Name="isCloudRelevant" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="isCloudRelevant" sap:value-list="standard"/>
+                <Property Name="isCUDApplicable" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:value-list="standard"/>
+                <Property Name="isReadApplicable" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:value-list="standard"/>
+                <Property Name="Priority" Type="Edm.String" MaxLength="60" sap:label="Priority" sap:quickinfo="Short Text for Fixed Values" sap:value-list="standard"/>
+                <Property Name="MigrationApprover" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="User" sap:quickinfo="User Name in User Master Record"/>
+            </EntityType>
+            <EntityType Name="C_SBRBOSTATUSVALUEHELPType" sap:label="Value Help for Status" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Status"/>
+                </Key>
+                <Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="25" sap:display-format="UpperCase" sap:label="Status" sap:quickinfo="Status of Objects"/>
+            </EntityType>
+            <EntityType Name="C_SBROBJECTVALHELPType" sap:label="Value Help for Object" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ObjectName"/>
+                </Key>
+                <Property Name="ObjectName" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="SAP Object Type"/>
+            </EntityType>
+            <EntityType Name="C_SBRPERSONVALUEHELPType" sap:label="Person responsible value help" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="PersonResponsible"/>
+                </Key>
+                <Property Name="PersonResponsible" Type="Edm.String" Nullable="false" MaxLength="80" sap:label="Description" sap:quickinfo="Description of the Technical User Account"/>
+            </EntityType>
+            <EntityType Name="I_SBRAREAVHType" sap:label="Area Value Help" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Area"/>
+                </Key>
+                <Property Name="Area" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Lower Value" sap:quickinfo="Values for Domains: Single Value / Upper Limit"/>
+                <Property Name="Description" Type="Edm.String" MaxLength="60" sap:label="Short Descript." sap:quickinfo="Short Text for Fixed Values"/>
+            </EntityType>
+            <EntityType Name="I_SBRISAPPLICABLEVHType" sap:label="Value Help for Flags" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Value"/>
+                </Key>
+                <Property Name="Value" Type="Edm.String" Nullable="false" MaxLength="3" sap:display-format="UpperCase"/>
+            </EntityType>
+            <EntityType Name="I_SBRPriorityValueHelpType" sap:label="Priority Value Help" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Priority"/>
+                </Key>
+                <Property Name="Priority" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Lower Value" sap:quickinfo="Values for Domains: Single Value / Upper Limit"/>
+                <Property Name="PriorityText" Type="Edm.String" MaxLength="60" sap:label="Short Descript." sap:quickinfo="Short Text for Fixed Values"/>
+            </EntityType>
+            <EntityContainer Name="CA_BUSINESS_REPOSITORY_SMART_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="C_SBRAPPCOMPVH" EntityType="CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBRAPPCOMPVHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="C_SBRBACKUP" EntityType="CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBRBACKUPType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="C_SBRBOSTATUSVALUEHELP" EntityType="CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBRBOSTATUSVALUEHELPType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="C_SBROBJECTVALHELP" EntityType="CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBROBJECTVALHELPType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="C_SBRPERSONVALUEHELP" EntityType="CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBRPERSONVALUEHELPType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="I_SBRAREAVH" EntityType="CA_BUSINESS_REPOSITORY_SMART_SRV.I_SBRAREAVHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="I_SBRISAPPLICABLEVH" EntityType="CA_BUSINESS_REPOSITORY_SMART_SRV.I_SBRISAPPLICABLEVHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="I_SBRPriorityValueHelp" EntityType="CA_BUSINESS_REPOSITORY_SMART_SRV.I_SBRPriorityValueHelpType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+            </EntityContainer>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBRBACKUPType/ObjectName">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="value help for object"/>
+                        <PropertyValue Property="CollectionPath" String="ZObject_ValueHelp"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ObjectName"/>
+                                    <PropertyValue Property="ValueListProperty" String="ObjectName"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBRBACKUPType/Area">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Area help"/>
+                        <PropertyValue Property="CollectionPath" String="Z_AreaValueHelp"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Area"/>
+                                    <PropertyValue Property="ValueListProperty" String="Area"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBRBACKUPType/PersonResponsible">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Person responsible value help"/>
+                        <PropertyValue Property="CollectionPath" String="zperson_valuehelp"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="PersonResponsible"/>
+                                    <PropertyValue Property="ValueListProperty" String="PersonResponsible"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBRBACKUPType/Status">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="value help for status"/>
+                        <PropertyValue Property="CollectionPath" String="zbo_statusvaluehelp"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Status"/>
+                                    <PropertyValue Property="ValueListProperty" String="Status"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBRBACKUPType/ApplicationComponent">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="applicationcompentvaluehelp"/>
+                        <PropertyValue Property="CollectionPath" String="zapplicationcompentvaluehelp"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ApplicationComponent"/>
+                                    <PropertyValue Property="ValueListProperty" String="ApplicationComponent"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBRBACKUPType/isMigrationApplicable">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="for flags"/>
+                        <PropertyValue Property="CollectionPath" String="ZIsApplicable_valuehelp"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="isMigrationApplicable"/>
+                                    <PropertyValue Property="ValueListProperty" String="Value"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBRBACKUPType/isSearchApplicable">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="for flags"/>
+                        <PropertyValue Property="CollectionPath" String="ZIsApplicable_valuehelp"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="isSearchApplicable"/>
+                                    <PropertyValue Property="ValueListProperty" String="Value"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBRBACKUPType/isOutputApplicable">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="for flags"/>
+                        <PropertyValue Property="CollectionPath" String="ZIsApplicable_valuehelp"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="isOutputApplicable"/>
+                                    <PropertyValue Property="ValueListProperty" String="Value"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBRBACKUPType/isCloudRelevant">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="for flags"/>
+                        <PropertyValue Property="CollectionPath" String="ZIsApplicable_valuehelp"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="isCloudRelevant"/>
+                                    <PropertyValue Property="ValueListProperty" String="Value"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBRBACKUPType/isCUDApplicable">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="for flags"/>
+                        <PropertyValue Property="CollectionPath" String="ZIsApplicable_valuehelp"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="isCUDApplicable"/>
+                                    <PropertyValue Property="ValueListProperty" String="Value"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBRBACKUPType/isReadApplicable">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="for flags"/>
+                        <PropertyValue Property="CollectionPath" String="ZIsApplicable_valuehelp"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="isReadApplicable"/>
+                                    <PropertyValue Property="ValueListProperty" String="Value"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations
+                xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBRBACKUPType/Priority">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="priority value help"/>
+                        <PropertyValue Property="CollectionPath" String="zgemini_priority"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Priority"/>
+                                    <PropertyValue Property="ValueListProperty" String="ddtext"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="domvalue_l"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <atom:link
+                xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/CA_BUSINESS_REPOSITORY_SMART_SRV/$metadata"/>
+                <atom:link
+                    xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/CA_BUSINESS_REPOSITORY_SMART_SRV/$metadata"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>

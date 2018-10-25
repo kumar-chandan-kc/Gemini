@@ -1,0 +1,71 @@
+[{
+       "CDS_Names": "C_BEHSUBSCRIPTION",
+       "Fieldnames": "Businesssubscriber",
+       "__metadata": {
+              "uri": "I_SBRCDSKEYFIELDS(CDS_Names='CDS_Names',Fieldnames='Fieldnames')",
+              "type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSKEYFIELDSType"
+       }
+}, {
+       "CDS_Names": "CDS_Names",
+       "Fieldnames": "Fieldnames",
+       "__metadata": {
+              "uri": "I_SBRCDSKEYFIELDS(CDS_Names='CDS_Names%202',Fieldnames='Fieldnames%202')",
+              "type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSKEYFIELDSType"
+       }
+}, {
+       "CDS_Names": "CDS_Names 3",
+       "Fieldnames": "Fieldnames 3",
+       "__metadata": {
+              "uri": "I_SBRCDSKEYFIELDS(CDS_Names='CDS_Names%203',Fieldnames='Fieldnames%203')",
+              "type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSKEYFIELDSType"
+       }
+}, {
+       "CDS_Names": "CDS_Names 4",
+       "Fieldnames": "Fieldnames 4",
+       "__metadata": {
+              "uri": "I_SBRCDSKEYFIELDS(CDS_Names='CDS_Names%204',Fieldnames='Fieldnames%204')",
+              "type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSKEYFIELDSType"
+       }
+}, {
+       "CDS_Names": "CDS_Names 5",
+       "Fieldnames": "Fieldnames 5",
+       "__metadata": {
+              "uri": "I_SBRCDSKEYFIELDS(CDS_Names='CDS_Names%205',Fieldnames='Fieldnames%205')",
+              "type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSKEYFIELDSType"
+       }
+}, {
+       "CDS_Names": "CDS_Names 6",
+       "Fieldnames": "Fieldnames 6",
+       "__metadata": {
+              "uri": "I_SBRCDSKEYFIELDS(CDS_Names='CDS_Names%206',Fieldnames='Fieldnames%206')",
+              "type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSKEYFIELDSType"
+       }
+}, {
+       "CDS_Names": "CDS_Names 7",
+       "Fieldnames": "Fieldnames 7",
+       "__metadata": {
+              "uri": "I_SBRCDSKEYFIELDS(CDS_Names='CDS_Names%207',Fieldnames='Fieldnames%207')",
+              "type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSKEYFIELDSType"
+       }
+}, {
+       "CDS_Names": "CDS_Names 8",
+       "Fieldnames": "Fieldnames 8",
+       "__metadata": {
+              "uri": "I_SBRCDSKEYFIELDS(CDS_Names='CDS_Names%208',Fieldnames='Fieldnames%208')",
+              "type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSKEYFIELDSType"
+       }
+}, {
+       "CDS_Names": "CDS_Names 9",
+       "Fieldnames": "Fieldnames 9",
+       "__metadata": {
+              "uri": "I_SBRCDSKEYFIELDS(CDS_Names='CDS_Names%209',Fieldnames='Fieldnames%209')",
+              "type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSKEYFIELDSType"
+       }
+}, {
+       "CDS_Names": "CDS_Names 10",
+       "Fieldnames": "Fieldnames 10",
+       "__metadata": {
+              "uri": "I_SBRCDSKEYFIELDS(CDS_Names='CDS_Names%2010',Fieldnames='Fieldnames%2010')",
+              "type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSKEYFIELDSType"
+       }
+}]

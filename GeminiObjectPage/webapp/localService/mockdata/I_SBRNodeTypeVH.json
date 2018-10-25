@@ -1,0 +1,15 @@
+[{
+	"NodeType": "Bank",
+	"SAPObjectType": "Bank",
+	"__metadata": {
+		"uri": "I_SBRNodeTypeVH(NodeType='NodeType%201',SAPObjectType='SAPObjectType%201')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRNodeTypeVHType"
+	}
+}, {
+	"NodeType": "BankItem",
+	"SAPObjectType": "Bank",
+	"__metadata": {
+		"uri": "I_SBRNodeTypeVH(NodeType='NodeType%202',SAPObjectType='SAPObjectType%202')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRNodeTypeVHType"
+	}
+}]

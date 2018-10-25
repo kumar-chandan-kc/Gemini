@@ -1,0 +1,71 @@
+[{
+                "JiraLink": "JiraLink 1",
+                "Response": true,
+                "__metadata": {
+                                "uri": "JiraResponseSet(true)",
+                                "type": "CA_BUSINESS_REPOSITORY_SRV.JiraResponse"
+                }
+}, {
+                "JiraLink": "JiraLink 2",
+                "Response": true,
+                "__metadata": {
+                                "uri": "JiraResponseSet(true)",
+                                "type": "CA_BUSINESS_REPOSITORY_SRV.JiraResponse"
+                }
+}, {
+                "JiraLink": "JiraLink 3",
+                "Response": true,
+                "__metadata": {
+                                "uri": "JiraResponseSet(true)",
+                                "type": "CA_BUSINESS_REPOSITORY_SRV.JiraResponse"
+                }
+}, {
+                "JiraLink": "JiraLink 4",
+                "Response": true,
+                "__metadata": {
+                                "uri": "JiraResponseSet(true)",
+                                "type": "CA_BUSINESS_REPOSITORY_SRV.JiraResponse"
+                }
+}, {
+                "JiraLink": "JiraLink 5",
+                "Response": true,
+                "__metadata": {
+                                "uri": "JiraResponseSet(true)",
+                                "type": "CA_BUSINESS_REPOSITORY_SRV.JiraResponse"
+                }
+}, {
+                "JiraLink": "JiraLink 6",
+                "Response": false,
+                "__metadata": {
+                                "uri": "JiraResponseSet(false)",
+                                "type": "CA_BUSINESS_REPOSITORY_SRV.JiraResponse"
+                }
+}, {
+                "JiraLink": "JiraLink 7",
+                "Response": true,
+                "__metadata": {
+                                "uri": "JiraResponseSet(true)",
+                                "type": "CA_BUSINESS_REPOSITORY_SRV.JiraResponse"
+                }
+}, {
+                "JiraLink": "JiraLink 8",
+                "Response": true,
+                "__metadata": {
+                                "uri": "JiraResponseSet(true)",
+                                "type": "CA_BUSINESS_REPOSITORY_SRV.JiraResponse"
+                }
+}, {
+                "JiraLink": "JiraLink 9",
+                "Response": false,
+                "__metadata": {
+                                "uri": "JiraResponseSet(false)",
+                                "type": "CA_BUSINESS_REPOSITORY_SRV.JiraResponse"
+                }
+}, {
+                "JiraLink": "JiraLink 10",
+                "Response": true,
+                "__metadata": {
+                                "uri": "JiraResponseSet(true)",
+                                "type": "CA_BUSINESS_REPOSITORY_SRV.JiraResponse"
+                }
+}]

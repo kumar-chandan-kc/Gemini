@@ -1,0 +1,71 @@
+[{
+	"sap_bo_type": "sap_bo_type 1",
+	"search_object": "search_object 1",
+	"__metadata": {
+		"uri": "I_SBRSEARCHACTUAL(sap_bo_type='sap_bo_type%201',search_object='search_object%201')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSEARCHACTUALType"
+	}
+}, {
+	"sap_bo_type": "sap_bo_type 2",
+	"search_object": "search_object 2",
+	"__metadata": {
+		"uri": "I_SBRSEARCHACTUAL(sap_bo_type='sap_bo_type%202',search_object='search_object%202')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSEARCHACTUALType"
+	}
+}, {
+	"sap_bo_type": "sap_bo_type 3",
+	"search_object": "search_object 3",
+	"__metadata": {
+		"uri": "I_SBRSEARCHACTUAL(sap_bo_type='sap_bo_type%203',search_object='search_object%203')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSEARCHACTUALType"
+	}
+}, {
+	"sap_bo_type": "sap_bo_type 4",
+	"search_object": "search_object 4",
+	"__metadata": {
+		"uri": "I_SBRSEARCHACTUAL(sap_bo_type='sap_bo_type%204',search_object='search_object%204')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSEARCHACTUALType"
+	}
+}, {
+	"sap_bo_type": "sap_bo_type 5",
+	"search_object": "search_object 5",
+	"__metadata": {
+		"uri": "I_SBRSEARCHACTUAL(sap_bo_type='sap_bo_type%205',search_object='search_object%205')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSEARCHACTUALType"
+	}
+}, {
+	"sap_bo_type": "sap_bo_type 6",
+	"search_object": "search_object 6",
+	"__metadata": {
+		"uri": "I_SBRSEARCHACTUAL(sap_bo_type='sap_bo_type%206',search_object='search_object%206')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSEARCHACTUALType"
+	}
+}, {
+	"sap_bo_type": "sap_bo_type 7",
+	"search_object": "search_object 7",
+	"__metadata": {
+		"uri": "I_SBRSEARCHACTUAL(sap_bo_type='sap_bo_type%207',search_object='search_object%207')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSEARCHACTUALType"
+	}
+}, {
+	"sap_bo_type": "sap_bo_type 8",
+	"search_object": "search_object 8",
+	"__metadata": {
+		"uri": "I_SBRSEARCHACTUAL(sap_bo_type='sap_bo_type%208',search_object='search_object%208')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSEARCHACTUALType"
+	}
+}, {
+	"sap_bo_type": "sap_bo_type 9",
+	"search_object": "search_object 9",
+	"__metadata": {
+		"uri": "I_SBRSEARCHACTUAL(sap_bo_type='sap_bo_type%209',search_object='search_object%209')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSEARCHACTUALType"
+	}
+}, {
+	"sap_bo_type": "sap_bo_type 10",
+	"search_object": "search_object 10",
+	"__metadata": {
+		"uri": "I_SBRSEARCHACTUAL(sap_bo_type='sap_bo_type%2010',search_object='search_object%2010')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSEARCHACTUALType"
+	}
+}]

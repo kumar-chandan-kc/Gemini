@@ -1,0 +1,17 @@
+<core:FragmentDefinition  
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <SelectDialog
+        id="MigrationObjectActualValueHelpDialog"
+        title="{i18n>MigrationObjectValueHelpTitle}"
+        class="sapUiPopupWithPadding"
+        items="{path: 'Gemini>/migr'}"
+        search="handleValueHelpSearchMigrationObjectActual"
+        liveChange="handleValueHelpSearchMigrationObjectActual"
+        confirm="handleValueHelpClose"
+        cancel="handleValueHelpClose">
+        <StandardListItem id="MigrationObjectActualList"
+            title="{Gemini>ident}" 
+        /> 
+    </SelectDialog>
+</core:FragmentDefinition>

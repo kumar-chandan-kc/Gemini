@@ -1,0 +1,55 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout">
+	<ViewSettingsDialog confirm="s4.cfnd.geminiobjectpage.controller.Events.handleEventsMappingConfirm"
+		cancel="s4.cfnd.geminiobjectpage.controller.Events.handleEventsMappingClose">
+		<customTabs>
+			<ViewSettingsCustomTab id="eventmapping" title="{i18n>ConverttoActuals}">
+				<content>
+					<Panel height="100%">
+						<layout:VerticalLayout width="50%">
+							<layout:HorizontalLayout>
+								<Label text="{i18n>SAPObjectEvent}*" width="180px" design="Bold"/>
+							</layout:HorizontalLayout>   
+							<layout:HorizontalLayout> 
+								<!--<Label id="eventsMapEventNameDisplay" text="{geminievents>/EventName}" width="200px" visible="{=${geminievents>/aEvents>changetype} === 'Enhancement' ? true : false }"/>-->
+								<Input id="eventsMapEventName" width="200%" showValueHelp="true" showSuggestion="true" valueHelpOnly="true"
+									editable="{=${geminievents>/ChangeType} === 'New' ? true : false}" valueHelpRequest="onValueHelpRequestEventIdObject"></Input>
+							</layout:HorizontalLayout> 
+							<!--<layout:HorizontalLayout>-->
+							<!--        <Button id="btevent6" type="Transparent" enabled="false"/>-->
+							<!--<Button id="btevent4" type="Transparent" enabled="false"/>-->
+							<!--</layout:HorizontalLayout>-->
+							<layout:HorizontalLayout>
+								<Label class="sapUiSmallMarginTop" text="{i18n>SAPObjectTaskCode}*" width="180px" design="Bold"/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<!--<Label id="eventsMapTaskCodeDisplay" text="{geminievents>/Taskcode}" width="200px"  visible="{=${geminievents>changetype} === 'Enhancement' ? true : false }" />-->
+								<Input id="eventsMapTaskCode" width="100%" showValueHelp="true" showSuggestion="true" valueHelpOnly="true"
+									editable="{=${geminievents>/ChangeType} === 'New' ? true : false}" valueHelpRequest="onValueHelpRequestEventTaskCode"></Input>
+							</layout:HorizontalLayout>
+							<!--<Button id="btevent4" type="Transparent" enabled="false"/>-->
+							<layout:HorizontalLayout>
+								<Label class="sapUiSmallMarginTop" id="ActualReleaseEvents" text="{i18n>ActualRelease}" visible="true" design="Bold"/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<Input id="ActualReleaseEvents1" width="100%" showValueHelp="true" value=" " showSuggestion="true"
+									suggestionItems="{ path: 'Gemini>/target_release' }" valueHelpOnly="true" valueHelpRequest="onValueHelpRequestTargetRelease">
+									<suggestionItems >
+										<core:ListItem text="{release_id}"/>
+									</suggestionItems>
+								</Input>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<!--<TextArea id="eventmappingcomment" placeholder="Enter SAP Object Task Type Name" growing="true" growingMaxLines="7" width="200%"-->
+								<!--        height="100%" rows="3"/>-->
+								<Label class="sapUiSmallMarginTop" id="eventmappingcomment1" text="{i18n>SAPObjectTaskTypeName}" visible="true" design="Bold"/>
+							</layout:HorizontalLayout>
+							<layout:HorizontalLayout>
+								<Input id="eventmappingcomment" visible="true" editable="true" showValueHelp="false" width="200%"/>
+							</layout:HorizontalLayout>
+						</layout:VerticalLayout>
+					</Panel>
+				</content>
+			</ViewSettingsCustomTab>
+		</customTabs>
+	</ViewSettingsDialog>
+</core:FragmentDefinition>

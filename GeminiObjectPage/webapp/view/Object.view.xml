@@ -1,0 +1,2341 @@
+<mvc:View xmlns="sap.m" xmlns:object="sap.uxap" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout" xmlns:ui="sap.ui"
+	xmlns:semantic="sap.f.semantic" xmlns:footerbar="sap.ushell.ui.footerbar"
+	controllerName="s4.cfnd.geminiobjectpage.controller.Object" xmlns:fb="sap.ui.comp.filterbar"
+	xmlns:f="sap.ui.layout.form" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:blocks="s4.cfnd.geminiobjectpage.controller">
+	<html:style>
+		.test { padding-left:0px }, .test1 { width:100% }
+	</html:style>
+	<Page>
+		<object:ObjectPageLayout id="ObjectPageLayout"
+			enableLazyLoading="false" showTitleInHeaderContent="true"
+			showEditHeaderButton="false" upperCaseAnchorBar="false" flexEnabled="true"
+			isChildPage="false" showFooter="true">
+			<object:headerTitle class="test1">
+				<object:ObjectPageHeader
+					isObjectSubtitleAlwaysVisible="false" isObjectTitleAlwaysVisible="false"
+					objectImageURI="sap-icon://document" objectImageShape="Circle"
+					objectTitle="{Header>/sObjectId}" objectImageAlt="{Header>/sObjectId}"
+					id="ObjectPageLayoutHeaderTitle" isObjectIconAlwaysVisible="false"
+					showPlaceholder="true" />
+			</object:headerTitle>
+			<object:headerContent>
+				<object:ObjectPageHeaderContent>
+					<object:content>
+						<layout:VerticalLayout>
+							<ObjectStatus title="{i18n>SAPObjectCategory}"
+								text="{=${Header>/sSAPObjectCategory} === 'TO' ? ${i18n>TechnicalObject} : ${i18n>BusinessObject} }" />
+							<ObjectStatus title="{i18n>ApplicationComponent}"
+								text="{Header>/sAppComp}" />
+							<ObjectStatus title="{i18n>Area}" text="{Header>/sArea}"
+								visible="{=${objectView>/editable} === true ? false : true }" />
+							<ObjectStatus title="{i18n>CDSObjectName}" text="{Header>/sCDSObj}"
+								visible="{=${objectView>/editable} === true ? false : true }" />
+							<ObjectStatus title="{i18n>CloudApplicable}"
+								text="{=${Header>/sIsCloud} === true ? ${i18n>Yes} : ${i18n>No} }"
+								visible="{=${objectView>/editable} === true ? false : true }" />
+						</layout:VerticalLayout>
+						<layout:VerticalLayout>
+							<ObjectStatus title="{i18n>Status}" text="{Header>/sStatus}" />
+							<ObjectStatus title="{i18n>PersonResponsible}" text="{Header>/sContactperson}" />
+							<ObjectStatus title="{i18n>Package}" text="{Header>/sPackage}"
+								visible="{=${objectView>/editable} === true ? false : true }" />
+							<ObjectStatus title="{i18n>Priority}" text="{Header>/sPriority}"
+								visible="{=${objectView>/editable} === true ? false : true }" />
+							<ObjectStatus title="{i18n>ReleaseStatus}" text="{Header>/sReleaseStateText}"
+								visible="{=${objectView>/editable} === true ? false : true }" /> 	
+						</layout:VerticalLayout>
+					</object:content>
+				</object:ObjectPageHeaderContent>
+			</object:headerContent>
+			<object:sections>
+				<!--Header Section -->
+				<object:ObjectPageSection id="headerSection"
+					title="{i18n>HeaderTitle}" visible="{objectView>/editable}">
+					<object:subSections>
+						<object:ObjectPageSubSection title="{i18n>HeaderTitle}">
+							<object:blocks>
+								<blocks:HeaderBlockLeft columnLayout="1" />
+								<blocks:HeaderBlockRight columnLayout="1" />
+							</object:blocks>
+						</object:ObjectPageSubSection>
+					</object:subSections>
+				</object:ObjectPageSection>
+				<!-- Section for API -->
+				<object:ObjectPageSection id="SectionAPI"
+					title="{i18n>APIFacet}">
+					<object:subSections>
+						<object:ObjectPageSubSection title="{i18n>Relevance}">
+							<FlexBox width="100%" alignItems="Start" justifyContent="Start">
+								<items>
+									<layout:HorizontalLayout>
+										<CheckBox id="isAPIRead" text="{i18n>APIReadApplicable}"
+											editable="false" selected="{Header>/isreadapiapplicable}" />
+										<CheckBox id="isAPICUD" text="{i18n>APICUDApplicable}"
+											editable="false" selected="{Header>/iscudapiapplicable}">
+											<layoutData>
+												<FlexItemData growFactor="1" />
+											</layoutData>
+										</CheckBox>
+									</layout:HorizontalLayout>
+								</items>
+							</FlexBox>
+						</object:ObjectPageSubSection>
+						<object:ObjectPageSubSection id="SectionAPIPlan"
+							title="{i18n>Planned}">
+							<Panel id="PanelPlanAPI" backgroundDesign="Transparent">
+								<BusyIndicator id="busyAPIPlan" size="1.4em" />
+								<FlexBox width="100%" alignItems="End" justifyContent="End">
+									<items>
+										<Button id="BtnConvertAPI" text="{i18n>ConverttoActuals}"
+											press="onBtnConvertAPI" visible="false" tooltip="{i18n>ConverttoActuals}"
+											type="Transparent" />
+										<Button icon="sap-icon://add" id="addPlanAPI" visible="false"
+											press="s4.cfnd.geminiobjectpage.controller.API.onaddPlanAPI"
+											type="Transparent" />
+										<Button id="BtnDelAPI" icon="sap-icon://delete"
+											press="s4.cfnd.geminiobjectpage.controller.API.onBtnMapDelAPI"
+											visible="false" type="Transparent" />
+									</items>
+								</FlexBox>
+								<Table id="TablePlanAPI"
+									items="{ path: 'Gemini>/apiplan', templateShareable:false}"
+									inset="false" visible="false"
+									selectionChange="s4.cfnd.geminiobjectpage.controller.API.onAPIPlanTableSelect">
+									<columns>
+										<Column id="changeTypeAPI" demandPopin="true">
+											<Text text="{i18n>changeTypeColName}*" />
+										</Column>
+										<Column id="protocolAPI" demandPopin="true">
+											<Text text="{i18n>protocolColName}" />
+										</Column>
+										<Column id="readApplicableAPI" demandPopin="true"
+											hAlign="Left">
+											<Text text="{i18n>readApplicableColName}" />
+										</Column>
+										<Column id="createApplicableAPI" demandPopin="true"
+											hAlign="Left">
+											<Text text="{i18n>createAppliacbleColName}" />
+										</Column>
+										<Column id="updateApplicableAPI" demandPopin="true"
+											hAlign="Left">
+											<Text text="{i18n>updateApplicableColName}" />
+										</Column>
+										<Column id="deleteApplicableAPI" demandPopin="true"
+											hAlign="Left">
+											<Text text="{i18n>deleteApplicaleColName}" />
+										</Column>
+										<Column id="othersApplicableAPI" demandPopin="true"
+											hAlign="Left">
+											<Text text="{i18n>othersApplicaleColName}" />
+										</Column>
+										<Column id="serviceInterfaceAPI" demandPopin="true">
+											<Text text="{i18n>serviceInterfaceColName}" />
+										</Column>
+										<Column id="targetReleaseAPI" demandPopin="true">
+											<Text text="{i18n>targetReleaseColName}*" />
+										</Column>
+										<Column id="actualReleaseAPI" demandPopin="true">
+											<Text text="{i18n>actualReleaseColName}" />
+										</Column>
+										<Column hAlign="Center" demandPopin="true">
+											<Text text="{i18n>descriptionColName}" />
+										</Column>
+										<Column visible="false" id="jiraAPI" hAlign="Center"
+											demandPopin="true">
+											<Text text="{i18n>jiraColName}" />
+										</Column>
+										<Column visible="false" id="jiraLinkAPI" demandPopin="true"
+											hAlign="Center">
+											<Text text="{i18n>jiraColName}" />
+										</Column>
+										<Column id="reqJiraLinkAPI" hAlign="Center">
+											<Text text="{i18n>reqJiraColName}" />
+										</Column>
+										<Column hAlign="Center" demandPopin="true">
+											<Text text="{i18n>statusColName}" />
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem press="onClick" vAlign="Middle">
+											<cells>
+												<Select id="changeTypeAPICombo"
+													items="{ path: 'Gemini>/apiChangeType', templateShareable:false}"
+													selectedKey="{Gemini>change_type}"
+													enabled="{=${Gemini>actual_release} !== '' ? false : true }"
+													change="s4.cfnd.geminiobjectpage.controller.API.onAPIPlanChangeTypeSelected">
+													<core:Item key="{Gemini>value}" text="{Gemini>value}" />
+												</Select>
+											</cells>
+											<cells>
+												<Select id="protCombo"
+													enabled="{=${Gemini>actual_release}.trim() === '' &amp;&amp; ${Gemini>change_type} === ${i18n>changeTypeNew} ? true : false }"
+													items="{ path: 'Gemini>/apiPlanProtocol', templateShareable:false}"
+													selectedKey="{Gemini>protocol}">
+													<core:Item key="{Gemini>Protocol}" text="{Gemini>Protocol}" />
+												</Select>
+											</cells>
+											<cells>
+												<CheckBox id="ra_id"
+													editable="{=${Gemini>actual_release} !== '' || ${Gemini>actual_release} === '' &amp;&amp; ${Gemini>others_applicable} === true ? false : true }"
+													tooltip="{=${Gemini>actual_release} === '' &amp;&amp; ${Gemini>others_applicable} === true  ? ${i18n>APICRUDToolTip} : '' }"
+													selected="{Gemini>read_applicable}" />
+											</cells>
+											<cells>
+												<CheckBox id="ca_id"
+													editable="{=${Gemini>actual_release} !== '' || ${Gemini>actual_release} === '' &amp;&amp; ${Gemini>others_applicable} === true ? false : true }"
+													tooltip="{=${Gemini>actual_release} === '' &amp;&amp; ${Gemini>others_applicable} === true ? ${i18n>APICRUDToolTip} : '' }"
+													selected="{Gemini>create_applicable}" />
+											</cells>
+											<cells>
+												<CheckBox id="ua_id"
+													editable="{=${Gemini>actual_release} !== '' || ${Gemini>actual_release} === '' &amp;&amp; ${Gemini>others_applicable} === true ? false : true }"
+													tooltip="{=${Gemini>actual_release} === '' &amp;&amp; ${Gemini>others_applicable} === true  ? ${i18n>APICRUDToolTip} : '' }"
+													selected="{Gemini>update_applicable}" />
+											</cells>
+											<cells>
+												<CheckBox id="da_id"
+													editable="{=${Gemini>actual_release} !== '' || ${Gemini>actual_release} === '' &amp;&amp; ${Gemini>others_applicable} === true ? false : true }"
+													tooltip="{=${Gemini>actual_release} === '' &amp;&amp; ${Gemini>others_applicable} === true ? ${i18n>APICRUDToolTip} : '' }"
+													selected="{Gemini>delete_applicable}" />
+											</cells>
+											<cells>
+												<CheckBox id="oa_id"
+													editable="{=${Gemini>actual_release} === '' &amp;&amp; ${Gemini>read_applicable} === false &amp;&amp; ${Gemini>update_applicable} === false &amp;&amp; ${Gemini>delete_applicable} === false &amp;&amp; ${Gemini>create_applicable} === false ? true : false }"
+													tooltip="{=${Gemini>actual_release} === '' &amp;&amp; ${Gemini>read_applicable} === true || ${Gemini>update_applicable} === true || ${Gemini>delete_applicable} === true || ${Gemini>create_applicable} === true ?  ${i18n>APIOthersApplToolTip} : '' }"
+													selected="{Gemini>others_applicable}" />
+											</cells>
+											<cells>
+												<Input id="siIdPlan"
+													editable="{=${Gemini>actual_release}.trim() === '' &amp;&amp; ${Gemini>change_type} !== ${i18n>changeTypeNew} ? true : false }"
+													showValueHelp="{=${Gemini>actual_release}.trim() === '' &amp;&amp; ${Gemini>change_type} !== ${i18n>changeTypeNew} ? true : false }"
+													value="{Gemini>mapped_service_interface}" showSuggestion="true"
+													valueHelpOnly="true"
+													suggestionItems="{ path: '/I_SBRSERVICEINTERFACEVH', templateShareable:false }"
+													valueHelpRequest="s4.cfnd.geminiobjectpage.controller.API.onValueHelpRequestAPIObjectPlan"
+													suggestionItemSelected="suggestionItemSelectedServIntAPIPlan">
+													<suggestionItems>
+														<core:ListItem text="{ServiceInterface}"
+															additionalText="{communication_scenario_id}" />
+													</suggestionItems>
+												</Input>
+											</cells>
+											<cells>
+												<Input id="releaseAPI" width="100%"
+													editable="{=${Gemini>actual_release} !== '' ? false : true }"
+													showValueHelp="{=${Gemini>actual_release} !== '' ? false : true }"
+													value="{Gemini>target_release}" showSuggestion="true"
+													suggestionItems="{ path: 'Gemini>/target_release', templateShareable:false }"
+													valueHelpRequest="onValueHelpRequestTargetRelease"
+													valueHelpOnly="true">
+													<suggestionItems>
+														<core:ListItem text="{release_id}" />
+													</suggestionItems>
+												</Input>
+											</cells>
+											<cells>
+												<Text id="actual_rel" text="{Gemini>actual_release}" />
+											</cells>
+											<cells>
+												<Input id="descAPI" value="{Gemini>description}"
+													editable="{=${Gemini>actual_release} !== '' ? false : true }" />
+											</cells>
+											<cells>
+												<Input id="jiraAPIInput"
+													editable="{=${Gemini>actual_release} !== '' ? false : true }"
+													value="{Gemini>jira_backlog}"
+													liveChange="s4.cfnd.geminiobjectpage.controller.API.APIJiraChange"
+													change="s4.cfnd.geminiobjectpage.controller.API.APIJiraChange"
+													valueState="{=${Gemini>jira_valid} === '0' ? 'Error' : 'None' }"
+													valueStateText="{=${Gemini>jira_valid} === '0' ? ${i18n>validjira} : '' }" />
+											</cells>
+											<cells>
+												<Link id="jiraAPILink" text="{Gemini>jira_backlog}"
+													target="_blank" href="{Gemini>jira_backlog_link}" />
+											</cells>
+											<cells>
+												<Input id="jiraReqAPIInput"
+													editable="{=${Gemini>actual_release} !== '' ? false : true }"
+													value="{Gemini>requirement_jira}"
+													liveChange="s4.cfnd.geminiobjectpage.controller.API.APIReqJiraChange"
+													change="s4.cfnd.geminiobjectpage.controller.API.APIReqJiraChange"
+													valueState="{=${Gemini>jira_req_valid} === '0' ? 'Error' : 'None' }"
+													valueStateText="{=${Gemini>jira_req_valid} === '0' ? ${i18n>validjira} : '' }" />
+											</cells>
+											<cells>
+												<core:Icon id="APIStatus" src="{Gemini>status_icon}"
+													color="{Gemini>status_colour}" tooltip="{Gemini>tool_tip}" />
+											</cells>
+											<cells>
+												<Input id="csAPI" value="{Gemini>communication_scenario}"
+													editable="false" visible="false" />
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+								<Table id="TablePlanAPInonEdit"
+									items="{ path: 'Gemini>/apiplan', templateShareable:false}"
+									inset="false" visible="true">
+									<columns>
+										<Column demandPopin="true">
+											<Text text="{i18n>changeTypeColName}" />
+										</Column>
+										<Column id="a2" demandPopin="true">
+											<Text text="{i18n>protocolColName}" />
+										</Column>
+										<Column demandPopin="true" hAlign="Left">
+											<Text text="{i18n>readApplicableColName}" />
+										</Column>
+										<Column demandPopin="true" hAlign="Left">
+											<Text text="{i18n>createAppliacbleColName}" />
+										</Column>
+										<Column demandPopin="true" hAlign="Left">
+											<Text text="{i18n>updateApplicableColName}" />
+										</Column>
+										<Column demandPopin="true" hAlign="Left">
+											<Text text="{i18n>deleteApplicaleColName}" />
+										</Column>
+										<Column demandPopin="true" hAlign="Left">
+											<Text text="{i18n>othersApplicaleColName}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>serviceInterfaceColName}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>targetReleaseColName}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>actualReleaseColName}" />
+										</Column>
+										<Column hAlign="Center" demandPopin="true">
+											<Text text="{i18n>descriptionColName}" />
+										</Column>
+										<Column visible="true" id="jiraLinkAPI2" hAlign="Center"
+											demandPopin="true">
+											<Text text="{i18n>jiraColName}" />
+										</Column>
+										<Column hAlign="Center">
+											<Text text="{i18n>reqJiraColName}" />
+										</Column>
+										<Column width="6%" hAlign="Center" demandPopin="true">
+											<Text text="{i18n>statusColName}" />
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem press="onClick" vAlign="Middle">
+											<cells>
+												<Text id="changeTypeAPICombo2" text="{Gemini>change_type}" />
+											</cells>
+											<cells>
+												<Text id="protCombo2" text="{Gemini>protocol}" />
+											</cells>
+											<cells>
+												<CheckBox id="ra_id2" editable="false"
+													selected="{Gemini>read_applicable}" />
+											</cells>
+											<cells>
+												<CheckBox id="ca_id2" editable="false"
+													selected="{Gemini>create_applicable}" />
+											</cells>
+											<cells>
+												<CheckBox id="ua_id2" editable="false"
+													selected="{Gemini>update_applicable}" />
+											</cells>
+											<cells>
+												<CheckBox id="da_id2" editable="false"
+													selected="{Gemini>delete_applicable}" />
+											</cells>
+											<cells>
+												<CheckBox id="oa_id2" editable="false"
+													selected="{Gemini>others_applicable}" />
+											</cells>
+											<cells>
+												<Text id="siIdPlan2" text="{Gemini>mapped_service_interface}" />
+											</cells>
+											<cells>
+												<Text id="releaseAPI2" text="{Gemini>target_release}" />
+											</cells>
+											<cells>
+												<Text id="actual_rel2" text="{Gemini>actual_release}" />
+											</cells>
+											<cells>
+												<Text id="descAPI2" text="{Gemini>description}" />
+											</cells>
+											<cells>
+												<Link id="jiraAPILink2" text="{Gemini>jira_backlog}"
+													target="_blank" href="{Gemini>jira_backlog_link}" />
+											</cells>
+											<cells>
+												<Link id="ReqJiraAPILink" text="{Gemini>requirement_jira}"
+													target="_blank" href="{Gemini>requirement_jira_link}" />
+											</cells>
+											<cells>
+												<!--<ProgressIndicator id="APIStatus" class="sapUiSmallMarginBottom" 
+													percentValue="100" state="{Gemini>status_colour}" width="50%"/> -->
+												<core:Icon id="APIStatus2" src="{Gemini>status_icon}"
+													color="{Gemini>status_colour}" tooltip="{Gemini>tool_tip}" />
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+							</Panel>
+						</object:ObjectPageSubSection>
+						<object:ObjectPageSubSection id="SectionAPIActuals"
+							title="{i18n>Actuals}">
+							<Panel id="F">
+								<BusyIndicator id="busyAPI" size="1.4em" />
+								<FlexBox width="100%" alignItems="Start" justifyContent="Start">
+									<items>
+										<Button type="Transparent" enabled="false">
+											<layoutData>
+												<FlexItemData growFactor="2" />
+											</layoutData>
+										</Button>
+										<Button icon="sap-icon://add" id="APIadd" visible="false"
+											press="s4.cfnd.geminiobjectpage.controller.API.onSIAdd" type="Transparent">
+											<layoutData>
+												<FlexItemData growFactor="0" />
+											</layoutData>
+										</Button>
+									</items>
+								</FlexBox>
+								<Table id="idTable6" inset="false"
+									items="{ path: 'Gemini>/api', templateShareable:false}" delete="s4.cfnd.geminiobjectpage.controller.API.deleteAPIItems"
+									visible="false">
+									<columns>
+										<Column id="serviceInterfaceCol" width="50%"
+											demandPopin="true">
+											<Text text="{i18n>serviceInterfaceColName}*" />
+										</Column>
+										<Column id="communicationScenarioCol" width="15%"
+											demandPopin="true">
+											<Text text="{i18n>communicationScenarioColName}" />
+										</Column>
+										<Column id="protocolCol" demandPopin="true">
+											<Text text="{i18n>protocolColName}" />
+										</Column>
+										<Column id="readApplicableCol" demandPopin="true">
+											<Text text="{i18n>readApplicableColName}" />
+										</Column>
+										<Column id="cudApplicableCol" demandPopin="true">
+											<Text text="{i18n>cudApplicableColName}" />
+										</Column>
+										<Column id="othApplicableCol" demandPopin="true">
+											<Text text="{i18n>othersApplicaleColName}" />
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem press="onClick" vAlign="Middle">
+											<cells>
+												<Input id="siId"
+													editable="{=${Gemini>new_row} === true ? true : false }"
+													showValueHelp="{=${Gemini>new_row} === true ? true : false }"
+													value="{Gemini>si}" showSuggestion="{=${Gemini>new_row} === true ? true : false }"
+													suggestionItems="{ path: '/I_SBRSERVICEINTERFACEVH', templateShareable:false }"
+													valueHelpRequest="s4.cfnd.geminiobjectpage.controller.API.onValueHelpRequestAPIObject"
+													suggestionItemSelected="suggestionItemSelectedServInt"
+													valueHelpOnly="true">
+													<suggestionItems>
+														<core:ListItem text="{ServiceInterface}"
+															additionalText="{communication_scenario_id}" />
+													</suggestionItems>
+												</Input>
+											</cells>
+											<cells>
+												<Text id="csId" text="{Gemini>comm}"/>
+											</cells>
+											<cells>
+												<Text id="proId" text="{Gemini>protocol}"/>
+											</cells>
+											<cells>
+												<Text id="readFlg" text="{Gemini>read}" />
+											</cells>
+											<cells>	
+												<Text id="CUDFlg" text="{Gemini>create}"/>
+											</cells>
+											<cells>
+												<Text id="othFlg" text="{Gemini>others}"/>
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+								<Table id="idTable6nonEdit" inset="false"
+									items="{ path: 'Gemini>/api',templateShareable:false}" visible="true">
+									<columns>
+										<Column width="50%" demandPopin="true">
+											<Text text="{i18n>serviceInterfaceColName}" />
+										</Column>
+										<Column width="15%" demandPopin="true">
+											<Text text="{i18n>communicationScenarioColName}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>protocolColName}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>readApplicableColName}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>cudApplicableColName}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>othersApplicaleColName}" />
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem press="onClick" vAlign="Middle">
+											<cells>
+												<Text id="siId2" text="{Gemini>si}" />
+											</cells>
+											<cells>
+												<Text id="csId2" text="{Gemini>comm}" />
+											</cells>
+											<cells>
+												<Text id="proId2" text="{Gemini>protocol}" />
+											</cells>
+											<cells>
+												<Text text="{Gemini>read}"/>
+											</cells>
+											<cells>	
+												<Text text="{Gemini>create}"/>
+											</cells>
+											<cells>
+												<Text text="{Gemini>others}"/>
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+							</Panel>
+						</object:ObjectPageSubSection>
+					</object:subSections>
+				</object:ObjectPageSection>
+				<!-- Begin Extensions -->
+				<object:ObjectPageSection id="SectionE"
+					title="{i18n>ExtensionsFacet}">
+					<object:subSections>
+						<object:ObjectPageSubSection title="{i18n>Relevance}">
+							<FlexBox width="100%" alignItems="Start" justifyContent="Start">
+								<items>
+									<layout:HorizontalLayout>
+										<CheckBox id="isext" text="{i18n>ExtensionApplicable}"
+											selected="{Header>/sIsExt}" editable="false" visible="true"
+											select="s4.cfnd.geminiobjectpage.controller.Extensibility.ExtChangeHeaderSelection">
+											<layoutData>
+												<FlexItemData growFactor="1" />
+											</layoutData>
+										</CheckBox>
+									</layout:HorizontalLayout>
+								</items>
+							</FlexBox>
+						</object:ObjectPageSubSection>
+						<object:ObjectPageSubSection id="SectionExtensibilityPlan"
+							title="{i18n>Planned}">
+							<Panel id="PanelPlanExtensibility" backgroundDesign="Transparent">
+								<BusyIndicator id="busyPlanExt" size="1.4em" />
+								<FlexBox width="100%" alignItems="End" justifyContent="End">
+									<items>
+										<Button id="BtnMapExt" text="{i18n>Maptoactuals}"
+											press="s4.cfnd.geminiobjectpage.controller.Extensibility.onBtnMapExt"
+											visible="false"
+											tooltip="{=${Gemini>/businessContext}.length > 0 ? '' : ${i18n>noBusinessContextPresentinActualsText}}"
+											type="Transparent"
+											enabled="{=${Gemini>/businessContext}.length > 0 &amp;&amp; (${Header>/sIsExt} === 'True' || ${Header>/sIsExt} === true)? true : false}" />
+										<Button icon="sap-icon://add" id="addPlanExt" visible="false"
+											press="s4.cfnd.geminiobjectpage.controller.Extensibility.onaddPlanExtensibility"
+											type="Transparent"
+											enabled="{=(${Header>/sIsExt} === 'True' || ${Header>/sIsExt} === true) ? true : false}"
+											tooltip="{=(${Header>/sIsExt} === 'True' || ${Header>/sIsExt} === true) ? '' : ${i18n>extensionNotApplicable}}" />
+										<Button id="BtnDelExtPlan" icon="sap-icon://delete"
+											press="s4.cfnd.geminiobjectpage.controller.Extensibility.deleteExtPlanItems"
+											visible="false" type="Transparent" enabled="false"
+											tooltip="{=(${Header>/sIsExt} === 'True' || ${Header>/sIsExt} === true) ? '' : ${i18n>extensionNotApplicable}}" />
+									</items>
+								</FlexBox>
+								<Table id="TablePlanExt"
+									items="{ path: 'Gemini>/extplan', templateShareable:false}"
+									inset="false" visible="false"
+									selectionChange="s4.cfnd.geminiobjectpage.controller.Extensibility.onExtTableSelect"
+									mode="SingleSelectLeft">
+									<columns>
+										<Column demandPopin="true">
+											<Text text="{i18n>changeTypeColName}*" />
+										</Column>
+										<Column id="businessContextInput" demandPopin="true">
+											<Text text="{i18n>businessContextColName}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>extTypeColName}*" />
+										</Column>
+										<Column id="targetReleaseExtInput" demandPopin="true">
+											<Text text="{i18n>targetReleaseColName}*" />
+										</Column>
+										<Column id="actualReleaseExt" demandPopin="true">
+											<Text text="{i18n>actualReleaseColName}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>descriptionColName}" />
+										</Column>
+										<Column visible="false" id="jiraExt" demandPopin="true">
+											<Text text="{i18n>jiraColName}" />
+										</Column>
+										<Column visible="true" id="jiraLinkExt" hAlign="Center"
+											demandPopin="true">
+											<Text />
+										</Column>
+										<Column hAlign="Center" demandPopin="true">
+											<Text text="{i18n>statusColName}" />
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem press="onClick" vAlign="Middle">
+											<cells>
+												<ComboBox id="changeTypeExtCombo"
+													editable="{=${Gemini>actual_release}.trim() === '' &amp;&amp; (${Header>/sIsExt} === 'True' || ${Header>/sIsExt} === true) ? true : false }"
+													showButton="true"
+													items="{ path: 'Gemini>/apiChangeType', templateShareable:false}"
+													selectedKey="{Gemini>change_type}"
+													change="s4.cfnd.geminiobjectpage.controller.Extensibility.HandlechangeTypeExtCombo">
+													<core:Item key="{Gemini>value}" text="{Gemini>value}" />
+												</ComboBox>
+											</cells>
+											<cells>
+												<Input id="bc" value="{Gemini>business_context}"
+													editable="{=${Gemini>actual_release}.trim() === '' &amp;&amp; (${Header>/sIsExt} === 'True' || ${Header>/sIsExt} === true) ? true : false }"
+													showValueHelp="{=${Gemini>change_type} === ${i18n>changeTypeNew} ? false : true }"
+													valueHelpOnly="{=${Gemini>change_type} === ${i18n>changeTypeNew} ? false : true }"
+													valueHelpRequest="s4.cfnd.geminiobjectpage.controller.Extensibility.onValueHelpRequestExtObject" />
+											</cells>
+											<cells>
+												<ComboBox id="ExtTypeCombo"
+													editable="{=${Gemini>actual_release}.trim() === '' &amp;&amp; (${Header>/sIsExt} === 'True' || ${Header>/sIsExt} === true) ? true : false }"
+													showButton="true"
+													items="{ path: 'Gemini>/extType', templateShareable:false}"
+													selectedKey="{Gemini>ext_type}">
+													<core:Item key="{Gemini>value}" text="{Gemini>value}" />
+												</ComboBox>
+											</cells>
+											<cells>
+												<Input id="releaseExt" width="100%"
+													editable="{=${Gemini>actual_release}.trim() === '' &amp;&amp; (${Header>/sIsExt} === 'True' || ${Header>/sIsExt} === true) ? true : false }"
+													showValueHelp="true" value="{Gemini>target_release}"
+													valueHelpOnly="true" showSuggestion="true"
+													suggestionItems="{ path: 'Gemini>/target_release', templateShareable:false }"
+													valueHelpRequest="onValueHelpRequestTargetRelease">
+													<suggestionItems>
+														<core:ListItem text="{release_id}" />
+													</suggestionItems>
+												</Input>
+											</cells>
+											<cells>
+												<Text id="releaseActualExt2" text="{Gemini>actual_release}" />
+											</cells>
+											<cells>
+												<Input id="descExt" value="{Gemini>description}"
+													editable="{=${Gemini>actual_release}.trim() === '' &amp;&amp; (${Header>/sIsExt} === 'True' || ${Header>/sIsExt} === true) ? true : false }" />
+											</cells>
+											<cells>
+												<Input id="jiraExtInput"
+													editable="{=${Gemini>actual_release}.trim() === '' &amp;&amp; (${Header>/sIsExt} === 'True' || ${Header>/sIsExt} === true) ? true : false }"
+													value="{Gemini>jira_backlog}"
+													liveChange="s4.cfnd.geminiobjectpage.controller.Extensibility.ExtJiraChange"
+													change="s4.cfnd.geminiobjectpage.controller.Extensibility.ExtJiraChange"
+													valueStateText="{=${Gemini>jira_valid} === '0' ? ${i18n>validjira} : '' }"
+													valueState="{=${Gemini>jira_valid} === '0' ? 'Error' : 'None' }" />
+											</cells>
+											<cells>
+												<Link id="jiraExtLink" text="{Gemini>jira_backlog}"
+													target="_blank" href="{Gemini>jira_backlog_link}" />
+											</cells>
+											<cells>
+												<core:Icon id="ExtensibilityStatus" src="{Gemini>status_icon}"
+													color="{Gemini>status_colour}"
+													tooltip="{=${Gemini>actual_release}.trim() !== '' ? 'Object already mapped' : ${Gemini>tool_tip} }" />
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+								<Table id="TablePlanExt2"
+									items="{ path: 'Gemini>/extplan', templateShareable:false}"
+									inset="false">
+									<columns>
+										<Column demandPopin="true">
+											<Text text="{i18n>changeTypeColName}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>businessContextColName}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>extTypeColName}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>targetReleaseColName}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>actualReleaseColName}" />
+										</Column>
+										<Column hAlign="Center" demandPopin="true">
+											<Text text="{i18n>descriptionColName}" />
+										</Column>
+										<Column visible="false" id="jiraExt2" demandPopin="true">
+											<Text text="{i18n>Description}" />
+										</Column>
+										<Column visible="true" id="jiraLinkExt2" hAlign="Center"
+											demandPopin="true">
+											<Text text="{i18n>jiraColName}" />
+										</Column>
+										<Column hAlign="Center" id="extStatus" demandPopin="true">
+											<Text text="{i18n>statusColName}" />
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem press="onClick" vAlign="Middle">
+											<cells>
+												<Text id="changeTypeExtCombo2" text="{Gemini>change_type}" />
+											</cells>
+											<cells>
+												<Text id="bc2" text="{Gemini>business_context}" />
+											</cells>
+											<cells>
+												<Text id="ExtTypeCombo2" text="{Gemini>ext_type}" />
+											</cells>
+											<cells>
+												<Text id="releaseExt2" text="{Gemini>target_release}" />
+											</cells>
+											<cells>
+												<Text id="releaseActualExt" text="{Gemini>actual_release}" />
+											</cells>
+											<cells>
+												<Text id="descExt2" text="{Gemini>description}" />
+											</cells>
+											<cells>
+												<Text id="jiraExtInput2" text="{Gemini>jira_backlog}" />
+											</cells>
+											<cells>
+												<Link id="jiraExtLink2" text="{Gemini>jira_backlog}"
+													target="_blank" href="{Gemini>jira_backlog_link}" />
+											</cells>
+											<cells>
+												<core:Icon id="ExtensibilityStatus2" src="{Gemini>status_icon}"
+													color="{Gemini>status_colour}" tooltip="{Gemini>tool_tip}" />
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+							</Panel>
+						</object:ObjectPageSubSection>
+						<object:ObjectPageSubSection id="SectionSSE"
+							title="{i18n>Actuals}">
+							<Panel id="E">
+								<BusyIndicator id="busyBusContext" size="1.4em" />
+								<Table id="idTable5" inset="false"
+									items="{ path: 'Gemini>/businessContext', templateShareable:false}">
+									<columns>
+										<Column minScreenWidth="Tablet" demandPopin="true">
+											<Text text="{i18n>businessContextColName}" />
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem type="Navigation" press="onClick"
+											vAlign="Middle">
+											<cells>
+												<Text text="{Gemini>value}" />
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+							</Panel>
+						</object:ObjectPageSubSection>
+					</object:subSections>
+				</object:ObjectPageSection>
+				<!--Section For Output Management -->
+				<object:ObjectPageSection id="Section2"
+					title="{i18n>OutputObjectsFacet}">
+					<object:subSections>
+						<object:ObjectPageSubSection id="SectionSSROut"
+							title="{i18n>Relevance}">
+							<FlexBox width="100%" alignItems="Start" justifyContent="SpaceBetween">
+								<items>
+									<CheckBox id="isout" text="{i18n>OutputObjectApplicable}"
+										select="onselectoutput" editable="false" selected="{Header>/sIsOut}" />
+								</items>
+							</FlexBox>
+						</object:ObjectPageSubSection>
+						<object:ObjectPageSubSection id="SectionSSFOut"
+							title="{i18n>Planned}">
+							<Panel id="PanelPlanOut" backgroundDesign="Transparent">
+								<FlexBox width="100%" alignItems="End" justifyContent="End">
+									<items>
+										<Button text="{i18n>ConverttoActuals}" id="convertPlanOut"
+											visible="false"
+											press="s4.cfnd.geminiobjectpage.controller.OutputObjects.onConvertPlanOut"
+											type="Transparent" />
+										<Button icon="sap-icon://add" id="addPlanOut" visible="false"
+											press="s4.cfnd.geminiobjectpage.controller.OutputObjects.onaddPlanOut"
+											type="Transparent" />
+										<Button icon="sap-icon://delete" id="deletePlanOut"
+											visible="false"
+											press="s4.cfnd.geminiobjectpage.controller.OutputObjects.ondeletePlanOut"
+											type="Transparent" />
+									</items>
+								</FlexBox>
+								<Table id="TablePlanOutDisplay"
+									items="{ path: 'geminioutput>/aOutObjs', templateShareable:false}"
+									visible="true" delete="ondeletePlanOut" inset="false">
+									<columns>
+										<Column demandPopin="true">
+											<Text text="{i18n>changeTypeColName}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>ApplicationObjectTypeColName}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>OutputObjectColName}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>targetReleaseColName}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>actualReleaseColName}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>descriptionColName}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>jiraColName}" />
+										</Column>
+										<Column hAlign="Center" demandPopin="true">
+											<Text text="{i18n>statusColName}" />
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem press="onClick" vAlign="Middle">
+											<cells>
+												<Text text="{geminioutput>changeType}" />
+											</cells>
+											<cells>
+												<Text text="{geminioutput>application_object}" />
+											</cells>
+											<cells>
+												<Text text="{geminioutput>output_type}" />
+											</cells>
+											<cells>
+												<Text text="{geminioutput>target_release}" />
+											</cells>
+											<cells>
+												<Text text="{geminioutput>actual_release}" />
+											</cells>
+											<cells>
+												<Text text="{geminioutput>description}" />
+											</cells>
+											<cells>
+												<Link id="jiralinkOM" text="{geminioutput>jira_backlog}"
+													target="_blank" href="{geminioutput>jira_backlog_link}" />
+											</cells>
+											<cells>
+												<core:Icon src="{geminioutput>status_icon}" color="{geminioutput>status_colour}"
+													tooltip="{geminioutput>tool_tip}" />
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+								<Table id="TablePlanOutEdit"
+									items="{ path: 'geminioutput>/aOutObjs', templateShareable:false}"
+									visible="false" delete="ondeletePlanOut" inset="false"
+									mode="SingleSelectLeft"
+									selectionChange="s4.cfnd.geminiobjectpage.controller.OutputObjects.onOutTableSelect">
+									<columns>
+										<Column id="changeTypeOutput" demandPopin="true">
+											<Text text="{i18n>changeTypeColName}" />
+										</Column>
+										<Column id="applicationObjectTypePlanned" demandPopin="true">
+											<Text text="{i18n>ApplicationObjectTypeColName}" />
+										</Column>
+										<Column id="outputObjectPlanned" demandPopin="true">
+											<Text id="OutputEditText" text="{i18n>OutputObjectColName}" />
+										</Column>
+										<Column id="targetReleaseOutputPlanned" demandPopin="true">
+											<Text text="{i18n>targetReleaseColName}*" />
+										</Column>
+										<Column id="actualReleaseOutputPlanned" demandPopin="true">
+											<Text text="{i18n>actualReleaseColName}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>descriptionColName}" />
+										</Column>
+										<Column id="jiraOutputPlanned" demandPopin="true">
+											<Text text="{i18n>jiraColName}" />
+										</Column>
+										<Column hAlign="Center" demandPopin="true">
+											<Text text="{i18n>statusColName}" />
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem press="onClick" vAlign="Middle">
+											<cells>
+												<ComboBox editable="{=${geminioutput>mapped_output_object} === '' }"
+													showButton="true"
+													items="{ path: 'geminioutput>/aChangeType', templateShareable:false}"
+													selectedKey="{geminioutput>changeType}"
+													change="s4.cfnd.geminiobjectpage.controller.OutputObjects.onOutputPlanChangeTypeSelected">
+													<core:Item key="{geminioutput>value}" text="{geminioutput>value}" />
+												</ComboBox>
+											</cells>
+											<cells>
+												<Input
+													editable="{=${geminioutput>mapped_output_object} === '' &amp;&amp; ${geminioutput>changeType} === ${i18n>changeTypeNew} }"
+													value="{geminioutput>application_object}" />
+											</cells>
+											<cells>
+												<Input editable="{=${geminioutput>mapped_output_object} === '' }"
+													value="{geminioutput>output_type}" valueHelpOnly="true"
+													showValueHelp="{=${geminioutput>changeType} !== ${i18n>changeTypeNew} }"
+													showSuggestion="{=${geminioutput>changeType} !== ${i18n>changeTypeNew} }"
+													suggestionItems="{ path: '/I_SBROPOBJVH', templateShareable:false }"
+													valueHelpRequest="onValueHelpRequestOutputObject">
+													<suggestionItems>
+														<core:ListItem text="{OutputType}"
+															additionalText="{ApplicationObjectType}" />
+													</suggestionItems>
+
+												</Input>
+											</cells>
+											<cells>
+												<Input editable="{=${geminioutput>mapped_output_object} === '' }"
+													valueHelpOnly="true" showValueHelp="true"
+													value="{geminioutput>target_release}" showSuggestion="true"
+													suggestionItems="{ path: 'Gemini>/target_release', templateShareable:false }"
+													valueHelpRequest="onValueHelpRequestTargetRelease">
+													<suggestionItems>
+														<core:ListItem text="{release_id}" />
+													</suggestionItems>
+												</Input>
+											</cells>
+											<cells>
+												<Text text="{geminioutput>actual_release}" />
+											</cells>
+											<cells>
+												<Input editable="{=${geminioutput>mapped_output_object} === '' }"
+													value="{geminioutput>description}" />
+											</cells>
+											<cells>
+												<Input editable="{=${geminioutput>mapped_output_object} === '' }"
+													value="{geminioutput>jira_backlog}"
+													liveChange="s4.cfnd.geminiobjectpage.controller.OutputObjects.JiraChange"
+													change="s4.cfnd.geminiobjectpage.controller.OutputObjects.JiraChange"
+													suggestionItemSelected="suggestionItemSelected"
+													valueStateText="{=${geminioutput>jira_valid} === '0' ? ${i18n>validjira} : '' }"
+													valueState="{=${geminioutput>jira_valid} === '0' ? 'Error' : 'None' }" />
+											</cells>
+											<cells>
+												<core:Icon src="{geminioutput>status_icon}" color="{geminioutput>status_colour}"
+													tooltip="{geminioutput>tool_tip}" />
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+							</Panel>
+						</object:ObjectPageSubSection>
+						<object:ObjectPageSubSection id="SectionSS2"
+							title="{i18n>Actuals}">
+							<Panel id="B" backgroundDesign="Transparent">
+								<BusyIndicator id="busyOut" size="1.4em" />
+								<FlexBox width="100%" alignItems="End" justifyContent="End">
+									<items>
+										<Button id="outadd" visible="false" icon="sap-icon://add"
+											press="onAdd" type="Transparent" />
+									</items>
+								</FlexBox>
+								<Table id="idTable2Display" visible="true" inset="false"
+									items="{ path: 'Gemini>/output', templateShareable:false}"
+									delete="deleteOutputItems">
+									<columns>
+										<Column demandPopin="true">
+											<Text text="{i18n>ApplicationObjectTypeColName}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>OutputObjectColName}" />
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem vAlign="Middle">
+											<cells>
+												<Text text="{Gemini>value1}" />
+											</cells>
+											<cells>
+												<Text text='{Gemini>value}' />
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+								<Table id="idTable2" visible="false" inset="false"
+									items="{ path: 'Gemini>/output', templateShareable:false}"
+									delete="deleteOutputItems">
+									<columns>
+										<Column demandPopin="true">
+											<Text text="{i18n>ApplicationObjectTypeColName}" />
+										</Column>
+										<Column id="outputObject" demandPopin="true">
+											<Text text="{i18n>OutputObjectColName}*" />
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem vAlign="Middle">
+											<cells>
+												<Text id="outc2" text="{Gemini>value1}" />
+											</cells>
+											<cells>
+												<Input id="outc1"
+													editable="{parts:['Gemini>value1'], formatter:'.fnOutputActualsEditable'}"
+													valueHelpOnly="true" showValueHelp="true" value="{Gemini>value}"
+													showSuggestion="true"
+													suggestionItems="{ path: '/I_SBROPOBJVH', templateShareable:false }"
+													valueHelpRequest="onValueHelpRequestOutputObject"
+													suggestionItemSelected="suggestionItemSelected">
+													<suggestionItems>
+														<core:ListItem text="{OutputType}"
+															additionalText="{ApplicationObjectType}" />
+													</suggestionItems>
+												</Input>
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+							</Panel>
+						</object:ObjectPageSubSection>
+					</object:subSections>
+				</object:ObjectPageSection>
+				<!-- Facet for Migration -->
+				<object:ObjectPageSection id="Section"
+					title="{i18n>MigrationObjectsFacet}">
+					<object:subSections>
+						<object:ObjectPageSubSection id="SectionSSRMig"
+							title="{i18n>Relevance}">
+							<FlexBox width="100%" alignItems="Start" justifyContent="SpaceBetween">
+								<items>
+									<CheckBox id="ismig" text="{i18n>MigrationApplicable}"
+										select="onMigrationRelevanceChange" editable="false"
+										selected="{Header>/sIsMig}" />
+								</items>
+							</FlexBox>
+						</object:ObjectPageSubSection>
+						<object:ObjectPageSubSection id="SectionPlan"
+							title="{i18n>Planned}">
+							<Panel id="PanelPlanMigr" backgroundDesign="Transparent">
+								<FlexBox width="100%" alignItems="End" justifyContent="End">
+									<items>
+										<Button text="{i18n>ConverttoActuals}" id="mapPlanMigr"
+											visible="false" press="onMapPlanMigr" type="Transparent" />
+										<Button icon="sap-icon://add" id="addPlanMigr" visible="false"
+											press="onAddPlanMigr" type="Transparent" />
+										<Button icon="sap-icon://delete" id="deleteMigrPlan"
+											visible="false" press="onDeletePlanMigr" type="Transparent"></Button>
+									</items>
+								</FlexBox>
+								<Table id="TablePlanMigrDisplay" visible="true" inset="false"
+									items="{ path: 'geminiMigr>/aMigrPlan', templateShareable:false}">
+									<columns>
+										<Column demandPopin="true" id="colM2">
+											<Text text="{i18n>changeTypeColName}" />
+										</Column>
+										<Column demandPopin="true" id="colM1">
+											<Text text="{i18n>MigrationObjectsColName}" />
+										</Column>
+										<Column demandPopin="true" hAlign="Center" id="colM3">
+											<Text text="{i18n>LoadAPIAvailabilityColName}" />
+										</Column>
+										<Column demandPopin="true" id="colM4">
+											<Text text="{i18n>LoadAPIColName}" />
+										</Column>
+										<Column demandPopin="true" id="colM5">
+											<Text text="{i18n>LoadAPIAvailabilityPlanColName}" />
+										</Column>
+										<Column demandPopin="true" id="colM6">
+											<Text text="{i18n>targetReleaseColName}" />
+										</Column>
+										<Column demandPopin="true" id="colM7">
+											<Text text="{i18n>actualReleaseColName}" />
+										</Column>
+										<Column demandPopin="true" id="colM8">
+											<Text text="{i18n>descriptionColName}" />
+										</Column>
+										<Column demandPopin="true" id="colM9">
+											<Text text="{i18n>jiraColName}" />
+										</Column>
+										<Column demandPopin="true" hAlign="Center" id="colM10">
+											<Text text="{i18n>statusColName}" />
+										</Column>
+									</columns>
+									<ColumnListItem vAlign="Middle">
+										<cells>
+											<Text id="changeTypeMigrPlan" text="{geminiMigr>change_type}" />
+										</cells>
+										<cells>
+											<Text id="SAPmigr" text="{geminiMigr>migration_object}" />
+										</cells>
+										<cells>
+											<CheckBox id="loadApiAvailMigr" selected="{geminiMigr>load_avail}"
+												editable="false" />
+										</cells>
+										<cells>
+											<Text id="loadApiMigr" text="{geminiMigr>load_api}" />
+										</cells>
+										<cells>
+											<Text id="loadApiAvailPlanMigr" text="{geminiMigr>load_avail_plan}" />
+										</cells>
+										<cells>
+											<Text id="releaseMigr" text="{geminiMigr>target_release}" />
+										</cells>
+										<cells>
+											<Text id="actReleaseMigr" text="{geminiMigr>actual_release}" />
+										</cells>
+										<cells>
+											<Text id="descMigr" text="{geminiMigr>description}" />
+										</cells>
+										<cells>
+											<Link id="JIRAlinkMigr" text="{geminiMigr>jira_link}"
+												target="_blank" href="{geminiMigr>jira_backlog_link}" />
+										</cells>
+										<cells>
+											<core:Icon id="migtPlanStatus" src="{geminiMigr>status_icon}"
+												color="{geminiMigr>status_colour}" tooltip="{geminiMigr>tool_tip}" />
+										</cells>
+									</ColumnListItem>
+								</Table>
+								<Table id="TablePlanMigrEdit" visible="false" inset="false"
+									items="{ path: 'geminiMigr>/aMigrPlan', templateShareable:false}"
+									selectionChange="s4.cfnd.geminiobjectpage.controller.MigrationObjects.onMigrTableSelect">
+									<columns>
+										<Column demandPopin="true" id="migrChangeType">
+											<Text text="{i18n>changeTypeColName}" />
+										</Column>
+										<Column demandPopin="true" id="migrObjPlan">
+											<Text text="{i18n>MigrationObjectsColName}*" />
+										</Column>
+										<Column demandPopin="true" hAlign="Center" id="colM13">
+											<Text text="{i18n>LoadAPIAvailabilityColName}" />
+										</Column>
+										<Column demandPopin="true" id="loadAPI">
+											<Text text="{i18n>LoadAPIColName}*" />
+										</Column>
+										<Column demandPopin="true" id="colM15">
+											<Text text="{i18n>LoadAPIAvailabilityPlanColName}*" />
+										</Column>
+										<Column demandPopin="true" id="colM16">
+											<Text text="{i18n>targetReleaseColName}*" />
+										</Column>
+										<Column visible="true" id="actualReleaseMigration"
+											demandPopin="true">
+											<Text text="{i18n>actualReleaseColName}" />
+										</Column>
+										<Column demandPopin="true" id="colM18">
+											<Text text="{i18n>descriptionColName}" />
+										</Column>
+										<Column demandPopin="true" id="col1M19">
+											<Text text="{i18n>jiraColName}" />
+										</Column>
+										<Column demandPopin="true" hAlign="Center" id="colM20">
+											<Text text="{i18n>statusColName}" />
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem vAlign="Middle">
+											<cells>
+												<Select id="changeTypeMigrPlanE"
+													items="{ path: 'geminiMigr>/aChangeType',templateShareable:false}"
+													selectedKey="{geminiMigr>change_type}"
+													enabled="{=${geminiMigr>migration_mapped} !== '' ? false : true }"
+													change="onMigrationPlanChangeTypeSelected">
+													<core:Item key="{geminiMigr>value}" text="{geminiMigr>value}" />
+												</Select>
+											</cells>
+											<cells>
+												<Input id="SAPmigrE" value="{geminiMigr>migration_object}"
+													showValueHelp="{=${geminiMigr>change_type} === ${i18n>changeTypeNew} ? false : true }"
+													valueHelpOnly="true" valueHelpRequest="onValueHelpRequestMigrationObject"
+													editable="{=${geminiMigr>migration_mapped} !== '' ? false : true }" />
+											</cells>
+											<cells>
+												<CheckBox id="loadApiAvailMigrE" selected="{geminiMigr>load_avail}"
+													editable="{=${geminiMigr>migration_mapped} !== '' ? false : true }" />
+											</cells>
+											<cells>
+												<Input id="loadApiMigrE" value="{geminiMigr>load_api}"
+													editable="{=${geminiMigr>migration_mapped} !== '' ? false : true }" />
+											</cells>
+											<cells>
+												<Input id="loadApiAvailPlanMigrE" value="{geminiMigr>load_avail_plan}"
+													editable="{=${geminiMigr>migration_mapped} !== '' ? false : true }" />
+											</cells>
+											<cells>
+												<Input id="releaseMigrE" showValueHelp="true"
+													value="{geminiMigr>target_release}" showSuggestion="true"
+													suggestionItems="{ path: 'Gemini>/target_release',templateShareable:false }"
+													valueHelpRequest="onValueHelpRequestTargetRelease"
+													valueHelpOnly="true"
+													editable="{=${geminiMigr>migration_mapped} !== '' ? false : true }">
+													<suggestionItems>
+														<core:ListItem text="{release_id}" />
+													</suggestionItems>
+												</Input>
+											</cells>
+											<cells>
+												<Text id="actReleaseMigrE" text="{geminiMigr>actual_release}" />
+											</cells>
+											<cells>
+												<Input id="descMigrE" value="{geminiMigr>description}"
+													editable="{=${geminiMigr>migration_mapped} !== '' ? false : true }" />
+											</cells>
+											<cells>
+												<Input id="JIRAMigrE" value="{geminiMigr>jira_link}"
+													liveChange="s4.cfnd.geminiobjectpage.controller.MigrationObjects.MigrJiraChange"
+													change="s4.cfnd.geminiobjectpage.controller.MigrationObjects.MigrJiraChange"
+													editable="{=${geminiMigr>migration_mapped} !== '' ? false : true }"
+													valueStateText="{=${geminiMigr>jira_valid} === '0' ? ${i18n>validjira} : '' }"
+													valueState="{=${geminiMigr>jira_valid} === '0' ? 'Error' : 'None' }" />
+											</cells>
+											<cells>
+												<core:Icon id="migtPlanStatusE" src="{geminiMigr>status_icon}"
+													color="{geminiMigr>status_colour}" tooltip="{geminiMigr>tool_tip}" />
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+							</Panel>
+						</object:ObjectPageSubSection>
+						<object:ObjectPageSubSection id="SectionMigrationActuals"
+							title="{i18n>Actuals}">
+							<Panel id="panelMigrationActuals">
+								<BusyIndicator id="busyMigr" size="1.4em" />
+								<FlexBox width="100%" alignItems="Start" justifyContent="SpaceBetween">
+									<items>
+										<Button type="Transparent" enabled="true" />
+										<Button icon="sap-icon://add" id="migrationActualsAdd"
+											visible="false"
+											press="s4.cfnd.geminiobjectpage.controller.MigrationObjects.onMigrationActualsAdd"
+											type="Transparent" />
+									</items>
+								</FlexBox>
+								<Table id="idTable" visible="true" inset="false"
+									items="{ path: 'Gemini>/migr', templateShareable:false}">
+									<columns>
+										<Column demandPopin="true">
+											<Text text="{i18n>MigrationObjectsColName}" />
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem vAlign="Middle">
+											<cells>
+												<Text text="{Gemini>ident}" />
+											</cells>
+										</ColumnListItem>
+									</items>
+									<customData>
+										<sap.ui.core:CustomData
+											xmlns:sap.ui.core="sap.ui.core" key="w5g.dt.editable" value="true"
+											id="__data45" />
+									</customData>
+								</Table>
+								<Table id="tableMigrationActualsEdit" visible="false"
+									inset="false" items="{ path: 'Gemini>/migr', templateShareable:false}"
+									delete="s4.cfnd.geminiobjectpage.controller.MigrationObjects.onMigrationActualsDelete"
+									mode="Delete">
+									<columns>
+										<Column demandPopin="true">
+											<Text text="{i18n>MigrationObjectsColName}" />
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem vAlign="Middle">
+											<cells>
+												<Input id="actualsMigrationObj" showValueHelp="true"
+													value="{Gemini>ident}" showSuggestion="true"
+													suggestionItems="{ path: '/I_SBRMIGRVH',templateShareable:false }"
+													valueHelpRequest="onValueHelpRequestMigrObjectMap"
+													valueHelpOnly="true"
+													editable="{=${Gemini>rowType} === ${i18n>changeTypeNew} ? true : false }">
+													<suggestionItems>
+														<core:ListItem text="{ident}" />
+													</suggestionItems>
+												</Input>
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+							</Panel>
+						</object:ObjectPageSubSection>
+					</object:subSections>
+				</object:ObjectPageSection>
+				<!-- Facet for Events -->
+				<object:ObjectPageSection id="events"
+					title="{i18n>EventsFacet}">
+					<object:subSections>
+						<object:ObjectPageSubSection title="{i18n>Relevance}">
+							<FlexBox width="100%" alignItems="Start" justifyContent="Start">
+								<items>
+									<layout:VerticalLayout>
+										<layout:HorizontalLayout>
+											<CheckBox id="isevents" text="{i18n>EventsApplicable}"
+												selected="{Header>/sIsEvents}"
+												select="s4.cfnd.geminiobjectpage.controller.Events.onEventsRelevanceChange"
+												editable="{parts:['objectView>/editable'	],formatter:'s4.cfnd.geminiobjectpage.controller.Events.fnEventApplicableEditable'}" />
+										</layout:HorizontalLayout>
+										<layout:HorizontalLayout>
+											<Label text="" design="Bold" width="100%" />
+											<Text />
+										</layout:HorizontalLayout>
+										<layout:HorizontalLayout>
+											<Button type="Transparent" enabled="false" width="10px" />
+											<!--<Label text=" SAP Object Representation :" width="200px"/> -->
+											<!--<Label text=":" design="Bold" width="25px"/> -->
+											<Label design="Bold" text="{i18n>SAPObjectRepresentation}"
+												width="200px" />
+											<Text id="objectName1"
+												visible="{parts:['objectView>/editable','Header>/sIsEvents'],formatter:'s4.cfnd.geminiobjectpage.controller.Events.fnSOBJEditable'}"
+												text="{Header>/sEventObjectName}" />
+											<Input id="objectName"
+												visible="{parts:['objectView>/editable','Header>/sIsEvents'],formatter:'s4.cfnd.geminiobjectpage.controller.Events.fnSOBJInputEditable'}"
+												width="100%" editable="true" showValueHelp="true"
+												value="{Header>/sEventObjectName}" showSuggestion="false"
+												valueHelpOnly="true"
+												suggestionItems="{ path: 'Gemini>/objectNameValueHelp', templateShareable:false}"
+												valueHelpRequest="onAsisgnObjRepValueHelpRequest"
+												fieldWidth="100%">
+												<suggestionItems id="suggest">
+													<core:Item key="{Gemini>ObjectName}" text="{Gemini>ObjectName}" />
+												</suggestionItems>
+											</Input>
+											<!--<RadioButtonGroup columns="3" width="100%" class="sapUiMediumMarginBottom" 
+												select="onSelectObjectType1" visible="false"> -->
+											<!-- <RadioButton groupName="GroupA" text="BOR Object" selected="true"/> -->
+											<!-- <RadioButton groupName="GroupA" text="Class"/> -->
+											<!--</RadioButtonGroup> -->
+										</layout:HorizontalLayout>
+									</layout:VerticalLayout>
+								</items>
+							</FlexBox>
+						</object:ObjectPageSubSection>
+						<object:ObjectPageSubSection
+                             title="{i18n>CDSKeyFields}">
+                             <Panel id="PanelCDSKeyFields"
+                                    backgroundDesign="Transparent">
+                                    <FlexBox width="100%" alignItems="End"
+                                           justifyContent="End">
+                                           <items>
+                                           		  
+                                                  <Button id="AddCDSKeyFields"
+                                                        tooltip="{i18n>addItem}" visible="false"
+                                                        icon="sap-icon://add"
+                                                        press="s4.cfnd.geminiobjectpage.controller.Events.onAddCDSKeyFields"
+                                                        type="Transparent" />
+                                           </items>
+                                    </FlexBox>
+                                    <Table id="idCDSKeyFieldsTable"
+                                           items="{path:  'Gemini>/CDSKeyFields',templateShareable:false}">
+                                           <columns>
+                                                  <Column>
+                                                        <Text text="{i18n>BOKey} 1" />
+                                                  </Column>
+                                                  <Column>
+                                                        <Text text="{i18n>BOKey} 2" />
+                                                  </Column>
+                                                  <Column>
+                                                        <Text text="{i18n>BOKey} 3" />
+                                                  </Column>
+                                                  <Column>
+                                                        <Text text="{i18n>BOKey} 4" />
+                                                  </Column>
+                                                  <Column>
+                                                        <Text text="{i18n>BOKey} 5" />
+                                                  </Column>
+                                                  <Column>
+                                                        <Text text="{i18n>BOKey} 6" />
+                                                  </Column>
+                                           </columns>
+
+                                           <ColumnListItem>
+                                                  <cells>
+                                                        <Text text="{Gemini>BOKey0}" />
+                                                  </cells>
+
+                                                  <cells>
+                                                        <Text text="{Gemini>BOKey1}" />
+                                                  </cells>
+
+                                                  <cells>
+                                                        <Text text="{Gemini>BOKey2}" />
+                                                  </cells>
+
+                                                  <cells>
+                                                        <Text text="{Gemini>BOKey3}" />
+                                                  </cells>
+
+                                                  <cells>
+                                                        <Text text="{Gemini>BOKey4}" />
+                                                  </cells>
+
+                                                  <cells>
+                                                        <Text text="{Gemini>BOKey5}" />
+                                                  </cells>
+                                           </ColumnListItem>
+
+
+                                    </Table>
+                             </Panel>
+                         </object:ObjectPageSubSection>
+						
+						<object:ObjectPageSubSection id="SectionSSFEvents"
+							title="{i18n>Planned}">
+							<Panel id="PanelPlanEvents" backgroundDesign="Transparent">
+								<FlexBox width="100%" alignItems="End" justifyContent="End">
+									<items>
+										<Button id="BtnMapEvent" text="{i18n>ConverttoActuals}"
+											visible="false"
+											press="s4.cfnd.geminiobjectpage.controller.Events.onMapPlanEvents"
+											type="Transparent" />
+										<Button icon="sap-icon://add" id="addPlanEvents"
+											visible="false"
+											press="s4.cfnd.geminiobjectpage.controller.Events.onaddPlanEvents"
+											type="Transparent" />
+										<Button icon="sap-icon://delete" id="deleteplanEvents"
+											visible="false"
+											press="s4.cfnd.geminiobjectpage.controller.Events.onDeletePlanEvents"
+											type="Transparent"></Button>
+									</items>
+								</FlexBox>
+								<Table id="TablePlanEventsDisplay" visible="true" inset="false"
+									items="{ path: 'geminievents>/aEvents', templateShareable:false}"
+									delete="ondeletePlanEvents">
+									<columns>
+										<Column visible="true" demandPopin="true">
+											<Text text="{i18n>changeTypeColName}" />
+										</Column>
+										<Column visible="true" demandPopin="true">
+											<Text text="{i18n>SAPObjectEventColName}" />
+										</Column>
+										<Column visible="true" demandPopin="true">
+											<Text text="{i18n>SAPObjectTaskCodeColName}" />
+										</Column>
+										<Column visible="true" demandPopin="true">
+											<Text text="{i18n>SAPObjectNodeType}" />
+										</Column>
+										<Column visible="true" demandPopin="true">
+											<Text text="{i18n>targetReleaseColName}" />
+										</Column>
+										<Column visible="true" demandPopin="true">
+											<Text text="{i18n>actualReleaseColName}" />
+										</Column>
+										<Column visible="true" demandPopin="true">
+											<Text text="{i18n>descriptionColName}" />
+										</Column>
+										<Column visible="true" id="jiralinkeventcolumn"
+											demandPopin="true">
+											<Text text="{i18n>jiraColName}" />
+										</Column>
+										<Column hAlign="Center" demandPopin="true">
+											<Text text="{i18n>statusColName}" />
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem press="onClick" vAlign="Middle">
+											<cells>
+												<Text text="{geminievents>changetype}" />
+											</cells>
+											<cells>
+												<Text id="SAPevent" text="{geminievents>bo_event}" />
+											</cells>
+											<cells>
+												<Text id="SAPTask" text="{geminievents>bo_task}" />
+											</cells>
+											<cells>
+												<Text id="SAPNodeType" text="{geminievents>object_node_type}" />
+											</cells>
+											<cells>
+												<Text id="releaseEvent" text="{geminievents>target_release}" />
+											</cells>
+											<cells>
+												<Text id="ActualEvent" text="{geminievents>actual_release}" />
+											</cells>
+											<cells>
+												<Text id="descEvent" text="{geminievents>description}" />
+											</cells>
+											<cells>
+												<Link id="jiralinkEvent" text="{geminievents>jira_backlog}"
+													target="_blank" href="{geminievents>jira_backlog_link}" />
+											</cells>
+											<cells>
+												<core:Icon id="EventStatus" src="{geminievents>status_icon}"
+													color="{geminievents>status_colour}" tooltip="{geminievents>tool_tip}" />
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+								<Table id="TablePlanEventsEdit" visible="false"
+									selectionChange="s4.cfnd.geminiobjectpage.controller.Events.onEventsTableSelect"
+									inset="false"
+									items="{ path: 'geminievents>/aEvents', templateShareable:false}"
+									delete="ondeletePlanEvents">
+									<columns>
+										<Column id="changeTypeEvent" demandPopin="true">
+											<Text text="{i18n>changeTypeColName}" />
+										</Column>
+										<Column id="sapObjectEvent" demandPopin="true">
+											<Text text="{i18n>SAPObjectEventColName}" />
+										</Column>
+										<Column id="sapObjectTaskCode" demandPopin="true">
+											<Text text="{i18n>SAPObjectTaskCodeColName}" />
+										</Column>
+										<Column id="sapObjectNodeType" demandPopin="true">
+											<Text text="{i18n>SAPObjectNodeType}" />
+										</Column>
+										<Column id="targetReleaseEvent" demandPopin="true">
+											<Text text="{i18n>targetReleaseColName}*" />
+										</Column>
+										<Column id="actualReleaseEvents" demandPopin="true">
+											<Text text="{i18n>actualReleaseColName}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>descriptionColName}" />
+										</Column>
+										<Column id="jiraeventcolumn" demandPopin="true">
+											<Text text="{i18n>jiraColName}" />
+										</Column>
+										<Column hAlign="Center" demandPopin="true">
+											<Text text="{i18n>statusColName}" />
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem press="onClick" vAlign="Middle">
+											<cells>
+												<Select enabled="{= ${geminievents>status} === '0'}"
+													forceSelection="false" selectedKey="{geminievents>changetype}"
+													items="{ path: 'geminievents>/aChangeType', templateShareable:false}"
+													change="s4.cfnd.geminiobjectpage.controller.Events.EventPlanChange">
+													<core:Item key="{geminievents>value}" text="{geminievents>value}" />
+												</Select>
+											</cells>
+											<cells>
+												<!--<Input id="" editable="false" value=""/> -->
+												<!--{= ${geminievents>status} === '0' &amp;&amp; ${geminievents>changetype} 
+													!== 'Not Relevant'} -->
+												<!--s4.cfnd.geminiobjectpage.controller.OutputObjects -->
+												<Input id="SAPevent1"
+													editable="{parts:['geminievents>status','geminievents>changetype','geminievents>bo_event','Gemini>/eventIdHelp'], formatter:'.fnEventEditable'}"
+													value="{geminievents>bo_event}" valueHelpOnly="true"
+													showValueHelp="{= ${geminievents>changetype} === ${i18n>changeTypeEnhancement}}"
+													showSuggestion="{= ${geminievents>changetype} === ${i18n>changeTypeEnhancement}}"
+													suggestionItems="{ path: 'Gemini>/eventIdHelp', templateShareable:false}"
+													valueHelpRequest="onValueHelpRequestEventIdObject">
+													<suggestionItems>
+														<core:ListItem text="{Gemini>event}" />
+													</suggestionItems>
+												</Input>
+											</cells>
+											<cells>
+												<Input id="SAPTask1"
+													editable="{=${geminievents>status} === '0' &amp;&amp; ${geminievents>changetype} !== 'Not Relevant'}"
+													value="{geminievents>bo_task}" valueHelpOnly="true"
+													showValueHelp="true"
+													suggestionItems="{ path: '/C_SBRTASKCODEVH',templateShareable:false }"
+													valueHelpRequest="onValueHelpRequestEventTaskCode">
+													<suggestionItems>
+														<core:Item text="{taskCode}" />
+													</suggestionItems>
+												</Input>
+											</cells>
+											<cells>
+												<Input id="SAPNodeType1"
+													editable="{=${geminievents>status} === '0' &amp;&amp; ${geminievents>changetype} !== 'Not Relevant'}"
+													value="{geminievents>object_node_type}" valueHelpOnly="true"
+													showValueHelp="true" valueHelpRequest="onValueHelpRequestEventNodeType">
+												</Input>
+											</cells>
+											<cells>
+												<Input id="releaseEvent1"
+													editable="{=${geminievents>status} === '0' &amp;&amp; ${geminievents>changetype} !== 'Not Relevant'}"
+													width="100%" showValueHelp="true" valueHelpOnly="true"
+													value="{geminievents>target_release}"
+													suggestionItems="{ path: 'Gemini>/target_release',templateShareable:false }"
+													valueHelpRequest="onValueHelpRequestTargetRelease">
+													<suggestionItems>
+														<core:ListItem text="{release_id}" />
+													</suggestionItems>
+												</Input>
+											</cells>
+											<cells>
+												<Text id="ActualEvent1" text="{geminievents>actual_release}" />
+											</cells>
+											<cells>
+												<Input id="descEvent1"
+													editable="{=${geminievents>status} === '0' &amp;&amp; ${geminievents>changetype} !== 'Not Relevant'}"
+													value="{geminievents>description}" />
+											</cells>
+											<cells>
+												<Input id="jiraEvent"
+													editable="{=${geminievents>status} === '0' &amp;&amp; ${geminievents>changetype} !== 'Not Relevant'}"
+													value="{geminievents>jira_backlog}"
+													liveChange="s4.cfnd.geminiobjectpage.controller.Events.EventJiraChange"
+													change="s4.cfnd.geminiobjectpage.controller.Events.EventJiraChange"
+													valueStateText="{=${geminievents>jira_valid} === '0' ? ${i18n>validjira} : '' }"
+													valueState="{=${geminievents>jira_valid} === '0' ? 'Error' : 'None' }" />
+											</cells>
+											<cells>
+												<core:Icon id="EventStatus1" src="{geminievents>status_icon}"
+													color="{geminievents>status_colour}" tooltip="{geminievents>tool_tip}" />
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+							</Panel>
+						</object:ObjectPageSubSection>
+						<object:ObjectPageSubSection id="SectionSS1"
+							title="{i18n>Actuals}">
+							<Panel id="EV">
+								<BusyIndicator id="busyEvents" size="1.4em" />
+								<FlexBox width="100%" alignItems="Start" justifyContent="SpaceBetween">
+									<items>
+										<Button type="Transparent" enabled="true" />
+										<Button icon="sap-icon://add" id="eventsadd" visible="false"
+											press="s4.cfnd.geminiobjectpage.controller.Events.onEventAdd"
+											type="Transparent" />
+									</items>
+								</FlexBox>
+								<Table id="eventsTable" visible="true"
+									items="{ path: 'Gemini>/events', templateShareable:false}">
+									<columns>
+										<Column visible="true" demandPopin="true">
+											<Text text="{i18n>SAPObjectEventColName}" />
+										</Column>
+										<Column visible="true" demandPopin="true">
+											<Text text="{i18n>SAPObjectTaskCodeColName}" />
+										</Column>
+										<Column visible="true" demandPopin="true">
+											<Text text="{i18n>SAPObjectTaskTypeNameColName}" />
+										</Column>
+										<Column visible="true" demandPopin="true">
+											<Text text="{i18n>SAPObjectNodeType}" />
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem vAlign="Middle">
+											<cells>
+												<Text id="EventId" text="{Gemini>Event}" />
+											</cells>
+											<cells>
+												<Text id="EventTaskCode" text="{Gemini>TaskCode}" />
+											</cells>
+											<cells>
+												<Text id="EventTaskText" text="{Gemini>TaskText}" />
+											</cells>
+											<cells>
+												<Text id="EventNodeType" text="{Gemini>NodeType}" />
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+								<Table id="eventsTableOnEdit" visible="false"
+									items="{ path: 'Gemini>/events', templateShareable:false}"
+									delete="s4.cfnd.geminiobjectpage.controller.Events.deleteEventItems">
+									<columns>
+										<Column id="sapObjectEventActual" demandPopin="true">
+											<Text text="{i18n>SAPObjectEventColName}*" />
+										</Column>
+										<Column id="sapObjectTaskCodeActual" demandPopin="true">
+											<Text text="{i18n>SAPObjectTaskCodeColName}*" />
+										</Column>
+										<Column id="sapObjectTaskTypeName" demandPopin="true">
+											<Text text="{i18n>SAPObjectTaskTypeNameColName}*" />
+										</Column>
+										<Column visible="true" demandPopin="true">
+											<Text text="{i18n>SAPObjectNodeType}" />
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem vAlign="Middle">
+											<cells>
+												<Input id="EventId1"
+													editable="{=${Gemini>new_row} === true ? true : false }"
+													showValueHelp="true" valueHelpOnly="true" value="{Gemini>Event}"
+													showSuggestion="true"
+													suggestionItems="{ path: 'Gemini>/eventIdHelp', templateShareable:false}"
+													valueHelpRequest="onValueHelpRequestEventIdObject">
+													<suggestionItems>
+														<core:ListItem text="{Gemini>event}" />
+													</suggestionItems>
+												</Input>
+											</cells>
+											<cells>
+												<Input id="EventTaskCode1"
+													editable="{=${Gemini>new_row} === true ? true : false }"
+													value="{Gemini>TaskCode}" valueHelpOnly="true"
+													showSuggestion="true"
+													suggestionItems="{ path: '/C_SBRTASKCODEVH', templateShareable:false }"
+													showValueHelp="true" valueHelpRequest="onValueHelpRequestEventTaskCode">
+													<suggestionItems>
+														<core:Item text="{taskCode}" />
+													</suggestionItems>
+												</Input>
+											</cells>
+											<cells>
+												<Input id="EventTaskText1"
+													editable="{=${Gemini>new_row} === true ? true : false }"
+													showValueHelp="false" value="{Gemini>TaskText}" />
+											</cells>
+											<cells>
+												<Input id="EventNodeType1"
+													editable="{=${Gemini>new_row} === true ? true : false }"
+													value="{Gemini>NodeType}" valueHelpOnly="true"
+													showValueHelp="true" valueHelpRequest="onValueHelpRequestEventNodeType">
+												</Input>
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+							</Panel>
+						</object:ObjectPageSubSection>
+					</object:subSections>
+				</object:ObjectPageSection>
+				<!-- Facet for Search -->
+				<object:ObjectPageSection id="Section6"
+					title="{i18n>SearchObjectsFacet}">
+					<object:subSections>
+						<object:ObjectPageSubSection id="SearchRelevance"
+							title="{i18n>Relevance}">
+							<FlexBox width="100%" alignItems="Start" justifyContent="SpaceBetween">
+								<items>
+									<!--<CheckBox id="isrel" text="Search Applicable" editable="false"/> -->
+									<!--<CheckBox id="issearchEdit" text="Search Applicable" editable="false"/> -->
+									<CheckBox id="issearch" text="{i18n>SearchApplicable}"
+										select="s4.cfnd.geminiobjectpage.controller.Search.onSearchApplicable"
+										editable="false" selected="{Header>/sIsSearch}" />
+								</items>
+							</FlexBox>
+						</object:ObjectPageSubSection>
+						<object:ObjectPageSubSection id="SectionSS7"
+							title="{i18n>Planned}">
+							<Panel class="sapUiContentPadding">
+								<content>
+									<!--<layout:HorizontalLayout> -->
+									<!--<Label text="Planned" design="Bold" width="175px"/> -->
+									<!--<Button type="Transparent" enabled="false"/> -->
+									<FlexBox width="100%" alignItems="End" justifyContent="End">
+										<items>
+											<Button id="BtnConvertSearch" text="{i18n>ConverttoActuals}"
+												press="s4.cfnd.geminiobjectpage.controller.Search.onBtnConvertSearch"
+												visible="false" tooltip="" type="Transparent" />
+											<Button type="Transparent" icon="sap-icon://add" id="addSearchPlan"
+												visible="false"
+												press="s4.cfnd.geminiobjectpage.controller.Search.onSearchPlanAdd" />
+											<Button type="Transparent" icon="sap-icon://delete"
+												id="deleteSearchPlan" visible="false"
+												press="s4.cfnd.geminiobjectpage.controller.Search.deleteSearchPlanItems" />
+										</items>
+									</FlexBox>
+									<Table id="TablePlanSearchDisplay" visible="true" inset="false"
+										items="{ path: 'Gemini>/search', templateShareable:false}">
+										<columns>
+											<Column demandPopin="true" id="colM2search">
+												<Text text="{i18n>changeTypeColName}" />
+											</Column>
+											<Column demandPopin="true" id="colM1search">
+												<Text text="{i18n>SearchObjectColName}" />
+											</Column>
+											<Column demandPopin="true" id="colM3search">
+												<Text text="{i18n>targetReleaseColName}" />
+											</Column>
+											<Column demandPopin="true" id="colM4search">
+												<Text text="{i18n>actualReleaseColName}" />
+											</Column>
+											<Column demandPopin="true" id="colM5search">
+												<Text text="{i18n>descriptionColName}" />
+											</Column>
+											<Column demandPopin="true" id="colM9search">
+												<Text text="{i18n>jiraColName}" />
+											</Column>
+											<Column demandPopin="true" id="colM10search">
+												<Text text="{i18n>statusColName}" />
+											</Column>
+										</columns>
+										<ColumnListItem vAlign="Middle">
+											<cells>
+												<Text id="searchchangetypedis" text="{Gemini>change_type}" />
+											</cells>
+											<cells>
+												<Text id="searchobjectinputdis" text="{Gemini>search_object}" />
+											</cells>
+											<cells>
+												<Text id="searchreleasedis" text="{Gemini>target_release}" />
+											</cells>
+											<cells>
+												<Text id="searchactual_reldis" text="{Gemini>actual_release}" />
+											</cells>
+											<cells>
+												<Text id="searchdescriptiondis" text="{Gemini>description}" />
+											</cells>
+											<cells>
+												<Link id="search_jira_link_dis" text="{Gemini>jira_backlog}"
+													target="_blank" href="{Gemini>jira_backlog_link}" />
+											</cells>
+											<cells>
+												<core:Icon id="searchstatusdis" src="{Gemini>status_icon}"
+													color="{Gemini>status_colour}" tooltip="{Gemini>tool_tip}" />
+											</cells>
+										</ColumnListItem>
+									</Table>
+									<!--</layout:HorizontalLayout> -->
+									<Table id="idTable9" visible="false" inset="false"
+										items="{ path: 'Gemini>/search', templateShareable:false}"
+										selectionChange="s4.cfnd.geminiobjectpage.controller.Search.onSearchTableSelect">
+										<!--</layout:HorizontalLayout> -->
+										<!--<Table id="idTable9" inset="false" items="{ path: 'Gemini>/search', 
+											templateShareable:false}"> -->
+										<columns>
+											<!--<Column width="50%" demandPopin="true"> -->
+											<!-- <Text text="search_id"/> -->
+											<!--</Column> -->
+											<Column demandPopin="true">
+												<Text text="{i18n>changeTypeColName}" />
+											</Column>
+											<Column id="searchObjectPlanned" demandPopin="true">
+												<Text text="{i18n>SearchObjectColName}" />
+											</Column>
+											<!--<Column demandPopin="true"> -->
+											<!-- <Text text="Search Object Type*"/> -->
+											<!--</Column> -->
+											<Column id="targetReleaseSearch" demandPopin="true">
+												<Text text="{i18n>targetReleaseColName}*" />
+											</Column>
+											<Column id="searchplan_actualrel" demandPopin="true">
+												<Text text="{i18n>actualReleaseColName}" />
+											</Column>
+											<Column demandPopin="true">
+												<Text text="{i18n>descriptionColName}" />
+											</Column>
+											<Column id="jirasearch" demandPopin="true">
+												<Text text="{i18n>jiraColName}" />
+											</Column>
+											<!--<Column id="jiralinksearch" visible="true" demandPopin="true"> -->
+											<!-- <Text text="{i18n>jiraColName}"/> -->
+											<!--</Column> -->
+											<Column demandPopin="true">
+												<Text text="{i18n>statusColName}" />
+											</Column>
+										</columns>
+										<items>
+											<ColumnListItem press="onClick" vAlign="Middle">
+												<!--<cells> -->
+												<!-- <Input id="searchId" editable="false" showValueHelp="true" 
+													value="{Gemini>search_id}" showSuggestion="true" -->
+												<!-- suggestionItems="{ path: '/SERVICEINTERFACEVALUEHELP' }" 
+													valueHelpRequest="onValueHelpRequestAPIObject" -->
+												<!-- suggestionItemSelected="suggestionItemSelectedServInt"> -->
+												<!-- <suggestionItems > -->
+												<!-- <core:ListItem text="{ServiceInterface}" additionalText="{communication_scenario_id}"/> -->
+												<!-- </suggestionItems> -->
+												<!-- </Input> -->
+												<!--</cells> -->
+												<!--<cells> -->
+												<!-- <Input id="csId" editable="false" showValueHelp="false" 
+													value="{Gemini>comm}"/> -->
+												<!--</cells> -->
+												<cells>
+													<!--<Input id="searchchangetype" editable="false" showValueHelp="false" 
+														value="{Gemini>change_type}"/> -->
+													<!-- <ComboBox id="searchchangetype" editable="false" showButton="true" 
+														items="{ path: 'geminievents>/aChangeType'}" change="searchPlanChange"> -->
+													<!-- <core:Item key="{geminievents>value}" text="{geminievents>value}"/> -->
+													<!--</ComboBox> -->
+													<Select id="searchchangetype" enabled="{=${Gemini>ident_mapping} === '' }"
+														items="{ path: 'Gemini>/aChange', templateShareable:false}"
+														selectedKey="{Gemini>change_type}"
+														change="s4.cfnd.geminiobjectpage.controller.Search.searchPlanChange">
+														<core:Item key="{Gemini>value}" text="{Gemini>value}" />
+													</Select>
+												</cells>
+												<cells>
+													<Input id="searchobjectinput"
+														editable="{=${Gemini>ident_mapping} !== '' ? false : true }"
+														showValueHelp="{=${Gemini>change_type} === ${i18n>changeTypeNew} ? false : true }"
+														value="{Gemini>search_object}" showSuggestion="false"
+														suggestionItems="{ path: '/C_SBRSEARCHVH',templateShareable:false }"
+														valueHelpRequest="onValueHelpRequestSearch" valueHelpOnly="true">
+														<suggestionItems>
+															<core:Item key="{model}" text="{model}" />
+														</suggestionItems>
+													</Input>
+												</cells>
+												<!--<cells> -->
+												<!-- <Input id="searchobjecttypeinput" editable="false" showValueHelp="false" 
+													value="{Gemini>search_object_type}"/> -->
+												<!--</cells> -->
+												<cells>
+													<Input id="searchrelease" width="100%"
+														editable="{=${Gemini>ident_mapping} !== '' ? false : true }"
+														valueHelpOnly="true" showValueHelp="true"
+														value="{Gemini>target_release}" showSuggestion="true"
+														suggestionItems="{ path: 'Gemini>/target_release',templateShareable:false }"
+														valueHelpRequest="onValueHelpRequestTargetRelease">
+														<suggestionItems>
+															<core:ListItem text="{release_id}" />
+														</suggestionItems>
+													</Input>
+												</cells>
+												<cells>
+													<Text id="searchactual_rel" text="{Gemini>actual_release}" />
+												</cells>
+												<cells>
+													<Input id="searchdescription"
+														editable="{=${Gemini>ident_mapping} !== '' ? false : true }"
+														showValueHelp="false" value="{Gemini>description}" />
+												</cells>
+												<cells>
+													<Input id="search_jira_backlog"
+														editable="{=${Gemini>ident_mapping} !== '' ? false : true }"
+														showValueHelp="false" value="{Gemini>jira_backlog}"
+														liveChange="s4.cfnd.geminiobjectpage.controller.Search.searchjirachange"
+														change="s4.cfnd.geminiobjectpage.controller.Search.searchjirachange"
+														valueStateText="{=${Gemini>jira_valid} === '0' ? ${i18n>validjira} : '' }"
+														valueState="{=${Gemini>jira_valid} === '0' ? 'Error' : 'None' }" />
+												</cells>
+												<!--<cells> -->
+												<!-- <Link id="search_jira_link" text="{Gemini>jira_backlog}" 
+													target="_blank" href="{Gemini>jira_backlog_link}"/> -->
+												<!--</cells> -->
+												<cells>
+													<!--<Text id="EventStatus" text="{geminievents>Status}"/> -->
+													<!--<ProgressIndicator id="EventStatus" class="sapUiSmallMarginBottom" 
+														percentValue="100" state="{geminievents>status_colour}" /> -->
+													<core:Icon id="searchstatus" src="{Gemini>status_icon}"
+														color="{Gemini>status_colour}" tooltip="{Gemini>tool_tip}" />
+												</cells>
+											</ColumnListItem>
+										</items>
+									</Table>
+								</content>
+							</Panel>
+						</object:ObjectPageSubSection>
+						<object:ObjectPageSubSection id="SearchActual"
+							title="{i18n>Actuals}">
+							<Panel id="S">
+								<FlexBox width="100%" alignItems="End" justifyContent="End">
+									<items>
+										<Button type="Transparent" icon="sap-icon://add" id="addSearchActual"
+											visible="false"
+											press="s4.cfnd.geminiobjectpage.controller.Search.onSearchActualAdd" />
+										<Button type="Transparent" icon="sap-icon://delete" id="deleteSearchActual"
+											visible="false"
+											press="s4.cfnd.geminiobjectpage.controller.Search.onSearchActualDelete" />
+									</items>
+								</FlexBox>
+								<Table id="Searchactualtabledisplay" visible="true" inset="false"
+									items="{ path: 'search>/searchactual', templateShareable:false}">
+									<columns>
+										<Column visible="true" demandPopin="true" id="searchobjdis">
+											<Text text="{i18n>SearchObjectColName}" />
+										</Column>
+									</columns>
+									<ColumnListItem vAlign="Middle">
+										<cells>
+											<Text id="searchobjectdis" text="{search>search_object}" />
+										</cells>
+									</ColumnListItem>
+								</Table>
+								<Table id="Searchactualtable" visible="false" inset="false"
+									items="{ path: 'search>/searchactual', templateShareable:false}"
+									selectionChange="s4.cfnd.geminiobjectpage.controller.Search.searchActualTableSelect">
+									<columns>
+										<!--<Column demandPopin="true"> -->
+										<!-- <Text text="SAP Object Type"/> -->
+										<!--</Column> -->
+										<Column id="searchObjectActual" demandPopin="true">
+											<Text text="{i18n>SearchObjectColName}*" />
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem press="onClick" vAlign="Middle">
+											<!--<cells> -->
+											<!-- <Input id="sapobjecttypeinput" editable="false" showValueHelp="false" 
+												value="{search>sap_bo_type}"/> -->
+											<!--</cells> -->
+											<cells>
+												<Input id="searchobject" editable="{=${search>edit} === '1'}"
+													showValueHelp="false" value="{search>search_object}" />
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+							</Panel>
+						</object:ObjectPageSubSection>
+					</object:subSections>
+				</object:ObjectPageSection>
+				<!-- Section for CDS -->
+				<object:ObjectPageSection id="SectionCDS"
+					title="{i18n>CDSFacet}">
+					<object:subSections>
+						<object:ObjectPageSubSection title="{i18n>CDSFacet}">
+							<Panel id="CDS">
+								<BusyIndicator id="busyCDSActual" size="1.4em" />
+								<FlexBox width="100%" alignItems="Start" justifyContent="Start">
+									<items>
+										<Button type="Transparent" enabled="false">
+											<layoutData>
+												<FlexItemData growFactor="2" />
+											</layoutData>
+										</Button>
+										<Button icon="sap-icon://add" id="CDSadd" visible="false"
+											press="s4.cfnd.geminiobjectpage.controller.CDS.onCDSAdd"
+											type="Transparent">
+											<layoutData>
+												<FlexItemData growFactor="0" />
+											</layoutData>
+										</Button>
+									</items>
+								</FlexBox>
+								<Table id="TableActualCDS" inset="false"
+									items="{ path: 'Gemini>/cds', templateShareable:false}" delete="s4.cfnd.geminiobjectpage.controller.CDS.deleteCDSItems"
+									visible="false">
+									<columns>
+										<Column id="CDSArtifactCol" demandPopin="true">
+											<Text text="{i18n>cdsArtifactColName}*" />
+										</Column>
+										<Column id="CDSUsageTypeCol" demandPopin="true">
+											<Text text="{i18n>usageTypeColName}*" />
+										</Column>
+										<Column id="CDSViewNameCol" demandPopin="true">
+											<Text text="{i18n>viewNameColName}*" />
+										</Column>
+										<Column id="CDSReleaseStatusCol" demandPopin="true">
+											<Text text="{i18n>releaseStatusColName}" />
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem press="onClick" vAlign="Middle">
+											<cells>
+												<Select id="artifactCDSCombo" selectedItem="true"
+													change="s4.cfnd.geminiobjectpage.controller.CDS.onCDSArtifactSelected"
+													items="{ path: 'Gemini>/cdsArtifactList', templateShareable:false}"
+													selectedKey="{Gemini>cds_artifact}" enabled="{=${Gemini>new_row} === true ? true : false }">
+													<core:Item key="{Gemini>value}" text="{Gemini>value}" />
+												</Select>
+												<!--<ComboBox id="artifactCDSCombo" editable="false" showButton="true" 
+													items="{ path: 'Gemini>/cdsArtifactList'}" -->
+												<!-- selectedKey="{Gemini>cds_artifact}" change="s4.cfnd.geminiobjectpage.controller.CDS.onCDSArtifactSelected"> -->
+												<!-- <core:Item key="{Gemini>value}" text="{Gemini>value}"/> -->
+												<!--</ComboBox> -->
+											</cells>
+											<cells>
+												<MultiComboBox id="usageType"
+													selectionChange="s4.cfnd.geminiobjectpage.controller.CDS.handleUsageTypeSelectionChange"
+													editable="{=${Gemini>new_row} === true ? true : false }"
+													selectionFinish="s4.cfnd.geminiobjectpage.controller.CDS.handleUsageTypeSelectionFinish"
+													width="500px"
+													items="{ path: 'Gemini>/cdsUsageTypeList',templateShareable:false}"
+													selectedKeys="{Gemini>cdsUsageTypeKeysArray}">
+													<core:Item key="{Gemini>value}" text="{Gemini>value}" />
+												</MultiComboBox>
+											</cells>
+											<cells>
+												<Input id="CDSViewName"
+													editable="{=${Gemini>new_row} === true ? true : false }"
+													showValueHelp="{=${Gemini>new_row} === true ? true : false }"
+													value="{Gemini>view_name}" valueHelpOnly="true"
+													valueHelpRequest="onValueHelpRequestCDSViewName" />
+											</cells>
+											<cells>
+												<Text id="releaseStatus" text="{Gemini>release_status}" />
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+								<Table id="TableActualCDSnonEdit" inset="false"
+									items="{ path: 'Gemini>/cds', templateShareable:false}" delete="s4.cfnd.geminiobjectpage.controller.CDS.deleteCDSItems"
+									visible="false">
+									<columns>
+										<Column demandPopin="true">
+											<Text text="{i18n>cdsArtifactColName}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>usageTypeColName}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>viewNameColName}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>releaseStatusColName}" />
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem press="onClick" vAlign="Middle">
+											<cells>
+												<Text id="artifactCDSCombo2" text="{Gemini>cds_artifact}"></Text>
+											</cells>
+											<cells>
+												<Text id="usageType2" text="{Gemini>cdsUsageTypeString}"></Text>
+											</cells>
+											<cells>
+												<Text id="CDSViewName2" text="{Gemini>view_name}"></Text>
+											</cells>
+											<cells>
+												<Text text="{Gemini>release_status}" />
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+							</Panel>
+						</object:ObjectPageSubSection>
+					</object:subSections>
+				</object:ObjectPageSection>
+				<!-- Section for Fiori App -->
+				<object:ObjectPageSection id="SectionFiori"
+					title="{i18n>FioriAppFacet}">
+					<object:subSections>
+						<object:ObjectPageSubSection title="{i18n>FioriAppFacet}">
+							<Panel id="FioriApp">
+								<FlexBox width="100%" alignItems="Start" justifyContent="Start">
+									<items>
+										<Button type="Transparent" enabled="false">
+											<layoutData>
+												<FlexItemData growFactor="2" />
+											</layoutData>
+										</Button>
+										<Button icon="sap-icon://add" id="addFioriApp"
+											visible="false"
+											press="s4.cfnd.geminiobjectpage.controller.Fiori.onFioriAdd"
+											type="Transparent">
+											<layoutData>
+												<FlexItemData growFactor="0" />
+											</layoutData>
+										</Button>
+									</items>
+								</FlexBox>
+								<Table id="TableFioriDisplay" inset="false"
+									items="{ path: 'Gemini>/fiori', templateShareable:false}"
+									visible="true">
+									<columns>
+										<Column demandPopin="true">
+											<Text text="{i18n>FioriAppName}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>FioriID}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>FioriAppType}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>UITechnology}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>SemanticObject}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>Action}" />
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem press="onClick" vAlign="Middle">
+											<cells>
+												<Text id="fioriAppName" text="{Gemini>AppName}"></Text>
+											</cells>
+											<cells>
+												<Text id="fioriId" text="{Gemini>FioriID}"></Text>
+											</cells>
+											<cells>
+												<Text id="fioriAppType" text="{Gemini>AppType}"></Text>
+											</cells>
+											<cells>
+												<Text id="UItechnology" text="{Gemini>UITechnology}"></Text>
+											</cells>
+											<cells>
+												<Text id="semanticObject" text="{Gemini>SemanticObject}"></Text>
+											</cells>
+											<cells>
+												<Text id="action" text="{Gemini>SemanticAction}"></Text>
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+								<Table id="TableFioriEdit" inset="false"
+									items="{ path: 'Gemini>/fiori', templateShareable:false}"
+									delete="s4.cfnd.geminiobjectpage.controller.Fiori.deleteFioriApp"
+									visible="false">
+									<columns>
+										<Column demandPopin="true">
+											<Text text="{i18n>FioriAppName}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>FioriID}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>FioriAppType}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>UITechnology}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>SemanticObject}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>Action}" />
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem press="onClick" vAlign="Middle">
+											<cells>
+												<Text id="fioriAppNameEdit" text="{Gemini>AppName}"></Text>
+											</cells>
+											<cells>
+												<Text id="fioriIdEdit" text="{Gemini>FioriID}"></Text>
+											</cells>
+											<cells>
+												<Text id="fioriAppTypeEdit" text="{Gemini>AppType}"></Text>
+											</cells>
+											<cells>
+												<Text id="UItechnologyEdit" text="{Gemini>UITechnology}"></Text>
+											</cells>
+											<cells>
+												<Text id="semanticObjectEdit" text="{Gemini>SemanticObject}"></Text>
+											</cells>
+											<cells>
+												<Text id="actionEdit" text="{Gemini>SemanticAction}"></Text>
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+							</Panel>
+						</object:ObjectPageSubSection>
+					</object:subSections>
+				</object:ObjectPageSection>
+				<object:ObjectPageSection id="SectionNodeType"
+					title="{i18n>NodeTypeFacet}">
+					<object:subSections>
+						<object:ObjectPageSubSection title="{i18n>NodeTypeFacet}">
+							<Panel id="NodeType">
+								<FlexBox width="100%" alignItems="Start" justifyContent="Start">
+									<items>
+										<!--<Button type="Transparent" enabled="false"> -->
+										<!-- <layoutData> -->
+										<!-- <FlexItemData growFactor="2"/> -->
+										<!-- </layoutData> -->
+										<!--</Button> -->
+									</items>
+								</FlexBox>
+								<Table id="TableNodeDisplay" inset="false"
+									items="{ path: 'Gemini>/nodetype', templateShareable:false}"
+									visible="true">
+									<columns>
+										<Column demandPopin="true">
+											<Text text="{i18n>NodeType}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>Description}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>RootNodeFlag}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>ApprovalStatus}" />
+										</Column>
+										<Column demandPopin="true">
+											<Text text="{i18n>PersonResponsible}" />
+										</Column>
+										<Column demandPopin="true"
+											visible="{=${objectView>/editable} === true ? false : true }">
+											<Text text="{i18n>RepresentativeView}" />
+										</Column>
+										<Column demandPopin="true"
+											visible="{=${objectView>/editable} === true ? true : false }">
+											<Text text="{i18n>RepresentativeView}" />
+										</Column>
+										<Column demandPopin="true"
+											visible="{=${objectView>/editable} === true ? false : true }">
+											<Text text="{i18n>ValueHelpView}" />
+										</Column>
+										<Column demandPopin="true"
+											visible="{=${objectView>/editable} === true ? true : false }">
+											<Text text="{i18n>ValueHelpView}" />
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem vAlign="Middle">
+											<cells>
+												<Text id="nodeType" text="{Gemini>object_node_type}"></Text>
+											</cells>
+											<cells>
+												<Text id="description" text="{Gemini>description}"></Text>
+											</cells>
+											<cells>
+												<CheckBox id="node_id" editable="false"
+													selected="{Gemini>root_node_flag}" />
+												<!-- <Text id="rootNodeFlag" text="{Gemini>root_node_flag}"></Text> -->
+											</cells>
+											<cells>
+												<Text id="approvalStatus" text="{Gemini>approval_status}"></Text>
+											</cells>
+											<cells>
+												<Text id="responsibleUser" text="{Gemini>PersonResponsible}"></Text>
+											</cells>
+											<cells>
+												<Text id="RepresentativeView" text="{Gemini>RepresentativeView}"></Text>
+											</cells>
+											<cells>
+												<Input id="RepresentativeViewEdit" value="{Gemini>RepresentativeView}"
+													editable="{parts:['Gemini>RepresentativeViewRelease'],formatter:'s4.cfnd.geminiobjectpage.controller.NodeType.fnNodeTypeCDSEditable'}"
+													showValueHelp="true" valueHelpOnly="true"
+													valueHelpRequest="s4.cfnd.geminiobjectpage.controller.NodeType.onValueHelpRequestNodeTypeCDS" />
+											</cells>
+											<cells>
+												<Text id="ValueHelpView" text="{Gemini>ValueHelpView}"></Text>
+											</cells>
+											<cells>
+												<Input id="ValueHelpViewEdit" value="{Gemini>ValueHelpView}"
+													editable="{parts:['Gemini>ValueHelpViewRelease'],formatter:'s4.cfnd.geminiobjectpage.controller.NodeType.fnNodeTypeCDSEditable'}"
+													showValueHelp="true" valueHelpOnly="true"
+													valueHelpRequest="s4.cfnd.geminiobjectpage.controller.NodeType.onValueHelpRequestNodeTypeCDS" />
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+							</Panel>
+						</object:ObjectPageSubSection>
+					</object:subSections>
+				</object:ObjectPageSection>
+				<!-- Section for Comments -->
+				<object:ObjectPageSection id="Section3"
+					title="{i18n>CommentsFacet}">
+					<object:subSections>
+						<object:ObjectPageSubSection id="SectionSS3">
+							<Panel class="sapUiContentPadding">
+								<content>
+									<TextArea id="TypeComment" editable="false"
+										placeholder="{i18n>PCComment}" growing="true" growingMaxLines="7"
+										width="100%" height="100%" rows="3" />
+									<List id="idCommentsList" noDataText="No Comments "
+										showSeparators="Inner"
+										items="{ path: 'Gemini>/comment' , templateShareable:false}">
+										<FeedListItem info="{Gemini>createdby}" text="{Gemini>statuscomments}"
+											timestamp="{Gemini>createdat}" />
+									</List>
+									<BusyIndicator id="busyComments" size="1.4em" />
+								</content>
+							</Panel>
+						</object:ObjectPageSubSection>
+					</object:subSections>
+				</object:ObjectPageSection>
+			</object:sections>
+			<object:footer>
+				<Toolbar>
+					<Button id="error" icon="sap-icon://message-popup" type="Emphasized"
+						press="handleMessagePopoverPress" visible="false" />
+					<ToolbarSpacer />
+					<Button id="save" text="{i18n>Save}" type="Accept" press="fnJiraValidation"
+						visible="false" />
+					<Button id="edit" text="{i18n>Edit}" press="handleedit"
+						visible="false" />
+					<Button id="cancel" text="{i18n>Cancel}" press="cancel"
+						type="Reject" visible="false" />
+					<Button id="assign" text="{i18n>Assign}" press="onAssign"
+						visible="false" />
+				</Toolbar>
+			</object:footer>
+		</object:ObjectPageLayout>
+	</Page>
+</mvc:View>

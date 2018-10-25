@@ -1,0 +1,53 @@
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout">
+
+
+	<Dialog id="TrTaskCreationDialog" afterClose="s4.cfnd.geminiobjectpage.controller.TransportRequest.onNewTaskCreateCancel" title="{i18n>CreateTask}">
+
+		<Panel height="100%">
+			<layout:VerticalLayout width="100%">
+
+				<Text text="{i18n>NewTaskConfirmMsg}" class="sapUiMediumMarginBottom"
+					wrapping="true" />
+
+				<layout:HorizontalLayout>
+					<Label design="Bold" text="{i18n>ObjectNameText} " class="sapUiTinyMarginEnd" />
+					<Text id="TRObjName" text="{Gemini>/TRObjectName}" />
+				</layout:HorizontalLayout>
+
+				<layout:HorizontalLayout>
+					<Label design="Bold" text="{i18n>TransportRequest}: " class="sapUiTinyMarginEnd" />
+					<Text id="TRNumber" text="{Gemini>/TRTaskDialogNumber}" />
+				</layout:HorizontalLayout>
+
+				<layout:HorizontalLayout>
+					<Label design="Bold" text="{i18n>Owner}: " class="sapUiTinyMarginEnd" />
+					<Text id="TROwner" text="{Gemini>/TRTaskDialogOwner}" />
+				</layout:HorizontalLayout>
+
+				<layout:HorizontalLayout>
+					<Label design="Bold" text="{i18n>descriptionColName}: "
+						class="sapUiTinyMarginEnd" />
+					<Text id="TRDesc" text="{Gemini>/TRTaskDialogDesc}" />
+				</layout:HorizontalLayout>
+
+
+
+
+			</layout:VerticalLayout>
+
+		</Panel>
+
+		<beginButton>
+			<Button text="{i18n>ConfirmBtnText}"
+				press="s4.cfnd.geminiobjectpage.controller.TransportRequest.onNewTaskCreateConfirm" />
+		</beginButton>
+		<endButton>
+			<Button text="{i18n>Cancel}"
+				press="s4.cfnd.geminiobjectpage.controller.TransportRequest.onNewTaskCreateCancel" />
+		</endButton>
+
+	</Dialog>
+
+
+</core:FragmentDefinition>

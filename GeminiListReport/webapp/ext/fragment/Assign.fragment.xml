@@ -1,0 +1,25 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout">
+	<ViewSettingsDialog confirm="handleAssignConfirm" cancel="handlecancel">
+		<customTabs>
+			<ViewSettingsCustomTab id="Assign" title="{@i18n>AssignCustomTitle}">
+				<content>
+					<Panel height="100%">
+						<layout:VerticalLayout width="50%">
+							<Label text="{@i18n>AssignLabelText}" design="Bold" id="VSDThemeLabel"/>
+							<Input id="Assign1" width="200%" editable="true" showValueHelp="true" value="" showSuggestion="true" suggestionItems="{ path: 'geminiold>/BOTable', sorter: { path: 'ObjectName' } }" valueHelpRequest="onObjValueHelpRequest" fieldWidth="100%">
+								<suggestionItems>
+									<core:Item key="{geminiold>ObjectName}" text="{geminiold>ObjectName}"/>
+								</suggestionItems>
+							</Input>
+							<Button id="btn1" type="Transparent" enabled="false"/>
+							<Button id="btn2" type="Transparent" enabled="false"/>
+							<Label text="{@i18n>AssignCommentsLabelText}" design="Bold" id="VSDThemeLabel2"/>
+							<!--<FeedInput post="onPost"/>-->
+							<TextArea id="TypeHere" placeholder="{@i18n>AssignTextArea}" growing="true" growingMaxLines="7" width="200%" height="100%" rows="3"/>
+						</layout:VerticalLayout>
+					</Panel>
+				</content>
+			</ViewSettingsCustomTab>
+		</customTabs>
+	</ViewSettingsDialog>
+</core:FragmentDefinition>

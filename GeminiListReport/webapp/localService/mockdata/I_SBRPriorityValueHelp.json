@@ -1,0 +1,71 @@
+[{
+	"Priority": "Priority 1",
+	"PriorityText": "PriorityText 1",
+	"__metadata": {
+		"uri": "I_SBRPriorityValueHelp('Priority%201')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.I_SBRPriorityValueHelpType"
+	}
+}, {
+	"Priority": "Priority 2",
+	"PriorityText": "PriorityText 2",
+	"__metadata": {
+		"uri": "I_SBRPriorityValueHelp('Priority%202')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.I_SBRPriorityValueHelpType"
+	}
+}, {
+	"Priority": "Priority 3",
+	"PriorityText": "PriorityText 3",
+	"__metadata": {
+		"uri": "I_SBRPriorityValueHelp('Priority%203')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.I_SBRPriorityValueHelpType"
+	}
+}, {
+	"Priority": "Priority 4",
+	"PriorityText": "PriorityText 4",
+	"__metadata": {
+		"uri": "I_SBRPriorityValueHelp('Priority%204')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.I_SBRPriorityValueHelpType"
+	}
+}, {
+	"Priority": "Priority 5",
+	"PriorityText": "PriorityText 5",
+	"__metadata": {
+		"uri": "I_SBRPriorityValueHelp('Priority%205')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.I_SBRPriorityValueHelpType"
+	}
+}, {
+	"Priority": "Priority 6",
+	"PriorityText": "PriorityText 6",
+	"__metadata": {
+		"uri": "I_SBRPriorityValueHelp('Priority%206')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.I_SBRPriorityValueHelpType"
+	}
+}, {
+	"Priority": "Priority 7",
+	"PriorityText": "PriorityText 7",
+	"__metadata": {
+		"uri": "I_SBRPriorityValueHelp('Priority%207')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.I_SBRPriorityValueHelpType"
+	}
+}, {
+	"Priority": "Priority 8",
+	"PriorityText": "PriorityText 8",
+	"__metadata": {
+		"uri": "I_SBRPriorityValueHelp('Priority%208')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.I_SBRPriorityValueHelpType"
+	}
+}, {
+	"Priority": "Priority 9",
+	"PriorityText": "PriorityText 9",
+	"__metadata": {
+		"uri": "I_SBRPriorityValueHelp('Priority%209')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.I_SBRPriorityValueHelpType"
+	}
+}, {
+	"Priority": "Priority 10",
+	"PriorityText": "PriorityText 10",
+	"__metadata": {
+		"uri": "I_SBRPriorityValueHelp('Priority%2010')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.I_SBRPriorityValueHelpType"
+	}
+}]

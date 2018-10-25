@@ -1,0 +1,8 @@
+[{
+	"SAPObjectType": "BKPF",
+	"event": "BO",
+	"__metadata": {
+		"uri": "EventValueHelp(SAPObjectType='SAPObjectType%201',event='event%201')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.EventValueHelpType"
+	}
+}]

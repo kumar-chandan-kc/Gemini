@@ -1,0 +1,61 @@
+[{
+	"taskCode": "taskCode 1",
+	"__metadata": {
+		"uri": "C_SBRTASKCODEVH('taskCode%201')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.C_SBRTASKCODEVHType"
+	}
+}, {
+	"taskCode": "taskCode 2",
+	"__metadata": {
+		"uri": "C_SBRTASKCODEVH('taskCode%202')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.C_SBRTASKCODEVHType"
+	}
+}, {
+	"taskCode": "taskCode 3",
+	"__metadata": {
+		"uri": "C_SBRTASKCODEVH('taskCode%203')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.C_SBRTASKCODEVHType"
+	}
+}, {
+	"taskCode": "taskCode 4",
+	"__metadata": {
+		"uri": "C_SBRTASKCODEVH('taskCode%204')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.C_SBRTASKCODEVHType"
+	}
+}, {
+	"taskCode": "taskCode 5",
+	"__metadata": {
+		"uri": "C_SBRTASKCODEVH('taskCode%205')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.C_SBRTASKCODEVHType"
+	}
+}, {
+	"taskCode": "taskCode 6",
+	"__metadata": {
+		"uri": "C_SBRTASKCODEVH('taskCode%206')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.C_SBRTASKCODEVHType"
+	}
+}, {
+	"taskCode": "taskCode 7",
+	"__metadata": {
+		"uri": "C_SBRTASKCODEVH('taskCode%207')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.C_SBRTASKCODEVHType"
+	}
+}, {
+	"taskCode": "taskCode 8",
+	"__metadata": {
+		"uri": "C_SBRTASKCODEVH('taskCode%208')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.C_SBRTASKCODEVHType"
+	}
+}, {
+	"taskCode": "taskCode 9",
+	"__metadata": {
+		"uri": "C_SBRTASKCODEVH('taskCode%209')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.C_SBRTASKCODEVHType"
+	}
+}, {
+	"taskCode": "taskCode 10",
+	"__metadata": {
+		"uri": "C_SBRTASKCODEVH('taskCode%2010')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.C_SBRTASKCODEVHType"
+	}
+}]

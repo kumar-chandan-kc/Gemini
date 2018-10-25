@@ -1,0 +1,69 @@
+{
+	"fileName": "id_1513768873978_66_moveControls",
+	"fileType": "change",
+	"changeType": "moveControls",
+	"reference": "GeminiSmartTemplate.Component",
+	"packageName": "$TMP",
+	"content": {
+		"movedElements": [{
+			"selector": {
+				"id": "GeminiSmartTemplate::sap.suite.ui.generic.template.ListReport.view.ListReport::C_SBRBACKUP--ActionC_SBRBACKUP1button",
+				"idIsLocal": false
+			},
+			"sourceIndex": 1,
+			"targetIndex": 4
+		}],
+		"source": {
+			"selector": {
+				"aggregation": "content",
+				"type": "sap.m.OverflowToolbar",
+				"id": "GeminiSmartTemplate::sap.suite.ui.generic.template.ListReport.view.ListReport::C_SBRBACKUP--template::ListReport::TableToolbar",
+				"idIsLocal": false
+			}
+		},
+		"target": {
+			"selector": {
+				"aggregation": "content",
+				"type": "sap.m.OverflowToolbar",
+				"id": "GeminiSmartTemplate::sap.suite.ui.generic.template.ListReport.view.ListReport::C_SBRBACKUP--template::ListReport::TableToolbar",
+				"idIsLocal": false
+			}
+		}
+	},
+	"selector": {
+		"id": "GeminiSmartTemplate::sap.suite.ui.generic.template.ListReport.view.ListReport::C_SBRBACKUP--template::ListReport::TableToolbar",
+		"idIsLocal": false
+	},
+	"layer": "VENDOR",
+	"texts": {},
+	"namespace": "apps/GeminiSmartTemplate/changes/",
+	"creation": "2017-12-20T11:22:20.792Z",
+	"originalLanguage": "EN",
+	"conditions": {},
+	"context": "",
+	"support": {
+		"generator": "Change.createInitialFileContent",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.50.6"
+	},
+	"dependentSelector": {
+		"source": {
+			"id": "GeminiSmartTemplate::sap.suite.ui.generic.template.ListReport.view.ListReport::C_SBRBACKUP--template::ListReport::TableToolbar",
+			"idIsLocal": false
+		},
+		"target": {
+			"id": "GeminiSmartTemplate::sap.suite.ui.generic.template.ListReport.view.ListReport::C_SBRBACKUP--template::ListReport::TableToolbar",
+			"idIsLocal": false
+		},
+		"movedElements": [{
+			"id": "GeminiSmartTemplate::sap.suite.ui.generic.template.ListReport.view.ListReport::C_SBRBACKUP--ActionC_SBRBACKUP1button",
+			"idIsLocal": false
+		}]
+	},
+	"validAppVersions": {
+		"creation": "${project.version}",
+		"from": "${project.version}",
+		"to": "${project.version}"
+	}
+}

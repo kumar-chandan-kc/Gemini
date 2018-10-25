@@ -1,0 +1,35 @@
+{
+	"fileName": "id_1514347650670_75_propertyChange",
+	"fileType": "change",
+	"changeType": "propertyChange",
+	"reference": "GeminiSmartTemplate.Component",
+	"packageName": "$TMP",
+	"content": {
+		"property": "visible",
+		"newValue": true
+	},
+	"selector": {
+		"id": "GeminiSmartTemplate::sap.suite.ui.generic.template.ListReport.view.ListReport::C_SBRBACKUP--listReport-btnExcelExport",
+		"type": "sap.m.OverflowToolbarButton",
+		"idIsLocal": false
+	},
+	"layer": "VENDOR",
+	"texts": {},
+	"namespace": "apps/GeminiSmartTemplate/changes/",
+	"creation": "2017-12-27T04:07:32.663Z",
+	"originalLanguage": "EN",
+	"conditions": {},
+	"context": "",
+	"support": {
+		"generator": "Change.createInitialFileContent",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.50.6"
+	},
+	"dependentSelector": {},
+	"validAppVersions": {
+		"creation": "${project.version}",
+		"from": "${project.version}",
+		"to": "${project.version}"
+	}
+}

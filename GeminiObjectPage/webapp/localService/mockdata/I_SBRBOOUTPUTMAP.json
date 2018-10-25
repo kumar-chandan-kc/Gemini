@@ -1,0 +1,101 @@
+[{
+	"ObjectName": "ObjectName 1",
+	"applicationobjecttype": "applicationobjecttype 1",
+	"outputtype": "outputtype 1",
+	"area": "area 1",
+	"MapCount": 8,
+	"__metadata": {
+		"uri": "I_SBRBOOUTPUTMAP(ObjectName='ObjectName%201',applicationobjecttype='applicationobjecttype%201',outputtype='outputtype%201')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRBOOUTPUTMAPType"
+	}
+}, {
+	"ObjectName": "ObjectName 2",
+	"applicationobjecttype": "applicationobjecttype 2",
+	"outputtype": "outputtype 2",
+	"area": "area 2",
+	"MapCount": 0,
+	"__metadata": {
+		"uri": "I_SBRBOOUTPUTMAP(ObjectName='ObjectName%202',applicationobjecttype='applicationobjecttype%202',outputtype='outputtype%202')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRBOOUTPUTMAPType"
+	}
+}, {
+	"ObjectName": "ObjectName 3",
+	"applicationobjecttype": "applicationobjecttype 3",
+	"outputtype": "outputtype 3",
+	"area": "area 3",
+	"MapCount": 0,
+	"__metadata": {
+		"uri": "I_SBRBOOUTPUTMAP(ObjectName='ObjectName%203',applicationobjecttype='applicationobjecttype%203',outputtype='outputtype%203')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRBOOUTPUTMAPType"
+	}
+}, {
+	"ObjectName": "ObjectName 4",
+	"applicationobjecttype": "applicationobjecttype 4",
+	"outputtype": "outputtype 4",
+	"area": "area 4",
+	"MapCount": 0,
+	"__metadata": {
+		"uri": "I_SBRBOOUTPUTMAP(ObjectName='ObjectName%204',applicationobjecttype='applicationobjecttype%204',outputtype='outputtype%204')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRBOOUTPUTMAPType"
+	}
+}, {
+	"ObjectName": "ObjectName 5",
+	"applicationobjecttype": "applicationobjecttype 5",
+	"outputtype": "outputtype 5",
+	"area": "area 5",
+	"MapCount": 2,
+	"__metadata": {
+		"uri": "I_SBRBOOUTPUTMAP(ObjectName='ObjectName%205',applicationobjecttype='applicationobjecttype%205',outputtype='outputtype%205')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRBOOUTPUTMAPType"
+	}
+}, {
+	"ObjectName": "ObjectName 6",
+	"applicationobjecttype": "applicationobjecttype 6",
+	"outputtype": "outputtype 6",
+	"area": "area 6",
+	"MapCount": 4,
+	"__metadata": {
+		"uri": "I_SBRBOOUTPUTMAP(ObjectName='ObjectName%206',applicationobjecttype='applicationobjecttype%206',outputtype='outputtype%206')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRBOOUTPUTMAPType"
+	}
+}, {
+	"ObjectName": "ObjectName 7",
+	"applicationobjecttype": "applicationobjecttype 7",
+	"outputtype": "outputtype 7",
+	"area": "area 7",
+	"MapCount": 5,
+	"__metadata": {
+		"uri": "I_SBRBOOUTPUTMAP(ObjectName='ObjectName%207',applicationobjecttype='applicationobjecttype%207',outputtype='outputtype%207')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRBOOUTPUTMAPType"
+	}
+}, {
+	"ObjectName": "ObjectName 8",
+	"applicationobjecttype": "applicationobjecttype 8",
+	"outputtype": "outputtype 8",
+	"area": "area 8",
+	"MapCount": 8,
+	"__metadata": {
+		"uri": "I_SBRBOOUTPUTMAP(ObjectName='ObjectName%208',applicationobjecttype='applicationobjecttype%208',outputtype='outputtype%208')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRBOOUTPUTMAPType"
+	}
+}, {
+	"ObjectName": "ObjectName 9",
+	"applicationobjecttype": "applicationobjecttype 9",
+	"outputtype": "outputtype 9",
+	"area": "area 9",
+	"MapCount": 9,
+	"__metadata": {
+		"uri": "I_SBRBOOUTPUTMAP(ObjectName='ObjectName%209',applicationobjecttype='applicationobjecttype%209',outputtype='outputtype%209')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRBOOUTPUTMAPType"
+	}
+}, {
+	"ObjectName": "ObjectName 10",
+	"applicationobjecttype": "applicationobjecttype 10",
+	"outputtype": "outputtype 10",
+	"area": "area 10",
+	"MapCount": 3,
+	"__metadata": {
+		"uri": "I_SBRBOOUTPUTMAP(ObjectName='ObjectName%2010',applicationobjecttype='applicationobjecttype%2010',outputtype='outputtype%2010')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRBOOUTPUTMAPType"
+	}
+}]

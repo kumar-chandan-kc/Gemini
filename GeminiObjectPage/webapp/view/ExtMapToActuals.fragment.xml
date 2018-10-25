@@ -1,0 +1,31 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout">
+	<ViewSettingsDialog confirm="handleExtMapConfirm" cancel="handleExtMapClose">
+		<customTabs>
+			<ViewSettingsCustomTab id="ExtMapToActuals" title="{i18n>MaptoBusinessContext}">
+				<content>
+					<Panel height="100%">
+						<layout:VerticalLayout width="50%">
+							<Label text="{i18n>SelectaBusinessContext}" design="Bold" width="200%"/>
+							<Input id="ExtMapBC" width="200%" editable="true" showValueHelp="true" value="" valueHelpOnly="true" showSuggestion="true"
+								suggestionItems="{ path: 'Gemini>/businessContext'}" valueHelpRequest="s4.cfnd.geminiobjectpage.controller.Extensibility.onValueHelpRequestExtObjectMapExt"
+								fieldWidth="100%">
+								<suggestionItems>
+									<core:Item key="{Gemini>value}"/>
+								</suggestionItems>
+							</Input>
+							<Label id="ActualReleaseExtText" design="Bold" text="{i18n>ActualReleaseField}" visible="true"/>
+							<Input id="ActualReleaseExt" width="100%" showValueHelp="true" showSuggestion="true" valueHelpOnly="true"
+								suggestionItems="{ path: 'Gemini>/target_release' }" valueHelpRequest="onValueHelpRequestTargetReleaseExtMap">
+								<suggestionItems>
+									<core:ListItem text="{release_id}"/>
+								</suggestionItems>
+							</Input>
+							<Button  type="Transparent" enabled="false"/>
+							<Button  type="Transparent" enabled="false"/>
+						</layout:VerticalLayout>
+					</Panel>
+				</content>
+			</ViewSettingsCustomTab>
+		</customTabs>
+	</ViewSettingsDialog>
+</core:FragmentDefinition>

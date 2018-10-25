@@ -1,0 +1,1442 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+	<edmx:Reference xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+		Uri="https://dlms4hana.dlm.docker.sap.corp:50001/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value">
+		<edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+	</edmx:Reference>
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="CA_BUSINESS_REPOSITORY_SRV" xml:lang="en" sap:schema-version="1">
+			<EntityType Name="JiraResponse" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Response"/>
+				</Key>
+				<Property Name="JiraLink" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Jira Link" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Response" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Jira Response" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="CDSKeyFields" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="ObjectName"/>
+					<PropertyRef Name="CDSViewName"/>
+				</Key>
+				<Property Name="ObjectName" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="CDSViewName" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="TRCheckLockedObjectResponse" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="sObjectName"/>
+					<PropertyRef Name="sObj"/>
+				</Key>
+				<Property Name="sObjectName" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="sObj" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="TROwner" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="TRDescription" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="IsObjectLocked" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Indicator" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="IsLockRequiredInNewTask" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Indicator" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="IsTaskOpen" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Indicator" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="TRNumber" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="FioriActual" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="AppName"/>
+				</Key>
+				<Property Name="AppName" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FioriID" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="AppType" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="UITechnology" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="SemanticObject" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="SemanticAction" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="CheckLockedObject" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="TaskNumber"/>
+					<PropertyRef Name="ObjectName"/>
+				</Key>
+				<Property Name="TransportNumber" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="TaskNumber" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="RequestType" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="TRStatus" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ObjectName" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="TRANSPORT" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="TRNumber"/>
+				</Key>
+				<Property Name="Requesttype" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Package" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="TRNumber" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="TRDescription" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="sObjectName" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="sObj" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="IsTaskOpen" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Indicator" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="CheckTrType" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="FlagNodeType"/>
+					<PropertyRef Name="FlagExtension"/>
+					<PropertyRef Name="FlagMigration"/>
+					<PropertyRef Name="FlagAnalytics"/>
+					<PropertyRef Name="FlagOutput"/>
+					<PropertyRef Name="FlagEvents"/>
+					<PropertyRef Name="FlagSearch"/>
+					<PropertyRef Name="FlagAPI"/>
+				</Key>
+				<Property Name="FlagCus" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FlagWB" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="RequestType" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FlagNodeType" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FlagExtension" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FlagMigration" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FlagAnalytics" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FlagOutput" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FlagEvents" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FlagSearch" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FlagAPI" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="CheckTrObjMap" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="FlagMigration"/>
+					<PropertyRef Name="FlagExtensions"/>
+					<PropertyRef Name="FlagOutput"/>
+					<PropertyRef Name="FlagAnalytics"/>
+					<PropertyRef Name="FlagSearch"/>
+					<PropertyRef Name="FlagEvents"/>
+					<PropertyRef Name="FlagAPI"/>
+				</Key>
+				<Property Name="MigrationTr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FlagMigration" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ExtensionsTr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FlagExtensions" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="OuputTr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FlagOutput" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="AnalyticsTr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FlagAnalytics" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="SearchTr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FlagSearch" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="EventsTr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FlagEvents" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="APITr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="FlagAPI" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="CheckReleasedTask" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Tr_Number"/>
+				</Key>
+				<Property Name="Description" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Request_Type" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Package" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Tr_Number" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="EventValueHelpType" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="SAPObjectType"/>
+					<PropertyRef Name="event"/>
+				</Key>
+				<Property Name="SAPObjectType" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="event" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="MaintainBusinessObjectType" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="SAPObjectName"/>
+				</Key>
+				<Property Name="SAPObjectName" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ObjectCat" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ObjectName" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="ouptut" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Outputtype"/>
+					<PropertyRef Name="Applicationobjecttype"/>
+					<PropertyRef Name="Sapobjecttype"/>
+				</Key>
+				<Property Name="Outputtype" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Output Type"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Applicationobjecttype" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Appl. Object Type"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="Sapobjecttype" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="SAP Object Type"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="Assign" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="sapobjecttypeold"/>
+				</Key>
+				<Property Name="sapobjecttypeold" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="sapobjecttypenew" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="comment" Type="Edm.String" Nullable="false" sap:unicode="false" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/>
+				<Property Name="createdate" Type="Edm.DateTimeOffset" Nullable="false" Precision="0" sap:unicode="false" sap:label="Time Stamp"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="C_SBRAPPCOMPVHType" sap:label="Value Help for Application Component" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="ApplicationComponent"/>
+				</Key>
+				<Property Name="ApplicationComponent" Type="Edm.String" Nullable="false" MaxLength="24" sap:display-format="UpperCase"
+					sap:label="Component ID" sap:quickinfo="Application component ID"/>
+			</EntityType>
+			<EntityType Name="C_SBRBUSINESSEVENTSType" sap:label="Business Events CDS" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="SAPObjectType"/>
+					<PropertyRef Name="Task"/>
+					<PropertyRef Name="Event"/>
+				</Key>
+				<Property Name="SAPObjectType" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="SAP Object Type"/>
+				<Property Name="Task" Type="Edm.String" Nullable="false" MaxLength="5" sap:display-format="UpperCase" sap:label="SAP Object Task Type"/>
+				<Property Name="Event" Type="Edm.String" Nullable="false" MaxLength="32" sap:display-format="UpperCase" sap:label="SAPObject Event Code"
+					sap:quickinfo="SAP Object Event Code"/>
+				<Property Name="NodeType" Type="Edm.String" MaxLength="30" sap:label="SAP Object Node Type"/>
+				<Property Name="TaskCode" Type="Edm.String" MaxLength="18" sap:label="SAP Object Task Code"/>
+				<Property Name="TaskText" Type="Edm.String" MaxLength="40" sap:label="Obj Task Type Name" sap:quickinfo="SAP Object Task Type Name"/>
+				<Property Name="ActualRelease" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Actual Release"/>
+			</EntityType>
+			<EntityType Name="C_SBRBusinessObjectVHType" sap:label="Business Object Value Help" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="ObjectName"/>
+				</Key>
+				<Property Name="ObjectName" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Object type"/>
+			</EntityType>
+			<EntityType Name="C_SBRBUSOBJNAMEVHType" sap:label="Value Help for BUS Object Name" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="ObjectName"/>
+				</Key>
+				<Property Name="ObjectName" Type="Edm.String" Nullable="false" MaxLength="30" sap:display-format="UpperCase" sap:label="Class/Interface"
+					sap:quickinfo="Object Type Name"/>
+			</EntityType>
+			<EntityType Name="C_SBRSEARCHVHType" sap:label="Search Value Help" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="registration_id"/>
+				</Key>
+				<Property Name="registration_id" Type="Edm.String" Nullable="false" MaxLength="32" sap:display-format="UpperCase"
+					sap:label="Registration ID"/>
+				<Property Name="software_component" Type="Edm.String" MaxLength="32" sap:display-format="UpperCase" sap:label="Software Component"
+					sap:quickinfo="Software Component with search help for connector creation"/>
+				<Property Name="model" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Object Type"/>
+			</EntityType>
+			<EntityType Name="C_SBRTASKCODEVHType" sap:label="Value Help View for Task code" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="taskCode"/>
+				</Key>
+				<Property Name="taskCode" Type="Edm.String" Nullable="false" MaxLength="18" sap:label="SAP Object Task Code"/>
+			</EntityType>
+			<EntityType Name="I_SBRAnalyticsPlanType" sap:label="Analytics Planned Documents" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="analytics_id"/>
+				</Key>
+				<Property Name="analytics_id" Type="Edm.Guid" Nullable="false" sap:label="Analytics GUID"/>
+				<Property Name="sap_bo_type" Type="Edm.String" MaxLength="30" sap:label="SAP Object Type"/>
+				<Property Name="area" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Area" sap:quickinfo="Area / LoB"/>
+				<Property Name="analytics_artifact" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label=""
+					sap:quickinfo="30 Characters"/>
+				<Property Name="change_type" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Change Type"/>
+				<Property Name="target_release" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Target Release"/>
+				<Property Name="description" Type="Edm.String" sap:label="Description" sap:quickinfo="Description of the object"/>
+				<Property Name="status" Type="Edm.String" MaxLength="25" sap:label="Status" sap:quickinfo="Status of Objects"/>
+				<Property Name="status_colour" Type="Edm.String" MaxLength="6" sap:display-format="UpperCase"/>
+				<Property Name="status_icon" Type="Edm.String" MaxLength="38" sap:display-format="UpperCase"/>
+				<Property Name="tool_tip" Type="Edm.String" MaxLength="29" sap:display-format="UpperCase"/>
+				<Property Name="actual_release" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Target Release"/>
+			</EntityType>
+			<EntityType Name="I_SBRAPIOPERATIONSMASTERType" sap:label="Map API Operations to SAP Object Types" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="sapobjecttype"/>
+					<PropertyRef Name="communicationscenario"/>
+					<PropertyRef Name="apitype"/>
+					<PropertyRef Name="service_interface"/>
+					<PropertyRef Name="protocol"/>
+				</Key>
+				<Property Name="sapobjecttype" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="SAP Object Type"/>
+				<Property Name="communicationscenario" Type="Edm.String" Nullable="false" MaxLength="30" sap:display-format="UpperCase"
+					sap:label="CommScenario" sap:quickinfo="Communication Scenario"/>
+				<Property Name="apitype" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Protocol"/>
+				<Property Name="service_interface" Type="Edm.String" Nullable="false" MaxLength="40" sap:display-format="UpperCase"
+					sap:label="Service Interface"/>
+				<Property Name="protocol" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Protocol"/>
+				<Property Name="serviceinterface_wov" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Service Interface"/>
+				<Property Name="readapi" Type="Edm.Byte"/>
+				<Property Name="createapi" Type="Edm.Byte"/>
+				<Property Name="updateapi" Type="Edm.Byte"/>
+				<Property Name="deleteapi" Type="Edm.Byte"/>
+				<Property Name="othersapi" Type="Edm.Byte"/>
+			</EntityType>
+			<EntityType Name="I_SBRAPIOpToSAPObjectTypeType" sap:label="Map API operations to SAP Object Type" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="sapobjecttype"/>
+					<PropertyRef Name="communicationscenario"/>
+					<PropertyRef Name="apitype"/>
+					<PropertyRef Name="service_interface"/>
+					<PropertyRef Name="entityset"/>
+					<PropertyRef Name="protocol"/>
+				</Key>
+				<Property Name="sapobjecttype" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="SAP Object Type"/>
+				<Property Name="communicationscenario" Type="Edm.String" Nullable="false" MaxLength="30" sap:display-format="UpperCase"
+					sap:label="CommScenario" sap:quickinfo="Communication Scenario"/>
+				<Property Name="apitype" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Protocol"/>
+				<Property Name="service_interface" Type="Edm.String" Nullable="false" MaxLength="40" sap:display-format="UpperCase"
+					sap:label="Service Interface"/>
+				<Property Name="entityset" Type="Edm.String" Nullable="false" MaxLength="100" sap:display-format="UpperCase" sap:label="Entity Set"/>
+				<Property Name="protocol" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Protocol"/>
+				<Property Name="communication_scenario_name" Type="Edm.String" MaxLength="255" sap:display-format="UpperCase" sap:label="Comm Scenario Name"/>
+				<Property Name="service_name" Type="Edm.String" MaxLength="255" sap:display-format="UpperCase" sap:label="Service Intf Name"/>
+				<Property Name="readapi" Type="Edm.Byte" sap:label="Read API Count" sap:quickinfo="Read API"/>
+				<Property Name="createapi" Type="Edm.Byte" sap:label="Create API Count"/>
+				<Property Name="updateapi" Type="Edm.Byte" sap:label="Update API Count"/>
+				<Property Name="deleteapi" Type="Edm.Byte" sap:label="Delete API Count"/>
+				<Property Name="minimum_version" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Release Version"
+					sap:quickinfo="Minimum release version"/>
+			</EntityType>
+			<EntityType Name="I_SBRAPIPLANType" sap:label="API Planned Documents" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="api_id"/>
+				</Key>
+				<Property Name="api_id" Type="Edm.Guid" Nullable="false" sap:label="API GUID"/>
+				<Property Name="sap_bo_type" Type="Edm.String" MaxLength="30" sap:label="SAP Object Type"/>
+				<Property Name="protocol" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Protocol"/>
+				<Property Name="area" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Area" sap:quickinfo="Area / LoB"/>
+				<Property Name="read_applicable" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Read Applicable"
+					sap:quickinfo="Is Read Applicable"/>
+				<Property Name="create_applicable" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Create Applicable"/>
+				<Property Name="update_applicable" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Update Applicable"
+					sap:quickinfo="Is Update Applicable"/>
+				<Property Name="delete_applicable" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Delete Applicable"
+					sap:quickinfo="Is Delete Applicable"/>
+				<Property Name="others_applicable" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Others Applicable"/>
+				<Property Name="target_release" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Target Release"/>
+				<Property Name="description" Type="Edm.String" sap:label="Description" sap:quickinfo="Description of the object"/>
+				<Property Name="status" Type="Edm.String" MaxLength="25" sap:label="Status" sap:quickinfo="Status of Objects"/>
+				<Property Name="change_type" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Change Type"
+					sap:quickinfo="Change Type of Planned Cloud Qualities"/>
+				<Property Name="status_colour" Type="Edm.String" MaxLength="6" sap:display-format="UpperCase"/>
+				<Property Name="status_icon" Type="Edm.String" MaxLength="38" sap:display-format="UpperCase"/>
+				<Property Name="mapped_service_interface" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Service Interface"/>
+				<Property Name="actual_release" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Actual Release"/>
+				<Property Name="communication_scenario" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="CommScenario"
+					sap:quickinfo="Communication Scenario"/>
+				<Property Name="jira_backlog" Type="Edm.String" MaxLength="100" sap:display-format="UpperCase" sap:label="Jira Back Log"
+					sap:quickinfo="Jira Backlog Id"/>
+				<Property Name="tool_tip" Type="Edm.String" MaxLength="29" sap:display-format="UpperCase"/>
+				<Property Name="jira_backlog_link" Type="Edm.String" MaxLength="136" sap:display-format="UpperCase"/>
+				<Property Name="jira_valid" Type="Edm.String" MaxLength="1" sap:display-format="NonNegative"/>
+				<Property Name="requirement_jira_link" Type="Edm.String" MaxLength="136" sap:display-format="UpperCase"/>
+				<Property Name="requirement_jira" Type="Edm.String" MaxLength="100" sap:display-format="UpperCase" sap:label="Jira Back Log"
+					sap:quickinfo="Jira Backlog Id"/>
+				<Property Name="jira_req_valid" Type="Edm.String" MaxLength="1" sap:display-format="NonNegative"/>
+			</EntityType>
+			<EntityType Name="I_SBRAREAVHType" sap:label="Area Value Help" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Area"/>
+				</Key>
+				<Property Name="Area" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Lower Value"
+					sap:quickinfo="Values for Domains: Single Value / Upper Limit"/>
+				<Property Name="Description" Type="Edm.String" MaxLength="60" sap:label="Short Descript." sap:quickinfo="Short Text for Fixed Values"/>
+			</EntityType>
+			<EntityType Name="I_SBRBOOUTPUTMAPType" sap:label="BO map to OutPut types" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="ObjectName"/>
+					<PropertyRef Name="applicationobjecttype"/>
+					<PropertyRef Name="outputtype"/>
+				</Key>
+				<Property Name="ObjectName" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="SAP Object Type"/>
+				<Property Name="applicationobjecttype" Type="Edm.String" Nullable="false" MaxLength="30" sap:display-format="UpperCase"
+					sap:label="Appl. Object Type" sap:quickinfo="Application Object Type (Business Object)"/>
+				<Property Name="outputtype" Type="Edm.String" Nullable="false" MaxLength="30" sap:display-format="UpperCase" sap:label="Output Type"/>
+				<Property Name="area" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Area" sap:quickinfo="Area / LoB"/>
+				<Property Name="MapCount" Type="Edm.Byte"/>
+			</EntityType>
+			<EntityType Name="I_SBRBORCOMMENTType" sap:label="Comment" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="sapobjecttype"/>
+					<PropertyRef Name="createdat"/>
+				</Key>
+				<Property Name="sapobjecttype" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="SAP Object Type"/>
+				<Property Name="createdat" Type="Edm.DateTimeOffset" Nullable="false" Precision="0" sap:label="Time Stamp"
+					sap:quickinfo="UTC Time Stamp in Short Form (YYYYMMDDhhmmss)"/>
+				<Property Name="statuscomments" Type="Edm.String" MaxLength="500"/>
+				<Property Name="createdby" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="User"
+					sap:quickinfo="User Name in User Master Record"/>
+			</EntityType>
+			<EntityType Name="I_SBRBusinessContextVHType" sap:label="Business Context Value Help" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="business_context"/>
+				</Key>
+				<Property Name="business_context" Type="Edm.String" Nullable="false" MaxLength="30" sap:display-format="UpperCase"
+					sap:label="Business Context" sap:quickinfo="Custom Fields: Business Context Name"/>
+				<Property Name="availability" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Availability"
+					sap:quickinfo="Custom Fields: Availability of registered Entity"/>
+				<Property Name="release_status" Type="Edm.String" MaxLength="5" sap:display-format="UpperCase" sap:label="Release Status"
+					sap:quickinfo="Custom Fields: Release Status of registered Entity"/>
+			</EntityType>
+			<EntityType Name="I_SBRCDSACTUALFINALType" sap:label="Final CDS view for CDS Actuals" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="CDSName"/>
+				</Key>
+				<Property Name="CDSName" Type="Edm.String" Nullable="false" MaxLength="30" sap:display-format="UpperCase" sap:label="Name of DD object"
+					sap:quickinfo="Name of the ABAP Dictionary object"/>
+				<Property Name="IsInterface" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase"/>
+				<Property Name="IsQuery" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase"/>
+				<Property Name="IsCube" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase"/>
+				<Property Name="IsDimension" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase"/>
+				<Property Name="IsValueHelp" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase"/>
+				<Property Name="IsAssociation" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase"/>
+				<Property Name="CDSReleasedStatus" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase"/>
+			</EntityType>
+			<EntityType Name="I_SBRCDSACTUALSType" sap:label="CDS Actual Objects" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="sap_bo_type"/>
+					<PropertyRef Name="cds_artifact"/>
+					<PropertyRef Name="view_name"/>
+				</Key>
+				<Property Name="sap_bo_type" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="SAP Object Type"/>
+				<Property Name="cds_artifact" Type="Edm.String" Nullable="false" MaxLength="30" sap:display-format="UpperCase" sap:label="CDS Artifact Name"/>
+				<Property Name="view_name" Type="Edm.String" Nullable="false" MaxLength="40" sap:display-format="UpperCase" sap:label="Name DDL Source"
+					sap:quickinfo="Name of a DDL Source"/>
+				<Property Name="release_status" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="CDS Release Status"/>
+				<Property Name="isanalytics" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Analytics usage type"
+					sap:quickinfo="Analytics usage type flag"/>
+				<Property Name="isextensibility" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Ext usage type"
+					sap:quickinfo="Extensibility usage type flag"/>
+				<Property Name="isapiinterface" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="API Interface"
+					sap:quickinfo="API Interface usage type flag"/>
+				<Property Name="iskeystructure" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Key structure flag"
+					sap:quickinfo="Key structure usage type flag"/>
+				<Property Name="isdataextraction" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Data extraction flag"
+					sap:quickinfo="Data extraction usage type flag"/>
+				<Property Name="isbwextraction" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="BW Extraction flag"
+					sap:quickinfo="BW Extraction usage type flag"/>
+				<Property Name="issearch" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Search flag" sap:quickinfo="Search usage type flag"/>
+			</EntityType>
+			<EntityType Name="I_SBRCDSKEYFIELDSType" sap:label="CDS for key field names of all the CDS" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="CDS_Names"/>
+					<PropertyRef Name="Fieldnames"/>
+				</Key>
+				<Property Name="CDS_Names" Type="Edm.String" Nullable="false" MaxLength="30" sap:display-format="UpperCase" sap:label=""
+					sap:quickinfo="DD: Name of Structured Object (For Example, Entity, Context)"/>
+				<Property Name="Fieldnames" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="" sap:quickinfo="DD: Field Name Original Spelling"/>
+				<Property Name="KeyFieldPosition" Type="Edm.Int32" sap:label="" sap:quickinfo="DD: Marked Position in a Repeat Group"/>
+			</EntityType>
+			<EntityType Name="I_SBRCDSViewNameVHType" sap:label="CDS view name Value Help" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="CDSName"/>
+				</Key>
+				<Property Name="CDSName" Type="Edm.String" Nullable="false" MaxLength="40" sap:display-format="UpperCase" sap:label="Name DDL Source"
+					sap:quickinfo="Name of a DDL Source"/>
+				<Property Name="CDSReleaseStatus" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase"/>
+				<Property Name="ApplicationComponentName" Type="Edm.String" MaxLength="24" sap:display-format="UpperCase" sap:label="Component ID"
+					sap:quickinfo="Application component ID"/>
+			</EntityType>
+			<EntityType Name="I_SBRCloudQualityType" sap:label="SAP Object Types Cloud Quality" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="ObjectName"/>
+				</Key>
+				<Property Name="ObjectName" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="SAP Object Type"/>
+				<Property Name="Area" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Area" sap:quickinfo="Area / LoB"/>
+				<Property Name="PersonResponsible" Type="Edm.String" MaxLength="80" sap:label="Description" sap:quickinfo="User Description"/>
+				<Property Name="Status" Type="Edm.String" MaxLength="25" sap:label="Status" sap:quickinfo="Status of Objects"/>
+				<Property Name="devclass" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Package"/>
+				<Property Name="StatusComments" Type="Edm.String" sap:label="Status Comment"/>
+				<Property Name="CDSObjectName" Type="Edm.String" MaxLength="32" sap:display-format="UpperCase"/>
+				<Property Name="CDSViewname" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="" sap:quickinfo="DDL Source"/>
+				<Property Name="borObject" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Object Type"/>
+				<Property Name="clObject" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="SAP Obj Rep"
+					sap:quickinfo="SAP Object Representation"/>
+				<Property Name="ObjectCount" Type="Edm.Byte"/>
+				<Property Name="ApplicationComponent" Type="Edm.String" MaxLength="24" sap:display-format="UpperCase" sap:label="Component ID"
+					sap:quickinfo="Application component ID"/>
+				<Property Name="ParentObjectName" Type="Edm.String" MaxLength="30" sap:label="ParentObject" sap:quickinfo="Parent BO"/>
+				<Property Name="BusinessContextCount" Type="Edm.Byte"/>
+				<Property Name="BadiCount" Type="Edm.Int32"/>
+				<Property Name="OdataCount" Type="Edm.Int32"/>
+				<Property Name="ExtCDSCOunt" Type="Edm.Int32"/>
+				<Property Name="isExtensionApplicable" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase"/>
+				<Property Name="MigrationObjectCount" Type="Edm.Int32"/>
+				<Property Name="SearchObjectCount1" Type="Edm.Int32"/>
+				<Property Name="MigrationObjectExists" Type="Edm.Byte"/>
+				<Property Name="SearchObjectExists" Type="Edm.Byte"/>
+				<Property Name="ismigrationapplicable" Type="Edm.String" MaxLength="5" sap:display-format="UpperCase"/>
+				<Property Name="SearchObjectCount" Type="Edm.Byte"/>
+				<Property Name="SearchObject" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Object Type"/>
+				<Property Name="isSearchapplicable" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase"/>
+				<Property Name="OutputObjectAvailable" Type="Edm.Byte"/>
+				<Property Name="isOutputapplicable" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase"/>
+				<Property Name="CDSCount" Type="Edm.Byte"/>
+				<Property Name="softwarecomponent" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Software Component"/>
+				<Property Name="CDSCountRequired" Type="Edm.String" MaxLength="5" sap:display-format="UpperCase"/>
+				<Property Name="contactperson" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Contact Person"/>
+				<Property Name="isCloudRelevant" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase"/>
+				<Property Name="iscudapiapplicable" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="API CUD Applicable"
+					sap:quickinfo="Create/Update/Delete APIs applicable for this object"/>
+				<Property Name="isreadapiapplicable" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="API Read Applicable"
+					sap:quickinfo="Is read api applicable for this object"/>
+				<Property Name="sap_object_category" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="SAP Object Category"/>
+				<Property Name="ReleaseState" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Release State"/>
+				<Property Name="ReleaseStateText" Type="Edm.String" MaxLength="60" sap:label="Short Descript." sap:quickinfo="Short Text for Fixed Values"/>
+				<Property Name="is_event_applicable" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Event Applicable"
+					sap:quickinfo="Is event applicable"/>
+				<Property Name="Priority" Type="Edm.String" MaxLength="60" sap:label="Short Descript." sap:quickinfo="Short Text for Fixed Values"/>
+				<Property Name="PriorityKey" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Lower Value"
+					sap:quickinfo="Values for Domains: Single Value / Upper Limit"/>
+			</EntityType>
+			<EntityType Name="I_SBRCloudQualityCompletionType" sap:semantics="aggregate" sap:label="Cloud Quality completion" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="ID"/>
+				</Key>
+				<Property Name="ID" Type="Edm.String" Nullable="false" sap:sortable="false" sap:filterable="false"/>
+				<Property Name="ObjectName" Type="Edm.String" MaxLength="30" sap:aggregation-role="dimension" sap:label="SAP Object Type"/>
+				<Property Name="ObjectCount" Type="Edm.Byte" sap:aggregation-role="measure" sap:filterable="false"/>
+				<Property Name="area" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:display-format="UpperCase" sap:label="Area"
+					sap:quickinfo="Area / LoB"/>
+				<Property Name="applicationcomponent" Type="Edm.String" MaxLength="24" sap:aggregation-role="dimension" sap:display-format="UpperCase"
+					sap:label="Component ID" sap:quickinfo="Application component ID"/>
+				<Property Name="ParentObjectName" Type="Edm.String" MaxLength="30" sap:aggregation-role="dimension" sap:label="ParentObject"
+					sap:quickinfo="Parent BO"/>
+				<Property Name="priority" Type="Edm.String" MaxLength="10" sap:aggregation-role="dimension" sap:display-format="UpperCase"
+					sap:label="PriorityCode" sap:quickinfo="Priority of SAP Object Type"/>
+				<Property Name="PriorityText" Type="Edm.String" MaxLength="60" sap:aggregation-role="dimension" sap:label="Priority"
+					sap:quickinfo="Priority Text"/>
+				<Property Name="BusinessContextCount" Type="Edm.Byte" sap:aggregation-role="measure" sap:filterable="false"/>
+				<Property Name="BAdICount" Type="Edm.Int32" sap:aggregation-role="measure" sap:filterable="false"/>
+				<Property Name="ODATACount" Type="Edm.Int32" sap:aggregation-role="measure" sap:filterable="false"/>
+				<Property Name="ExtCDSCOunt" Type="Edm.Int32" sap:aggregation-role="measure" sap:filterable="false"/>
+				<Property Name="IsExtensionApplicable" Type="Edm.String" MaxLength="1" sap:aggregation-role="dimension" sap:display-format="UpperCase"
+					sap:label="Extension Applicable" sap:quickinfo="Is Extension Business Contexts applicable for this object"/>
+				<Property Name="MigrationObjectCount" Type="Edm.Int32" sap:aggregation-role="measure" sap:filterable="false"/>
+				<Property Name="SearchObjectCount" Type="Edm.Int32" sap:aggregation-role="measure" sap:filterable="false"/>
+				<Property Name="MigrationObjectExists" Type="Edm.Byte" sap:aggregation-role="measure" sap:filterable="false"/>
+				<Property Name="SearchObjectExists" Type="Edm.Byte" sap:aggregation-role="measure" sap:filterable="false"/>
+				<Property Name="IsMigrationApplicable" Type="Edm.String" MaxLength="1" sap:aggregation-role="dimension" sap:display-format="UpperCase"
+					sap:label="Migration Applicable" sap:quickinfo="Is Migration Object applicable for this object"/>
+				<Property Name="IsEventApplicable" Type="Edm.String" MaxLength="1" sap:aggregation-role="dimension" sap:display-format="UpperCase"
+					sap:label="Event Applicable" sap:quickinfo="Is event applicable"/>
+				<Property Name="searchobject" Type="Edm.String" MaxLength="20" sap:aggregation-role="dimension" sap:display-format="UpperCase"
+					sap:label="Object Type"/>
+				<Property Name="IsSearchApplicable" Type="Edm.String" MaxLength="1" sap:aggregation-role="dimension" sap:display-format="UpperCase"
+					sap:label="Search Applicable" sap:quickinfo="Is Search Objects required for this object"/>
+				<Property Name="OutputObjectAvailable" Type="Edm.Byte" sap:aggregation-role="measure" sap:filterable="false"/>
+				<Property Name="isoutputapplicable" Type="Edm.String" MaxLength="1" sap:aggregation-role="dimension" sap:display-format="UpperCase"
+					sap:label="Output Applicable" sap:quickinfo="Is Output object applicable"/>
+				<Property Name="EventApplicable" Type="Edm.Byte" sap:aggregation-role="measure" sap:filterable="false"/>
+				<Property Name="CDSCount" Type="Edm.Byte" sap:aggregation-role="measure" sap:filterable="false"/>
+				<Property Name="CDSCountRequired" Type="Edm.String" MaxLength="1" sap:aggregation-role="dimension" sap:display-format="UpperCase"/>
+				<Property Name="ReadAPICount" Type="Edm.Byte" sap:aggregation-role="measure" sap:filterable="false"/>
+				<Property Name="CUDAPICount" Type="Edm.Byte" sap:aggregation-role="measure" sap:filterable="false"/>
+				<Property Name="IsReadApplicable" Type="Edm.String" MaxLength="1" sap:aggregation-role="dimension" sap:display-format="UpperCase"/>
+				<Property Name="IsCUDApplicable" Type="Edm.String" MaxLength="1" sap:aggregation-role="dimension" sap:display-format="UpperCase"/>
+				<Property Name="Counter" Type="Edm.Byte" sap:aggregation-role="measure" sap:filterable="false"/>
+				<Property Name="EventExists" Type="Edm.Byte" sap:aggregation-role="measure" sap:filterable="false"/>
+			</EntityType>
+			<EntityType Name="I_SBRCombinedObjectViewType" sap:label="Obj page view with flags &amp; information on business context" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="ObjectName"/>
+				</Key>
+				<Property Name="ObjectName" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="SAP Object Type"/>
+				<Property Name="Status" Type="Edm.String" MaxLength="25" sap:label="Status" sap:quickinfo="Status of Objects"/>
+				<Property Name="CDSObjectName" Type="Edm.String" MaxLength="32" sap:display-format="UpperCase"/>
+				<Property Name="StatusComments" Type="Edm.String" sap:label="Status Comment"/>
+				<Property Name="borObject" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Object Type"/>
+				<Property Name="clObject" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="SAP Obj Rep"
+					sap:quickinfo="SAP Object Representation"/>
+				<Property Name="ObjectCount" Type="Edm.Byte"/>
+				<Property Name="Area" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Area" sap:quickinfo="Area / LoB"/>
+				<Property Name="ApplicationComponent" Type="Edm.String" MaxLength="24" sap:display-format="UpperCase" sap:label="Component ID"
+					sap:quickinfo="Application component ID"/>
+				<Property Name="devclass" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Package"/>
+				<Property Name="isExtensionApplicable" Type="Edm.String" MaxLength="5" sap:display-format="UpperCase"/>
+				<Property Name="ismigrationapplicable" Type="Edm.String" MaxLength="5" sap:display-format="UpperCase"/>
+				<Property Name="SearchObject" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Object Type"/>
+				<Property Name="issearchapplicable" Type="Edm.String" MaxLength="5" sap:display-format="UpperCase"/>
+				<Property Name="OutputObjectAvailable" Type="Edm.Byte"/>
+				<Property Name="outputtype" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Output Type"/>
+				<Property Name="applicationobjecttype" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Appl. Object Type"
+					sap:quickinfo="Application Object Type (Business Object)"/>
+				<Property Name="isoutputapplicable" Type="Edm.String" MaxLength="5" sap:display-format="UpperCase"/>
+				<Property Name="CDSCountRequired" Type="Edm.String" MaxLength="5" sap:display-format="UpperCase"/>
+				<Property Name="contactperson" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Contact Person"/>
+				<Property Name="isCloudRelevant" Type="Edm.String" MaxLength="5" sap:display-format="UpperCase"/>
+				<Property Name="BusinessContext" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Business Context"
+					sap:quickinfo="Custom Fields: Business Context Name"/>
+				<Property Name="sap_object_category" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="SAP Object Category"/>
+				<Property Name="MigrationObject" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Migration Object"
+					sap:quickinfo="Migration Object IDs"/>
+				<Property Name="CDSViewname" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="" sap:quickinfo="DDL Source"/>
+				<Property Name="iscudapiapplicable" Type="Edm.String" MaxLength="5" sap:display-format="UpperCase"/>
+				<Property Name="isreadapiapplicable" Type="Edm.String" MaxLength="5" sap:display-format="UpperCase"/>
+				<Property Name="is_event_applicable" Type="Edm.String" MaxLength="5" sap:display-format="UpperCase"/>
+				<Property Name="bodef_borobject" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase"/>
+				<Property Name="bodef_classobject" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase"/>
+				<Property Name="PersonResponsible" Type="Edm.String" MaxLength="80" sap:label="Description" sap:quickinfo="User Description"/>
+				<Property Name="Priority" Type="Edm.String" MaxLength="60" sap:label="Short Descript." sap:quickinfo="Short Text for Fixed Values"/>
+				<Property Name="PriorityKey" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Lower Value"
+					sap:quickinfo="Values for Domains: Single Value / Upper Limit"/>
+				<Property Name="ReleaseState" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Release State"/>
+				<Property Name="ReleaseStateText" Type="Edm.String" MaxLength="60" sap:label="Short Descript." sap:quickinfo="Short Text for Fixed Values"/>
+				<NavigationProperty Name="to_CDS" Relationship="CA_BUSINESS_REPOSITORY_SRV.assoc_69DABA8ABDE6A988080D7347DC6F28AF"
+					FromRole="FromRole_assoc_69DABA8ABDE6A988080D7347DC6F28AF" ToRole="ToRole_assoc_69DABA8ABDE6A988080D7347DC6F28AF"/>
+			</EntityType>
+			<EntityType Name="I_SBRCommunicationScenarioVHType" sap:label="Communication Scenario Value Help" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="CommunicationScenario"/>
+					<PropertyRef Name="communication_scenario_id"/>
+				</Key>
+				<Property Name="CommunicationScenario" Type="Edm.String" Nullable="false" MaxLength="255" sap:display-format="UpperCase"
+					sap:label="Comm Scenario Name"/>
+				<Property Name="communication_scenario_id" Type="Edm.String" Nullable="false" MaxLength="30" sap:display-format="UpperCase"
+					sap:label="CommScenario" sap:quickinfo="Communication Scenario"/>
+			</EntityType>
+			<EntityType Name="I_SBRCQBACKUPType" sap:label="Cloud Qualities data from OAM" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="object_name"/>
+					<PropertyRef Name="cloud_quality"/>
+					<PropertyRef Name="object_category"/>
+				</Key>
+				<Property Name="object_name" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="OAM Object Name"/>
+				<Property Name="cloud_quality" Type="Edm.String" Nullable="false" MaxLength="30" sap:display-format="UpperCase"
+					sap:label="OAM CLoud Quality" sap:quickinfo="OAM Cloud Quality"/>
+				<Property Name="object_category" Type="Edm.String" Nullable="false" MaxLength="32" sap:label="OAM Object Category"/>
+				<Property Name="product_area" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Area" sap:quickinfo="Area / LoB"/>
+				<Property Name="sub_area" Type="Edm.String" MaxLength="30" sap:label="Sub Area"/>
+				<Property Name="sap_object_type" Type="Edm.String" MaxLength="30" sap:label="SAP Object Type"/>
+				<Property Name="description" Type="Edm.String" sap:label="Object Description" sap:quickinfo="OAM Object Name Description"/>
+				<Property Name="first_scope" Type="Edm.String" MaxLength="20" sap:label="First Delivery Scope"/>
+				<Property Name="release_cq" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="CQ Release"
+					sap:quickinfo="OAM Cloud quality Release"/>
+				<Property Name="release_shipment" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="OAM Shipment Release"
+					sap:quickinfo="OAM Cloud Quality Shipment Release"/>
+				<Property Name="jira_link" Type="Edm.String" MaxLength="150" sap:label="JIRA Link"/>
+				<Property Name="jira_direct" Type="Edm.String" MaxLength="150" sap:label="JIRA Direct"/>
+				<Property Name="scope_item_link" Type="Edm.String" MaxLength="30" sap:label="Scope Item Link"/>
+				<Property Name="two_tier_relevance" Type="Edm.String" MaxLength="3" sap:label="Two Tier Relevance"/>
+				<Property Name="effort_estimation" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Effort Estimation"
+					sap:quickinfo="OAM Effort Estimation"/>
+				<Property Name="issue" Type="Edm.String" sap:label="JIRA Issue"/>
+				<Property Name="source" Type="Edm.String" sap:label="Source"/>
+				<Property Name="contact_person" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="OAM Contact Person"/>
+				<Property Name="contact_po" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="OAM PO Contact"/>
+				<Property Name="customer_reference" Type="Edm.String" MaxLength="100" sap:label="Customer Reference"/>
+				<Property Name="comment_desc" Type="Edm.String" sap:label="Comment Description" sap:quickinfo="OAM Comment Description"/>
+			</EntityType>
+			<EntityType Name="I_SBREVENTPLANType" sap:label="Events Planning" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="event_id"/>
+				</Key>
+				<Property Name="event_id" Type="Edm.Guid" Nullable="false" sap:label="Event GUID" sap:quickinfo="GUID for Event Planning"/>
+				<Property Name="sap_bo_type" Type="Edm.String" MaxLength="30" sap:label="SAP Object Type"/>
+				<Property Name="bo_task" Type="Edm.String" MaxLength="18" sap:label="SAP Object Task Code"/>
+				<Property Name="bo_event" Type="Edm.String" MaxLength="32" sap:display-format="UpperCase" sap:label="SAPObject Event Code"
+					sap:quickinfo="SAP Object Event Code"/>
+				<Property Name="object_node_type" Type="Edm.String" MaxLength="30" sap:label="SAP Object Node Type"/>
+				<Property Name="changetype" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Change Type"
+					sap:quickinfo="Change Type of Planned Cloud Qualities"/>
+				<Property Name="target_release" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Target Release"/>
+				<Property Name="actual_release" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Actual Release"/>
+				<Property Name="description" Type="Edm.String" sap:label="Description" sap:quickinfo="Description of the object"/>
+				<Property Name="status" Type="Edm.String" MaxLength="25" sap:label="Status" sap:quickinfo="Status of Objects"/>
+				<Property Name="tool_tip" Type="Edm.String" MaxLength="29" sap:display-format="UpperCase"/>
+				<Property Name="status_colour" Type="Edm.String" MaxLength="6" sap:display-format="UpperCase"/>
+				<Property Name="status_icon" Type="Edm.String" MaxLength="38" sap:display-format="UpperCase"/>
+				<Property Name="jira_valid" Type="Edm.String" MaxLength="1" sap:display-format="NonNegative"/>
+				<Property Name="jira_backlog" Type="Edm.String" MaxLength="100" sap:display-format="UpperCase" sap:label="Jira Back Log"
+					sap:quickinfo="Jira Backlog Id"/>
+				<Property Name="jira_backlog_link" Type="Edm.String" MaxLength="136" sap:display-format="UpperCase"/>
+			</EntityType>
+			<EntityType Name="I_SBREXTPLANType" sap:label="Planned Extensibility Objects" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="ext_id"/>
+				</Key>
+				<Property Name="ext_id" Type="Edm.Guid" Nullable="false" sap:label="Ext ID for Planning"
+					sap:quickinfo="Gemini: Data Element for Random Extensibility ID"/>
+				<Property Name="sap_bo_type" Type="Edm.String" MaxLength="30" sap:label="SAP Object Type"/>
+				<Property Name="area" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Area" sap:quickinfo="Area / LoB"/>
+				<Property Name="business_context" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Business Context"
+					sap:quickinfo="Business Context Name"/>
+				<Property Name="ext_type" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Extension Type"
+					sap:quickinfo="Business Object Type"/>
+				<Property Name="target_release" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Target Release"/>
+				<Property Name="description" Type="Edm.String" sap:label="Description" sap:quickinfo="Description of the object"/>
+				<Property Name="status" Type="Edm.String" MaxLength="25" sap:label="Status" sap:quickinfo="Status of Objects"/>
+				<Property Name="change_type" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Change Type"
+					sap:quickinfo="Change Type of Planned Cloud Qualities"/>
+				<Property Name="mapped_business_context" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Business Context"
+					sap:quickinfo="Business Context Name"/>
+				<Property Name="actual_release" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Actual Release"/>
+				<Property Name="jira_backlog" Type="Edm.String" MaxLength="100" sap:display-format="UpperCase" sap:label="Jira Back Log"
+					sap:quickinfo="Jira Backlog Id"/>
+				<Property Name="jira_backlog_link" Type="Edm.String" MaxLength="136" sap:display-format="UpperCase"/>
+				<Property Name="jira_valid" Type="Edm.String" MaxLength="1" sap:display-format="NonNegative"/>
+				<Property Name="status_colour" Type="Edm.String" MaxLength="6" sap:display-format="UpperCase"/>
+				<Property Name="status_icon" Type="Edm.String" MaxLength="38" sap:display-format="UpperCase"/>
+				<Property Name="tool_tip" Type="Edm.String" MaxLength="29" sap:display-format="UpperCase"/>
+			</EntityType>
+			<EntityType Name="I_SBRFINALOBJECTPAGEType" sap:label="Final view of Obj page details" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="ObjectName"/>
+				</Key>
+				<Property Name="ObjectName" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="SAP Object Type"/>
+				<Property Name="area" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Area" sap:quickinfo="Area / LoB"/>
+				<Property Name="BusinessContext" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Business Context"
+					sap:quickinfo="Custom Fields: Business Context Name"/>
+				<Property Name="badi_name" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="BAdI Definition Name"
+					sap:quickinfo="Name of a BAdI in Enhancement Framework"/>
+				<Property Name="model_name" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Model Name"
+					sap:quickinfo="Custom Fields: Gateway Model Name"/>
+				<Property Name="entity_name" Type="Edm.String" MaxLength="40" sap:label="Entity Type Name" sap:quickinfo="Custom Fields: Entity Type Name"/>
+				<Property Name="ODATA_CDS" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="CDS View Name"
+					sap:quickinfo="Custom Fields: CDS View Name"/>
+				<Property Name="release_status" Type="Edm.String" MaxLength="5" sap:display-format="UpperCase" sap:label="Release Status"
+					sap:quickinfo="Custom Fields: Release Status of registered Entity"/>
+				<Property Name="CDS_Ext" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="CDS View Name"
+					sap:quickinfo="Custom Fields: CDS View Name"/>
+				<Property Name="underlying_view_alias" Type="Edm.String" MaxLength="30" sap:label="Underlying Alias"
+					sap:quickinfo="Custom Fields: CDS Alias for underlying View"/>
+				<Property Name="MigrationObject" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Migration Object"
+					sap:quickinfo="Migration Object IDs"/>
+				<Property Name="outputtype" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Output Type"/>
+				<Property Name="applicationobjecttype" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Appl. Object Type"
+					sap:quickinfo="Application Object Type (Business Object)"/>
+			</EntityType>
+			<EntityType Name="I_SBRFIORIACTLSType" sap:label="Fiori App Actuals" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="SapObjectType"/>
+					<PropertyRef Name="FioriID"/>
+					<PropertyRef Name="SemanticObject"/>
+				</Key>
+				<Property Name="SapObjectType" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="SAP Object Type"/>
+				<Property Name="FioriID" Type="Edm.String" Nullable="false" MaxLength="5" sap:display-format="UpperCase" sap:label=""
+					sap:quickinfo="Fiori ID"/>
+				<Property Name="SemanticObject" Type="Edm.String" Nullable="false" MaxLength="30" sap:display-format="UpperCase" sap:label=""
+					sap:quickinfo="Semantic Object"/>
+				<Property Name="AppName" Type="Edm.String" MaxLength="100" sap:display-format="UpperCase" sap:label="" sap:quickinfo="Fiori App Name"/>
+				<Property Name="AppType" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="" sap:quickinfo="Fiori App Type"/>
+				<Property Name="UITechnology" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="" sap:quickinfo="UI Technology"/>
+				<Property Name="SemanticAction" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label=""
+					sap:quickinfo="Action for Semantic Object"/>
+			</EntityType>
+			<EntityType Name="I_SBRGTNCUSERType" sap:label="User Name" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="accnt"/>
+					<PropertyRef Name="bname"/>
+				</Key>
+				<Property Name="accnt" Type="Edm.String" Nullable="false" MaxLength="12" sap:display-format="UpperCase" sap:label="Account number"
+					sap:quickinfo="Account ID"/>
+				<Property Name="bname" Type="Edm.String" Nullable="false" MaxLength="12" sap:display-format="UpperCase" sap:label="User"
+					sap:quickinfo="User Name in User Master Record"/>
+				<Property Name="UserDescription" Type="Edm.String" MaxLength="80" sap:label="Description" sap:quickinfo="User Description"/>
+			</EntityType>
+			<EntityType Name="I_SBRMIGRACTUALType" sap:label="Actuals for Migration Objects" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="ident"/>
+					<PropertyRef Name="lfdno"/>
+					<PropertyRef Name="sapobjecttype"/>
+				</Key>
+				<Property Name="ident" Type="Edm.String" Nullable="false" MaxLength="20" sap:display-format="UpperCase" sap:label="Migration Object"
+					sap:quickinfo="Migration Object IDs"/>
+				<Property Name="lfdno" Type="Edm.String" Nullable="false" MaxLength="3" sap:display-format="UpperCase" sap:label=""
+					sap:quickinfo="3-Byte field"/>
+				<Property Name="sapobjecttype" Type="Edm.String" Nullable="false" MaxLength="100" sap:label="" sap:quickinfo="Character 100"/>
+				<Property Name="notinlist" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="" sap:quickinfo="Checkbox"/>
+				<Property Name="firstrelease" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="" sap:quickinfo="30 Characters"/>
+				<Property Name="funcname" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="" sap:quickinfo="Function name"/>
+				<Property Name="nocover" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="" sap:quickinfo="Checkbox"/>
+			</EntityType>
+			<EntityType Name="I_SBRMIGRATIONACTUALSType" sap:label="Migration Actuals data" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="ident"/>
+					<PropertyRef Name="lfdno"/>
+					<PropertyRef Name="sapobjecttype"/>
+				</Key>
+				<Property Name="ident" Type="Edm.String" Nullable="false" MaxLength="20" sap:display-format="UpperCase" sap:label="Migration Object"
+					sap:quickinfo="Migration Object IDs"/>
+				<Property Name="lfdno" Type="Edm.String" Nullable="false" MaxLength="3" sap:display-format="UpperCase" sap:label=""
+					sap:quickinfo="3-Byte field"/>
+				<Property Name="sapobjecttype" Type="Edm.String" Nullable="false" MaxLength="100" sap:label="" sap:quickinfo="Character 100"/>
+				<Property Name="notinlist" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="" sap:quickinfo="Checkbox"/>
+				<Property Name="firstrelease" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="" sap:quickinfo="30 Characters"/>
+				<Property Name="funcname" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="" sap:quickinfo="Function name"/>
+				<Property Name="nocover" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="" sap:quickinfo="Checkbox"/>
+			</EntityType>
+			<EntityType Name="I_SBRMIGRPLANType" sap:label="Planned Migration Objects" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="migrid"/>
+				</Key>
+				<Property Name="migrid" Type="Edm.Guid" Nullable="false" sap:label="Migration ID Plan" sap:quickinfo="Migration Object ID"/>
+				<Property Name="sap_bo_type" Type="Edm.String" MaxLength="30" sap:label="SAP Object Type"/>
+				<Property Name="migration_object" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Migration Object"
+					sap:quickinfo="Migration Object for Gemini"/>
+				<Property Name="target_release" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Target Release"/>
+				<Property Name="description" Type="Edm.String" sap:label="Description" sap:quickinfo="Description of the object"/>
+				<Property Name="status" Type="Edm.String" MaxLength="25" sap:label="Status" sap:quickinfo="Status of Objects"/>
+				<Property Name="change_type" Type="Edm.String" MaxLength="60" sap:label="Short Descript." sap:quickinfo="Short Text for Fixed Values"/>
+				<Property Name="load_api" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Load API"
+					sap:quickinfo="Load API for Migration Object"/>
+				<Property Name="load_avail" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Load API Avail"
+					sap:quickinfo="Load API Availability for Migration Objects"/>
+				<Property Name="load_avail_plan" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Load Avail Plan"
+					sap:quickinfo="Load Availability Plan for Migration Object"/>
+				<Property Name="status_colour" Type="Edm.String" MaxLength="6" sap:display-format="UpperCase"/>
+				<Property Name="status_icon" Type="Edm.String" MaxLength="38" sap:display-format="UpperCase"/>
+				<Property Name="tool_tip" Type="Edm.String" MaxLength="29" sap:display-format="UpperCase"/>
+				<Property Name="migration_mapped" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Migration Object"
+					sap:quickinfo="Migration Object IDs"/>
+				<Property Name="actual_release" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Actual Release"/>
+				<Property Name="jira_link" Type="Edm.String" MaxLength="100" sap:display-format="UpperCase" sap:label="Jira Back Log"
+					sap:quickinfo="Jira Backlog Id"/>
+				<Property Name="jira_backlog_link" Type="Edm.String" MaxLength="136" sap:display-format="UpperCase"/>
+				<Property Name="jira_valid" Type="Edm.String" MaxLength="1" sap:display-format="NonNegative"/>
+			</EntityType>
+			<EntityType Name="I_SBRMIGRVHType" sap:label="Value help for Migration Objects" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="ident"/>
+				</Key>
+				<Property Name="ident" Type="Edm.String" Nullable="false" MaxLength="20" sap:display-format="UpperCase" sap:label="Migration Object"
+					sap:quickinfo="Migration Object IDs"/>
+			</EntityType>
+			<EntityType Name="I_SBRNodeTypeCDSVHType" sap:label="Value Help View for Node Type CDS" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="sub_key"/>
+				</Key>
+				<Property Name="sub_key" Type="Edm.String" Nullable="false" MaxLength="120" sap:display-format="UpperCase" sap:label="Subkey"
+					sap:quickinfo="Together with TADIR key, identifies objects for package API"/>
+			</EntityType>
+			<EntityType Name="I_SBRNodeTypeVHType" sap:label="Value Help View for Node Type" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="NodeType"/>
+					<PropertyRef Name="SAPObjectType"/>
+				</Key>
+				<Property Name="NodeType" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="SAP Object Node Type"/>
+				<Property Name="SAPObjectType" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="SAP Object Type"/>
+			</EntityType>
+			<EntityType Name="I_SBROMPLANType" sap:label="Planned Output Objects" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="omid"/>
+				</Key>
+				<Property Name="omid" Type="Edm.Guid" Nullable="false" sap:label="Output Object GUID"/>
+				<Property Name="sap_bo_type" Type="Edm.String" MaxLength="30" sap:label="SAP Object Type"/>
+				<Property Name="area" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Area" sap:quickinfo="Area / LoB"/>
+				<Property Name="application_object" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Appl. Object Type"
+					sap:quickinfo="Application Object Type (Business Object)"/>
+				<Property Name="output_type" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Output Object"/>
+				<Property Name="target_release" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Target Release"/>
+				<Property Name="actual_release" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Actual Release"/>
+				<Property Name="description" Type="Edm.String" sap:label="Description" sap:quickinfo="Description of the object"/>
+				<Property Name="status" Type="Edm.String" MaxLength="25" sap:label="Status" sap:quickinfo="Status of Objects"/>
+				<Property Name="mapped_output_object" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Output Type"/>
+				<Property Name="mapped_application_object" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Appl. Object Type"
+					sap:quickinfo="Application Object Type (Business Object)"/>
+				<Property Name="changeType" Type="Edm.String" MaxLength="60" sap:label="Short Descript." sap:quickinfo="Short Text for Fixed Values"/>
+				<Property Name="status_colour" Type="Edm.String" MaxLength="6" sap:display-format="UpperCase"/>
+				<Property Name="status_icon" Type="Edm.String" MaxLength="38" sap:display-format="UpperCase"/>
+				<Property Name="tool_tip" Type="Edm.String" MaxLength="29" sap:display-format="UpperCase"/>
+				<Property Name="changeTypeDescription" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Change Type"/>
+				<Property Name="jira_backlog" Type="Edm.String" MaxLength="100" sap:display-format="UpperCase" sap:label="Jira Back Log"
+					sap:quickinfo="Jira Backlog Id"/>
+				<Property Name="jira_backlog_link" Type="Edm.String" MaxLength="136" sap:display-format="UpperCase"/>
+				<Property Name="jira_valid" Type="Edm.String" MaxLength="1" sap:display-format="NonNegative"/>
+			</EntityType>
+			<EntityType Name="I_SBROPOBJVHType" sap:label="Output Object Value Help" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="OutputType"/>
+					<PropertyRef Name="ApplicationObjectType"/>
+				</Key>
+				<Property Name="OutputType" Type="Edm.String" Nullable="false" MaxLength="30" sap:display-format="UpperCase" sap:label="Output Type"/>
+				<Property Name="ApplicationObjectType" Type="Edm.String" Nullable="false" MaxLength="30" sap:display-format="UpperCase"
+					sap:label="Appl. Object Type" sap:quickinfo="Application Object Type (Business Object)"/>
+			</EntityType>
+			<EntityType Name="I_SBRPACKAGEVHType" sap:label="Package Value Help" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="devclass"/>
+				</Key>
+				<Property Name="devclass" Type="Edm.String" Nullable="false" MaxLength="30" sap:display-format="UpperCase" sap:label="Package"/>
+				<Property Name="dlvunit" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Software Component"/>
+			</EntityType>
+			<EntityType Name="I_SBRPriorityValueHelpType" sap:label="Priority Value Help" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Priority"/>
+				</Key>
+				<Property Name="Priority" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Lower Value"
+					sap:quickinfo="Values for Domains: Single Value / Upper Limit"/>
+				<Property Name="PriorityText" Type="Edm.String" MaxLength="60" sap:label="Short Descript." sap:quickinfo="Short Text for Fixed Values"/>
+			</EntityType>
+			<EntityType Name="I_SBRPROTOCOLVHType" sap:label="Protocol Value Help" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Protocol"/>
+				</Key>
+				<Property Name="Protocol" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Protocol"/>
+			</EntityType>
+			<EntityType Name="I_SBRReleaseStateValueHelpType" sap:label="Release State Value Help" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="ReleaseState"/>
+				</Key>
+				<Property Name="ReleaseState" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Lower Value"
+					sap:quickinfo="Values for Domains: Single Value / Upper Limit"/>
+				<Property Name="ReleaseStateText" Type="Edm.String" MaxLength="60" sap:label="Short Descript." sap:quickinfo="Short Text for Fixed Values"/>
+			</EntityType>
+			<EntityType Name="I_SBRSAPOBJECTNODETYPEType" sap:label="Interface view to get list Node types" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="object_node_type"/>
+				</Key>
+				<Property Name="object_node_type" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="SAP Object Node Type"/>
+				<Property Name="description" Type="Edm.String" sap:label="Node Type Desc." sap:quickinfo="SAP Object Node Type Description"/>
+				<Property Name="object_type" Type="Edm.String" MaxLength="30" sap:label="SAP Object Type"/>
+				<Property Name="root_node_flag" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Root Node Indicator"
+					sap:quickinfo="SAP Object Root Node Indicator"/>
+				<Property Name="RepresentativeView" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase"/>
+				<Property Name="ValueHelpView" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase"/>
+				<Property Name="RepresentativeViewRelease" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase"/>
+				<Property Name="ValueHelpViewRelease" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase"/>
+				<Property Name="approval_status" Type="Edm.String" MaxLength="24" sap:display-format="UpperCase"/>
+				<Property Name="responsible_user" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Contact Person"/>
+				<Property Name="PersonResponsible" Type="Edm.String" MaxLength="80" sap:label="Description" sap:quickinfo="User Description"/>
+				<Property Name="representative_key" Type="Edm.String" MaxLength="30" sap:label="Representation Key"/>
+				<Property Name="approval_date" Type="Edm.DateTimeOffset" Precision="0" sap:label="Object Approval Date"/>
+				<Property Name="application_component" Type="Edm.String" MaxLength="24" sap:display-format="UpperCase" sap:label="Applic. Component"
+					sap:quickinfo="Application Component ID"/>
+				<Property Name="status_comment" Type="Edm.String" sap:label="Status Comment" sap:quickinfo="Object Node Type Status Comment"/>
+				<Property Name="lastchangeddate_gtnc" Type="Edm.DateTimeOffset" Precision="0" sap:label="Last Change Date"
+					sap:quickinfo="Last Changed Date(GTNC)"/>
+				<Property Name="lastchangedby_gtnc" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Last Changed By"
+					sap:quickinfo="Last Changed By(GTNC)"/>
+				<Property Name="approved_by" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="" sap:quickinfo="Appover"/>
+				<Property Name="usage_context" Type="Edm.String" MaxLength="10" sap:label="Usage Context"/>
+			</EntityType>
+			<EntityType Name="I_SBRSEARCHACTUALType" sap:label="Search Actuals" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="sap_bo_type"/>
+					<PropertyRef Name="search_object"/>
+				</Key>
+				<Property Name="sap_bo_type" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="SAP Object Type"/>
+				<Property Name="search_object" Type="Edm.String" Nullable="false" MaxLength="20" sap:display-format="UpperCase" sap:label="Search Object"/>
+			</EntityType>
+			<EntityType Name="I_SBRSEARCHPLANType" sap:label="Planned Search Objects" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="search_id"/>
+				</Key>
+				<Property Name="search_id" Type="Edm.Guid" Nullable="false" sap:label="API GUID" sap:quickinfo="Search GUID"/>
+				<Property Name="sap_bo_type" Type="Edm.String" MaxLength="30" sap:label="SAP Object Type"/>
+				<Property Name="area" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Area" sap:quickinfo="Area / LoB"/>
+				<Property Name="search_object" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Search Object"/>
+				<Property Name="search_object_type" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Search Object Type"/>
+				<Property Name="target_release" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Actual Release"/>
+				<Property Name="description" Type="Edm.String" sap:label="Description" sap:quickinfo="Description of the object"/>
+				<Property Name="status" Type="Edm.String" MaxLength="25" sap:label="Status" sap:quickinfo="Status of Objects"/>
+				<Property Name="change_type" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Change Type"
+					sap:quickinfo="Change Type of Planned Cloud Qualities"/>
+				<Property Name="ident_mapping" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Migration Object"
+					sap:quickinfo="Migration Object IDs"/>
+				<Property Name="actual_release" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Target Release"/>
+				<Property Name="jira_backlog" Type="Edm.String" MaxLength="100" sap:display-format="UpperCase" sap:label="Jira Back Log"
+					sap:quickinfo="Jira Backlog Id"/>
+				<Property Name="jira_backlog_link" Type="Edm.String" MaxLength="136" sap:display-format="UpperCase"/>
+				<Property Name="jira_valid" Type="Edm.String" MaxLength="1" sap:display-format="NonNegative"/>
+				<Property Name="status_colour" Type="Edm.String" MaxLength="6" sap:display-format="UpperCase"/>
+				<Property Name="tool_tip" Type="Edm.String" MaxLength="29" sap:display-format="UpperCase"/>
+				<Property Name="status_icon" Type="Edm.String" MaxLength="38" sap:display-format="UpperCase"/>
+			</EntityType>
+			<EntityType Name="I_SBRSERVICEINTERFACEVHType" sap:label="Service Interface value help" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="communication_scenario_id"/>
+					<PropertyRef Name="ServiceInterface"/>
+					<PropertyRef Name="protocol"/>
+				</Key>
+				<Property Name="communication_scenario_id" Type="Edm.String" Nullable="false" MaxLength="30" sap:display-format="UpperCase"
+					sap:label="CommScenario" sap:quickinfo="Communication Scenario"/>
+				<Property Name="ServiceInterface" Type="Edm.String" Nullable="false" MaxLength="40" sap:display-format="UpperCase"
+					sap:label="Service Interface"/>
+				<Property Name="protocol" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Protocol"/>
+				<Property Name="service_interface_wov" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Service Interface"/>
+			</EntityType>
+			<EntityType Name="I_SBRSICRUDType" sap:label="Fetches CRUD applicability for Service Interface" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="ServiceInterface"/>
+				</Key>
+				<Property Name="ServiceInterface" Type="Edm.String" Nullable="false" MaxLength="40" sap:display-format="UpperCase"
+					sap:label="Service Interface"/>
+				<Property Name="readapi" Type="Edm.Byte"/>
+				<Property Name="createapi" Type="Edm.Byte"/>
+				<Property Name="updateapi" Type="Edm.Byte"/>
+				<Property Name="deleteapi" Type="Edm.Byte"/>
+				<Property Name="othersapi" Type="Edm.Byte"/>
+			</EntityType>
+			<EntityType Name="I_SBRSOTAPIMAPType" sap:label="API and SAP Object Type Mapping" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="sapobjecttype"/>
+					<PropertyRef Name="serviceinterface"/>
+					<PropertyRef Name="communicationscenario"/>
+					<PropertyRef Name="apitype"/>
+				</Key>
+				<Property Name="sapobjecttype" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="SAP Object Type"/>
+				<Property Name="serviceinterface" Type="Edm.String" Nullable="false" MaxLength="40" sap:display-format="UpperCase"
+					sap:label="Service Interface"/>
+				<Property Name="communicationscenario" Type="Edm.String" Nullable="false" MaxLength="30" sap:display-format="UpperCase"
+					sap:label="CommScenario" sap:quickinfo="Communication Scenario"/>
+				<Property Name="apitype" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Protocol"/>
+				<Property Name="service_interface_wov" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Service Interface"/>
+			</EntityType>
+			<EntityType Name="I_SBRSOTToCDSType" sap:label="CDS for SOTs and their corresponding CDS" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="Object_type"/>
+				</Key>
+				<Property Name="Object_type" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="SAP Object Type"/>
+				<Property Name="CDS_Names" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="" sap:quickinfo="DDL Source"/>
+				<NavigationProperty Name="to_CDSKeys" Relationship="CA_BUSINESS_REPOSITORY_SRV.assoc_E77865B32CA349467061234F69AF4CFE"
+					FromRole="FromRole_assoc_E77865B32CA349467061234F69AF4CFE" ToRole="ToRole_assoc_E77865B32CA349467061234F69AF4CFE"/>
+			</EntityType>
+			<EntityType Name="I_SBRTargetReleaseType" sap:label="Target Release" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="release_id"/>
+				</Key>
+				<Property Name="release_id" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="Release ID"
+					sap:quickinfo="Target Release"/>
+				<Property Name="dev_start" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Dev Start Date"
+					sap:quickinfo="Development Start Date"/>
+				<Property Name="status_icon" Type="Edm.String" MaxLength="38" sap:display-format="UpperCase"/>
+				<Property Name="status_colour" Type="Edm.String" MaxLength="6" sap:display-format="UpperCase"/>
+				<Property Name="tool_tip" Type="Edm.String" MaxLength="29" sap:display-format="UpperCase"/>
+				<Property Name="dc" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Dev Clsose Date"
+					sap:quickinfo="Development Close Date"/>
+				<Property Name="cc" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Corr Close Date"
+					sap:quickinfo="Correction Close Date"/>
+				<Property Name="ecc" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="ECC Date"
+					sap:quickinfo="Emergency Correction Close Date"/>
+				<Property Name="zdate2" Type="Edm.DateTime" Precision="0" sap:display-format="Date"/>
+			</EntityType>
+			<EntityType Name="I_SBRUSERIDVHType" sap:label="User Name Value Help for Person Responsible" sap:content-version="1">
+				<Key>
+					<PropertyRef Name="bname"/>
+				</Key>
+				<Property Name="bname" Type="Edm.String" Nullable="false" MaxLength="12" sap:display-format="UpperCase" sap:label="User"
+					sap:quickinfo="User Name in User Master Record"/>
+				<Property Name="techdesc" Type="Edm.String" MaxLength="80" sap:label="Description" sap:quickinfo="Description of the Technical User Account"/>
+			</EntityType>
+			<Association Name="assoc_69DABA8ABDE6A988080D7347DC6F28AF" sap:content-version="1">
+				<End Type="CA_BUSINESS_REPOSITORY_SRV.I_SBRCombinedObjectViewType" Multiplicity="1" Role="FromRole_assoc_69DABA8ABDE6A988080D7347DC6F28AF"/>
+				<End Type="CA_BUSINESS_REPOSITORY_SRV.I_SBRSOTToCDSType" Multiplicity="0..1" Role="ToRole_assoc_69DABA8ABDE6A988080D7347DC6F28AF"/>
+			</Association>
+			<Association Name="assoc_E77865B32CA349467061234F69AF4CFE" sap:content-version="1">
+				<End Type="CA_BUSINESS_REPOSITORY_SRV.I_SBRSOTToCDSType" Multiplicity="1" Role="FromRole_assoc_E77865B32CA349467061234F69AF4CFE"/>
+				<End Type="CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSKEYFIELDSType" Multiplicity="*" Role="ToRole_assoc_E77865B32CA349467061234F69AF4CFE"/>
+			</Association>
+			<EntityContainer Name="CA_BUSINESS_REPOSITORY_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+				<EntitySet Name="JiraResponseSet" EntityType="CA_BUSINESS_REPOSITORY_SRV.JiraResponse" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+				<EntitySet Name="CDSKeyFieldsSet" EntityType="CA_BUSINESS_REPOSITORY_SRV.CDSKeyFields" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+				<EntitySet Name="TRCheckLockedObjectResponseCollection" EntityType="CA_BUSINESS_REPOSITORY_SRV.TRCheckLockedObjectResponse"
+					sap:content-version="1"/>
+				<EntitySet Name="FioriActualSet" EntityType="CA_BUSINESS_REPOSITORY_SRV.FioriActual" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+				<EntitySet Name="CheckLockedObject" EntityType="CA_BUSINESS_REPOSITORY_SRV.CheckLockedObject" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+				<EntitySet Name="TRANSPORT" EntityType="CA_BUSINESS_REPOSITORY_SRV.TRANSPORT" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+				<EntitySet Name="CheckTrType" EntityType="CA_BUSINESS_REPOSITORY_SRV.CheckTrType" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+				<EntitySet Name="CheckTrObjMap" EntityType="CA_BUSINESS_REPOSITORY_SRV.CheckTrObjMap" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+				<EntitySet Name="CheckReleasedTask" EntityType="CA_BUSINESS_REPOSITORY_SRV.CheckReleasedTask" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+				<EntitySet Name="EventValueHelp" EntityType="CA_BUSINESS_REPOSITORY_SRV.EventValueHelpType" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+				<EntitySet Name="MaintainBusinessObject" EntityType="CA_BUSINESS_REPOSITORY_SRV.MaintainBusinessObjectType" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+				<EntitySet Name="OUTPUT" EntityType="CA_BUSINESS_REPOSITORY_SRV.ouptut" sap:creatable="false" sap:pageable="false" sap:addressable="false"
+					sap:content-version="1"/>
+				<EntitySet Name="AssignSet" EntityType="CA_BUSINESS_REPOSITORY_SRV.Assign" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+					sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+				<EntitySet Name="C_SBRAPPCOMPVH" EntityType="CA_BUSINESS_REPOSITORY_SRV.C_SBRAPPCOMPVHType" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="C_SBRBUSINESSEVENTS" EntityType="CA_BUSINESS_REPOSITORY_SRV.C_SBRBUSINESSEVENTSType" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="C_SBRBusinessObjectVH" EntityType="CA_BUSINESS_REPOSITORY_SRV.C_SBRBusinessObjectVHType" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="C_SBRBUSOBJNAMEVH" EntityType="CA_BUSINESS_REPOSITORY_SRV.C_SBRBUSOBJNAMEVHType" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="C_SBRSEARCHVH" EntityType="CA_BUSINESS_REPOSITORY_SRV.C_SBRSEARCHVHType" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="C_SBRTASKCODEVH" EntityType="CA_BUSINESS_REPOSITORY_SRV.C_SBRTASKCODEVHType" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRAnalyticsPlan" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRAnalyticsPlanType" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRAPIOPERATIONSMASTER" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRAPIOPERATIONSMASTERType" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRAPIOpToSAPObjectType" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRAPIOpToSAPObjectTypeType" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRAPIPLAN" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRAPIPLANType" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRAREAVH" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRAREAVHType" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRBOOUTPUTMAP" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRBOOUTPUTMAPType" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRBORCOMMENT" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRBORCOMMENTType" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRBusinessContextVH" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRBusinessContextVHType" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRCDSACTUALFINAL" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSACTUALFINALType" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRCDSACTUALS" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSACTUALSType" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRCDSKEYFIELDS" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSKEYFIELDSType" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRCDSViewNameVH" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSViewNameVHType" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRCloudQuality" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRCloudQualityType" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRCloudQualityCompletion" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRCloudQualityCompletionType" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRCombinedObjectView" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRCombinedObjectViewType" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRCommunicationScenarioVH" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRCommunicationScenarioVHType"
+					sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRCQBACKUP" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRCQBACKUPType" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBREVENTPLAN" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBREVENTPLANType" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBREXTPLAN" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBREXTPLANType" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRFINALOBJECTPAGE" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRFINALOBJECTPAGEType" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRFIORIACTLS" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRFIORIACTLSType" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRGTNCUSER" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRGTNCUSERType" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRMIGRACTUAL" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRMIGRACTUALType" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRMIGRATIONACTUALS" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRMIGRATIONACTUALSType" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRMIGRPLAN" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRMIGRPLANType" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRMIGRVH" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRMIGRVHType" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRNodeTypeCDSVH" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRNodeTypeCDSVHType" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRNodeTypeVH" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRNodeTypeVHType" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBROMPLAN" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBROMPLANType" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBROPOBJVH" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBROPOBJVHType" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRPACKAGEVH" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRPACKAGEVHType" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRPriorityValueHelp" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRPriorityValueHelpType" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRPROTOCOLVH" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRPROTOCOLVHType" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRReleaseStateValueHelp" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRReleaseStateValueHelpType" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRSAPOBJECTNODETYPE" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRSAPOBJECTNODETYPEType" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRSEARCHACTUAL" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRSEARCHACTUALType" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRSEARCHPLAN" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRSEARCHPLANType" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRSERVICEINTERFACEVH" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRSERVICEINTERFACEVHType" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRSICRUD" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRSICRUDType" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRSOTAPIMAP" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRSOTAPIMAPType" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRSOTToCDS" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRSOTToCDSType" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRTargetRelease" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRTargetReleaseType" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+				<EntitySet Name="I_SBRUSERIDVH" EntityType="CA_BUSINESS_REPOSITORY_SRV.I_SBRUSERIDVHType" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"/>
+				<AssociationSet Name="assoc_69DABA8ABDE6A988080D7347DC6F28AF"
+					Association="CA_BUSINESS_REPOSITORY_SRV.assoc_69DABA8ABDE6A988080D7347DC6F28AF" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1">
+					<End EntitySet="I_SBRCombinedObjectView" Role="FromRole_assoc_69DABA8ABDE6A988080D7347DC6F28AF"/>
+					<End EntitySet="I_SBRSOTToCDS" Role="ToRole_assoc_69DABA8ABDE6A988080D7347DC6F28AF"/>
+				</AssociationSet>
+				<AssociationSet Name="assoc_E77865B32CA349467061234F69AF4CFE"
+					Association="CA_BUSINESS_REPOSITORY_SRV.assoc_E77865B32CA349467061234F69AF4CFE" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1">
+					<End EntitySet="I_SBRSOTToCDS" Role="FromRole_assoc_E77865B32CA349467061234F69AF4CFE"/>
+					<End EntitySet="I_SBRCDSKEYFIELDS" Role="ToRole_assoc_E77865B32CA349467061234F69AF4CFE"/>
+				</AssociationSet>
+				<FunctionImport Name="JiraValidation" ReturnType="CA_BUSINESS_REPOSITORY_SRV.JiraResponse" EntitySet="JiraResponseSet" m:HttpMethod="GET"
+					sap:action-for="CA_BUSINESS_REPOSITORY_SRV.JiraResponse">
+					<Parameter Name="JiraBacklogId" Type="Edm.String" Mode="In"/>
+				</FunctionImport>
+				<FunctionImport Name="CDSKeyField" ReturnType="CA_BUSINESS_REPOSITORY_SRV.CDSKeyFields" EntitySet="CDSKeyFieldsSet" m:HttpMethod="GET"
+					sap:action-for="CA_BUSINESS_REPOSITORY_SRV.CDSKeyFields">
+					<Parameter Name="Key6" Type="Edm.String" Mode="In"/>
+					<Parameter Name="Key5" Type="Edm.String" Mode="In"/>
+					<Parameter Name="Key4" Type="Edm.String" Mode="In"/>
+					<Parameter Name="Key3" Type="Edm.String" Mode="In"/>
+					<Parameter Name="Key2" Type="Edm.String" Mode="In"/>
+					<Parameter Name="Key1" Type="Edm.String" Mode="In"/>
+					<Parameter Name="SAPObjectType" Type="Edm.String" Mode="In"/>
+					<Parameter Name="CDSView" Type="Edm.String" Mode="In"/>
+				</FunctionImport>
+				<FunctionImport Name="TRCheckLockedObject" ReturnType="CA_BUSINESS_REPOSITORY_SRV.TRCheckLockedObjectResponse"
+					EntitySet="TRCheckLockedObjectResponseCollection" m:HttpMethod="GET" sap:action-for="CA_BUSINESS_REPOSITORY_SRV.TRCheckLockedObjectResponse">
+					<Parameter Name="sObj" Type="Edm.String" Mode="In"/>
+					<Parameter Name="sObjectName" Type="Edm.String" Mode="In"/>
+				</FunctionImport>
+			</EntityContainer>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm"
+				Target="CA_BUSINESS_REPOSITORY_SRV.CA_BUSINESS_REPOSITORY_SRV_Entities/I_SBRAnalyticsPlan">
+				<Annotation Term="Capabilities.FilterRestrictions">
+					<Record>
+						<PropertyValue Property="FilterExpressionRestrictions">
+							<Collection>
+								<Record>
+									<PropertyValue Property="Property" PropertyPath="description"/>
+									<PropertyValue Property="AllowedExpressions" String="SearchExpression"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm"
+				Target="CA_BUSINESS_REPOSITORY_SRV.CA_BUSINESS_REPOSITORY_SRV_Entities/I_SBRAPIPLAN">
+				<Annotation Term="Capabilities.FilterRestrictions">
+					<Record>
+						<PropertyValue Property="FilterExpressionRestrictions">
+							<Collection>
+								<Record>
+									<PropertyValue Property="Property" PropertyPath="description"/>
+									<PropertyValue Property="AllowedExpressions" String="SearchExpression"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm"
+				Target="CA_BUSINESS_REPOSITORY_SRV.CA_BUSINESS_REPOSITORY_SRV_Entities/I_SBRBORCOMMENT">
+				<Annotation Term="Capabilities.FilterRestrictions">
+					<Record>
+						<PropertyValue Property="FilterExpressionRestrictions">
+							<Collection>
+								<Record>
+									<PropertyValue Property="Property" PropertyPath="statuscomments"/>
+									<PropertyValue Property="AllowedExpressions" String="SearchExpression"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm"
+				Target="CA_BUSINESS_REPOSITORY_SRV.CA_BUSINESS_REPOSITORY_SRV_Entities/I_SBRCloudQuality">
+				<Annotation Term="Capabilities.FilterRestrictions">
+					<Record>
+						<PropertyValue Property="FilterExpressionRestrictions">
+							<Collection>
+								<Record>
+									<PropertyValue Property="Property" PropertyPath="StatusComments"/>
+									<PropertyValue Property="AllowedExpressions" String="SearchExpression"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm"
+				Target="CA_BUSINESS_REPOSITORY_SRV.CA_BUSINESS_REPOSITORY_SRV_Entities/I_SBRCombinedObjectView">
+				<Annotation Term="Capabilities.FilterRestrictions">
+					<Record>
+						<PropertyValue Property="FilterExpressionRestrictions">
+							<Collection>
+								<Record>
+									<PropertyValue Property="Property" PropertyPath="StatusComments"/>
+									<PropertyValue Property="AllowedExpressions" String="SearchExpression"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm"
+				Target="CA_BUSINESS_REPOSITORY_SRV.CA_BUSINESS_REPOSITORY_SRV_Entities/I_SBRCQBACKUP">
+				<Annotation Term="Capabilities.FilterRestrictions">
+					<Record>
+						<PropertyValue Property="FilterExpressionRestrictions">
+							<Collection>
+								<Record>
+									<PropertyValue Property="Property" PropertyPath="description"/>
+									<PropertyValue Property="AllowedExpressions" String="SearchExpression"/>
+								</Record>
+								<Record>
+									<PropertyValue Property="Property" PropertyPath="issue"/>
+									<PropertyValue Property="AllowedExpressions" String="SearchExpression"/>
+								</Record>
+								<Record>
+									<PropertyValue Property="Property" PropertyPath="source"/>
+									<PropertyValue Property="AllowedExpressions" String="SearchExpression"/>
+								</Record>
+								<Record>
+									<PropertyValue Property="Property" PropertyPath="comment_desc"/>
+									<PropertyValue Property="AllowedExpressions" String="SearchExpression"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm"
+				Target="CA_BUSINESS_REPOSITORY_SRV.CA_BUSINESS_REPOSITORY_SRV_Entities/I_SBREVENTPLAN">
+				<Annotation Term="Capabilities.FilterRestrictions">
+					<Record>
+						<PropertyValue Property="FilterExpressionRestrictions">
+							<Collection>
+								<Record>
+									<PropertyValue Property="Property" PropertyPath="description"/>
+									<PropertyValue Property="AllowedExpressions" String="SearchExpression"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm"
+				Target="CA_BUSINESS_REPOSITORY_SRV.CA_BUSINESS_REPOSITORY_SRV_Entities/I_SBREXTPLAN">
+				<Annotation Term="Capabilities.FilterRestrictions">
+					<Record>
+						<PropertyValue Property="FilterExpressionRestrictions">
+							<Collection>
+								<Record>
+									<PropertyValue Property="Property" PropertyPath="description"/>
+									<PropertyValue Property="AllowedExpressions" String="SearchExpression"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm"
+				Target="CA_BUSINESS_REPOSITORY_SRV.CA_BUSINESS_REPOSITORY_SRV_Entities/I_SBRMIGRPLAN">
+				<Annotation Term="Capabilities.FilterRestrictions">
+					<Record>
+						<PropertyValue Property="FilterExpressionRestrictions">
+							<Collection>
+								<Record>
+									<PropertyValue Property="Property" PropertyPath="description"/>
+									<PropertyValue Property="AllowedExpressions" String="SearchExpression"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm"
+				Target="CA_BUSINESS_REPOSITORY_SRV.CA_BUSINESS_REPOSITORY_SRV_Entities/I_SBROMPLAN">
+				<Annotation Term="Capabilities.FilterRestrictions">
+					<Record>
+						<PropertyValue Property="FilterExpressionRestrictions">
+							<Collection>
+								<Record>
+									<PropertyValue Property="Property" PropertyPath="description"/>
+									<PropertyValue Property="AllowedExpressions" String="SearchExpression"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm"
+				Target="CA_BUSINESS_REPOSITORY_SRV.CA_BUSINESS_REPOSITORY_SRV_Entities/I_SBRSAPOBJECTNODETYPE">
+				<Annotation Term="Capabilities.FilterRestrictions">
+					<Record>
+						<PropertyValue Property="FilterExpressionRestrictions">
+							<Collection>
+								<Record>
+									<PropertyValue Property="Property" PropertyPath="description"/>
+									<PropertyValue Property="AllowedExpressions" String="SearchExpression"/>
+								</Record>
+								<Record>
+									<PropertyValue Property="Property" PropertyPath="status_comment"/>
+									<PropertyValue Property="AllowedExpressions" String="SearchExpression"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm"
+				Target="CA_BUSINESS_REPOSITORY_SRV.CA_BUSINESS_REPOSITORY_SRV_Entities/I_SBRSEARCHPLAN">
+				<Annotation Term="Capabilities.FilterRestrictions">
+					<Record>
+						<PropertyValue Property="FilterExpressionRestrictions">
+							<Collection>
+								<Record>
+									<PropertyValue Property="Property" PropertyPath="description"/>
+									<PropertyValue Property="AllowedExpressions" String="SearchExpression"/>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self"
+				href="https://dlms4hana.dlm.docker.sap.corp:50001/sap/opu/odata/sap/CA_BUSINESS_REPOSITORY_SRV/$metadata"/>
+			<atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version"
+				href="https://dlms4hana.dlm.docker.sap.corp:50001/sap/opu/odata/sap/CA_BUSINESS_REPOSITORY_SRV/$metadata"/>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

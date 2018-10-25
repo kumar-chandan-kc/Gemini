@@ -1,0 +1,151 @@
+[{
+	"FlagCus": "FlagCus 1",
+	"FlagWB": "FlagWB 1",
+	"RequestType": "RequestType 1",
+	"FlagExtension": "FlagExtension 1",
+	"FlagMigration": "FlagMigration 1",
+	"FlagAnalytics": "FlagAnalytics 1",
+	"FlagOutput": "FlagOutput 1",
+	"FlagEvents": "FlagEvents 1",
+	"FlagSearch": "FlagSearch 1",
+	"FlagAPI": "FlagAPI 1",
+	"__metadata": {
+		"uri": "CheckTrType(FlagExtension='FlagExtension%201',FlagMigration='FlagMigration%201',FlagAnalytics='FlagAnalytics%201',FlagOutput='FlagOutput%201',FlagEvents='FlagEvents%201',FlagSearch='FlagSearch%201',FlagAPI='FlagAPI%201')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.CheckTrType"
+	}
+}, {
+	"FlagCus": "FlagCus 2",
+	"FlagWB": "FlagWB 2",
+	"RequestType": "RequestType 2",
+	"FlagExtension": "FlagExtension 2",
+	"FlagMigration": "FlagMigration 2",
+	"FlagAnalytics": "FlagAnalytics 2",
+	"FlagOutput": "FlagOutput 2",
+	"FlagEvents": "FlagEvents 2",
+	"FlagSearch": "FlagSearch 2",
+	"FlagAPI": "FlagAPI 2",
+	"__metadata": {
+		"uri": "CheckTrType(FlagExtension='FlagExtension%202',FlagMigration='FlagMigration%202',FlagAnalytics='FlagAnalytics%202',FlagOutput='FlagOutput%202',FlagEvents='FlagEvents%202',FlagSearch='FlagSearch%202',FlagAPI='FlagAPI%202')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.CheckTrType"
+	}
+}, {
+	"FlagCus": "FlagCus 3",
+	"FlagWB": "FlagWB 3",
+	"RequestType": "RequestType 3",
+	"FlagExtension": "FlagExtension 3",
+	"FlagMigration": "FlagMigration 3",
+	"FlagAnalytics": "FlagAnalytics 3",
+	"FlagOutput": "FlagOutput 3",
+	"FlagEvents": "FlagEvents 3",
+	"FlagSearch": "FlagSearch 3",
+	"FlagAPI": "FlagAPI 3",
+	"__metadata": {
+		"uri": "CheckTrType(FlagExtension='FlagExtension%203',FlagMigration='FlagMigration%203',FlagAnalytics='FlagAnalytics%203',FlagOutput='FlagOutput%203',FlagEvents='FlagEvents%203',FlagSearch='FlagSearch%203',FlagAPI='FlagAPI%203')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.CheckTrType"
+	}
+}, {
+	"FlagCus": "FlagCus 4",
+	"FlagWB": "FlagWB 4",
+	"RequestType": "RequestType 4",
+	"FlagExtension": "FlagExtension 4",
+	"FlagMigration": "FlagMigration 4",
+	"FlagAnalytics": "FlagAnalytics 4",
+	"FlagOutput": "FlagOutput 4",
+	"FlagEvents": "FlagEvents 4",
+	"FlagSearch": "FlagSearch 4",
+	"FlagAPI": "FlagAPI 4",
+	"__metadata": {
+		"uri": "CheckTrType(FlagExtension='FlagExtension%204',FlagMigration='FlagMigration%204',FlagAnalytics='FlagAnalytics%204',FlagOutput='FlagOutput%204',FlagEvents='FlagEvents%204',FlagSearch='FlagSearch%204',FlagAPI='FlagAPI%204')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.CheckTrType"
+	}
+}, {
+	"FlagCus": "FlagCus 5",
+	"FlagWB": "FlagWB 5",
+	"RequestType": "RequestType 5",
+	"FlagExtension": "FlagExtension 5",
+	"FlagMigration": "FlagMigration 5",
+	"FlagAnalytics": "FlagAnalytics 5",
+	"FlagOutput": "FlagOutput 5",
+	"FlagEvents": "FlagEvents 5",
+	"FlagSearch": "FlagSearch 5",
+	"FlagAPI": "FlagAPI 5",
+	"__metadata": {
+		"uri": "CheckTrType(FlagExtension='FlagExtension%205',FlagMigration='FlagMigration%205',FlagAnalytics='FlagAnalytics%205',FlagOutput='FlagOutput%205',FlagEvents='FlagEvents%205',FlagSearch='FlagSearch%205',FlagAPI='FlagAPI%205')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.CheckTrType"
+	}
+}, {
+	"FlagCus": "FlagCus 6",
+	"FlagWB": "FlagWB 6",
+	"RequestType": "RequestType 6",
+	"FlagExtension": "FlagExtension 6",
+	"FlagMigration": "FlagMigration 6",
+	"FlagAnalytics": "FlagAnalytics 6",
+	"FlagOutput": "FlagOutput 6",
+	"FlagEvents": "FlagEvents 6",
+	"FlagSearch": "FlagSearch 6",
+	"FlagAPI": "FlagAPI 6",
+	"__metadata": {
+		"uri": "CheckTrType(FlagExtension='FlagExtension%206',FlagMigration='FlagMigration%206',FlagAnalytics='FlagAnalytics%206',FlagOutput='FlagOutput%206',FlagEvents='FlagEvents%206',FlagSearch='FlagSearch%206',FlagAPI='FlagAPI%206')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.CheckTrType"
+	}
+}, {
+	"FlagCus": "FlagCus 7",
+	"FlagWB": "FlagWB 7",
+	"RequestType": "RequestType 7",
+	"FlagExtension": "FlagExtension 7",
+	"FlagMigration": "FlagMigration 7",
+	"FlagAnalytics": "FlagAnalytics 7",
+	"FlagOutput": "FlagOutput 7",
+	"FlagEvents": "FlagEvents 7",
+	"FlagSearch": "FlagSearch 7",
+	"FlagAPI": "FlagAPI 7",
+	"__metadata": {
+		"uri": "CheckTrType(FlagExtension='FlagExtension%207',FlagMigration='FlagMigration%207',FlagAnalytics='FlagAnalytics%207',FlagOutput='FlagOutput%207',FlagEvents='FlagEvents%207',FlagSearch='FlagSearch%207',FlagAPI='FlagAPI%207')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.CheckTrType"
+	}
+}, {
+	"FlagCus": "FlagCus 8",
+	"FlagWB": "FlagWB 8",
+	"RequestType": "RequestType 8",
+	"FlagExtension": "FlagExtension 8",
+	"FlagMigration": "FlagMigration 8",
+	"FlagAnalytics": "FlagAnalytics 8",
+	"FlagOutput": "FlagOutput 8",
+	"FlagEvents": "FlagEvents 8",
+	"FlagSearch": "FlagSearch 8",
+	"FlagAPI": "FlagAPI 8",
+	"__metadata": {
+		"uri": "CheckTrType(FlagExtension='FlagExtension%208',FlagMigration='FlagMigration%208',FlagAnalytics='FlagAnalytics%208',FlagOutput='FlagOutput%208',FlagEvents='FlagEvents%208',FlagSearch='FlagSearch%208',FlagAPI='FlagAPI%208')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.CheckTrType"
+	}
+}, {
+	"FlagCus": "FlagCus 9",
+	"FlagWB": "FlagWB 9",
+	"RequestType": "RequestType 9",
+	"FlagExtension": "FlagExtension 9",
+	"FlagMigration": "FlagMigration 9",
+	"FlagAnalytics": "FlagAnalytics 9",
+	"FlagOutput": "FlagOutput 9",
+	"FlagEvents": "FlagEvents 9",
+	"FlagSearch": "FlagSearch 9",
+	"FlagAPI": "FlagAPI 9",
+	"__metadata": {
+		"uri": "CheckTrType(FlagExtension='FlagExtension%209',FlagMigration='FlagMigration%209',FlagAnalytics='FlagAnalytics%209',FlagOutput='FlagOutput%209',FlagEvents='FlagEvents%209',FlagSearch='FlagSearch%209',FlagAPI='FlagAPI%209')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.CheckTrType"
+	}
+}, {
+	"FlagCus": "FlagCus 10",
+	"FlagWB": "FlagWB 10",
+	"RequestType": "RequestType 10",
+	"FlagExtension": "FlagExtension 10",
+	"FlagMigration": "FlagMigration 10",
+	"FlagAnalytics": "FlagAnalytics 10",
+	"FlagOutput": "FlagOutput 10",
+	"FlagEvents": "FlagEvents 10",
+	"FlagSearch": "FlagSearch 10",
+	"FlagAPI": "FlagAPI 10",
+	"__metadata": {
+		"uri": "CheckTrType(FlagExtension='FlagExtension%2010',FlagMigration='FlagMigration%2010',FlagAnalytics='FlagAnalytics%2010',FlagOutput='FlagOutput%2010',FlagEvents='FlagEvents%2010',FlagSearch='FlagSearch%2010',FlagAPI='FlagAPI%2010')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.CheckTrType"
+	}
+}]

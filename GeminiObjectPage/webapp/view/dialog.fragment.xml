@@ -1,0 +1,67 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<ViewSettingsDialog confirm="handleConfirm" title="{i18n>DialogTitle}">
+		<customTabs>
+			<ViewSettingsCustomTab id="example-settings" tooltip="{i18n>defaulticon}">
+				<content>
+					<List id="ProductList" items="{path: 'worklistView>/BOFields'}" selectionChange="onSelectionChange" updateFinished="updateFinished"
+						mode="MultiSelect" includeItemInSelection="true">
+						<StandardListItem title="{worklistView>field}"/>
+					</List>
+				</content>
+			</ViewSettingsCustomTab>
+			<!--<ViewSettingsCustomTab>-->
+			<!--        <content>-->
+			<!--                        <Table noDataText="No Products Found"  items="{ path : '/C_SBRAPPCOMPVH'}">-->
+			<!--                                        <ColumnListItem>-->
+			<!--                                                        <cells>-->
+			<!--                                                                        <ObjectIdentifier title="{applicationcomponent}" text="{applicationcomponent}"/>-->
+			<!--                                                        </cells>-->
+			<!--                                        </ColumnListItem>-->
+			<!--                                        <columns>-->
+			<!--                                                        <Column width="12em">-->
+			<!--                                                                        <header>-->
+			<!--                                                                                        <Text text="applicationcomponent"/>-->
+			<!--                                                                        </header>-->
+			<!--                                                        </Column>-->
+			<!--                                        </columns>-->
+			<!--                        </Table>-->
+			<!--        </content>-->
+			<!--</ViewSettingsCustomTab>-->
+		</customTabs>
+		<sortItems>
+			<ViewSettingsItem text="{i18n>ObjectNameDialogFragment}" key="ObjectName" selected="true"/>
+			<ViewSettingsItem text="{i18n>AreaDialogFragment}" key="Area"/>
+			<ViewSettingsItem text="{i18n>PersonResponsibleDialogFragment}" key="contactperson"/>
+			<ViewSettingsItem text="{i18n>ApplicationComponentDialogFragment}" key="ApplicationComponent"/>
+			<ViewSettingsItem text="{i18n>IsCloudRelevantDialogFragment}" key="cloudFlag"/>
+			<ViewSettingsItem text="{i18n>BadiCountDialogFragment}" key="BadiCount"/>
+			<ViewSettingsItem text="{i18n>OdataCountDialogFragment}" key="OdataCount"/>
+			<ViewSettingsItem text="{i18n>StatusCommentsDialogFragment}" key="Statuscomments"/>
+			<ViewSettingsItem text="{i18n>StatusDialogFragment}" key="Status"/>
+			<ViewSettingsItem text="{i18n>CDSCountDialogFragment}" key="CDSCount"/>
+			<ViewSettingsItem text="{i18n>SearchObjectDialogFragment}" key="SearchObject"/>
+			<ViewSettingsItem text="{i18n>isExtensionApplicableDialogFragment}" key="isExtensionApplicable"/>
+			<ViewSettingsItem text="{i18n>isSearchapplicableDialogFragment}" key="isSearchapplicable"/>
+			<ViewSettingsItem text="{i18n>isOutputapplicableDialogFragment}" key="isOutputapplicable"/>
+			<ViewSettingsItem text="{i18n>CDSViewnameDialogFragment}" key="CDSViewname"/>
+		</sortItems>
+		<groupItems>
+			<ViewSettingsItem text="{i18n>ObjectNameDialogFragment}" key="ObjectName" selected="true"/>
+			<ViewSettingsItem text="{i18n>AreaDialogFragment}" key="Area"/>
+			<ViewSettingsItem text="{i18n>PersonResponsibleDialogFragment}" key="contactperson"/>
+			<ViewSettingsItem text="{i18n>ApplicationComponentDialogFragment}" key="ApplicationComponent"/>
+			<ViewSettingsItem text="{i18n>IsCloudRelevantDialogFragment}" key="cloudFlag"/>
+			<ViewSettingsItem text="{i18n>BadiCountDialogFragment}" key="BadiCount"/>
+			<ViewSettingsItem text="{i18n>OdataCountDialogFragment}" key="OdataCount"/>
+			<ViewSettingsItem text="{i18n>StatusCommentsDialogFragment}" key="Statuscomments"/>
+			<ViewSettingsItem text="{i18n>StatusDialogFragment}" key="Status"/>
+			<ViewSettingsItem text="{i18n>CDSCountDialogFragment}" key="CDSCount"/>
+			<ViewSettingsItem text="{i18n>SearchObjectDialogFragment}" key="SearchObject"/>
+			<ViewSettingsItem text="{i18n>isExtensionApplicableDialogFragment}" key="isExtensionApplicable"/>
+			<ViewSettingsItem text="{i18n>isSearchapplicableDialogFragment}" key="isSearchapplicable"/>
+			<ViewSettingsItem text="{i18n>isOutputapplicableDialogFragment}" key="isOutputapplicable"/>
+			<ViewSettingsItem text="{i18n>CDSViewnameDialogFragment}" key="CDSViewname"/>
+		</groupItems>
+		<!--<filterItems></filterItems>-->
+	</ViewSettingsDialog>
+</core:FragmentDefinition>

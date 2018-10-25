@@ -1,0 +1,61 @@
+[{
+	"ApplicationComponent": "ApplicationComponent 1",
+	"__metadata": {
+		"uri": "C_SBRAPPCOMPVH('ApplicationComponent%201')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.C_SBRAPPCOMPVHType"
+	}
+}, {
+	"ApplicationComponent": "ApplicationComponent 2",
+	"__metadata": {
+		"uri": "C_SBRAPPCOMPVH('ApplicationComponent%202')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.C_SBRAPPCOMPVHType"
+	}
+}, {
+	"ApplicationComponent": "ApplicationComponent 3",
+	"__metadata": {
+		"uri": "C_SBRAPPCOMPVH('ApplicationComponent%203')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.C_SBRAPPCOMPVHType"
+	}
+}, {
+	"ApplicationComponent": "ApplicationComponent 4",
+	"__metadata": {
+		"uri": "C_SBRAPPCOMPVH('ApplicationComponent%204')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.C_SBRAPPCOMPVHType"
+	}
+}, {
+	"ApplicationComponent": "ApplicationComponent 5",
+	"__metadata": {
+		"uri": "C_SBRAPPCOMPVH('ApplicationComponent%205')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.C_SBRAPPCOMPVHType"
+	}
+}, {
+	"ApplicationComponent": "ApplicationComponent 6",
+	"__metadata": {
+		"uri": "C_SBRAPPCOMPVH('ApplicationComponent%206')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.C_SBRAPPCOMPVHType"
+	}
+}, {
+	"ApplicationComponent": "ApplicationComponent 7",
+	"__metadata": {
+		"uri": "C_SBRAPPCOMPVH('ApplicationComponent%207')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.C_SBRAPPCOMPVHType"
+	}
+}, {
+	"ApplicationComponent": "ApplicationComponent 8",
+	"__metadata": {
+		"uri": "C_SBRAPPCOMPVH('ApplicationComponent%208')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.C_SBRAPPCOMPVHType"
+	}
+}, {
+	"ApplicationComponent": "ApplicationComponent 9",
+	"__metadata": {
+		"uri": "C_SBRAPPCOMPVH('ApplicationComponent%209')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.C_SBRAPPCOMPVHType"
+	}
+}, {
+	"ApplicationComponent": "ApplicationComponent 10",
+	"__metadata": {
+		"uri": "C_SBRAPPCOMPVH('ApplicationComponent%2010')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.C_SBRAPPCOMPVHType"
+	}
+}]

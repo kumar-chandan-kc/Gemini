@@ -1,0 +1,81 @@
+[{
+       "CDSName": "C_BEHSUBSCRIPTION",
+       "CDSReleaseStatus": "CDSReleaseStatus 1",
+       "ApplicationComponentName": "ApplicationComponentName 1",
+       "__metadata": {
+              "uri": "I_SBRCDSViewNameVH('CDSName%201')",
+              "type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSViewNameVHType"
+       }
+}, {
+       "CDSName": "CDSName 2",
+       "CDSReleaseStatus": "CDSReleaseStatus 2",
+       "ApplicationComponentName": "ApplicationComponentName 2",
+       "__metadata": {
+              "uri": "I_SBRCDSViewNameVH('CDSName%202')",
+              "type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSViewNameVHType"
+       }
+}, {
+       "CDSName": "CDSName 3",
+       "CDSReleaseStatus": "CDSReleaseStatus 3",
+       "ApplicationComponentName": "ApplicationComponentName 3",
+       "__metadata": {
+              "uri": "I_SBRCDSViewNameVH('CDSName%203')",
+              "type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSViewNameVHType"
+       }
+}, {
+       "CDSName": "CDSName 4",
+       "CDSReleaseStatus": "CDSReleaseStatus 4",
+       "ApplicationComponentName": "ApplicationComponentName 4",
+       "__metadata": {
+              "uri": "I_SBRCDSViewNameVH('CDSName%204')",
+              "type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSViewNameVHType"
+       }
+}, {
+       "CDSName": "CDSName 5",
+       "CDSReleaseStatus": "CDSReleaseStatus 5",
+       "ApplicationComponentName": "ApplicationComponentName 5",
+       "__metadata": {
+              "uri": "I_SBRCDSViewNameVH('CDSName%205')",
+              "type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSViewNameVHType"
+       }
+}, {
+       "CDSName": "CDSName 6",
+       "CDSReleaseStatus": "CDSReleaseStatus 6",
+       "ApplicationComponentName": "ApplicationComponentName 6",
+       "__metadata": {
+              "uri": "I_SBRCDSViewNameVH('CDSName%206')",
+              "type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSViewNameVHType"
+       }
+}, {
+       "CDSName": "CDSName 7",
+       "CDSReleaseStatus": "CDSReleaseStatus 7",
+       "ApplicationComponentName": "ApplicationComponentName 7",
+       "__metadata": {
+              "uri": "I_SBRCDSViewNameVH('CDSName%207')",
+              "type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSViewNameVHType"
+       }
+}, {
+       "CDSName": "CDSName 8",
+       "CDSReleaseStatus": "CDSReleaseStatus 8",
+       "ApplicationComponentName": "ApplicationComponentName 8",
+       "__metadata": {
+              "uri": "I_SBRCDSViewNameVH('CDSName%208')",
+              "type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSViewNameVHType"
+       }
+}, {
+       "CDSName": "CDSName 9",
+       "CDSReleaseStatus": "CDSReleaseStatus 9",
+       "ApplicationComponentName": "ApplicationComponentName 9",
+       "__metadata": {
+              "uri": "I_SBRCDSViewNameVH('CDSName%209')",
+              "type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSViewNameVHType"
+       }
+}, {
+       "CDSName": "CDSName 10",
+       "CDSReleaseStatus": "CDSReleaseStatus 10",
+       "ApplicationComponentName": "ApplicationComponentName 10",
+       "__metadata": {
+              "uri": "I_SBRCDSViewNameVH('CDSName%2010')",
+              "type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSViewNameVHType"
+       }
+}]

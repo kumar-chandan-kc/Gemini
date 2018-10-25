@@ -1,0 +1,17 @@
+<core:FragmentDefinition  
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <SelectDialog
+        id="ServiceInterfaceDialog"
+        title="{i18n>ServiceInterfaceValueHelp}"
+        class="sapUiPopupWithPadding"
+        items="{/I_SBRSERVICEINTERFACEVH}"
+        search="handleValueHelpServiceInterface"
+        liveChange="handleValueHelpServiceInterface"
+        confirm="handleValueHelpClose"
+        cancel="handleValueHelpClose">
+        <StandardListItem 
+            title="{ServiceInterface}" description = "{communication_scenario_id}"
+             />
+    </SelectDialog>
+</core:FragmentDefinition>

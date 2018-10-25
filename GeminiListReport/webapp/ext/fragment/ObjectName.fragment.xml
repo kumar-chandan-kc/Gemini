@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog id="Obj" noDataText="No Object Name Found" title="{i18n>ObjectDialogTitle}" search="handleObjSearch" liveChange="handleObjSearch"
+		confirm="handleObjClose" cancel="handleObjClose" items="{ path: 'geminiold>/BOTable' , sorter: { path: 'ObjectName'} }">
+		<StandardListItem title="{geminiold>ObjectName}"/>
+	</SelectDialog>
+</core:FragmentDefinition>

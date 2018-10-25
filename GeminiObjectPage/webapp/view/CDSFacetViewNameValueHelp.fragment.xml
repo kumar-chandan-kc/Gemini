@@ -1,0 +1,22 @@
+<core:FragmentDefinition  
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <SelectDialog
+        id="CDSFacetViewNameValueHelp"
+        title="{i18n>CDSViewNameValueHelpFragTitle}"
+        class="sapUiPopupWithPadding"
+        items="{ path: 'Gemini>/cdsViewName'}"
+        search="handleValueHelpCDSViewName"
+        liveChange="handleValueHelpCDSViewName"
+        confirm="handleValueHelpClose"
+        cancel="handleValueHelpClose">
+        <StandardListItem id="CDSValueHelpListItems"
+            title="{Gemini>CDSName}"  info = "{Gemini>CDSReleasedStatus}"
+             />
+    </SelectDialog>
+    
+    
+             
+    
+    
+</core:FragmentDefinition>

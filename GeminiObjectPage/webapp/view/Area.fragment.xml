@@ -1,0 +1,19 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<SelectDialog
+		id="farea"
+		noDataText="{i18n>NoAreaFound}"
+		title="{i18n>SelectAreaTitle}"
+		search="handleAreaSearch"
+		liveChange="handleAreaSearch"
+		confirm="handleAreaClose"
+		cancel="handleAreaClose"
+		items="{
+			path: '/I_SBRAREAVH' 
+		}" >
+		<StandardListItem
+			title="{Area}"
+			 />
+	</SelectDialog>
+</core:FragmentDefinition>

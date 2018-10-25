@@ -1,0 +1,43 @@
+[{
+	"event_id": "bb018a01-5050-422b-a502-3f867b4c934f",
+	"sap_bo_type": "Bank",
+	"bo_task": "Changed",
+	"bo_event": "CHANGED",
+	"changetype": "New",
+	"target_release": "1805",
+	"actual_release": "",
+	"description": "",
+	"status": "0",
+	"tool_tip": "Passed the planned release",
+	"status_colour": "Green",
+	"status_icon": "sap-icon://border",
+	"jira_valid": "1",
+	"jira_backlog": "",
+	"jira_backlog_link": "",
+	"__metadata": {
+		"uri": "I_SBREVENTPLAN(guid'bb018a01-5050-422b-a502-3f867b4c934f')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBREVENTPLANType"
+	},
+	"object_node_type": "Bank"
+}, {
+	"event_id": "c93ad0a2-af71-42c1-8d88-39c9aece5d76",
+	"sap_bo_type": "Bank",
+	"bo_task": "Created",
+	"bo_event": "CREATED",
+	"changetype": "New",
+	"target_release": "1802",
+	"actual_release": "",
+	"description": "",
+	"status": "1",
+	"tool_tip": "Object already mapped",
+	"status_colour": "status_colour 2",
+	"status_icon": "sap-icon://border",
+	"jira_valid": "1",
+	"jira_backlog": "",
+	"jira_backlog_link": "",
+	"__metadata": {
+		"uri": "I_SBREVENTPLAN(guid'c93ad0a2-af71-42c1-8d88-39c9aece5d76')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBREVENTPLANType"
+	},
+	"object_node_type": "BankItem"
+}]

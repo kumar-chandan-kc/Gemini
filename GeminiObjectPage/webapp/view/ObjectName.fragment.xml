@@ -1,0 +1,19 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<SelectDialog
+		id="Obj"
+		noDataText="{i18n>NoObjectNameFound}"
+		title="{i18n>SelectObjectName}"
+		search="handleObjSearch"
+		liveChange="handleObjSearch"
+		confirm="handleObjClose"
+		cancel="handleObjClose"
+		items="{
+			path: '/I_SBRCloudQuality'
+		}" >
+		<StandardListItem
+			title="{ObjectName}"
+			 />
+	</SelectDialog>
+</core:FragmentDefinition>

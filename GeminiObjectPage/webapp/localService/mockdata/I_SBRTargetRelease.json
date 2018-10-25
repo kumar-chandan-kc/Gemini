@@ -1,0 +1,141 @@
+[{
+	"release_id": "release_id 1",
+	"dev_start": "/Date(1248756534000)/",
+	"status_icon": "status_icon 1",
+	"status_colour": "status_colour 1",
+	"tool_tip": "tool_tip 1",
+	"dc": "/Date(1184215734000)/",
+	"cc": "/Date(1207543734000)/",
+	"ecc": "/Date(1265777334000)/",
+	"zdate2": "/Date(1041050934000)/",
+	"__metadata": {
+		"uri": "I_SBRTargetRelease('release_id%201')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRTargetReleaseType"
+	}
+}, {
+	"release_id": "release_id 2",
+	"dev_start": "/Date(1015822134000)/",
+	"status_icon": "status_icon 2",
+	"status_colour": "status_colour 2",
+	"tool_tip": "tool_tip 2",
+	"dc": "/Date(1355201334000)/",
+	"cc": "/Date(969166134000)/",
+	"ecc": "/Date(1432097334000)/",
+	"zdate2": "/Date(1328503734000)/",
+	"__metadata": {
+		"uri": "I_SBRTargetRelease('release_id%202')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRTargetReleaseType"
+	}
+}, {
+	"release_id": "release_id 3",
+	"dev_start": "/Date(1058503734000)/",
+	"status_icon": "status_icon 3",
+	"status_colour": "status_colour 3",
+	"tool_tip": "tool_tip 3",
+	"dc": "/Date(1447908534000)/",
+	"cc": "/Date(1378788534000)/",
+	"ecc": "/Date(1071809334000)/",
+	"zdate2": "/Date(1152506934000)/",
+	"__metadata": {
+		"uri": "I_SBRTargetRelease('release_id%203')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRTargetReleaseType"
+	}
+}, {
+	"release_id": "release_id 4",
+	"dev_start": "/Date(1257482934000)/",
+	"status_icon": "status_icon 4",
+	"status_colour": "status_colour 4",
+	"tool_tip": "tool_tip 4",
+	"dc": "/Date(1031114934000)/",
+	"cc": "/Date(1159764534000)/",
+	"ecc": "/Date(1421988534000)/",
+	"zdate2": "/Date(1561265334000)/",
+	"__metadata": {
+		"uri": "I_SBRTargetRelease('release_id%204')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRTargetReleaseType"
+	}
+}, {
+	"release_id": "release_id 5",
+	"dev_start": "/Date(1195447734000)/",
+	"status_icon": "status_icon 5",
+	"status_colour": "status_colour 5",
+	"tool_tip": "tool_tip 5",
+	"dc": "/Date(1385441334000)/",
+	"cc": "/Date(1401943734000)/",
+	"ecc": "/Date(1550897334000)/",
+	"zdate2": "/Date(1225601334000)/",
+	"__metadata": {
+		"uri": "I_SBRTargetRelease('release_id%205')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRTargetReleaseType"
+	}
+}, {
+	"release_id": "release_id 6",
+	"dev_start": "/Date(1349930934000)/",
+	"status_icon": "status_icon 6",
+	"status_colour": "status_colour 6",
+	"tool_tip": "tool_tip 6",
+	"dc": "/Date(1291351734000)/",
+	"cc": "/Date(1268887734000)/",
+	"ecc": "/Date(1232340534000)/",
+	"zdate2": "/Date(1542516534000)/",
+	"__metadata": {
+		"uri": "I_SBRTargetRelease('release_id%206')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRTargetReleaseType"
+	}
+}, {
+	"release_id": "release_id 7",
+	"dev_start": "/Date(1371962934000)/",
+	"status_icon": "status_icon 7",
+	"status_colour": "status_colour 7",
+	"tool_tip": "tool_tip 7",
+	"dc": "/Date(1431751734000)/",
+	"cc": "/Date(1510634934000)/",
+	"ecc": "/Date(1117082934000)/",
+	"zdate2": "/Date(1267159734000)/",
+	"__metadata": {
+		"uri": "I_SBRTargetRelease('release_id%207')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRTargetReleaseType"
+	}
+}, {
+	"release_id": "release_id 8",
+	"dev_start": "/Date(1370839734000)/",
+	"status_icon": "status_icon 8",
+	"status_colour": "status_colour 8",
+	"tool_tip": "tool_tip 8",
+	"dc": "/Date(1192423734000)/",
+	"cc": "/Date(1207111734000)/",
+	"ecc": "/Date(1537850934000)/",
+	"zdate2": "/Date(1501735734000)/",
+	"__metadata": {
+		"uri": "I_SBRTargetRelease('release_id%208')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRTargetReleaseType"
+	}
+}, {
+	"release_id": "release_id 9",
+	"dev_start": "/Date(1072846134000)/",
+	"status_icon": "status_icon 9",
+	"status_colour": "status_colour 9",
+	"tool_tip": "tool_tip 9",
+	"dc": "/Date(1254977334000)/",
+	"cc": "/Date(1296449334000)/",
+	"ecc": "/Date(1135313334000)/",
+	"zdate2": "/Date(1482554934000)/",
+	"__metadata": {
+		"uri": "I_SBRTargetRelease('release_id%209')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRTargetReleaseType"
+	}
+}, {
+	"release_id": "release_id 10",
+	"dev_start": "/Date(1526273334000)/",
+	"status_icon": "status_icon 10",
+	"status_colour": "status_colour 10",
+	"tool_tip": "tool_tip 10",
+	"dc": "/Date(966487734000)/",
+	"cc": "/Date(1468385334000)/",
+	"ecc": "/Date(1240289334000)/",
+	"zdate2": "/Date(1144817334000)/",
+	"__metadata": {
+		"uri": "I_SBRTargetRelease('release_id%2010')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRTargetReleaseType"
+	}
+}]

@@ -1,0 +1,27 @@
+<mvc:View xmlns="sap.m" xmlns:object="sap.uxap" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout"
+	xmlns:ui="sap.ui" xmlns:semantic="sap.f.semantic" xmlns:footerbar="sap.ushell.ui.footerbar" xmlns:fb="sap.ui.comp.filterbar"
+	xmlns:f="sap.ui.layout.form" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="s4.cfnd.geminiobjectpage.controller.Blocks">
+	<f:SimpleForm id="SimpleFormDisplay354" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12"
+		labelSpanS="12" adjustLabelSpan="false" emptySpanXL="5" emptySpanL="5" emptySpanM="5" emptySpanS="5" columnsXL="1" columnsL="1" columnsM="1"
+		singleContainerFullSize="false">
+		<f:content>
+			<Label text="{i18n>Area}" labelFor="sInputArea"/>
+			<Input id="sInputArea" value="{Header>/sArea}" showSuggestion="true" suggestionItems="{ path: '/I_SBRAREAVH', templateShareable:false }"
+				showValueHelp="true" valueHelpRequest="onValueHelpRequestArea">
+				<suggestionItems>
+					<core:ListItem text="{Area}" additionalText="{Description}"/>
+				</suggestionItems>
+			</Input>
+			<Label text="{i18n>CDSObjectName}" labelFor="sInputCDSObject"/>
+			<Input id="sInputCDSObject" change='fnOnCDSChange' editable="{parts:['objectView>/editable'],formatter:'.fnCDSEditable'}" showSuggestion="true" value="{Header>/sCDSObj}"
+				suggestionItems="{ path: '/I_SBRCDSViewNameVH', templateShareable:false }" enableSuggestionsHighlighting="true"
+				valueHelpRequest="fnCDSValueHelp" showValueHelp="true">
+				<suggestionItems>
+					<core:Item key="{CDSName}" text="{CDSName}"/>
+				</suggestionItems>
+			</Input>
+			<Label text="{i18n>CloudApplicable}"/>
+			<CheckBox id="sCheckBoxCloudApplicble" selected="{Header>/sIsCloud}"/>
+		</f:content>
+	</f:SimpleForm>
+</mvc:View>

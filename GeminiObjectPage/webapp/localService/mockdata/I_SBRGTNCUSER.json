@@ -1,0 +1,81 @@
+[{
+	"accnt": "accnt 1",
+	"bname": "bname 1",
+	"UserDescription": "UserDescription 1",
+	"__metadata": {
+		"uri": "I_SBRGTNCUSER(accnt='accnt%201',bname='bname%201')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRGTNCUSERType"
+	}
+}, {
+	"accnt": "accnt 2",
+	"bname": "bname 2",
+	"UserDescription": "UserDescription 2",
+	"__metadata": {
+		"uri": "I_SBRGTNCUSER(accnt='accnt%202',bname='bname%202')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRGTNCUSERType"
+	}
+}, {
+	"accnt": "accnt 3",
+	"bname": "bname 3",
+	"UserDescription": "UserDescription 3",
+	"__metadata": {
+		"uri": "I_SBRGTNCUSER(accnt='accnt%203',bname='bname%203')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRGTNCUSERType"
+	}
+}, {
+	"accnt": "accnt 4",
+	"bname": "bname 4",
+	"UserDescription": "UserDescription 4",
+	"__metadata": {
+		"uri": "I_SBRGTNCUSER(accnt='accnt%204',bname='bname%204')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRGTNCUSERType"
+	}
+}, {
+	"accnt": "accnt 5",
+	"bname": "bname 5",
+	"UserDescription": "UserDescription 5",
+	"__metadata": {
+		"uri": "I_SBRGTNCUSER(accnt='accnt%205',bname='bname%205')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRGTNCUSERType"
+	}
+}, {
+	"accnt": "accnt 6",
+	"bname": "bname 6",
+	"UserDescription": "UserDescription 6",
+	"__metadata": {
+		"uri": "I_SBRGTNCUSER(accnt='accnt%206',bname='bname%206')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRGTNCUSERType"
+	}
+}, {
+	"accnt": "accnt 7",
+	"bname": "bname 7",
+	"UserDescription": "UserDescription 7",
+	"__metadata": {
+		"uri": "I_SBRGTNCUSER(accnt='accnt%207',bname='bname%207')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRGTNCUSERType"
+	}
+}, {
+	"accnt": "accnt 8",
+	"bname": "bname 8",
+	"UserDescription": "UserDescription 8",
+	"__metadata": {
+		"uri": "I_SBRGTNCUSER(accnt='accnt%208',bname='bname%208')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRGTNCUSERType"
+	}
+}, {
+	"accnt": "accnt 9",
+	"bname": "bname 9",
+	"UserDescription": "UserDescription 9",
+	"__metadata": {
+		"uri": "I_SBRGTNCUSER(accnt='accnt%209',bname='bname%209')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRGTNCUSERType"
+	}
+}, {
+	"accnt": "accnt 10",
+	"bname": "bname 10",
+	"UserDescription": "UserDescription 10",
+	"__metadata": {
+		"uri": "I_SBRGTNCUSER(accnt='accnt%2010',bname='bname%2010')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRGTNCUSERType"
+	}
+}]

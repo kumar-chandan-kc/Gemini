@@ -1,0 +1,19 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<SelectDialog
+		id="Appf"
+		noDataText="{i18n>NoApplicationComponentFound}"
+		title="{i18n>SelectApplicationComponentTitle}"
+		search="handleAppSearch"
+		liveChange="handleAppSearch"
+		confirm="handleAppClose"
+		cancel="handleAppClose"
+		items="{
+			path: '/C_SBRAPPCOMPVH'
+		}" >
+		<StandardListItem
+			title="{ApplicationComponent}" 
+			 />
+	</SelectDialog>
+</core:FragmentDefinition>

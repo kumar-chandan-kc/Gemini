@@ -1,0 +1,61 @@
+[{
+	"ObjectName": "ObjectName",
+	"__metadata": {
+		"uri": "C_SBROBJECTVALHELP('ObjectName%201')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBROBJECTVALHELPType"
+	}
+}, {
+	"ObjectName": "ObjectName2",
+	"__metadata": {
+		"uri": "C_SBROBJECTVALHELP('ObjectName%202')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBROBJECTVALHELPType"
+	}
+}, {
+	"ObjectName": "ObjectName3",
+	"__metadata": {
+		"uri": "C_SBROBJECTVALHELP('ObjectName%203')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBROBJECTVALHELPType"
+	}
+}, {
+	"ObjectName": "ObjectName 4",
+	"__metadata": {
+		"uri": "C_SBROBJECTVALHELP('ObjectName%204')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBROBJECTVALHELPType"
+	}
+}, {
+	"ObjectName": "ObjectName 5",
+	"__metadata": {
+		"uri": "C_SBROBJECTVALHELP('ObjectName%205')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBROBJECTVALHELPType"
+	}
+}, {
+	"ObjectName": "ObjectName 6",
+	"__metadata": {
+		"uri": "C_SBROBJECTVALHELP('ObjectName%206')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBROBJECTVALHELPType"
+	}
+}, {
+	"ObjectName": "ObjectName 7",
+	"__metadata": {
+		"uri": "C_SBROBJECTVALHELP('ObjectName%207')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBROBJECTVALHELPType"
+	}
+}, {
+	"ObjectName": "ObjectName 8",
+	"__metadata": {
+		"uri": "C_SBROBJECTVALHELP('ObjectName%208')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBROBJECTVALHELPType"
+	}
+}, {
+	"ObjectName": "ObjectName 9",
+	"__metadata": {
+		"uri": "C_SBROBJECTVALHELP('ObjectName%209')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBROBJECTVALHELPType"
+	}
+}, {
+	"ObjectName": "ObjectName 10",
+	"__metadata": {
+		"uri": "C_SBROBJECTVALHELP('ObjectName%2010')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBROBJECTVALHELPType"
+	}
+}]

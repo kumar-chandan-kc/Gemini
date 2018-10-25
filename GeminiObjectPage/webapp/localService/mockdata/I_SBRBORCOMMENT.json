@@ -1,0 +1,91 @@
+[{
+	"sapobjecttype": "sapobjecttype 1",
+	"createdat": "/Date(1455770856000+0000)/",
+	"statuscomments": "statuscomments 1",
+	"createdby": "createdby 1",
+	"__metadata": {
+		"uri": "I_SBRBORCOMMENT(sapobjecttype='sapobjecttype%201',createdat=/Date(1455770856000+0000)/)",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRBORCOMMENTType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 2",
+	"createdat": "/Date(993703656000+0000)/",
+	"statuscomments": "statuscomments 2",
+	"createdby": "createdby 2",
+	"__metadata": {
+		"uri": "I_SBRBORCOMMENT(sapobjecttype='sapobjecttype%202',createdat=/Date(993703656000+0000)/)",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRBORCOMMENTType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 3",
+	"createdat": "/Date(1116132456000+0000)/",
+	"statuscomments": "statuscomments 3",
+	"createdby": "createdby 3",
+	"__metadata": {
+		"uri": "I_SBRBORCOMMENT(sapobjecttype='sapobjecttype%203',createdat=/Date(1116132456000+0000)/)",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRBORCOMMENTType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 4",
+	"createdat": "/Date(1493614056000+0000)/",
+	"statuscomments": "statuscomments 4",
+	"createdby": "createdby 4",
+	"__metadata": {
+		"uri": "I_SBRBORCOMMENT(sapobjecttype='sapobjecttype%204',createdat=/Date(1493614056000+0000)/)",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRBORCOMMENTType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 5",
+	"createdat": "/Date(1444625256000+0000)/",
+	"statuscomments": "statuscomments 5",
+	"createdby": "createdby 5",
+	"__metadata": {
+		"uri": "I_SBRBORCOMMENT(sapobjecttype='sapobjecttype%205',createdat=/Date(1444625256000+0000)/)",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRBORCOMMENTType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 6",
+	"createdat": "/Date(1180673256000+0000)/",
+	"statuscomments": "statuscomments 6",
+	"createdby": "createdby 6",
+	"__metadata": {
+		"uri": "I_SBRBORCOMMENT(sapobjecttype='sapobjecttype%206',createdat=/Date(1180673256000+0000)/)",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRBORCOMMENTType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 7",
+	"createdat": "/Date(1226897256000+0000)/",
+	"statuscomments": "statuscomments 7",
+	"createdby": "createdby 7",
+	"__metadata": {
+		"uri": "I_SBRBORCOMMENT(sapobjecttype='sapobjecttype%207',createdat=/Date(1226897256000+0000)/)",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRBORCOMMENTType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 8",
+	"createdat": "/Date(1252558056000+0000)/",
+	"statuscomments": "statuscomments 8",
+	"createdby": "createdby 8",
+	"__metadata": {
+		"uri": "I_SBRBORCOMMENT(sapobjecttype='sapobjecttype%208',createdat=/Date(1252558056000+0000)/)",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRBORCOMMENTType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 9",
+	"createdat": "/Date(1365914856000+0000)/",
+	"statuscomments": "statuscomments 9",
+	"createdby": "createdby 9",
+	"__metadata": {
+		"uri": "I_SBRBORCOMMENT(sapobjecttype='sapobjecttype%209',createdat=/Date(1365914856000+0000)/)",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRBORCOMMENTType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 10",
+	"createdat": "/Date(959143656000+0000)/",
+	"statuscomments": "statuscomments 10",
+	"createdby": "createdby 10",
+	"__metadata": {
+		"uri": "I_SBRBORCOMMENT(sapobjecttype='sapobjecttype%2010',createdat=/Date(959143656000+0000)/)",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRBORCOMMENTType"
+	}
+}]

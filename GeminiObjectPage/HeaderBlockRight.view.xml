@@ -1,0 +1,21 @@
+<mvc:View id = "sHeaderBlock" xmlns="sap.m" xmlns:object="sap.uxap" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout"
+	xmlns:ui="sap.ui" xmlns:semantic="sap.f.semantic" xmlns:footerbar="sap.ushell.ui.footerbar" xmlns:fb="sap.ui.comp.filterbar"
+	xmlns:f="sap.ui.layout.form" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="s4.cfnd.geminiobjectpage.controller.Blocks">
+	<f:SimpleForm id="SimpleFormDisplay354" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="12"
+		labelSpanS="12" adjustLabelSpan="false" emptySpanXL="5" emptySpanL="5" emptySpanM="5" emptySpanS="5" columnsXL="1" columnsL="1" columnsM="1"
+		singleContainerFullSize="false">
+		<f:content>
+			<Label text="{i18n>Package}"/>
+			<Input id="sInputPackage" showSuggestion="true" suggestionItems="{ path: '/I_SBRPACKAGEVH', templateShareable:false }"
+				valueHelpRequest="onValueHelpRequestPackage" showValueHelp="true" value = "{Header>/sPackage}">
+				<suggestionItems>
+					<core:Item key="{devclass}" text="{devclass}"/>
+				</suggestionItems>
+			</Input>
+			<Label text="{i18n>Priority}"/>
+			<Select id="sPrioritySelect" selectedKey="{Header>/sPriorityKey}" items="{ path: '/I_SBRPriorityValueHelp', templateShareable:false}" change = "fnPriorityChange">
+				<core:Item key="{Priority}" text="{PriorityText}"/>
+			</Select>
+		</f:content>
+	</f:SimpleForm>
+</mvc:View>

@@ -1,0 +1,19 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<SelectDialog
+		id="CDSView"
+		noDataText="{i18n>NoCDSViewNameFound}"
+		title="{i18n>SelectCDSViewNameResponsible}"
+		search="handleCDSSearch"
+		liveChange="handleCDSSearch"
+		confirm="handleCDSClose"
+		cancel="handleCDSClose"
+	
+		items="{ path: 'worklistView>/CDSViewname' , sorter: { path: 'worklistView>value' }
+		}" >
+		<StandardListItem
+			title="{worklistView>value}"
+			 />
+	</SelectDialog> 
+</core:FragmentDefinition>

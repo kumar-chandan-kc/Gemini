@@ -1,0 +1,171 @@
+[{
+	"analytics_id": "42c3b900-b7a0-48d5-8c3a-629f829707a1",
+	"sap_bo_type": "sap_bo_type 1",
+	"area": "area 1",
+	"analytics_artifact": "analytics_artifact 1",
+	"change_type": "change_type 1",
+	"target_release": "target_release 1",
+	"description": "description 1",
+	"status": "status 1",
+	"status_colour": "status_colour 1",
+	"status_icon": "status_icon 1",
+	"tool_tip": "tool_tip 1",
+	"actual_release": "actual_release 1",
+	"__metadata": {
+		"uri": "I_SBRAnalyticsPlan(guid'42c3b900-b7a0-48d5-8c3a-629f829707a1')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRAnalyticsPlanType"
+	}
+}, {
+	"analytics_id": "f2b8d56e-e79a-4552-9acd-ad8b37d214b4",
+	"sap_bo_type": "sap_bo_type 2",
+	"area": "area 2",
+	"analytics_artifact": "analytics_artifact 2",
+	"change_type": "change_type 2",
+	"target_release": "target_release 2",
+	"description": "description 2",
+	"status": "status 2",
+	"status_colour": "status_colour 2",
+	"status_icon": "status_icon 2",
+	"tool_tip": "tool_tip 2",
+	"actual_release": "actual_release 2",
+	"__metadata": {
+		"uri": "I_SBRAnalyticsPlan(guid'f2b8d56e-e79a-4552-9acd-ad8b37d214b4')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRAnalyticsPlanType"
+	}
+}, {
+	"analytics_id": "3167c647-3ffb-4d96-901e-54040086e270",
+	"sap_bo_type": "sap_bo_type 3",
+	"area": "area 3",
+	"analytics_artifact": "analytics_artifact 3",
+	"change_type": "change_type 3",
+	"target_release": "target_release 3",
+	"description": "description 3",
+	"status": "status 3",
+	"status_colour": "status_colour 3",
+	"status_icon": "status_icon 3",
+	"tool_tip": "tool_tip 3",
+	"actual_release": "actual_release 3",
+	"__metadata": {
+		"uri": "I_SBRAnalyticsPlan(guid'3167c647-3ffb-4d96-901e-54040086e270')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRAnalyticsPlanType"
+	}
+}, {
+	"analytics_id": "fc17efaf-5a7a-4022-88a1-44d9745d6f35",
+	"sap_bo_type": "sap_bo_type 4",
+	"area": "area 4",
+	"analytics_artifact": "analytics_artifact 4",
+	"change_type": "change_type 4",
+	"target_release": "target_release 4",
+	"description": "description 4",
+	"status": "status 4",
+	"status_colour": "status_colour 4",
+	"status_icon": "status_icon 4",
+	"tool_tip": "tool_tip 4",
+	"actual_release": "actual_release 4",
+	"__metadata": {
+		"uri": "I_SBRAnalyticsPlan(guid'fc17efaf-5a7a-4022-88a1-44d9745d6f35')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRAnalyticsPlanType"
+	}
+}, {
+	"analytics_id": "8d3b9e8b-c6a1-4e3a-bead-cd4fed97f508",
+	"sap_bo_type": "sap_bo_type 5",
+	"area": "area 5",
+	"analytics_artifact": "analytics_artifact 5",
+	"change_type": "change_type 5",
+	"target_release": "target_release 5",
+	"description": "description 5",
+	"status": "status 5",
+	"status_colour": "status_colour 5",
+	"status_icon": "status_icon 5",
+	"tool_tip": "tool_tip 5",
+	"actual_release": "actual_release 5",
+	"__metadata": {
+		"uri": "I_SBRAnalyticsPlan(guid'8d3b9e8b-c6a1-4e3a-bead-cd4fed97f508')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRAnalyticsPlanType"
+	}
+}, {
+	"analytics_id": "71ad4f92-a57c-49da-a50d-6dde2d28c1c5",
+	"sap_bo_type": "sap_bo_type 6",
+	"area": "area 6",
+	"analytics_artifact": "analytics_artifact 6",
+	"change_type": "change_type 6",
+	"target_release": "target_release 6",
+	"description": "description 6",
+	"status": "status 6",
+	"status_colour": "status_colour 6",
+	"status_icon": "status_icon 6",
+	"tool_tip": "tool_tip 6",
+	"actual_release": "actual_release 6",
+	"__metadata": {
+		"uri": "I_SBRAnalyticsPlan(guid'71ad4f92-a57c-49da-a50d-6dde2d28c1c5')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRAnalyticsPlanType"
+	}
+}, {
+	"analytics_id": "5f9523e9-989c-4792-900b-9b4174306747",
+	"sap_bo_type": "sap_bo_type 7",
+	"area": "area 7",
+	"analytics_artifact": "analytics_artifact 7",
+	"change_type": "change_type 7",
+	"target_release": "target_release 7",
+	"description": "description 7",
+	"status": "status 7",
+	"status_colour": "status_colour 7",
+	"status_icon": "status_icon 7",
+	"tool_tip": "tool_tip 7",
+	"actual_release": "actual_release 7",
+	"__metadata": {
+		"uri": "I_SBRAnalyticsPlan(guid'5f9523e9-989c-4792-900b-9b4174306747')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRAnalyticsPlanType"
+	}
+}, {
+	"analytics_id": "75028550-09f8-4444-b17c-1e401a05919c",
+	"sap_bo_type": "sap_bo_type 8",
+	"area": "area 8",
+	"analytics_artifact": "analytics_artifact 8",
+	"change_type": "change_type 8",
+	"target_release": "target_release 8",
+	"description": "description 8",
+	"status": "status 8",
+	"status_colour": "status_colour 8",
+	"status_icon": "status_icon 8",
+	"tool_tip": "tool_tip 8",
+	"actual_release": "actual_release 8",
+	"__metadata": {
+		"uri": "I_SBRAnalyticsPlan(guid'75028550-09f8-4444-b17c-1e401a05919c')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRAnalyticsPlanType"
+	}
+}, {
+	"analytics_id": "9c95b41e-e470-4f59-8902-68127ec1e5d8",
+	"sap_bo_type": "sap_bo_type 9",
+	"area": "area 9",
+	"analytics_artifact": "analytics_artifact 9",
+	"change_type": "change_type 9",
+	"target_release": "target_release 9",
+	"description": "description 9",
+	"status": "status 9",
+	"status_colour": "status_colour 9",
+	"status_icon": "status_icon 9",
+	"tool_tip": "tool_tip 9",
+	"actual_release": "actual_release 9",
+	"__metadata": {
+		"uri": "I_SBRAnalyticsPlan(guid'9c95b41e-e470-4f59-8902-68127ec1e5d8')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRAnalyticsPlanType"
+	}
+}, {
+	"analytics_id": "76fd93c6-3442-4b39-9fa8-95e5fd4bc561",
+	"sap_bo_type": "sap_bo_type 10",
+	"area": "area 10",
+	"analytics_artifact": "analytics_artifact 10",
+	"change_type": "change_type 10",
+	"target_release": "target_release 10",
+	"description": "description 10",
+	"status": "status 10",
+	"status_colour": "status_colour 10",
+	"status_icon": "status_icon 10",
+	"tool_tip": "tool_tip 10",
+	"actual_release": "actual_release 10",
+	"__metadata": {
+		"uri": "I_SBRAnalyticsPlan(guid'76fd93c6-3442-4b39-9fa8-95e5fd4bc561')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRAnalyticsPlanType"
+	}
+}]

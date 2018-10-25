@@ -1,0 +1,49 @@
+[{
+	"object_node_type": "object_node_type",
+	"description": "description 12",
+	"object_type": "Bank",
+	"root_node_flag": true,
+	"RepresentativeView": "RepresentativeView 12",
+	"ValueHelpView": "ValueHelpView 12",
+	"RepresentativeViewRelease": "",
+	"ValueHelpViewRelease": "adslkfjlkas",
+	"approval_status": "approval_status 12",
+	"responsible_user": "responsible_user 12",
+	"PersonResponsible": "PersonResponsible 12",
+	"representative_key": "representative_key 12",
+	"approval_date": "/Date(1191316600000+0000)/",
+	"application_component": "application_component 12",
+	"status_comment": "status_comment 12",
+	"lastchangeddate_gtnc": "/Date(1252833400000+0000)/",
+	"lastchangedby_gtnc": "lastchangedby_gtnc 12",
+	"approved_by": "approved_by 12",
+	"usage_context": "usage_context 12",
+	"__metadata": {
+		"uri": "I_SBRSAPOBJECTNODETYPE('object_node_type%2012')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSAPOBJECTNODETYPEType"
+	}
+},{
+	"object_node_type": "object_node_type12",
+	"description": "description 8",
+	"object_type": "Bank",
+	"root_node_flag": false,
+	"RepresentativeView": "RepresentativeView 8",
+	"ValueHelpView": "ValueHelpView 8",
+	"RepresentativeViewRelease": "",
+	"ValueHelpViewRelease": "ValueHelpViewRelease 8",
+	"approval_status": "approval_status 8",
+	"responsible_user": "responsible_user 8",
+	"PersonResponsible": "PersonResponsible 8",
+	"representative_key": "representative_key 8",
+	"approval_date": "/Date(1045456665000+0000)/",
+	"application_component": "application_component 8",
+	"status_comment": "status_comment 8",
+	"lastchangeddate_gtnc": "/Date(1223613465000+0000)/",
+	"lastchangedby_gtnc": "lastchangedby_gtnc 8",
+	"approved_by": "approved_by 8",
+	"usage_context": "usage_context 8",
+	"__metadata": {
+		"uri": "I_SBRSAPOBJECTNODETYPE('object_node_type%208')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSAPOBJECTNODETYPEType"
+	}
+}]

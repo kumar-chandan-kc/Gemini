@@ -1,0 +1,30 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout">
+	<ViewSettingsDialog confirm="s4.cfnd.geminiobjectpage.controller.OutputObjects.handleOutputConvertConfirm" cancel="s4.cfnd.geminiobjectpage.controller.OutputObjects.handleOutputConvertClose">
+		<customTabs>
+			<ViewSettingsCustomTab id="OutputConvertToActuals" title="{i18n>ConverttoActuals}">
+				<content>
+					<Panel height="100%">
+						<layout:VerticalLayout width="70%">
+							<Label id="outObjPlanLabel" text="{i18n>SelectOutputObject}" design="Bold"/>
+							<Input id="outObjPlan" showValueHelp="true" valueHelpOnly="true" showSuggestion="false" suggestionItems="{ path: '/I_SBROPOBJVH' }"
+								valueHelpRequest="onValueHelpRequestOutputObject" suggestionItemSelected="suggestionItemSelected">
+								<suggestionItems >
+									<core:ListItem text="{OutputType}" additionalText="{ApplicationObjectType}"/>
+								</suggestionItems>
+							</Input>
+							<Label id="OutPlanApplicationObjectLabel" text="{i18n>ApplicationObject}" design="Bold"/>
+							<Input id="OutPlanApplicationObject" width="100%" editable="false" visible="true"/>
+							<Label id="ActualReleaseOutText" text="{i18n>ActualReleaseField}" design="Bold"/>
+							<Input id="releaseActualOut" width="100%" valueHelpOnly="true" showValueHelp="true" suggestionItems="{ path: 'Gemini>/target_release' }"
+								valueHelpRequest="onValueHelpRequestTargetRelease">
+								<suggestionItems >
+									<core:ListItem text="{release_id}"/>
+								</suggestionItems>
+							</Input>
+						</layout:VerticalLayout>
+					</Panel>
+				</content>
+			</ViewSettingsCustomTab>
+		</customTabs>
+	</ViewSettingsDialog>
+</core:FragmentDefinition>

@@ -1,0 +1,121 @@
+[{
+	"sap_bo_type": "sap_bo_type 1",
+	"fioriapp_name": "fioriapp_name 1",
+	"fiori_id": "fiori_id 1",
+	"fioriapp_type": "fioriapp_type 1",
+	"ui_technology": "ui_technology 1",
+	"semantic_object": "semantic_object 1",
+	"action": "action 1",
+	"__metadata": {
+		"uri": "I_SBRFIORIACTUAL(sap_bo_type='sap_bo_type%201',fioriapp_name='fioriapp_name%201')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRFIORIACTUALType"
+	}
+}, {
+	"sap_bo_type": "sap_bo_type 2",
+	"fioriapp_name": "fioriapp_name 2",
+	"fiori_id": "fiori_id 2",
+	"fioriapp_type": "fioriapp_type 2",
+	"ui_technology": "ui_technology 2",
+	"semantic_object": "semantic_object 2",
+	"action": "action 2",
+	"__metadata": {
+		"uri": "I_SBRFIORIACTUAL(sap_bo_type='sap_bo_type%202',fioriapp_name='fioriapp_name%202')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRFIORIACTUALType"
+	}
+}, {
+	"sap_bo_type": "sap_bo_type 3",
+	"fioriapp_name": "fioriapp_name 3",
+	"fiori_id": "fiori_id 3",
+	"fioriapp_type": "fioriapp_type 3",
+	"ui_technology": "ui_technology 3",
+	"semantic_object": "semantic_object 3",
+	"action": "action 3",
+	"__metadata": {
+		"uri": "I_SBRFIORIACTUAL(sap_bo_type='sap_bo_type%203',fioriapp_name='fioriapp_name%203')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRFIORIACTUALType"
+	}
+}, {
+	"sap_bo_type": "sap_bo_type 4",
+	"fioriapp_name": "fioriapp_name 4",
+	"fiori_id": "fiori_id 4",
+	"fioriapp_type": "fioriapp_type 4",
+	"ui_technology": "ui_technology 4",
+	"semantic_object": "semantic_object 4",
+	"action": "action 4",
+	"__metadata": {
+		"uri": "I_SBRFIORIACTUAL(sap_bo_type='sap_bo_type%204',fioriapp_name='fioriapp_name%204')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRFIORIACTUALType"
+	}
+}, {
+	"sap_bo_type": "sap_bo_type 5",
+	"fioriapp_name": "fioriapp_name 5",
+	"fiori_id": "fiori_id 5",
+	"fioriapp_type": "fioriapp_type 5",
+	"ui_technology": "ui_technology 5",
+	"semantic_object": "semantic_object 5",
+	"action": "action 5",
+	"__metadata": {
+		"uri": "I_SBRFIORIACTUAL(sap_bo_type='sap_bo_type%205',fioriapp_name='fioriapp_name%205')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRFIORIACTUALType"
+	}
+}, {
+	"sap_bo_type": "sap_bo_type 6",
+	"fioriapp_name": "fioriapp_name 6",
+	"fiori_id": "fiori_id 6",
+	"fioriapp_type": "fioriapp_type 6",
+	"ui_technology": "ui_technology 6",
+	"semantic_object": "semantic_object 6",
+	"action": "action 6",
+	"__metadata": {
+		"uri": "I_SBRFIORIACTUAL(sap_bo_type='sap_bo_type%206',fioriapp_name='fioriapp_name%206')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRFIORIACTUALType"
+	}
+}, {
+	"sap_bo_type": "sap_bo_type 7",
+	"fioriapp_name": "fioriapp_name 7",
+	"fiori_id": "fiori_id 7",
+	"fioriapp_type": "fioriapp_type 7",
+	"ui_technology": "ui_technology 7",
+	"semantic_object": "semantic_object 7",
+	"action": "action 7",
+	"__metadata": {
+		"uri": "I_SBRFIORIACTUAL(sap_bo_type='sap_bo_type%207',fioriapp_name='fioriapp_name%207')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRFIORIACTUALType"
+	}
+}, {
+	"sap_bo_type": "sap_bo_type 8",
+	"fioriapp_name": "fioriapp_name 8",
+	"fiori_id": "fiori_id 8",
+	"fioriapp_type": "fioriapp_type 8",
+	"ui_technology": "ui_technology 8",
+	"semantic_object": "semantic_object 8",
+	"action": "action 8",
+	"__metadata": {
+		"uri": "I_SBRFIORIACTUAL(sap_bo_type='sap_bo_type%208',fioriapp_name='fioriapp_name%208')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRFIORIACTUALType"
+	}
+}, {
+	"sap_bo_type": "sap_bo_type 9",
+	"fioriapp_name": "fioriapp_name 9",
+	"fiori_id": "fiori_id 9",
+	"fioriapp_type": "fioriapp_type 9",
+	"ui_technology": "ui_technology 9",
+	"semantic_object": "semantic_object 9",
+	"action": "action 9",
+	"__metadata": {
+		"uri": "I_SBRFIORIACTUAL(sap_bo_type='sap_bo_type%209',fioriapp_name='fioriapp_name%209')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRFIORIACTUALType"
+	}
+}, {
+	"sap_bo_type": "sap_bo_type 10",
+	"fioriapp_name": "fioriapp_name 10",
+	"fiori_id": "fiori_id 10",
+	"fioriapp_type": "fioriapp_type 10",
+	"ui_technology": "ui_technology 10",
+	"semantic_object": "semantic_object 10",
+	"action": "action 10",
+	"__metadata": {
+		"uri": "I_SBRFIORIACTUAL(sap_bo_type='sap_bo_type%2010',fioriapp_name='fioriapp_name%2010')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRFIORIACTUALType"
+	}
+}]

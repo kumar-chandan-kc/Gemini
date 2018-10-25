@@ -1,0 +1,17 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<SelectDialog
+		id="EventTaskHelp"
+		noDataText="{i18n>NoEventTaskCodeFound}"
+		title="{i18n>SelectTaskCode}"
+		search="handleTargetReleaseSearch"
+		liveChange="handleTargetReleaseSearch"
+		confirm="handleAppCloseEvent"
+		cancel="handleAppCloseEvent"
+		items="{ path: '/C_SBRTASKCODEVH'}" >
+		<StandardListItem
+			title="{taskCode}"
+			 />
+	</SelectDialog>
+</core:FragmentDefinition>

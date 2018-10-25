@@ -1,0 +1,17 @@
+<core:FragmentDefinition  
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <SelectDialog
+        id="ServiceInterfaceDialogAPIPlanned"
+        title="{i18n>ServiceInterfaceValueHelpforProtocol}"
+        class="sapUiPopupWithPadding"
+        items="{ path: 'Gemini>/apiConvertSIValueHelpExceptActuals'}"
+        search="handleValueHelpServiceInterface"
+        liveChange="handleValueHelpServiceInterface"
+        confirm="handleValueHelpClose"
+        cancel="handleValueHelpClose">
+        <StandardListItem id="APISIPlanListSI"
+            title="{Gemini>ServiceInterface}" description = "{Gemini>communication_scenario_id}"
+             />
+    </SelectDialog>
+</core:FragmentDefinition>

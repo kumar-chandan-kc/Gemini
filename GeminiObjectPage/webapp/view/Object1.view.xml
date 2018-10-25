@@ -1,0 +1,116 @@
+<mvc:View xmlns="sap.m" xmlns:object="sap.uxap" xmlns:mvc="sap.ui.core.mvc" xmlns:layout="sap.ui.layout" xmlns:ui="sap.ui"
+	xmlns:semantic="sap.f.semantic" xmlns:footerbar="sap.ushell.ui.footerbar" controllerName="s4.cfnd.geminiobjectpage.controller.Object1">
+	<object:ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="false" showTitleInHeaderContent="true">
+		<object:headerTitle>
+			<object:ObjectPageHeader objectImageURI="sap-icon://document" objectTitle="{Extensibility>/sbusinessContext}" objectImageShape="Circle"
+				objectImageAlt="{ObjectName}" objectSubtitle="Business Context" isObjectIconAlwaysVisible="false" isObjectTitleAlwaysVisible="false"
+				isObjectSubtitleAlwaysVisible="false"/>
+		</object:headerTitle>
+		<object:sections>
+			<object:ObjectPageSection id="Section4" title="{i18n>MappedSAPObjectTypes}">
+				<object:subSections>
+					<object:ObjectPageSubSection id="SectionSS4">
+						<Panel id="d">
+							<BusyIndicator id="busyObj" size="1.4em"/>
+							<Table id="idTable4" inset="false" noDataText="{i18n>NoBusinessObject}" items="{ path: 'Extensibility>/obj'}">
+								<columns>
+									<Column minScreenWidth="Tablet" demandPopin="true">
+										<Text text="{i18n>ObjectNames}"/>
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem type="Navigation" press="fnClick" vAlign="Middle">
+										<cells>
+											<Text text="{Extensibility>value}"/>
+										</cells>
+									</ColumnListItem>
+								</items>
+								<customData>
+									<sap.ui.core:CustomData xmlns:sap.ui.core="sap.ui.core" key="w5g.dt.editable" value="true" id="__data453"/>
+								</customData>
+							</Table>
+						</Panel>
+					</object:ObjectPageSubSection>
+				</object:subSections>
+			</object:ObjectPageSection>
+		</object:sections>
+		<object:sections>
+			<object:ObjectPageSection id="Section1" title="{i18n>BADIObjects}">
+				<object:subSections>
+					<object:ObjectPageSubSection id="SectionSS12">
+						<Panel id="b">
+							<BusyIndicator id="busyBadi" size="1.4em"/>
+							<Table id="idTable2" noDataText="{i18n>NoBadiObjects}" items="{ path: 'Extensibility>/badi'}">
+								<columns>
+									<Column minScreenWidth="Tablet" demandPopin="true">
+										<Text text="{i18n>BADIObjects}"/>
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem vAlign="Middle">
+										<cells>
+											<Text text="{Extensibility>value}"/>
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+						</Panel>
+					</object:ObjectPageSubSection>
+				</object:subSections>
+			</object:ObjectPageSection>
+		</object:sections>
+		<object:sections>
+			<object:ObjectPageSection id="Section2" title="{i18n>ODataServices}">
+				<object:subSections>
+					<object:ObjectPageSubSection id="SectionSS3" >
+						<Panel id="C">
+							<BusyIndicator id="busyOData" size="1.4em"/>
+							<Table id="idTable3" inset="false" noDataText="{i18n>NoOdataServices}" items="{ path: 'Extensibility>/odata'}">
+								<columns>
+									<Column minScreenWidth="Tablet" demandPopin="true">
+										<Text text="{i18n>ODataServices}"/>
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem vAlign="Middle">
+										<cells>
+											<Text text="{Extensibility>value}"/>
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+						</Panel>
+					</object:ObjectPageSubSection>
+				</object:subSections>
+			</object:ObjectPageSection>
+		</object:sections>
+		<object:sections>
+			<object:ObjectPageSection id="Section3" title="{i18n>CDSViews}">
+				<object:subSections>
+					<object:ObjectPageSubSection id="SectionSS1" >
+						<Panel id="A">
+							<BusyIndicator id="busyCDS" size="1.4em"/>
+							<Table id="idTable" inset="false" noDataText="{i18n>NoCDSViews}" items="{ path: 'Extensibility>/cdsView'}">
+								<columns>
+									<Column minScreenWidth="Tablet" demandPopin="true">
+										<Text text="{i18n>CDSViews}"/>
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem vAlign="Middle">
+										<cells>
+											<Text text="{Extensibility>value}"/>
+										</cells>
+									</ColumnListItem>
+								</items>
+								<customData>
+									<sap.ui.core:CustomData xmlns:sap.ui.core="sap.ui.core" key="w5g.dt.editable" value="true" id="__data45"/>
+								</customData>
+							</Table>
+						</Panel>
+					</object:ObjectPageSubSection>
+				</object:subSections>
+			</object:ObjectPageSection>
+		</object:sections>
+	</object:ObjectPageLayout>
+</mvc:View>

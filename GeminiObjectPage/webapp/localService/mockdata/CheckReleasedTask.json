@@ -1,0 +1,91 @@
+[{
+	"Description": "Description 1",
+	"Request_Type": "Request_Type 1",
+	"Package": "Package 1",
+	"Tr_Number": "Tr_Number 1",
+	"__metadata": {
+		"uri": "CheckReleasedTask('Tr_Number%201')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.CheckReleasedTask"
+	}
+}, {
+	"Description": "Description 2",
+	"Request_Type": "Request_Type 2",
+	"Package": "Package 2",
+	"Tr_Number": "Tr_Number 2",
+	"__metadata": {
+		"uri": "CheckReleasedTask('Tr_Number%202')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.CheckReleasedTask"
+	}
+}, {
+	"Description": "Description 3",
+	"Request_Type": "Request_Type 3",
+	"Package": "Package 3",
+	"Tr_Number": "Tr_Number 3",
+	"__metadata": {
+		"uri": "CheckReleasedTask('Tr_Number%203')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.CheckReleasedTask"
+	}
+}, {
+	"Description": "Description 4",
+	"Request_Type": "Request_Type 4",
+	"Package": "Package 4",
+	"Tr_Number": "Tr_Number 4",
+	"__metadata": {
+		"uri": "CheckReleasedTask('Tr_Number%204')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.CheckReleasedTask"
+	}
+}, {
+	"Description": "Description 5",
+	"Request_Type": "Request_Type 5",
+	"Package": "Package 5",
+	"Tr_Number": "Tr_Number 5",
+	"__metadata": {
+		"uri": "CheckReleasedTask('Tr_Number%205')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.CheckReleasedTask"
+	}
+}, {
+	"Description": "Description 6",
+	"Request_Type": "Request_Type 6",
+	"Package": "Package 6",
+	"Tr_Number": "Tr_Number 6",
+	"__metadata": {
+		"uri": "CheckReleasedTask('Tr_Number%206')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.CheckReleasedTask"
+	}
+}, {
+	"Description": "Description 7",
+	"Request_Type": "Request_Type 7",
+	"Package": "Package 7",
+	"Tr_Number": "Tr_Number 7",
+	"__metadata": {
+		"uri": "CheckReleasedTask('Tr_Number%207')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.CheckReleasedTask"
+	}
+}, {
+	"Description": "Description 8",
+	"Request_Type": "Request_Type 8",
+	"Package": "Package 8",
+	"Tr_Number": "Tr_Number 8",
+	"__metadata": {
+		"uri": "CheckReleasedTask('Tr_Number%208')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.CheckReleasedTask"
+	}
+}, {
+	"Description": "Description 9",
+	"Request_Type": "Request_Type 9",
+	"Package": "Package 9",
+	"Tr_Number": "Tr_Number 9",
+	"__metadata": {
+		"uri": "CheckReleasedTask('Tr_Number%209')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.CheckReleasedTask"
+	}
+}, {
+	"Description": "Description 10",
+	"Request_Type": "Request_Type 10",
+	"Package": "Package 10",
+	"Tr_Number": "Tr_Number 10",
+	"__metadata": {
+		"uri": "CheckReleasedTask('Tr_Number%2010')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.CheckReleasedTask"
+	}
+}]

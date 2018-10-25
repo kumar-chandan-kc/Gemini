@@ -1,0 +1,81 @@
+[{
+	"SAPObjectName": "SAPObjectName 1",
+	"ObjectCat": "ObjectCat 1",
+	"ObjectName": "ObjectName 1",
+	"__metadata": {
+		"uri": "MaintainBusinessObject('SAPObjectName%201')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.MaintainBusinessObjectType"
+	}
+}, {
+	"SAPObjectName": "SAPObjectName 2",
+	"ObjectCat": "ObjectCat 2",
+	"ObjectName": "ObjectName 2",
+	"__metadata": {
+		"uri": "MaintainBusinessObject('SAPObjectName%202')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.MaintainBusinessObjectType"
+	}
+}, {
+	"SAPObjectName": "SAPObjectName 3",
+	"ObjectCat": "ObjectCat 3",
+	"ObjectName": "ObjectName 3",
+	"__metadata": {
+		"uri": "MaintainBusinessObject('SAPObjectName%203')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.MaintainBusinessObjectType"
+	}
+}, {
+	"SAPObjectName": "SAPObjectName 4",
+	"ObjectCat": "ObjectCat 4",
+	"ObjectName": "ObjectName 4",
+	"__metadata": {
+		"uri": "MaintainBusinessObject('SAPObjectName%204')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.MaintainBusinessObjectType"
+	}
+}, {
+	"SAPObjectName": "SAPObjectName 5",
+	"ObjectCat": "ObjectCat 5",
+	"ObjectName": "ObjectName 5",
+	"__metadata": {
+		"uri": "MaintainBusinessObject('SAPObjectName%205')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.MaintainBusinessObjectType"
+	}
+}, {
+	"SAPObjectName": "SAPObjectName 6",
+	"ObjectCat": "ObjectCat 6",
+	"ObjectName": "ObjectName 6",
+	"__metadata": {
+		"uri": "MaintainBusinessObject('SAPObjectName%206')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.MaintainBusinessObjectType"
+	}
+}, {
+	"SAPObjectName": "SAPObjectName 7",
+	"ObjectCat": "ObjectCat 7",
+	"ObjectName": "ObjectName 7",
+	"__metadata": {
+		"uri": "MaintainBusinessObject('SAPObjectName%207')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.MaintainBusinessObjectType"
+	}
+}, {
+	"SAPObjectName": "SAPObjectName 8",
+	"ObjectCat": "ObjectCat 8",
+	"ObjectName": "ObjectName 8",
+	"__metadata": {
+		"uri": "MaintainBusinessObject('SAPObjectName%208')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.MaintainBusinessObjectType"
+	}
+}, {
+	"SAPObjectName": "SAPObjectName 9",
+	"ObjectCat": "ObjectCat 9",
+	"ObjectName": "ObjectName 9",
+	"__metadata": {
+		"uri": "MaintainBusinessObject('SAPObjectName%209')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.MaintainBusinessObjectType"
+	}
+}, {
+	"SAPObjectName": "SAPObjectName 10",
+	"ObjectCat": "ObjectCat 10",
+	"ObjectName": "ObjectName 10",
+	"__metadata": {
+		"uri": "MaintainBusinessObject('SAPObjectName%2010')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.MaintainBusinessObjectType"
+	}
+}]

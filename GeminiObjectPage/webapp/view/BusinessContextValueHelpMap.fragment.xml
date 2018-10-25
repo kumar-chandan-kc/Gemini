@@ -1,0 +1,17 @@
+<core:FragmentDefinition  
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <SelectDialog
+        id="BusinessContextDialogExtPlanned"
+        title="{i18n>BusinessContextValueHelpTitle}"
+        class="sapUiPopupWithPadding"
+        items="{ path: 'Gemini>/businessContext'}"
+        search="handleValueHelpBusinessContext"
+        liveChange="handleValueHelpBusinessContext"
+        confirm="handleValueHelpClose" 
+        cancel="handleValueHelpClose">
+        <StandardListItem id="ExtBCPlanList2"
+            title="{Gemini>value}"
+             />
+    </SelectDialog>
+</core:FragmentDefinition>

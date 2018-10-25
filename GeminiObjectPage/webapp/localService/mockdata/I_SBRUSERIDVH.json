@@ -1,0 +1,71 @@
+[{
+	"bname": "bname 1",
+	"techdesc": "techdesc 1",
+	"__metadata": {
+		"uri": "I_SBRUSERIDVH('bname%201')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRUSERIDVHType"
+	}
+}, {
+	"bname": "bname 2",
+	"techdesc": "techdesc 2",
+	"__metadata": {
+		"uri": "I_SBRUSERIDVH('bname%202')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRUSERIDVHType"
+	}
+}, {
+	"bname": "bname 3",
+	"techdesc": "techdesc 3",
+	"__metadata": {
+		"uri": "I_SBRUSERIDVH('bname%203')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRUSERIDVHType"
+	}
+}, {
+	"bname": "bname 4",
+	"techdesc": "techdesc 4",
+	"__metadata": {
+		"uri": "I_SBRUSERIDVH('bname%204')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRUSERIDVHType"
+	}
+}, {
+	"bname": "bname 5",
+	"techdesc": "techdesc 5",
+	"__metadata": {
+		"uri": "I_SBRUSERIDVH('bname%205')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRUSERIDVHType"
+	}
+}, {
+	"bname": "bname 6",
+	"techdesc": "techdesc 6",
+	"__metadata": {
+		"uri": "I_SBRUSERIDVH('bname%206')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRUSERIDVHType"
+	}
+}, {
+	"bname": "bname 7",
+	"techdesc": "techdesc 7",
+	"__metadata": {
+		"uri": "I_SBRUSERIDVH('bname%207')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRUSERIDVHType"
+	}
+}, {
+	"bname": "bname 8",
+	"techdesc": "techdesc 8",
+	"__metadata": {
+		"uri": "I_SBRUSERIDVH('bname%208')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRUSERIDVHType"
+	}
+}, {
+	"bname": "bname 9",
+	"techdesc": "techdesc 9",
+	"__metadata": {
+		"uri": "I_SBRUSERIDVH('bname%209')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRUSERIDVHType"
+	}
+}, {
+	"bname": "bname 10",
+	"techdesc": "techdesc 10",
+	"__metadata": {
+		"uri": "I_SBRUSERIDVH('bname%2010')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRUSERIDVHType"
+	}
+}]

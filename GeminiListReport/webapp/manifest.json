@@ -1,0 +1,199 @@
+{
+	"_version": "1.4.0",
+	"sap.app": {
+		"id": "${project.artifactId}",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "${project.version}"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"tags": {
+			"keywords": []
+		},
+		"ach": "BC-SRV-APS-REP",
+		"resources": "resources.json",
+		"dataSources": {
+			"mainService": {
+				"uri": "/sap/opu/odata/sap/CA_BUSINESS_REPOSITORY_SMART_SRV/",
+				"type": "OData",
+				"settings": {
+					"annotations": [
+						"CA_BUSINESS_REPOSITORY_ANNO_MDL",
+						"CA_BUSINESS_REPOSITORY__ANNO_MDL",
+						"localAnnotations"
+					],
+					"localUri": "localService/metadata.xml"
+				}
+			},
+			"CA_BUSINESS_REPOSITORY_ANNO_MDL": {
+				"uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='CA_BUSINESS_REPOSITORY_ANNO_MDL',Version='0001')/$value/",
+				"type": "ODataAnnotation",
+				"settings": {
+					"localUri": "localService/CA_BUSINESS_REPOSITORY_ANNO_MDL.xml"
+				}
+			},
+			"CA_BUSINESS_REPOSITORY__ANNO_MDL": {
+				"uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='CA_BUSINESS_REPOSITORY__ANNO_MDL',Version='0001')/$value/",
+				"type": "ODataAnnotation",
+				"settings": {
+					"localUri": "localService/CA_BUSINESS_REPOSITORY__ANNO_MDL.xml"
+				}
+			},
+			"localAnnotations": {
+				"uri": "annotations/annotations.xml",
+				"type": "ODataAnnotation",
+				"settings": {
+					"localUri": "annotations/annotations.xml"
+				}
+			}
+		},
+		"offline": false,
+		"sourceTemplate": {
+			"id": "ui5template.smartTemplate",
+			"version": "1.40.12"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+		]
+	},
+	"sap.ui5": {
+		"resources": {
+			"js": [],
+			"css": []
+		},
+		"dependencies": {
+			"minUI5Version": "${sap.ui5.dist.version}",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.generic.app": {},
+				"sap.suite.ui.generic.template": {},
+				"sap.ui.comp": {
+					"lazy": false
+				},
+				"sap.uxap": {
+					"lazy": false
+				},
+				"sap.ui.layout": {
+					"lazy": false
+				},
+				"sap.f": {
+					"lazy": false
+				},
+				"sap.ushell": {
+					"lazy": false
+				},
+				"sap.collaboration": {
+					"lazy": false
+				},
+				"sap.tnt": {
+					"lazy": false
+				}
+			},
+			"components": {}
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties"
+			},
+			"@i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties"
+			},
+			"i18n|sap.suite.ui.generic.template.ListReport|C_SBRBACKUP": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/ListReport/C_SBRBACKUP/i18n.properties"
+			},
+			"i18n|sap.suite.ui.generic.template.ObjectPage|C_SBRBACKUP": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/ObjectPage/C_SBRBACKUP/i18n.properties"
+			},
+			"": {
+				"dataSource": "mainService",
+				"preload": true,
+				"settings": {
+					"defaultBindingMode": "TwoWay",
+					"defaultCountMode": "Inline",
+					"refreshAfterChange": false
+				}
+			}
+		},
+		"extends": {
+			"extensions": {
+				"sap.ui.controllerExtensions": {
+					"sap.suite.ui.generic.template.ListReport.view.ListReport": {
+						"controllerName": "GeminiSmartTemplate.ext.controller.ListReportExt",
+						"sap.ui.generic.app": {
+							"C_SBRBACKUP": {
+								"EntitySet": "C_SBRBACKUP",
+								"Actions": {
+									"ActionC_SBRBACKUP5": {
+										"id": "ActionC_SBRBACKUP5button",
+										"text": "{@i18n>ActionC_SBRBACKUP5}",
+										"press": "onClickActionC_SBRBACKUP5"
+									},
+									"ActionC_SBRBACKUP6": {
+										"id": "ActionC_SBRBACKUP6button",
+										"press": "onClickActionC_SBRBACKUP6",
+										"determining": true
+									},
+									"ActionC_SBRBACKUP1": {
+										"id": "ActionC_SBRBACKUP1button",
+										"text": "{@i18n>ActionC_SBRBACKUP1}",
+										"press": "onClickActionC_SBRBACKUP1"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		}
+	},
+	"sap.ui.generic.app": {
+		"_version": "1.2.0",
+		"pages": [{
+			"entitySet": "C_SBRBACKUP",
+			"component": {
+				"name": "sap.suite.ui.generic.template.ListReport",
+				"list": true,
+				"settings": {
+					"smartVariantManagement": true
+				}
+			}
+		}]
+	},
+	"sap.fiori": {
+		"registrationIds": [
+			"FTEST"
+		],
+		"archeType": "transactional"
+	},
+	"sap.platform.hcp": {
+		"uri": ""
+	}
+}

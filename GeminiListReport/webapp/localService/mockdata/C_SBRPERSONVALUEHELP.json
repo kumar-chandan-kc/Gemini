@@ -1,0 +1,61 @@
+[{
+	"PersonResponsible": "PersonResponsible 1",
+	"__metadata": {
+		"uri": "C_SBRPERSONVALUEHELP('PersonResponsible%201')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBRPERSONVALUEHELPType"
+	}
+}, {
+	"PersonResponsible": "PersonResponsible 2",
+	"__metadata": {
+		"uri": "C_SBRPERSONVALUEHELP('PersonResponsible%202')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBRPERSONVALUEHELPType"
+	}
+}, {
+	"PersonResponsible": "PersonResponsible 3",
+	"__metadata": {
+		"uri": "C_SBRPERSONVALUEHELP('PersonResponsible%203')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBRPERSONVALUEHELPType"
+	}
+}, {
+	"PersonResponsible": "PersonResponsible 4",
+	"__metadata": {
+		"uri": "C_SBRPERSONVALUEHELP('PersonResponsible%204')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBRPERSONVALUEHELPType"
+	}
+}, {
+	"PersonResponsible": "PersonResponsible 5",
+	"__metadata": {
+		"uri": "C_SBRPERSONVALUEHELP('PersonResponsible%205')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBRPERSONVALUEHELPType"
+	}
+}, {
+	"PersonResponsible": "PersonResponsible 6",
+	"__metadata": {
+		"uri": "C_SBRPERSONVALUEHELP('PersonResponsible%206')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBRPERSONVALUEHELPType"
+	}
+}, {
+	"PersonResponsible": "PersonResponsible 7",
+	"__metadata": {
+		"uri": "C_SBRPERSONVALUEHELP('PersonResponsible%207')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBRPERSONVALUEHELPType"
+	}
+}, {
+	"PersonResponsible": "PersonResponsible 8",
+	"__metadata": {
+		"uri": "C_SBRPERSONVALUEHELP('PersonResponsible%208')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBRPERSONVALUEHELPType"
+	}
+}, {
+	"PersonResponsible": "PersonResponsible 9",
+	"__metadata": {
+		"uri": "C_SBRPERSONVALUEHELP('PersonResponsible%209')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBRPERSONVALUEHELPType"
+	}
+}, {
+	"PersonResponsible": "PersonResponsible 10",
+	"__metadata": {
+		"uri": "C_SBRPERSONVALUEHELP('PersonResponsible%2010')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.C_SBRPERSONVALUEHELPType"
+	}
+}]

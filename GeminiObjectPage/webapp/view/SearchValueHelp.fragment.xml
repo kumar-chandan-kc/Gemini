@@ -1,0 +1,17 @@
+<core:FragmentDefinition  
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <SelectDialog
+        id="SearchDialog"
+        title="{i18n>SearchObjectValueHelp}"
+        class="sapUiPopupWithPadding"
+        items="{/C_SBRSEARCHVH}"
+        search="handleValueHelpSearch"
+        liveChange="handleValueHelpSearch"
+        confirm="handleValueHelpClose"
+        cancel="handleValueHelpClose">
+        <StandardListItem id="Searchlist"
+            title="{model}"
+            description="{software_component}" />
+    </SelectDialog>
+</core:FragmentDefinition>

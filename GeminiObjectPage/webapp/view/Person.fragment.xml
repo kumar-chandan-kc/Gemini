@@ -1,0 +1,18 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<SelectDialog
+		id="pers"
+		noDataText="{i18n>NoPersonResponsibleFound}"
+		title="{i18n>SelectPersonResponsible}"
+		search="handlePerSearch"
+		liveChange="handlePerSearch"
+		confirm="handlePerClose"
+		cancel="handlePerClose"
+		items="{ path: 'worklistView>/Person' , sorter: { path: 'worklistView>value' }
+		}" >
+		<StandardListItem
+			title="{worklistView>value}"
+			 />
+	</SelectDialog>
+</core:FragmentDefinition>

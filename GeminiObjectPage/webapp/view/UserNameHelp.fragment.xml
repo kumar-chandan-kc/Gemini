@@ -1,0 +1,17 @@
+<core:FragmentDefinition  
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <SelectDialog
+        id="UserDialog"
+        title="{i18n>UserNameHelp}"
+        class="sapUiPopupWithPadding"
+        items="{/I_SBRGTNCUSER}"
+        search="handleValueHelpSearchUser"
+        liveChange="handleValueHelpSearchUser"
+        confirm="handleValueHelpClose"
+        cancel="handleValueHelpClose">
+        <StandardListItem id="UserList"
+            title="{accnt}"
+            description="{UserDescription}" />
+    </SelectDialog>
+</core:FragmentDefinition>

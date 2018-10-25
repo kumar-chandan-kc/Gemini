@@ -1,0 +1,217 @@
+<mvc:View controllerName="s4.cfnd.geminiobjectpage.controller.Worklist" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic" xmlns="sap.m" xmlns:f="sap.f"
+	xmlns:vm="sap.ui.comp.variants" xmlns:v="sap.ui.comp.variants" xmlns:core="sap.ui.core" xmlns:fb="sap.ui.comp.filterbar"
+	xmlns:layout="sap.ui.layout" xmlns:l="sap.ui.layout">
+	<f:DynamicPage id="page" headerExpanded="Gemini">
+		<!-- DynamicPage Title -->
+		<f:title>
+			<f:DynamicPageTitle></f:DynamicPageTitle>
+		</f:title>
+		<!-- DynamicPage Header -->
+		<f:header>
+			<f:DynamicPageHeader pinnable="false">
+				<f:content>
+					<!--<v:VariantManagement id="vm" select="onSelect" save="onSave" enabled="true" manage="onManage" showExecuteOnSelection="false"-->
+					<!--	showShare="false" showSetAsDefault="true" variantItems="{/GEMINI_VARIANTS}">-->
+					<!--	<v:variantItems>-->
+					<!--		<v:VariantItem text="{variantname}" key="{variantkey}"></v:VariantItem>-->
+					<!--	</v:variantItems>-->
+					<!--</v:VariantManagement>-->
+					<!--<fb:FilterBar search="onSearch" showRestoreButton="true" showClearButton="true" showGoOnFB="false">-->
+					<!--	<fb:filterItems>-->
+					<!--		<fb:FilterItem  id="ObjectName1" name="E" label="{i18n>ObjectNameDialogFragment}" visible="true">-->
+					<!--			<fb:control>-->
+					<!--				<MultiInput width="500px" id="Objv" tokenUpdate="applyFilter"-->
+					<!--					suggestionItems="{ path: '/I_SBRCloudQuality', sorter: { path: 'ObjectName' } }" showValueHelp="true"-->
+					<!--					valueHelpRequest="onObjValueHelpRequest" enableMultiLineMode="false">-->
+					<!--					<customData>-->
+					<!--						<core:CustomData key="multi" value="true"/>-->
+					<!--					</customData>-->
+					<!--					<core:Item key="{ObjectName}" text="{ObjectName}"/>-->
+					<!--				</MultiInput>-->
+					<!--			</fb:control>-->
+					<!--		</fb:FilterItem>-->
+					<!--		<fb:FilterItem id="Area1" name="A" label="{i18n>AreaDialogFragment}">-->
+					<!--			<fb:control>-->
+					<!--				<MultiInput width="500px" id="farea" tokenUpdate="applyFilter" suggestionItems="{ path: '/I_SBRAREAVH', sorter: { path: 'Area' } }"-->
+					<!--					showValueHelp="true" valueHelpRequest="onAreaValueHelpRequest" enableMultiLineMode="true">-->
+					<!--					<customData>-->
+					<!--						<core:CustomData key="multi" value="true"/>-->
+					<!--					</customData>-->
+					<!--					<core:Item key="{Area}" text="{Area}"/>-->
+					<!--				</MultiInput>-->
+					<!--			</fb:control>-->
+					<!--		</fb:FilterItem>-->
+					<!--		<fb:FilterItem id="isCloudRelevant1" name="B" label="{i18n>CloudRelevant}" visible="false">-->
+					<!--			<fb:control>-->
+					<!--				<Select id="cloud" forceSelection="true" change="applyFilter" items="{ path: 'worklistView>/cloudv' }">-->
+					<!--					<core:Item key="{worklistView>value}" text="{worklistView>value}"/>-->
+					<!--				</Select>-->
+					<!--			</fb:control>-->
+					<!--		</fb:FilterItem>-->
+					<!--		<fb:FilterItem id="isExtensionApplicable1" name="h" label="{i18n>isExtensionApplicableDialogFragment}" visible="false">-->
+					<!--			<fb:control>-->
+					<!--				<Select id="isExtApp" forceSelection="true" change="applyFilter" items="{ path: 'worklistView>/cloudv' }">-->
+					<!--					<core:Item key="{worklistView>value}" text="{worklistView>value}"/>-->
+					<!--				</Select>-->
+					<!--			</fb:control>-->
+					<!--		</fb:FilterItem>-->
+					<!--		<fb:FilterItem id="isOutputapplicable1" name="N" label="{i18n>isOutputapplicableDialogFragment}" visible="false">-->
+					<!--			<fb:control>-->
+					<!--				<Select id="isOutApp" forceSelection="true" change="applyFilter" items="{ path: 'worklistView>/cloudv' }">-->
+					<!--					<core:Item key="{worklistView>value}" text="{worklistView>value}"/>-->
+					<!--				</Select>-->
+					<!--			</fb:control>-->
+					<!--		</fb:FilterItem>-->
+					<!--		<fb:FilterItem id="isSearchapplicable1" name="K" label="{i18n>isSearchapplicableDialogFragment}" visible="false">-->
+					<!--			<fb:control>-->
+					<!--				<Select id="isSearchApp" forceSelection="true" change="applyFilter" items="{ path: 'worklistView>/cloudv' }">-->
+					<!--					<core:Item key="{worklistView>value}" text="{worklistView>value}"/>-->
+					<!--				</Select>-->
+					<!--			</fb:control>-->
+					<!--		</fb:FilterItem>-->
+					<!--		<fb:FilterItem id="Applicationcomponent1" name="D" label="{i18n>ApplicationComponentDialogFragment}">-->
+					<!--			<fb:control>-->
+					<!--				<MultiInput width="500px" id="Appv" tokenUpdate="applyFilter"-->
+					<!--					suggestionItems="{ path: '/C_SBRAPPCOMPVH', sorter: { path: 'ApplicationComponent' } }" showValueHelp="true"-->
+					<!--					valueHelpRequest="onAppValueHelpRequest" enableMultiLineMode="true">-->
+					<!--					<customData>-->
+					<!--						<core:CustomData key="multi" value="true"/>-->
+					<!--					</customData>-->
+					<!--					<core:Item key="{Applicationcomponent}" text="{Applicationcomponent}"/>-->
+					<!--				</MultiInput>-->
+					<!--			</fb:control>-->
+					<!--		</fb:FilterItem>-->
+					<!--		<fb:FilterItem id ="PersonResponsible1" name="F" label="{i18n>PersonResponsibleDialogFragment}" visible="true">-->
+					<!--			<fb:control>-->
+					<!--				<MultiInput width="500px" id="Per" tokenUpdate="applyFilter"-->
+					<!--					suggestionItems="{ path: 'worklistView>/Person', sorter: { path: 'value' } }" showValueHelp="true"-->
+					<!--					valueHelpRequest="onPerValueHelpRequest" enableMultiLineMode="true">-->
+					<!--					<customData>-->
+					<!--						<core:CustomData key="multi" value="true"/>-->
+					<!--					</customData>-->
+					<!--					<core:Item key="{worklistView>value}" text="{worklistView>value}"/>-->
+					<!--				</MultiInput>-->
+					<!--			</fb:control>-->
+					<!--		</fb:FilterItem>-->
+					<!--		<fb:FilterItem id="SearchObject1" name="I" label="{i18n>SearchObjectDialogFragment}" visible="false">-->
+					<!--			<fb:control>-->
+					<!--				<MultiInput width="500px" id="Search" tokenUpdate="applyFilter"-->
+					<!--					suggestionItems="{ path: 'worklistView>/SearchObject', sorter: { path: 'value' } }" showValueHelp="true"-->
+					<!--					valueHelpRequest="onSearchValueHelpRequest" enableMultiLineMode="true">-->
+					<!--					<customData>-->
+					<!--						<core:CustomData key="multi" value="true"/>-->
+					<!--					</customData>-->
+					<!--					<core:Item key="{worklistView>value}" text="{worklistView>value}"/>-->
+					<!--				</MultiInput>-->
+					<!--			</fb:control>-->
+					<!--		</fb:FilterItem>-->
+					<!--		<fb:FilterItem id="CDSViewname1" name="J" label="{i18n>CDSViewnameDialogFragment}" visible="false">-->
+					<!--			<fb:control>-->
+					<!--				<MultiInput width="500px" id="CDSView" tokenUpdate="applyFilter"-->
+					<!--					suggestionItems="{ path: 'worklistView>/CDSViewname', sorter: { path: 'value' } }" showValueHelp="true"-->
+					<!--					valueHelpRequest="onCDSValueHelpRequest" enableMultiLineMode="true">-->
+					<!--					<customData>-->
+					<!--						<core:CustomData key="multi" value="true"/>-->
+					<!--					</customData>-->
+					<!--					<core:Item key="{worklistView>value}" text="{worklistView>value}"/>-->
+					<!--				</MultiInput>-->
+					<!--			</fb:control>-->
+					<!--		</fb:FilterItem>-->
+					<!--	</fb:filterItems>-->
+					<!--</fb:FilterBar>-->
+				</f:content>
+			</f:DynamicPageHeader>
+		</f:header>
+		<!-- DynamicPage Content -->
+		<f:content>
+			<Table id="table" width="auto" items="{ path: 'worklistView>/BOTable', sorter: { path: 'ObjectName', descending: false } }"
+				noDataText="No Matching Found" busyIndicatorDelay="{worklistView>/tableBusyDelay}" growing="true" growingScrollToLoad="true"
+				updateFinished="onUpdateFinished" selectionChange="onSelect">
+				<headerToolbar>
+					<Toolbar>
+						<Title id="tableHeader" text="{worklistView>/worklistTableTitle}"/>
+						<ToolbarSpacer/>
+						<!--<Button tooltip="{i18n>ViewSettings}" icon="sap-icon://action-settings" press="handleViewSettingsDialogButtonPressed"/>-->
+						<SearchField id="searchField" tooltip="Enter ObjectName, Area.. to search" search="onSearch" width="auto" liveChange="onSearch"></SearchField>
+					</Toolbar>
+				</headerToolbar>
+				<columns>
+					<Column id="ObjectName" width="230px" visible="true">
+						<Text text="{i18n>ObjectNameDialogFragment}" id="nameColumnTitle"/>
+					</Column>
+					<Column id="Area" visible="true">
+						<Text text="{i18n>AreaDialogFragment}" id="nameColumnTitle1"/>
+					</Column>
+					<Column id="PersonResponsible" visible="true">
+						<Text text="{i18n>PersonResponsibleDialogFragment}" id="nameColumnTitle2"/>
+					</Column>
+					<Column id="ApplicationComponent" visible="true">
+						<Text text="{i18n>ApplicationComponentDialogFragment}" id="nameColumnTitle3"/>
+					</Column>
+					<Column id="Status" visible="true">
+						<Text text="{i18n>StatusDialogFragment}" id="nameColumnTitle5"/>
+					</Column>
+					<Column id="isCloudRelevant" visible="false">
+						<Text text="{i18n>IsCloudRelevantDialogFragment}" id="nameColumnTitle4"/>
+					</Column>
+					<Column id="BadiCount" visible="false">
+						<Text text="{i18n>BadiCountDialogFragment}" id="nameColumnTitle6"/>
+					</Column>
+					<Column id="OdataCount" visible="false">
+						<Text text="{i18n>OdataCountDialogFragment}" id="nameColumnTitle7"/>
+					</Column>
+					<Column id="CDSCount" visible="false">
+						<Text text="{i18n>CDSCountDialogFragment}" id="nameColumnTitle8"/>
+					</Column>
+					<Column id="Statuscomments" visible="false">
+						<Text text="{i18n>StatusCommentsDialogFragment}" id="nameColumnTitle49"/>
+					</Column>
+					<Column id="SearchObject" visible="false">
+						<Text text="{i18n>SearchObjectDialogFragment}" id="nameColumnTitle11"/>
+					</Column>
+					<Column id="isExtensionApplicable" visible="false">
+						<Text text="{i18n>isExtensionApplicableDialogFragment}" id="nameColumnTitle12"/>
+					</Column>
+					<Column id="CDSViewname" visible="false">
+						<Text text="{i18n>CDSViewnameDialogFragment}" id="nameColumnTitle13"/>
+					</Column>
+					<Column id="isSearchapplicable" visible="false">
+						<Text text="{i18n>isSearchapplicableDialogFragment}" id="nameColumnTitle15"/>
+					</Column>
+					<Column id="isOutputapplicable" visible="false">
+						<Text text="{i18n>isOutputapplicableDialogFragment}" id="nameColumnTitle14"/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem type="Navigation" press="onPress">
+						<cells>
+							<ObjectIdentifier title="{worklistView>ObjectName}"/>
+							<Text text="{worklistView>Area}"/>
+							<Text text="{worklistView>PersonResponsible}"/>
+							<Text text="{worklistView>ApplicationComponent}"/>
+							<Text text="{worklistView>Status}"/>
+							<Text text="{worklistView>isCloudRelevant}"/>
+							<Text text="{worklistView>BadiCount}"/>
+							<Text text="{worklistView>OdataCount}"/>
+							<Text text="{worklistView>CDSCount}"/>
+							<Text text="{worklistView>StatusComments}"/>
+							<Text text="{worklistView>SearchObject}"/>
+							<Text text="{worklistView>isExtensionApplicable}"/>
+							<Text text="{worklistView>CDSViewname}"/>
+							<Text text="{worklistView>isSearchapplicable}"/>
+							<Text text="{worklistView>isOutputapplicable}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+		</f:content>
+		<!--<f:footer>-->
+		<!--	<OverflowToolbar >-->
+		<!--		<ToolbarSpacer/>-->
+		<!--		<ComboBox id="combobox" items="{ path: 'worklistView>/reports', sorter: { path: 'worklistView>value' , descending: true } }" change="testgo">-->
+		<!--			<core:Item key="{worklistView>value}" text="{worklistView>value}"/>-->
+		<!--		</ComboBox>-->
+		<!--	</OverflowToolbar>-->
+		<!--</f:footer>-->
+	</f:DynamicPage>
+</mvc:View>

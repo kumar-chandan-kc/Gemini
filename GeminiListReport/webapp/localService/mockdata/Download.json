@@ -1,0 +1,21 @@
+[{
+	"Type": "Type 1",
+	"ObjectName": "",
+	"Area": "",
+	"PersonResponsible": "",
+	"ContactPerson": "",
+	"Status": "",
+	"ApplicationComponent": "FIN",
+	"API": true,
+	"Migration": true,
+	"Events": true,
+	"Output": true,
+	"Extension": true,
+	"Search": true,
+	"Target_Release": "1811",
+	"Search_field": "",
+	"__metadata": {
+		"uri": "$value?$value&$filter=API%20eq%20true%20and%20Migration%20eq%20true%20and%20Events%20eq%20true%20and%20Output%20eq%20true%20and%20Extension%20eq%20true%20and%20Search%20eq%20true%20and%20Search_field%20eq%20%27%27%20and%20Target_Release%20eq%20%271811%27",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.ExcelType"
+	}
+}]

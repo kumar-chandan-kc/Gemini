@@ -1,0 +1,131 @@
+[{
+	"CDSName": "CDSName 1",
+	"IsInterface": "IsInterface 1",
+	"IsQuery": "IsQuery 1",
+	"IsCube": "IsCube 1",
+	"IsDimension": "IsDimension 1",
+	"IsValueHelp": "IsValueHelp 1",
+	"IsAssociation": "IsAssociation 1",
+	"CDSReleasedStatus": "CDSReleasedStatus 1",
+	"__metadata": {
+		"uri": "I_SBRCDSACTUALFINAL('CDSName%201')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSACTUALFINALType"
+	}
+}, {
+	"CDSName": "CDSName 2",
+	"IsInterface": "IsInterface 2",
+	"IsQuery": "IsQuery 2",
+	"IsCube": "IsCube 2",
+	"IsDimension": "IsDimension 2",
+	"IsValueHelp": "IsValueHelp 2",
+	"IsAssociation": "IsAssociation 2",
+	"CDSReleasedStatus": "CDSReleasedStatus 2",
+	"__metadata": {
+		"uri": "I_SBRCDSACTUALFINAL('CDSName%202')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSACTUALFINALType"
+	}
+}, {
+	"CDSName": "CDSName 3",
+	"IsInterface": "IsInterface 3",
+	"IsQuery": "IsQuery 3",
+	"IsCube": "IsCube 3",
+	"IsDimension": "IsDimension 3",
+	"IsValueHelp": "IsValueHelp 3",
+	"IsAssociation": "IsAssociation 3",
+	"CDSReleasedStatus": "CDSReleasedStatus 3",
+	"__metadata": {
+		"uri": "I_SBRCDSACTUALFINAL('CDSName%203')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSACTUALFINALType"
+	}
+}, {
+	"CDSName": "CDSName 4",
+	"IsInterface": "IsInterface 4",
+	"IsQuery": "IsQuery 4",
+	"IsCube": "IsCube 4",
+	"IsDimension": "IsDimension 4",
+	"IsValueHelp": "IsValueHelp 4",
+	"IsAssociation": "IsAssociation 4",
+	"CDSReleasedStatus": "CDSReleasedStatus 4",
+	"__metadata": {
+		"uri": "I_SBRCDSACTUALFINAL('CDSName%204')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSACTUALFINALType"
+	}
+}, {
+	"CDSName": "CDSName 5",
+	"IsInterface": "IsInterface 5",
+	"IsQuery": "IsQuery 5",
+	"IsCube": "IsCube 5",
+	"IsDimension": "IsDimension 5",
+	"IsValueHelp": "IsValueHelp 5",
+	"IsAssociation": "IsAssociation 5",
+	"CDSReleasedStatus": "CDSReleasedStatus 5",
+	"__metadata": {
+		"uri": "I_SBRCDSACTUALFINAL('CDSName%205')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSACTUALFINALType"
+	}
+}, {
+	"CDSName": "CDSName 6",
+	"IsInterface": "IsInterface 6",
+	"IsQuery": "IsQuery 6",
+	"IsCube": "IsCube 6",
+	"IsDimension": "IsDimension 6",
+	"IsValueHelp": "IsValueHelp 6",
+	"IsAssociation": "IsAssociation 6",
+	"CDSReleasedStatus": "CDSReleasedStatus 6",
+	"__metadata": {
+		"uri": "I_SBRCDSACTUALFINAL('CDSName%206')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSACTUALFINALType"
+	}
+}, {
+	"CDSName": "CDSName 7",
+	"IsInterface": "IsInterface 7",
+	"IsQuery": "IsQuery 7",
+	"IsCube": "IsCube 7",
+	"IsDimension": "IsDimension 7",
+	"IsValueHelp": "IsValueHelp 7",
+	"IsAssociation": "IsAssociation 7",
+	"CDSReleasedStatus": "CDSReleasedStatus 7",
+	"__metadata": {
+		"uri": "I_SBRCDSACTUALFINAL('CDSName%207')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSACTUALFINALType"
+	}
+}, {
+	"CDSName": "CDSName 8",
+	"IsInterface": "IsInterface 8",
+	"IsQuery": "IsQuery 8",
+	"IsCube": "IsCube 8",
+	"IsDimension": "IsDimension 8",
+	"IsValueHelp": "IsValueHelp 8",
+	"IsAssociation": "IsAssociation 8",
+	"CDSReleasedStatus": "CDSReleasedStatus 8",
+	"__metadata": {
+		"uri": "I_SBRCDSACTUALFINAL('CDSName%208')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSACTUALFINALType"
+	}
+}, {
+	"CDSName": "CDSName 9",
+	"IsInterface": "IsInterface 9",
+	"IsQuery": "IsQuery 9",
+	"IsCube": "IsCube 9",
+	"IsDimension": "IsDimension 9",
+	"IsValueHelp": "IsValueHelp 9",
+	"IsAssociation": "IsAssociation 9",
+	"CDSReleasedStatus": "CDSReleasedStatus 9",
+	"__metadata": {
+		"uri": "I_SBRCDSACTUALFINAL('CDSName%209')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSACTUALFINALType"
+	}
+}, {
+	"CDSName": "CDSName 10",
+	"IsInterface": "IsInterface 10",
+	"IsQuery": "IsQuery 10",
+	"IsCube": "IsCube 10",
+	"IsDimension": "IsDimension 10",
+	"IsValueHelp": "IsValueHelp 10",
+	"IsAssociation": "IsAssociation 10",
+	"CDSReleasedStatus": "CDSReleasedStatus 10",
+	"__metadata": {
+		"uri": "I_SBRCDSACTUALFINAL('CDSName%2010')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCDSACTUALFINALType"
+	}
+}]

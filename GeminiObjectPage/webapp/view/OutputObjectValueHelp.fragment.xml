@@ -1,0 +1,17 @@
+<core:FragmentDefinition  
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <SelectDialog
+        id="OutputObjectDialog"
+        title="{i18n>OutputObjectHelp}"
+        class="sapUiPopupWithPadding"
+        items="{/I_SBROPOBJVH}"
+        search="handleValueHelpOutputObject"
+        liveChange="handleValueHelpOutputObject"
+        confirm="handleValueHelpClose"
+        cancel="handleValueHelpClose">
+        <StandardListItem id="OutputObjectlist"
+            title="{OutputType}"
+            description="{ApplicationObjectType}" />
+    </SelectDialog>
+</core:FragmentDefinition>

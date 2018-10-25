@@ -1,0 +1,71 @@
+[{
+	"CommunicationScenario": "CommunicationScenario 1",
+	"communication_scenario_id": "communication_scenario_id 1",
+	"__metadata": {
+		"uri": "I_SBRCommunicationScenarioVH(CommunicationScenario='CommunicationScenario%201',communication_scenario_id='communication_scenario_id%201')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCommunicationScenarioVHType"
+	}
+}, {
+	"CommunicationScenario": "CommunicationScenario 2",
+	"communication_scenario_id": "communication_scenario_id 2",
+	"__metadata": {
+		"uri": "I_SBRCommunicationScenarioVH(CommunicationScenario='CommunicationScenario%202',communication_scenario_id='communication_scenario_id%202')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCommunicationScenarioVHType"
+	}
+}, {
+	"CommunicationScenario": "CommunicationScenario 3",
+	"communication_scenario_id": "communication_scenario_id 3",
+	"__metadata": {
+		"uri": "I_SBRCommunicationScenarioVH(CommunicationScenario='CommunicationScenario%203',communication_scenario_id='communication_scenario_id%203')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCommunicationScenarioVHType"
+	}
+}, {
+	"CommunicationScenario": "CommunicationScenario 4",
+	"communication_scenario_id": "communication_scenario_id 4",
+	"__metadata": {
+		"uri": "I_SBRCommunicationScenarioVH(CommunicationScenario='CommunicationScenario%204',communication_scenario_id='communication_scenario_id%204')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCommunicationScenarioVHType"
+	}
+}, {
+	"CommunicationScenario": "CommunicationScenario 5",
+	"communication_scenario_id": "communication_scenario_id 5",
+	"__metadata": {
+		"uri": "I_SBRCommunicationScenarioVH(CommunicationScenario='CommunicationScenario%205',communication_scenario_id='communication_scenario_id%205')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCommunicationScenarioVHType"
+	}
+}, {
+	"CommunicationScenario": "CommunicationScenario 6",
+	"communication_scenario_id": "communication_scenario_id 6",
+	"__metadata": {
+		"uri": "I_SBRCommunicationScenarioVH(CommunicationScenario='CommunicationScenario%206',communication_scenario_id='communication_scenario_id%206')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCommunicationScenarioVHType"
+	}
+}, {
+	"CommunicationScenario": "CommunicationScenario 7",
+	"communication_scenario_id": "communication_scenario_id 7",
+	"__metadata": {
+		"uri": "I_SBRCommunicationScenarioVH(CommunicationScenario='CommunicationScenario%207',communication_scenario_id='communication_scenario_id%207')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCommunicationScenarioVHType"
+	}
+}, {
+	"CommunicationScenario": "CommunicationScenario 8",
+	"communication_scenario_id": "communication_scenario_id 8",
+	"__metadata": {
+		"uri": "I_SBRCommunicationScenarioVH(CommunicationScenario='CommunicationScenario%208',communication_scenario_id='communication_scenario_id%208')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCommunicationScenarioVHType"
+	}
+}, {
+	"CommunicationScenario": "CommunicationScenario 9",
+	"communication_scenario_id": "communication_scenario_id 9",
+	"__metadata": {
+		"uri": "I_SBRCommunicationScenarioVH(CommunicationScenario='CommunicationScenario%209',communication_scenario_id='communication_scenario_id%209')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCommunicationScenarioVHType"
+	}
+}, {
+	"CommunicationScenario": "CommunicationScenario 10",
+	"communication_scenario_id": "communication_scenario_id 10",
+	"__metadata": {
+		"uri": "I_SBRCommunicationScenarioVH(CommunicationScenario='CommunicationScenario%2010',communication_scenario_id='communication_scenario_id%2010')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRCommunicationScenarioVHType"
+	}
+}]

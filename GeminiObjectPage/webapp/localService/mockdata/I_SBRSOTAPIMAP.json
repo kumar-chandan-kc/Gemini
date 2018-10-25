@@ -1,0 +1,101 @@
+[{
+	"sapobjecttype": "sapobjecttype 1",
+	"serviceinterface": "serviceinterface 1",
+	"communicationscenario": "communicationscenario 1",
+	"apitype": "apitype 1",
+	"service_interface_wov": "service_interface_wov 1",
+	"__metadata": {
+		"uri": "I_SBRSOTAPIMAP(sapobjecttype='sapobjecttype%201',serviceinterface='serviceinterface%201',communicationscenario='communicationscenario%201',apitype='apitype%201')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSOTAPIMAPType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 2",
+	"serviceinterface": "serviceinterface 2",
+	"communicationscenario": "communicationscenario 2",
+	"apitype": "apitype 2",
+	"service_interface_wov": "service_interface_wov 2",
+	"__metadata": {
+		"uri": "I_SBRSOTAPIMAP(sapobjecttype='sapobjecttype%202',serviceinterface='serviceinterface%202',communicationscenario='communicationscenario%202',apitype='apitype%202')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSOTAPIMAPType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 3",
+	"serviceinterface": "serviceinterface 3",
+	"communicationscenario": "communicationscenario 3",
+	"apitype": "apitype 3",
+	"service_interface_wov": "service_interface_wov 3",
+	"__metadata": {
+		"uri": "I_SBRSOTAPIMAP(sapobjecttype='sapobjecttype%203',serviceinterface='serviceinterface%203',communicationscenario='communicationscenario%203',apitype='apitype%203')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSOTAPIMAPType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 4",
+	"serviceinterface": "serviceinterface 4",
+	"communicationscenario": "communicationscenario 4",
+	"apitype": "apitype 4",
+	"service_interface_wov": "service_interface_wov 4",
+	"__metadata": {
+		"uri": "I_SBRSOTAPIMAP(sapobjecttype='sapobjecttype%204',serviceinterface='serviceinterface%204',communicationscenario='communicationscenario%204',apitype='apitype%204')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSOTAPIMAPType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 5",
+	"serviceinterface": "serviceinterface 5",
+	"communicationscenario": "communicationscenario 5",
+	"apitype": "apitype 5",
+	"service_interface_wov": "service_interface_wov 5",
+	"__metadata": {
+		"uri": "I_SBRSOTAPIMAP(sapobjecttype='sapobjecttype%205',serviceinterface='serviceinterface%205',communicationscenario='communicationscenario%205',apitype='apitype%205')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSOTAPIMAPType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 6",
+	"serviceinterface": "serviceinterface 6",
+	"communicationscenario": "communicationscenario 6",
+	"apitype": "apitype 6",
+	"service_interface_wov": "service_interface_wov 6",
+	"__metadata": {
+		"uri": "I_SBRSOTAPIMAP(sapobjecttype='sapobjecttype%206',serviceinterface='serviceinterface%206',communicationscenario='communicationscenario%206',apitype='apitype%206')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSOTAPIMAPType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 7",
+	"serviceinterface": "serviceinterface 7",
+	"communicationscenario": "communicationscenario 7",
+	"apitype": "apitype 7",
+	"service_interface_wov": "service_interface_wov 7",
+	"__metadata": {
+		"uri": "I_SBRSOTAPIMAP(sapobjecttype='sapobjecttype%207',serviceinterface='serviceinterface%207',communicationscenario='communicationscenario%207',apitype='apitype%207')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSOTAPIMAPType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 8",
+	"serviceinterface": "serviceinterface 8",
+	"communicationscenario": "communicationscenario 8",
+	"apitype": "apitype 8",
+	"service_interface_wov": "service_interface_wov 8",
+	"__metadata": {
+		"uri": "I_SBRSOTAPIMAP(sapobjecttype='sapobjecttype%208',serviceinterface='serviceinterface%208',communicationscenario='communicationscenario%208',apitype='apitype%208')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSOTAPIMAPType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 9",
+	"serviceinterface": "serviceinterface 9",
+	"communicationscenario": "communicationscenario 9",
+	"apitype": "apitype 9",
+	"service_interface_wov": "service_interface_wov 9",
+	"__metadata": {
+		"uri": "I_SBRSOTAPIMAP(sapobjecttype='sapobjecttype%209',serviceinterface='serviceinterface%209',communicationscenario='communicationscenario%209',apitype='apitype%209')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSOTAPIMAPType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 10",
+	"serviceinterface": "serviceinterface 10",
+	"communicationscenario": "communicationscenario 10",
+	"apitype": "apitype 10",
+	"service_interface_wov": "service_interface_wov 10",
+	"__metadata": {
+		"uri": "I_SBRSOTAPIMAP(sapobjecttype='sapobjecttype%2010',serviceinterface='serviceinterface%2010',communicationscenario='communicationscenario%2010',apitype='apitype%2010')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSOTAPIMAPType"
+	}
+}]

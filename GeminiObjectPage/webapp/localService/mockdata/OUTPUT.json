@@ -1,0 +1,81 @@
+[{
+	"Outputtype": "Outputtype 1",
+	"Applicationobjecttype": "Applicationobjecttype 1",
+	"Sapobjecttype": "Sapobjecttype 1",
+	"__metadata": {
+		"uri": "OUTPUT(Outputtype='Outputtype%201',Applicationobjecttype='Applicationobjecttype%201',Sapobjecttype='Sapobjecttype%201')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.ouptut"
+	}
+}, {
+	"Outputtype": "Outputtype 2",
+	"Applicationobjecttype": "Applicationobjecttype 2",
+	"Sapobjecttype": "Sapobjecttype 2",
+	"__metadata": {
+		"uri": "OUTPUT(Outputtype='Outputtype%202',Applicationobjecttype='Applicationobjecttype%202',Sapobjecttype='Sapobjecttype%202')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.ouptut"
+	}
+}, {
+	"Outputtype": "Outputtype 3",
+	"Applicationobjecttype": "Applicationobjecttype 3",
+	"Sapobjecttype": "Sapobjecttype 3",
+	"__metadata": {
+		"uri": "OUTPUT(Outputtype='Outputtype%203',Applicationobjecttype='Applicationobjecttype%203',Sapobjecttype='Sapobjecttype%203')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.ouptut"
+	}
+}, {
+	"Outputtype": "Outputtype 4",
+	"Applicationobjecttype": "Applicationobjecttype 4",
+	"Sapobjecttype": "Sapobjecttype 4",
+	"__metadata": {
+		"uri": "OUTPUT(Outputtype='Outputtype%204',Applicationobjecttype='Applicationobjecttype%204',Sapobjecttype='Sapobjecttype%204')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.ouptut"
+	}
+}, {
+	"Outputtype": "Outputtype 5",
+	"Applicationobjecttype": "Applicationobjecttype 5",
+	"Sapobjecttype": "Sapobjecttype 5",
+	"__metadata": {
+		"uri": "OUTPUT(Outputtype='Outputtype%205',Applicationobjecttype='Applicationobjecttype%205',Sapobjecttype='Sapobjecttype%205')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.ouptut"
+	}
+}, {
+	"Outputtype": "Outputtype 6",
+	"Applicationobjecttype": "Applicationobjecttype 6",
+	"Sapobjecttype": "Sapobjecttype 6",
+	"__metadata": {
+		"uri": "OUTPUT(Outputtype='Outputtype%206',Applicationobjecttype='Applicationobjecttype%206',Sapobjecttype='Sapobjecttype%206')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.ouptut"
+	}
+}, {
+	"Outputtype": "Outputtype 7",
+	"Applicationobjecttype": "Applicationobjecttype 7",
+	"Sapobjecttype": "Sapobjecttype 7",
+	"__metadata": {
+		"uri": "OUTPUT(Outputtype='Outputtype%207',Applicationobjecttype='Applicationobjecttype%207',Sapobjecttype='Sapobjecttype%207')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.ouptut"
+	}
+}, {
+	"Outputtype": "Outputtype 8",
+	"Applicationobjecttype": "Applicationobjecttype 8",
+	"Sapobjecttype": "Sapobjecttype 8",
+	"__metadata": {
+		"uri": "OUTPUT(Outputtype='Outputtype%208',Applicationobjecttype='Applicationobjecttype%208',Sapobjecttype='Sapobjecttype%208')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.ouptut"
+	}
+}, {
+	"Outputtype": "Outputtype 9",
+	"Applicationobjecttype": "Applicationobjecttype 9",
+	"Sapobjecttype": "Sapobjecttype 9",
+	"__metadata": {
+		"uri": "OUTPUT(Outputtype='Outputtype%209',Applicationobjecttype='Applicationobjecttype%209',Sapobjecttype='Sapobjecttype%209')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.ouptut"
+	}
+}, {
+	"Outputtype": "Outputtype 10",
+	"Applicationobjecttype": "Applicationobjecttype 10",
+	"Sapobjecttype": "Sapobjecttype 10",
+	"__metadata": {
+		"uri": "OUTPUT(Outputtype='Outputtype%2010',Applicationobjecttype='Applicationobjecttype%2010',Sapobjecttype='Sapobjecttype%2010')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.ouptut"
+	}
+}]

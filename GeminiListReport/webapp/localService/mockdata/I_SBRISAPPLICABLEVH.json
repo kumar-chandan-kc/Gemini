@@ -1,0 +1,61 @@
+[{
+	"Value": "Value 1",
+	"__metadata": {
+		"uri": "I_SBRISAPPLICABLEVH('Value%201')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.I_SBRISAPPLICABLEVHType"
+	}
+}, {
+	"Value": "Value 2",
+	"__metadata": {
+		"uri": "I_SBRISAPPLICABLEVH('Value%202')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.I_SBRISAPPLICABLEVHType"
+	}
+}, {
+	"Value": "Value 3",
+	"__metadata": {
+		"uri": "I_SBRISAPPLICABLEVH('Value%203')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.I_SBRISAPPLICABLEVHType"
+	}
+}, {
+	"Value": "Value 4",
+	"__metadata": {
+		"uri": "I_SBRISAPPLICABLEVH('Value%204')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.I_SBRISAPPLICABLEVHType"
+	}
+}, {
+	"Value": "Value 5",
+	"__metadata": {
+		"uri": "I_SBRISAPPLICABLEVH('Value%205')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.I_SBRISAPPLICABLEVHType"
+	}
+}, {
+	"Value": "Value 6",
+	"__metadata": {
+		"uri": "I_SBRISAPPLICABLEVH('Value%206')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.I_SBRISAPPLICABLEVHType"
+	}
+}, {
+	"Value": "Value 7",
+	"__metadata": {
+		"uri": "I_SBRISAPPLICABLEVH('Value%207')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.I_SBRISAPPLICABLEVHType"
+	}
+}, {
+	"Value": "Value 8",
+	"__metadata": {
+		"uri": "I_SBRISAPPLICABLEVH('Value%208')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.I_SBRISAPPLICABLEVHType"
+	}
+}, {
+	"Value": "Value 9",
+	"__metadata": {
+		"uri": "I_SBRISAPPLICABLEVH('Value%209')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.I_SBRISAPPLICABLEVHType"
+	}
+}, {
+	"Value": "Value 10",
+	"__metadata": {
+		"uri": "I_SBRISAPPLICABLEVH('Value%2010')",
+		"type": "CA_BUSINESS_REPOSITORY_SMART_SRV.I_SBRISAPPLICABLEVHType"
+	}
+}]

@@ -1,0 +1,11 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog
+		id="TargetReleaseHelpMigrMap" 
+		noDataText="{i18n>NoTargetReleaseFound}" 
+		title="{i18n>SelectTargetRelease}" 
+		confirm="handleValueHelpClose" 
+		cancel="handleValueHelpClose"
+		items="{ path: 'Gemini>/target_release' , sorter: { path: 'release_id'}}">
+		<StandardListItem title="{Gemini>release_id}"/>
+	</SelectDialog>
+</core:FragmentDefinition>

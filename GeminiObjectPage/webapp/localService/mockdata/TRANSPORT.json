@@ -1,0 +1,13 @@
+[{
+	"Requesttype": "",
+	"Package": "",
+	"TRNumber": "TRNumber",
+	"TRDescription": "TRDescription",
+	"sObjectName": "",
+	"sObj": "",
+	"IsTaskOpen": false,
+	"__metadata": {
+		"uri": "TRANSPORT('TRNumber%2011')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.TRANSPORT"
+	}
+}]

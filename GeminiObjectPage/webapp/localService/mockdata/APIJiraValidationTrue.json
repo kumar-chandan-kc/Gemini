@@ -1,0 +1,8 @@
+{
+                "JiraLink": "https://sapjira.wdf.sap.corp/browse/APIREQ-369",
+                "Response": true,
+                "__metadata": {
+                                "uri": "JiraResponseSet(true)",
+                                "type": "CA_BUSINESS_REPOSITORY_SRV.JiraResponse"
+                }
+}

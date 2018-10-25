@@ -1,0 +1,121 @@
+[{
+       "Object_type": "Bank",
+       "CDS_Names": "C_BEHSUBSCRIPTION",
+       "__metadata": {
+              "uri": "I_SBRSOTToCDS('Bank')",
+              "type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSOTToCDSType"
+       },
+       "to_CDSKeys": {
+              "__deferred": {
+                     "uri": "I_SBRSOTToCDS('Object_type%201')/to_CDSKeys"
+              }
+       }
+}, {
+       "Object_type": "Object_type 2",
+       "CDS_Names": "CDS_Names 2",
+       "__metadata": {
+              "uri": "I_SBRSOTToCDS('Object_type%202')",
+              "type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSOTToCDSType"
+       },
+       "to_CDSKeys": {
+              "__deferred": {
+                     "uri": "I_SBRSOTToCDS('Object_type%202')/to_CDSKeys"
+              }
+       }
+}, {
+       "Object_type": "Object_type 3",
+       "CDS_Names": "CDS_Names 3",
+       "__metadata": {
+              "uri": "I_SBRSOTToCDS('Object_type%203')",
+              "type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSOTToCDSType"
+       },
+       "to_CDSKeys": {
+              "__deferred": {
+                     "uri": "I_SBRSOTToCDS('Object_type%203')/to_CDSKeys"
+              }
+       }
+}, {
+       "Object_type": "Object_type 4",
+       "CDS_Names": "CDS_Names 4",
+       "__metadata": {
+              "uri": "I_SBRSOTToCDS('Object_type%204')",
+              "type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSOTToCDSType"
+       },
+       "to_CDSKeys": {
+              "__deferred": {
+                     "uri": "I_SBRSOTToCDS('Object_type%204')/to_CDSKeys"
+              }
+       }
+}, {
+       "Object_type": "Object_type 5",
+       "CDS_Names": "CDS_Names 5",
+       "__metadata": {
+              "uri": "I_SBRSOTToCDS('Object_type%205')",
+              "type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSOTToCDSType"
+       },
+       "to_CDSKeys": {
+              "__deferred": {
+                     "uri": "I_SBRSOTToCDS('Object_type%205')/to_CDSKeys"
+              }
+       }
+}, {
+       "Object_type": "Object_type 6",
+       "CDS_Names": "CDS_Names 6",
+       "__metadata": {
+              "uri": "I_SBRSOTToCDS('Object_type%206')",
+              "type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSOTToCDSType"
+       },
+       "to_CDSKeys": {
+              "__deferred": {
+                     "uri": "I_SBRSOTToCDS('Object_type%206')/to_CDSKeys"
+              }
+       }
+}, {
+       "Object_type": "Object_type 7",
+       "CDS_Names": "CDS_Names 7",
+       "__metadata": {
+              "uri": "I_SBRSOTToCDS('Object_type%207')",
+              "type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSOTToCDSType"
+       },
+       "to_CDSKeys": {
+              "__deferred": {
+                     "uri": "I_SBRSOTToCDS('Object_type%207')/to_CDSKeys"
+              }
+       }
+}, {
+       "Object_type": "Object_type 8",
+       "CDS_Names": "CDS_Names 8",
+       "__metadata": {
+              "uri": "I_SBRSOTToCDS('Object_type%208')",
+              "type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSOTToCDSType"
+       },
+       "to_CDSKeys": {
+              "__deferred": {
+                     "uri": "I_SBRSOTToCDS('Object_type%208')/to_CDSKeys"
+              }
+       }
+}, {
+       "Object_type": "Object_type 9",
+       "CDS_Names": "CDS_Names 9",
+       "__metadata": {
+              "uri": "I_SBRSOTToCDS('Object_type%209')",
+              "type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSOTToCDSType"
+       },
+       "to_CDSKeys": {
+              "__deferred": {
+                     "uri": "I_SBRSOTToCDS('Object_type%209')/to_CDSKeys"
+              }
+       }
+}, {
+       "Object_type": "Object_type 10",
+       "CDS_Names": "CDS_Names 10",
+       "__metadata": {
+              "uri": "I_SBRSOTToCDS('Object_type%2010')",
+              "type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRSOTToCDSType"
+       },
+       "to_CDSKeys": {
+              "__deferred": {
+                     "uri": "I_SBRSOTToCDS('Object_type%2010')/to_CDSKeys"
+              }
+       }
+}]

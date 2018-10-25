@@ -1,0 +1,47 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<!--<SelectDialog-->
+	<!--	id="Obj1"-->
+	<!--	noDataText="No Object Names Found"-->
+	<!--	title="Select Object Name"-->
+	<!--	search="handleObjectSearch"-->
+	<!--	liveChange="handleObjectSearch"-->
+	<!--	confirm="handleObjectClose"-->
+	<!--	cancel="handleObjectClose"-->
+	<!--	items="{ path: 'Gemini>/objectNameValueHelp' , sorter: { path: 'Gemini>ObjectName' }-->
+	<!--	}" >-->
+	<!--	<RadioButtonGroup columns="3" width="100%" class="sapUiMediumMarginBottom" select="onSelectObjectType1" visible="true">-->
+	<!--											<RadioButton groupName="GroupA" text="BOR Object" selected="true"/>-->
+	<!--											<RadioButton groupName="GroupA" text="Class"/>-->
+	<!--										</RadioButtonGroup>-->
+	<!--	<StandardListItem-->
+	<!--		title="{Gemini>ObjectName}"-->
+	<!--		 />-->
+	<!--</SelectDialog>-->
+	<Dialog id="borcl1" title="{i18n>MaintainSAPObjectRepresentation}" stretch="false" contentWidth="350px" contentHeight="500px">
+		<content>
+			<IconTabBar id="idIconTabBarNoIcons" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding" select="onobjectbarselect"
+				expandable="false">
+				<items>
+					<IconTabFilter text="{i18n>BORObject}">
+						<SearchField id="searchField"  search="onSearch" width="auto" liveChange="onSearch"></SearchField>
+						<List id="Borobjects" items="{path: 'Gemini>/BusValueHelp'}" mode="SingleSelectLeft" includeItemInSelection="true">
+							<StandardListItem title="{Gemini>ObjectName}"/>
+						</List>
+					</IconTabFilter>
+					<IconTabFilter text="{i18n>Class}">
+						<SearchField id="searchField1"  search="onSearch1" width="auto" liveChange="onSearch"></SearchField>
+						<List id="classobjects" items="{path: 'Gemini>/ClassValueHelp'}" mode="SingleSelectLeft" includeItemInSelection="true">
+							<StandardListItem title="{Gemini>ObjectName}"/>
+						</List>
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+		</content>
+		<beginButton>
+			<Button text="{i18n>ConfirmBtnText}" icon="sap-icon://accept" press="onDialogSubmitButton"/>
+		</beginButton>
+		<endButton>
+			<Button text="{i18n>Cancel}" icon="sap-icon://sys-cancel" press="onDialogCancelButton"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

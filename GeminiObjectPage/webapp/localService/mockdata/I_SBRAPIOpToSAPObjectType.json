@@ -1,0 +1,181 @@
+[{
+	"sapobjecttype": "sapobjecttype 1",
+	"communicationscenario": "communicationscenario 1",
+	"apitype": "apitype 1",
+	"service_interface": "service_interface 1",
+	"entityset": "entityset 1",
+	"protocol": "protocol 1",
+	"communication_scenario_name": "communication_scenario_name 1",
+	"service_name": "service_name 1",
+	"readapi": 0,
+	"createapi": 2,
+	"updateapi": 8,
+	"deleteapi": 4,
+	"minimum_version": "minimum_version 1",
+	"__metadata": {
+		"uri": "I_SBRAPIOpToSAPObjectType(sapobjecttype='sapobjecttype%201',communicationscenario='communicationscenario%201',apitype='apitype%201',service_interface='service_interface%201',entityset='entityset%201',protocol='protocol%201')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRAPIOpToSAPObjectTypeType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 2",
+	"communicationscenario": "communicationscenario 2",
+	"apitype": "apitype 2",
+	"service_interface": "service_interface 2",
+	"entityset": "entityset 2",
+	"protocol": "protocol 2",
+	"communication_scenario_name": "communication_scenario_name 2",
+	"service_name": "service_name 2",
+	"readapi": 3,
+	"createapi": 3,
+	"updateapi": 7,
+	"deleteapi": 5,
+	"minimum_version": "minimum_version 2",
+	"__metadata": {
+		"uri": "I_SBRAPIOpToSAPObjectType(sapobjecttype='sapobjecttype%202',communicationscenario='communicationscenario%202',apitype='apitype%202',service_interface='service_interface%202',entityset='entityset%202',protocol='protocol%202')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRAPIOpToSAPObjectTypeType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 3",
+	"communicationscenario": "communicationscenario 3",
+	"apitype": "apitype 3",
+	"service_interface": "service_interface 3",
+	"entityset": "entityset 3",
+	"protocol": "protocol 3",
+	"communication_scenario_name": "communication_scenario_name 3",
+	"service_name": "service_name 3",
+	"readapi": 2,
+	"createapi": 8,
+	"updateapi": 0,
+	"deleteapi": 9,
+	"minimum_version": "minimum_version 3",
+	"__metadata": {
+		"uri": "I_SBRAPIOpToSAPObjectType(sapobjecttype='sapobjecttype%203',communicationscenario='communicationscenario%203',apitype='apitype%203',service_interface='service_interface%203',entityset='entityset%203',protocol='protocol%203')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRAPIOpToSAPObjectTypeType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 4",
+	"communicationscenario": "communicationscenario 4",
+	"apitype": "apitype 4",
+	"service_interface": "service_interface 4",
+	"entityset": "entityset 4",
+	"protocol": "protocol 4",
+	"communication_scenario_name": "communication_scenario_name 4",
+	"service_name": "service_name 4",
+	"readapi": 5,
+	"createapi": 5,
+	"updateapi": 2,
+	"deleteapi": 6,
+	"minimum_version": "minimum_version 4",
+	"__metadata": {
+		"uri": "I_SBRAPIOpToSAPObjectType(sapobjecttype='sapobjecttype%204',communicationscenario='communicationscenario%204',apitype='apitype%204',service_interface='service_interface%204',entityset='entityset%204',protocol='protocol%204')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRAPIOpToSAPObjectTypeType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 5",
+	"communicationscenario": "communicationscenario 5",
+	"apitype": "apitype 5",
+	"service_interface": "service_interface 5",
+	"entityset": "entityset 5",
+	"protocol": "protocol 5",
+	"communication_scenario_name": "communication_scenario_name 5",
+	"service_name": "service_name 5",
+	"readapi": 4,
+	"createapi": 3,
+	"updateapi": 8,
+	"deleteapi": 4,
+	"minimum_version": "minimum_version 5",
+	"__metadata": {
+		"uri": "I_SBRAPIOpToSAPObjectType(sapobjecttype='sapobjecttype%205',communicationscenario='communicationscenario%205',apitype='apitype%205',service_interface='service_interface%205',entityset='entityset%205',protocol='protocol%205')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRAPIOpToSAPObjectTypeType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 6",
+	"communicationscenario": "communicationscenario 6",
+	"apitype": "apitype 6",
+	"service_interface": "service_interface 6",
+	"entityset": "entityset 6",
+	"protocol": "protocol 6",
+	"communication_scenario_name": "communication_scenario_name 6",
+	"service_name": "service_name 6",
+	"readapi": 2,
+	"createapi": 4,
+	"updateapi": 2,
+	"deleteapi": 2,
+	"minimum_version": "minimum_version 6",
+	"__metadata": {
+		"uri": "I_SBRAPIOpToSAPObjectType(sapobjecttype='sapobjecttype%206',communicationscenario='communicationscenario%206',apitype='apitype%206',service_interface='service_interface%206',entityset='entityset%206',protocol='protocol%206')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRAPIOpToSAPObjectTypeType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 7",
+	"communicationscenario": "communicationscenario 7",
+	"apitype": "apitype 7",
+	"service_interface": "service_interface 7",
+	"entityset": "entityset 7",
+	"protocol": "protocol 7",
+	"communication_scenario_name": "communication_scenario_name 7",
+	"service_name": "service_name 7",
+	"readapi": 7,
+	"createapi": 2,
+	"updateapi": 3,
+	"deleteapi": 8,
+	"minimum_version": "minimum_version 7",
+	"__metadata": {
+		"uri": "I_SBRAPIOpToSAPObjectType(sapobjecttype='sapobjecttype%207',communicationscenario='communicationscenario%207',apitype='apitype%207',service_interface='service_interface%207',entityset='entityset%207',protocol='protocol%207')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRAPIOpToSAPObjectTypeType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 8",
+	"communicationscenario": "communicationscenario 8",
+	"apitype": "apitype 8",
+	"service_interface": "service_interface 8",
+	"entityset": "entityset 8",
+	"protocol": "protocol 8",
+	"communication_scenario_name": "communication_scenario_name 8",
+	"service_name": "service_name 8",
+	"readapi": 5,
+	"createapi": 9,
+	"updateapi": 5,
+	"deleteapi": 3,
+	"minimum_version": "minimum_version 8",
+	"__metadata": {
+		"uri": "I_SBRAPIOpToSAPObjectType(sapobjecttype='sapobjecttype%208',communicationscenario='communicationscenario%208',apitype='apitype%208',service_interface='service_interface%208',entityset='entityset%208',protocol='protocol%208')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRAPIOpToSAPObjectTypeType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 9",
+	"communicationscenario": "communicationscenario 9",
+	"apitype": "apitype 9",
+	"service_interface": "service_interface 9",
+	"entityset": "entityset 9",
+	"protocol": "protocol 9",
+	"communication_scenario_name": "communication_scenario_name 9",
+	"service_name": "service_name 9",
+	"readapi": 5,
+	"createapi": 2,
+	"updateapi": 0,
+	"deleteapi": 9,
+	"minimum_version": "minimum_version 9",
+	"__metadata": {
+		"uri": "I_SBRAPIOpToSAPObjectType(sapobjecttype='sapobjecttype%209',communicationscenario='communicationscenario%209',apitype='apitype%209',service_interface='service_interface%209',entityset='entityset%209',protocol='protocol%209')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRAPIOpToSAPObjectTypeType"
+	}
+}, {
+	"sapobjecttype": "sapobjecttype 10",
+	"communicationscenario": "communicationscenario 10",
+	"apitype": "apitype 10",
+	"service_interface": "service_interface 10",
+	"entityset": "entityset 10",
+	"protocol": "protocol 10",
+	"communication_scenario_name": "communication_scenario_name 10",
+	"service_name": "service_name 10",
+	"readapi": 5,
+	"createapi": 8,
+	"updateapi": 3,
+	"deleteapi": 2,
+	"minimum_version": "minimum_version 10",
+	"__metadata": {
+		"uri": "I_SBRAPIOpToSAPObjectType(sapobjecttype='sapobjecttype%2010',communicationscenario='communicationscenario%2010',apitype='apitype%2010',service_interface='service_interface%2010',entityset='entityset%2010',protocol='protocol%2010')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRAPIOpToSAPObjectTypeType"
+	}
+}]

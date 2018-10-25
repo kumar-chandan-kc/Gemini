@@ -1,0 +1,15 @@
+[{
+	"SapObjectType": "Bank",
+	"AppName": "lfdno1",
+	"FioriID": "F1234",
+	"SemanticObject": "ABCRun",
+	"AppType": "SAPUI5",
+	"UITechnology": "funcname"
+}, {
+	"SapObjectType": "Bank",
+	"AppName": "lfdno2",
+	"FioriID": "F1272",
+	"SemanticObject": "ABCRun",
+	"AppType": "SAPUI5",
+	"UITechnology": "funcname"
+}]

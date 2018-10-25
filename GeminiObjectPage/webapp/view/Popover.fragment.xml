@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout">inition>
+	<Popover title="{i18n>Cancel}" class="sapUiContentPadding" placement="Bottom" initialFocus="email">
+		<content>
+			<Label id="cancelLabel" text="{i18n>ExitConfirmMsg}"/>
+		</content>
+		<FlexBox alignItems="Center" justifyContent="Center">
+			<items>
+				<Button text="{i18n>Save}" press="onSave" class="sapUiSmallMarginEnd"/>
+				<Button text="{i18n>Cancel}" press="onReload"/>
+			</items>
+		</FlexBox>
+	</Popover>
+</core:FragmentDefinition>

@@ -1,0 +1,121 @@
+[{
+	"ident": "ident 1",
+	"lfdno": "lfdno 1",
+	"sapobjecttype": "sapobjecttype 1",
+	"notinlist": false,
+	"firstrelease": "firstrelease 1",
+	"funcname": "funcname 1",
+	"nocover": false,
+	"__metadata": {
+		"uri": "I_SBRMIGRACTUAL(ident='ident%201',lfdno='lfdno%201',sapobjecttype='sapobjecttype%201')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRMIGRACTUALType"
+	}
+}, {
+	"ident": "ident 2",
+	"lfdno": "lfdno 2",
+	"sapobjecttype": "sapobjecttype 2",
+	"notinlist": false,
+	"firstrelease": "firstrelease 2",
+	"funcname": "funcname 2",
+	"nocover": false,
+	"__metadata": {
+		"uri": "I_SBRMIGRACTUAL(ident='ident%202',lfdno='lfdno%202',sapobjecttype='sapobjecttype%202')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRMIGRACTUALType"
+	}
+}, {
+	"ident": "ident 3",
+	"lfdno": "lfdno 3",
+	"sapobjecttype": "sapobjecttype 3",
+	"notinlist": true,
+	"firstrelease": "firstrelease 3",
+	"funcname": "funcname 3",
+	"nocover": false,
+	"__metadata": {
+		"uri": "I_SBRMIGRACTUAL(ident='ident%203',lfdno='lfdno%203',sapobjecttype='sapobjecttype%203')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRMIGRACTUALType"
+	}
+}, {
+	"ident": "ident 4",
+	"lfdno": "lfdno 4",
+	"sapobjecttype": "sapobjecttype 4",
+	"notinlist": false,
+	"firstrelease": "firstrelease 4",
+	"funcname": "funcname 4",
+	"nocover": true,
+	"__metadata": {
+		"uri": "I_SBRMIGRACTUAL(ident='ident%204',lfdno='lfdno%204',sapobjecttype='sapobjecttype%204')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRMIGRACTUALType"
+	}
+}, {
+	"ident": "ident 5",
+	"lfdno": "lfdno 5",
+	"sapobjecttype": "sapobjecttype 5",
+	"notinlist": true,
+	"firstrelease": "firstrelease 5",
+	"funcname": "funcname 5",
+	"nocover": true,
+	"__metadata": {
+		"uri": "I_SBRMIGRACTUAL(ident='ident%205',lfdno='lfdno%205',sapobjecttype='sapobjecttype%205')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRMIGRACTUALType"
+	}
+}, {
+	"ident": "ident 6",
+	"lfdno": "lfdno 6",
+	"sapobjecttype": "sapobjecttype 6",
+	"notinlist": true,
+	"firstrelease": "firstrelease 6",
+	"funcname": "funcname 6",
+	"nocover": true,
+	"__metadata": {
+		"uri": "I_SBRMIGRACTUAL(ident='ident%206',lfdno='lfdno%206',sapobjecttype='sapobjecttype%206')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRMIGRACTUALType"
+	}
+}, {
+	"ident": "ident 7",
+	"lfdno": "lfdno 7",
+	"sapobjecttype": "sapobjecttype 7",
+	"notinlist": false,
+	"firstrelease": "firstrelease 7",
+	"funcname": "funcname 7",
+	"nocover": false,
+	"__metadata": {
+		"uri": "I_SBRMIGRACTUAL(ident='ident%207',lfdno='lfdno%207',sapobjecttype='sapobjecttype%207')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRMIGRACTUALType"
+	}
+}, {
+	"ident": "ident 8",
+	"lfdno": "lfdno 8",
+	"sapobjecttype": "sapobjecttype 8",
+	"notinlist": true,
+	"firstrelease": "firstrelease 8",
+	"funcname": "funcname 8",
+	"nocover": true,
+	"__metadata": {
+		"uri": "I_SBRMIGRACTUAL(ident='ident%208',lfdno='lfdno%208',sapobjecttype='sapobjecttype%208')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRMIGRACTUALType"
+	}
+}, {
+	"ident": "ident 9",
+	"lfdno": "lfdno 9",
+	"sapobjecttype": "sapobjecttype 9",
+	"notinlist": true,
+	"firstrelease": "firstrelease 9",
+	"funcname": "funcname 9",
+	"nocover": false,
+	"__metadata": {
+		"uri": "I_SBRMIGRACTUAL(ident='ident%209',lfdno='lfdno%209',sapobjecttype='sapobjecttype%209')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRMIGRACTUALType"
+	}
+}, {
+	"ident": "ident 10",
+	"lfdno": "lfdno 10",
+	"sapobjecttype": "sapobjecttype 10",
+	"notinlist": false,
+	"firstrelease": "firstrelease 10",
+	"funcname": "funcname 10",
+	"nocover": true,
+	"__metadata": {
+		"uri": "I_SBRMIGRACTUAL(ident='ident%2010',lfdno='lfdno%2010',sapobjecttype='sapobjecttype%2010')",
+		"type": "CA_BUSINESS_REPOSITORY_SRV.I_SBRMIGRACTUALType"
+	}
+}]

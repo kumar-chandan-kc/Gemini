@@ -1,0 +1,25 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout">
+	<ViewSettingsDialog confirm="handleAssignConfirm" cancel="handleAssignClose">
+		<customTabs>
+			<ViewSettingsCustomTab id="Assign" title="{i18n>AssignToNewSAPObjectType}">
+				<content>
+					<Panel height="100%">
+						<layout:VerticalLayout width="50%">
+							<Label text="{i18n>SelectanObjectName}" design="Bold"/>
+							<Input id="Assign1" width="200%" editable="true" showValueHelp="true" value="" showSuggestion="false" valueHelpOnly = "true"
+								suggestionItems="{ path: '/I_SBRCloudQuality', sorter: { path: 'ObjectName' } }" valueHelpRequest="onObjValueHelpRequest" fieldWidth="100%">
+								<suggestionItems>
+									<core:Item key="{ObjectName}" text="{ObjectName}"/>
+								</suggestionItems>
+							</Input>
+							<Button type="Transparent" enabled="false"/>
+							<Button type="Transparent" enabled="false"/>
+							<Label text="{i18n>CommentsAssign}" design="Bold" id="assignComment"/>
+							<TextArea id="TypeCommentHere" placeholder="{@i18n>AssignTextArea}" growing="true" growingMaxLines="7" width="200%" height="100%" rows="3"/>
+						</layout:VerticalLayout>
+					</Panel>
+				</content>
+			</ViewSettingsCustomTab>
+		</customTabs>
+	</ViewSettingsDialog>
+</core:FragmentDefinition>

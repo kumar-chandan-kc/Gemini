@@ -1,0 +1,11 @@
+{
+	"d": {
+		"__metadata": {
+			"id": "https://localhost:8080/sap/opu/odata/sap/CA_BUSINESS_REPOSITORY_SRV/JiraResponseSet(true)",
+			"uri": "https://localhost:8080/sap/opu/odata/sap/CA_BUSINESS_REPOSITORY_SRV/JiraResponseSet(true)",
+			"type": "CA_BUSINESS_REPOSITORY_SRV.JiraResponse"
+		},
+		"JiraLink": "",
+		"Response": true
+	}
+}

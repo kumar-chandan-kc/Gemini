@@ -1,0 +1,15 @@
+<core:FragmentDefinition  
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <SelectDialog growingThreshold = "100"
+        id="CDSDialog"
+        title="{i18n>CDSViewHelp}"
+        items="{/I_SBRCDSViewNameVH}"
+        search="handleValueHelpSearchCDS"
+        liveChange="handleValueHelpSearchCDS"
+        confirm="handleValueHelpCDS"
+        cancel="handleValueHelpCDS">
+        <StandardListItem
+            title="{CDSName}" />
+    </SelectDialog>
+</core:FragmentDefinition>

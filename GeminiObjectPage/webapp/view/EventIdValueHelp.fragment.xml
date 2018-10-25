@@ -1,0 +1,17 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<SelectDialog
+		id="EventHelp"
+		noDataText="{i18n>NoSAPObjectEventFound}"
+		title="{i18n>SelectEvent}"
+		search="handleTargetReleaseSearch"
+		liveChange="handleTargetReleaseSearch"
+		confirm="handleAppCloseEvent"
+		cancel="handleAppCloseEvent"
+		items="{ path: 'Gemini>/eventIdHelp'}">
+		<StandardListItem
+			title="{Gemini>event}"
+			 />
+	</SelectDialog>
+</core:FragmentDefinition>

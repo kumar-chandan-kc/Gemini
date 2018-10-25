@@ -1,0 +1,60 @@
+{
+  "projectType": [
+    "sap.watt.saptoolsets.fiori.project.ui5template.smartProject",
+    "sap.watt.uitools.ide.fiori",
+    "sap.watt.saptoolsets.fiori.project.uiadaptation"
+  ],
+  "generation": [
+    {
+      "templateId": "ui5template.smartTemplateCommon",
+      "templateVersion": "1.40.12",
+      "dateTimeStamp": "Wed, 20 Dec 2017 10:27:17 GMT"
+    },
+    {
+      "templateId": "ui5template.smartTemplate",
+      "templateVersion": "1.40.12",
+      "dateTimeStamp": "Wed, 20 Dec 2017 10:27:22 GMT"
+    },
+    {
+      "templateId": "uiadaptation.changespreviewjs",
+      "templateVersion": "0.0.0",
+      "dateTimeStamp": "Thu, 08 Mar 2018 10:07:18 GMT"
+    },
+    {
+      "templateId": "ui5template.listreportextension",
+      "templateVersion": "1.0.0",
+      "dateTimeStamp": "Thu, 08 Feb 2018 06:50:26 GMT"
+    },
+    {
+      "templateId": "uiadaptation.uiadaptationpanehtml",
+      "templateVersion": "0.0.0",
+      "dateTimeStamp": "Mon, 26 Feb 2018 08:51:30 GMT"
+    }
+  ],
+  "mockpreview": {
+    "mockUri": "/sap/opu/odata/sap/CA_BUSINESS_REPOSITORY_SMART_SRV",
+    "metadataFilePath": "",
+    "loadJSONFiles": true,
+    "loadCustomRequests": false,
+    "mockRequestsFilePath": ""
+  },
+  "translation": {
+    "translationDomain": "",
+    "supportedLanguages": "en,fr,de",
+    "defaultLanguage": "en",
+    "defaultI18NPropertyFile": "i18n.properties",
+    "resourceModelName": "i18n"
+  },
+  "basevalidator": {
+    "services": {
+      "xml": "fioriXmlAnalysis",
+      "js": "fioriJsValidator"
+    }
+  },
+  "codeCheckingTriggers": {
+    "notifyBeforePush": true,
+    "notifyBeforePushLevel": "Error",
+    "blockPush": false,
+    "blockPushLevel": "Error"
+  }
+}
